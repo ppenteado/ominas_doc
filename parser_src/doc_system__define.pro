@@ -1085,6 +1085,8 @@ pro doc_system::loadParsers
   compile_opt strictarr, hidden
 
   ; file parsers
+  ; Replace the default parser for pro files with DOCparProFileParser_o, to handle separation lines between
+  ; comment blocks and routine declarations (Paulo Penteado, 2016/06)
   ;self.parsers->put, 'profile', obj_new('DOCparProFileParser', system=self)
   self.parsers->put, 'profile', obj_new('DOCparProFileParser_o', system=self)
   self.parsers->put, 'idldocfile', obj_new('DOCparIDLdocFileParser', system=self)
@@ -1095,6 +1097,7 @@ pro doc_system::loadParsers
   self.parsers->put, 'idldocformat', obj_new('DOCparIDLdocFormatParser', system=self)
   self.parsers->put, 'idlformat', $
                      obj_new('DOCparIDLFormatParser', system=self)
+  ; Add the parser for OMINAS format (Paulo Penteado, 2016/06)
   self.parsers->put, 'ominasformat', $
                      obj_new('DOCparOMINASFormatParser', system=self)
 
@@ -1787,6 +1790,9 @@ function doc_system::init, root=root, output=output, $
 
   ; get location of IDLdoc in order to find locations of data files like
   ; images, templates, etc.
+  ; Look for idldoc.pro instead of calling mg_src_root(), because this file is
+  ; replacing the original from IDLdoc (Paulo Penteado,2016/06)
+  ;self.sourceLocation = mg_src_root() 
   self.sourceLocation = file_dirname(file_which('idldoc.pro'))
 
   self.quiet = keyword_set(quiet)
