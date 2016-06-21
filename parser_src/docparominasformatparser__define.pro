@@ -150,6 +150,12 @@ pro docparominasformatparser::_handleRoutineTag, tag, lines, $
      'keyword output': self->_handleArguments, lines, routine=routine, markup_parser=markupParser, input=0, /keyword, tag='keyword'
      'environment variables': begin
         tag='procedure'
+        lines=['Environment variables: ','',lines]
+        self.docparidlformatparser::_handleRoutineTag, tag, lines,routine=routine,markup_parser=markupParser
+      end
+      'status': begin
+        tag='restrictions'
+        lines=['Status: ','',lines]
         self.docparidlformatparser::_handleRoutineTag, tag, lines,routine=routine,markup_parser=markupParser
       end     
     else: begin
