@@ -343,6 +343,25 @@ pro docparprofileparser_o::_parseLines, lines, file, format=format, markup=marku
   codeLevel = 0L             ; level of "indention", i.e., begin-end blocks
   routineLineStart = 0
   currentComments = obj_new('MGcoArrayList', type=7, block_size=20)
+  
+  ;parse includes (by Paulo Penteado, 06/2016)
+  w=where(stregex(strtrim(lines,2),'@[[:graph:]]+',/bool),wc)
+  while wc gt 0 do begin
+    linesl=list(lines,/extract)
+    iincs=0
+      incfile=(stregex(strtrim(lines[w[iincs]],2),'@([[:graph:]]+)',/extract,/subexpr))[-1]
+      incfile=file_which(incfile)
+      ninc=file_lines(incfile)
+      inclines=strarr(ninc)
+      openr,lun,incfile,/get_lun
+      readf,lun,inclines
+      free_lun,lun
+      linesl.remove,w[iincs]
+      linesl.add,inclines,w[iincs],/extract
+      ;if iincs lt (wc-1) then w[iincs+1:-1]+=ninc-1
+    lines=linesl.toarray()
+  w=where(stregex(strtrim(lines,2),'@[[:graph:]]+',/bool),wc)
+  endwhile
 
   tokenizer = obj_new('DOCparProFileTokenizer', lines)
 

@@ -80,6 +80,34 @@ pro docparidlformatparser::_handleArguments, lines, routine=routine, $
   endfor
 end
 
+;+
+; Handles one tag in a file's comments.
+;
+; :Params:
+;    tag : in, required, type=string
+;       rst tag, i.e. returns, params, keywords, etc.
+;    lines : in, required, type=strarr
+;       lines of raw text for that tag
+;
+; :Keywords:
+;    file : in, required, type=object
+;       routine file object
+;    markup_parser : in, required, type=object
+;       markup parser object
+;-
+pro docparominasformatparser::_handleFileTag, tag, lines, $
+  file=file,  $
+  markup_parser=markupParser
+  compile_opt strictarr, hidden
+
+  case strlowcase(tag) of
+    'input':
+    'output':
+    'return':
+    else: self.docparidlformatparser::_handleFileTag, tag, lines, file=file, markup_parser=markupParser
+  endcase
+end
+
 
 ;+
 ; Handles one tag in a routine's comments.
@@ -117,7 +145,13 @@ pro docparominasformatparser::_handleRoutineTag, tag, lines, $
      'return': begin
        tag='outputs'
        self.docparidlformatparser::_handleRoutineTag, tag, lines,routine=routine,markup_parser=markupParser
-     end     
+     end
+     'keyword input': self->_handleArguments, lines, routine=routine, markup_parser=markupParser, /input, /keyword, tag='keyword'
+     'keyword output': self->_handleArguments, lines, routine=routine, markup_parser=markupParser, input=0, /keyword, tag='keyword'
+     'environment variables': begin
+        tag='procedure'
+        self.docparidlformatparser::_handleRoutineTag, tag, lines,routine=routine,markup_parser=markupParser
+      end     
     else: begin
         self.docparidlformatparser::_handleRoutineTag, tag, lines,routine=routine,markup_parser=markupParser
       end
@@ -149,25 +183,39 @@ pro docparominasformatparser::parseRoutineComments, lines, routine=routine, $
                   'inputs', 'optional inputs', 'input', 'keyword parameters', $
                   'outputs', 'optional outputs', 'output', 'return', 'common blocks', $
                   'side effects', 'restrictions', 'procedure', 'example', $
-                  'modification history'] + ':'
+                  'modification history','keywords','environment variables'] + ':'
+                  
 
   tagLocations = bytarr(n_elements(lines))
   for s = 0L, n_elements(sectionNames) - 1L do begin
     ;tagLocations or= strlowcase(strtrim(lines, 2)) eq sectionNames[s]
     tagLocations or= strmatch(strlowcase(strtrim(lines, 2)),sectionNames[s]+'*')
+    ;tagLocations or= strmatch(strlowcase(strtrim(lines, 2)),sectionNames[s]+'*NONE')
   endfor
 
   tagStarts = where(tagLocations, nTags)
   if (nTags eq 0) then return
   tagEnds = nTags eq 1 ? n_elements(lines) - 1L : [tagStarts[1:*] - 1L, n_elements(lines) - 1L]
+  previoustag=''
   for t = 0L, nTags - 1L do begin
     tag = strtrim(lines[tagStarts[t]], 2)
     tag = strmid(tag, 0, strlen(tag) - 1L)
 
+    
     if (tagStarts[t] + 1L lt tagEnds[t]) then begin
+      if strmatch(tag,'INPUT*') then begin
+        if strmatch(previoustag,'KEYWORD*') then tag='KEYWORD INPUT'
+      endif
+      if strmatch(tag,'OUTPUT*') then begin
+        if strmatch(previoustag,'KEYWORD*') && (tagstarts[t]+2L lt tagends[t]) then begin
+          tag='KEYWORD OUTPUT'
+        endif
+      endif
+      
       self->_handleRoutineTag, tag, lines[tagStarts[t] + 1L:tagEnds[t]], $
                                routine=routine, markup_parser=markupParser
     endif
+    previoustag=tag
   endfor
 end
 
