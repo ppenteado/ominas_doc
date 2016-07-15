@@ -345,22 +345,35 @@ pro docparprofileparser_o::_parseLines, lines, file, format=format, markup=marku
   currentComments = obj_new('MGcoArrayList', type=7, block_size=20)
   
   ;parse includes (by Paulo Penteado, 06/2016)
-  w=where(stregex(strtrim(lines,2),'@[[:graph:]]+',/bool),wc)
+  w=where(stregex(strtrim(lines,2),'^[^;]*@[[:graph:]]+',/bool),wc)
+  on_error,0
   while wc gt 0 do begin
     linesl=list(lines,/extract)
     iincs=0
-      incfile=(stregex(strtrim(lines[w[iincs]],2),'@([[:graph:]]+)',/extract,/subexpr))[-1]
-      incfile=file_which(incfile)
+      incfilen=(stregex(strtrim(lines[w[iincs]],2),'@([[:graph:]]+)',/extract,/subexpr))[-1]
+      incfile=file_which(incfilen)
+      if ~incfile then incfile=file_which(incfilen+'.pro')
+      if ~incfile then message,incfilen+', from file'+file.fullpath+' not found'
       ninc=file_lines(incfile)
-      inclines=strarr(ninc)
-      openr,lun,incfile,/get_lun
-      readf,lun,inclines
-      free_lun,lun
-      linesl.remove,w[iincs]
-      linesl.add,inclines,w[iincs],/extract
-      ;if iincs lt (wc-1) then w[iincs+1:-1]+=ninc-1
+      if ninc then begin
+        inclines=strarr(ninc)
+        openr,lun,incfile,/get_lun
+        readf,lun,inclines
+        free_lun,lun
+        linesl.remove,w[iincs]
+        linesl.add,inclines,w[iincs],/extract
+        ;if iincs lt (wc-1) then w[iincs+1:-1]+=ninc-1
+      endif
     lines=linesl.toarray()
-  w=where(stregex(strtrim(lines,2),'@[[:graph:]]+',/bool),wc)
+;    sl=strpos(lines,';')
+;    w=where(sl ne 0,wc)
+;    if wc then begin
+;      lines=lines[w]
+;      sl=sl[w]
+;    endif
+;    w=where(sl ne -1,wc)
+;    if wc then lines[w]=strmid(lines[w],0,sl[w])
+  w=where(stregex(strtrim(lines,2),'^[^;]*@[[:graph:]]+',/bool),wc)
   endwhile
 
   tokenizer = obj_new('DOCparProFileTokenizer', lines)

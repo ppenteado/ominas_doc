@@ -442,7 +442,7 @@ end
 ;-
 pro doc_system::error, msg
   compile_opt strictarr, hidden
-  on_error, 2
+  on_error, 0;2
 
   if (self.logFile ne '') then printf, self.logLun, 'IDLDOC: ' + msg
 
