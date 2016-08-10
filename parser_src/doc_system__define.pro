@@ -719,9 +719,11 @@ pro doc_system::parseTree
   dlmFiles = file_search(self.root, '*.dlm', /test_regular, count=nDLMFiles)
   savFiles = file_search(self.root, '*.sav', /test_regular, count=nSavFiles)
   idldocFiles = file_search(self.root, '*.idldoc', /test_regular, count=nIDLdocFiles)
+  rstFiles = file_search(self.root, '*.rst', /test_regular, count=nrstFiles)
+
 
   ; quit if no files found
-  if (nProFiles + nSavFiles + nIDLdocFiles + nDLMFiles eq 0) then return
+  if (nProFiles + nSavFiles + nIDLdocFiles + nDLMFiles + nrstFiles eq 0) then return
 
   ; add all the files together
   allFiles = ['']
@@ -729,6 +731,7 @@ pro doc_system::parseTree
   if (nDLMFiles gt 0) then allFiles = [allFiles, dlmFiles]
   if (nSavFiles gt 0) then allFiles = [allFiles, savFiles]
   if (nIDLdocFiles gt 0) then allFiles = [allFiles, idldocFiles]
+  if (nrstFiles gt 0) then allFiles = [allFiles, rstFiles]
   allFiles = allFiles[1:*]
 
   ; remove the common root location
@@ -764,8 +767,10 @@ pro doc_system::parseTree
     readf, lun, lines
     free_lun, lun
 
-    formatParser = self->getParser(self.format + 'format')
-    markupParser = self->getParser(self.markup + 'markup')
+    ;formatParser = self->getParser(self.format + 'format')
+    formatParser = self->getParser('rstformat')
+    ;markupParser = self->getParser(self.markup + 'markup')
+    markupParser = self->getParser('rstmarkup')
 
     formatParser->parseOverviewComments, lines, $
                                          system=self, $
@@ -1090,6 +1095,8 @@ pro doc_system::loadParsers
   ;self.parsers->put, 'profile', obj_new('DOCparProFileParser', system=self)
   self.parsers->put, 'profile', obj_new('DOCparProFileParser_o', system=self)
   self.parsers->put, 'idldocfile', obj_new('DOCparIDLdocFileParser', system=self)
+  self.parsers->put, 'rstfile', obj_new('DOCparrstFileParser', system=self)
+
 
   ; header comment parsers
   self.parsers->put, 'verbatimformat', obj_new('DOCparVerbatimFormatParser', system=self)
