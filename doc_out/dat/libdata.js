@@ -35,14 +35,14 @@ libdata[libdataItem++] = new Array("./dat_compress_data_mask.html", "dat_compres
 libdata[libdataItem++] = new Array("./dat_create_descriptors.html", "dat_create_descriptors.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("./dat_create_descriptors.html#dat_create_descriptors", "dat_create_descriptors", 'routine in <a href="./dat_create_descriptors.html">dat_create_descriptors.pro</a>', "dat_create_descriptors.pro", "", "dat_create_descriptors", "	Creates and initializes a data descriptor.    ", "crdddsilent	If set, messages are suppressed.    abbrevusernametasksudataunameassoc_xdfilenameName of data file.   minmaxdimArray giving the dimensions of the data array.   typeInteger giving the type code of the data array.   dataData array.   abscissanhistNumber of past version of the data array to archive. 		If not given, the environment variable NV_NHIST is 		used.  If that is not set, then nhist defaults to 1.   headerHeader array.   filetypeFiletype identifier string.  If not given 			an attempt is made to detect it.   input_fnName of function to read data file.   output_fnName of function to write data file.   keyword_fnName of function to read/write header keywords.   instrumentInstrument string.  If not given an 			attempt is made to detect it.   input_translatorsString array giving the names of the 				input translators.   output_translatorsString array giving the names of the 				output translators.     input_transformsString array giving the names of the 				input transforms.   output_transformsString array giving the names of the 				output transforms.   maintainData maintenance mode.   compressCompression suffix.   tab_translatorsn Number of descriptors to create.   end_keywords", "NV/SYS", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created and initialized data descriptor.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("./dat_create_descriptors.html#dat_create_descriptors", "dat_create_descriptors", 'routine in <a href="./dat_create_descriptors.html">dat_create_descriptors.pro</a>', "dat_create_descriptors.pro", "", "dat_create_descriptors", "	Creates and initializes a data descriptor.    ", "crdddsilent	If set, messages are suppressed.    abbrevusernametasksudataunamefilenameName of data file.   dimArray giving the dimensions of the data array.   typeInteger giving the type code of the data array.   dataData array.   abscissanhistNumber of past version of the data array to archive. 		If not given, the environment variable NV_NHIST is 		used.  If that is not set, then nhist defaults to 1.   headerHeader array.   filetypeFiletype identifier string.  If not given 			an attempt is made to detect it.   input_fnName of function to read data file.   output_fnName of function to write data file.   keyword_fnName of function to read/write header keywords.   instrumentInstrument string.  If not given an 			attempt is made to detect it.   input_translatorsString array giving the names of the 				input translators.   output_translatorsString array giving the names of the 				output translators.     input_transformsString array giving the names of the 				input transforms.   output_transformsString array giving the names of the 				output transforms.   maintainData maintenance mode.   compressCompression suffix.   tab_translatorsn Number of descriptors to create.   end_keywords", "NV/SYS", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created and initialized data descriptor.    STATUS: 	Complete    ");
   
   
 
 libdata[libdataItem++] = new Array("./dat_data.html", "dat_data.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_data.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("./dat_data.html#dat_data", "dat_data", 'routine in <a href="./dat_data.html">dat_data.pro</a>', "dat_data.pro", "", "dat_data", "	Returns the data array associated with a data descriptor.    ", "samples Sampling indices.  If set, only these data elements are 		  returned.  May be 1D or the same number of dimensions as 		  the data array.   offsetnd      If set, the samples input is taken to be an ND coordinate 	          rather than a 1D subscript.  dat_data can normally tell 	          the difference automatically, but there is an ambiguity 	          if a single ND point is requested.  In that case, dat_data 	          interprets that as an array of 1D subscripts, unless /nd 	          is set.   true    If set, the actual data array is returned, even if there is 	          a sampling function.   noeventabscissaIf set, the abscissa array is returned instead of the data 		  array.   ddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 2/1998  	Adapted by:	Spitale, 5/2016   	The data array associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_data    ");
+  libdata[libdataItem++] = new Array("./dat_data.html#dat_data", "dat_data", 'routine in <a href="./dat_data.html">dat_data.pro</a>', "dat_data.pro", "", "dat_data", "	Returns the data array associated with a data descriptor.    ", "samples Sampling indices.  If set, only these data elements are 		  returned.  May be 1D or the same number of dimensions as 		  the data array.   nd      If set, the samples input is taken to be an ND coordinate 	          rather than a 1D subscript.  dat_data can normally tell 	          the difference automatically, but there is an ambiguity 	          if a single ND point is requested.  In that case, dat_data 	          interprets that as an array of 1D subscripts, unless /nd 	          is set.   true    If set, the actual data array is returned, even if there is 	          a sampling function.   noeventabscissaIf set, the abscissa array is returned instead of the data 		  array.   ddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 2/1998  	Adapted by:	Spitale, 5/2016   	The data array associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_data    ");
   
   
 
@@ -67,17 +67,17 @@ libdata[libdataItem++] = new Array("./dat_dim.html", "dat_dim.pro", '.pro file i
   
   
 
-libdata[libdataItem++] = new Array("./dat_dim_data.html", "dat_dim_data.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_dim_data.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("./dat_dim_data.html#dat_dim_data", "dat_dim_data", 'routine in <a href="./dat_dim_data.html">dat_dim_data.pro</a>', "dat_dim_data.pro", "", "dat_dim_data", "	Returns the dimension function associated with a data descriptor.    ", "noeventddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	The dim_data associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_dim_data    ");
-  
-  
-
 libdata[libdataItem++] = new Array("./dat_dim_fn.html", "dat_dim_fn.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_dim_fn.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./dat_dim_fn.html#dat_dim_fn", "dat_dim_fn", 'routine in <a href="./dat_dim_fn.html">dat_dim_fn.pro</a>', "dat_dim_fn.pro", "", "dat_dim_fn", "	Returns the dimension function associated with a data descriptor.    ", "noeventddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	The dim_fn associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_dim_fn    ");
+  
+  
+
+libdata[libdataItem++] = new Array("./dat_dim_fn_data.html", "dat_dim_fn_data.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_dim_fn_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("./dat_dim_fn_data.html#dat_dim_fn_data", "dat_dim_fn_data", 'routine in <a href="./dat_dim_fn_data.html">dat_dim_fn_data.pro</a>', "dat_dim_fn_data.pro", "", "dat_dim_fn_data", "	Returns the dimension function associated with a data descriptor.    ", "noeventddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	The dim_fn_data associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_dim_fn_data    ");
   
   
 
@@ -91,7 +91,7 @@ libdata[libdataItem++] = new Array("./dat_filetype.html", "dat_filetype.pro", '.
 libdata[libdataItem++] = new Array("./dat_get_value.html", "dat_get_value.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_get_value.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("./dat_get_value.html#dat_get_value", "dat_get_value", 'routine in <a href="./dat_get_value.html">dat_get_value.pro</a>', "dat_get_value.pro", "", "dat_get_value", "	Calls input translators, supplying the given keyword, and builds 	a list of returned descriptors.    ", "status	0 if at least one translator call was successful, 			-1 otherwise.    trs	Transient argument string.   tr_disableIf set, dat_get_value returns without performing 			any action.   tr_overrideComma-delimited list of translators to use instead 			of those stored in dd.   tr_firstIf set, dat_get_value returns after the first 			successful translator.   tr_nosortBy default, outpur descriptors are sorted to remove 			those with duplicate names, retaining only the first 			descriptor of a given name for each input data 			descriptor.  /tr_nosort disables this action.   key1key2key3key4key5key6key7key8dd	Data descriptors.  Must all have the same instrument 			string.   keywordKeyword to pass to translators, describing the 			requested quantity.   end_keywords", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Array of descriptors returned from all successful translator calls. 	Descriptors are returned in the same order that the corresponding 	translators were called.  Each translator may produce multiple 	descriptors.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("./dat_get_value.html#dat_get_value", "dat_get_value", 'routine in <a href="./dat_get_value.html">dat_get_value.pro</a>', "dat_get_value.pro", "", "dat_get_value", "	Calls input translators, supplying the given keyword, and builds 	a list of  returned values.    ", "status	0 if at least one translator call was successful, 			-1 otherwise.    trs	Transient argument string.   tr_disableIf set, dat_get_value returns without performing 			any action.   tr_overrideComma-delimited list of translators to use instead 			of those stored in dd.   tr_firstIf set, dat_get_value returns after the first 			successful translator.   key1key2key3key4key5key6key7key8dd	Data descriptor.   keywordKeyword to pass to translators, describing the 			requested quantity.   end_keywords", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Array of values returned from all successful translator calls. 	Values are returned in the same order that the corresponding 	translators were called.  The dimensions are determined by the 	output of the first translator call.  Dimensions are (dim,n_values), 	where n_objects is the total number of returned values (there may 	be more than one per translator), and dim is the dimensions of 	each value.  If dim == 1, the dimensions of the dat_get_value result 	are (n_values).    STATUS: 	Complete    ");
   
   
 
@@ -119,7 +119,7 @@ libdata[libdataItem++] = new Array("./dat_instrument.html", "dat_instrument.pro"
 libdata[libdataItem++] = new Array("./dat_load_data.html", "dat_load_data.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_load_data.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("./dat_load_data.html#dat_load_data", "dat_load_data", 'routine in <a href="./dat_load_data.html">dat_load_data.pro</a>', "dat_load_data.pro", "", "dat_load_data", "	Loads the data array for a given data descriptor.  Adds to 	NV state maintained list if maintain == 1.    ", "sampledataddData descriptor to test.   ", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Loaded data array.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("./dat_load_data.html#dat_load_data", "dat_load_data", 'routine in <a href="./dat_load_data.html">dat_load_data.pro</a>', "dat_load_data.pro", "", "dat_load_data", "	Loads the data array for a given data descriptor.  Adds to 	NV state maintained list if maintain == 1.    ", "sampleddData descriptor to test.   ", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Loaded data array.    STATUS: 	Complete    ");
   
   
 
@@ -210,7 +210,7 @@ libdata[libdataItem++] = new Array("./dat_parse_transient_keyvals.html", "dat_pa
 libdata[libdataItem++] = new Array("./dat_put_value.html", "dat_put_value.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_put_value.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("./dat_put_value.html#dat_put_value", "dat_put_value", 'routine in <a href="./dat_put_value.html">dat_put_value.pro</a>', "dat_put_value.pro", "", "dat_put_value", "	Calls output translators, supplying the given keyword and value.    ", "trs	Transient argument string.   status	0 if at least one translator call was successful, 			-1 otherwise.    tr_disableIf set, dat_get_value returns without performing 			any action.   tr_overrideComma-delimited list of translators to use instead 			of those stored in dd.   tr_firstIf set, dat_get_value returns after the first 			successful translator.   tr_nosortkey1key2key3key4key5key6key7key8dd	Data descriptor.   keywordKeyword to pass to translators, describing the 			requested quantity.   value	Value to write through the translators.   end_keywords", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
+  libdata[libdataItem++] = new Array("./dat_put_value.html#dat_put_value", "dat_put_value", 'routine in <a href="./dat_put_value.html">dat_put_value.pro</a>', "dat_put_value.pro", "", "dat_put_value", "	Calls output translators, supplying the given keyword and value.    ", "trs	Transient argument string.   status	0 if at least one translator call was successful, 			-1 otherwise.    tr_disableIf set, dat_get_value returns without performing 			any action.   tr_overrideComma-delimited list of translators to use instead 			of those stored in dd.   tr_firstIf set, dat_get_value returns after the first 			successful translator.   key1key2key3key4key5key6key7key8dd	Data descriptor.   keywordKeyword to pass to translators, describing the 			requested quantity.   value	Value to write through the translators.   end_keywords", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
   
   
 
@@ -242,17 +242,17 @@ libdata[libdataItem++] = new Array("./dat_replicate.html", "dat_replicate.pro", 
   
   
 
-libdata[libdataItem++] = new Array("./dat_sampling_data.html", "dat_sampling_data.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_sampling_data.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("./dat_sampling_data.html#dat_sampling_data", "dat_sampling_data", 'routine in <a href="./dat_sampling_data.html">dat_sampling_data.pro</a>', "dat_sampling_data.pro", "", "dat_sampling_data", "	Returns the sampling function associated with a data descriptor.    ", "noeventddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	The sampling_data associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_sampling_data    ");
-  
-  
-
 libdata[libdataItem++] = new Array("./dat_sampling_fn.html", "dat_sampling_fn.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_sampling_fn.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./dat_sampling_fn.html#dat_sampling_fn", "dat_sampling_fn", 'routine in <a href="./dat_sampling_fn.html">dat_sampling_fn.pro</a>', "dat_sampling_fn.pro", "", "dat_sampling_fn", "	Returns the sampling function associated with a data descriptor.    ", "noeventddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	The sampling_fn associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_sampling_fn    ");
+  
+  
+
+libdata[libdataItem++] = new Array("./dat_sampling_fn_data.html", "dat_sampling_fn_data.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_sampling_fn_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("./dat_sampling_fn_data.html#dat_sampling_fn_data", "dat_sampling_fn_data", 'routine in <a href="./dat_sampling_fn_data.html">dat_sampling_fn_data.pro</a>', "dat_sampling_fn_data.pro", "", "dat_sampling_fn_data", "	Returns the sampling function associated with a data descriptor.    ", "noeventddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	The sampling_fn_data associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_sampling_fn_data    ");
   
   
 
@@ -270,17 +270,17 @@ libdata[libdataItem++] = new Array("./dat_set_data.html", "dat_set_data.pro", '.
   
   
 
-libdata[libdataItem++] = new Array("./dat_set_dim_data.html", "dat_set_dim_data.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_set_dim_data.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("./dat_set_dim_data.html#dat_set_dim_data", "dat_set_dim_data", 'routine in <a href="./dat_set_dim_data.html">dat_set_dim_data.pro</a>', "dat_set_dim_data.pro", "", "dat_set_dim_data", "	Replaces the dimension function data associated with a data descriptor.    ", "noeventdd		Data descriptor.   data", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
-  
-  
-
 libdata[libdataItem++] = new Array("./dat_set_dim_fn.html", "dat_set_dim_fn.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_set_dim_fn.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./dat_set_dim_fn.html#dat_set_dim_fn", "dat_set_dim_fn", 'routine in <a href="./dat_set_dim_fn.html">dat_set_dim_fn.pro</a>', "dat_set_dim_fn.pro", "", "dat_set_dim_fn", "	Replaces the dimension function associated with a data descriptor.    ", "noeventdd	Data descriptor.   dim_fnNew sampling function.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
+  
+  
+
+libdata[libdataItem++] = new Array("./dat_set_dim_fn_data.html", "dat_set_dim_fn_data.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_set_dim_fn_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("./dat_set_dim_fn_data.html#dat_set_dim_fn_data", "dat_set_dim_fn_data", 'routine in <a href="./dat_set_dim_fn_data.html">dat_set_dim_fn_data.pro</a>', "dat_set_dim_fn_data.pro", "", "dat_set_dim_fn_data", "	Replaces the dimension function data associated with a data descriptor.    ", "noeventdd		Data descriptor.   dim_fn_dataNew sampling function data.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
   
   
 
@@ -326,17 +326,17 @@ libdata[libdataItem++] = new Array("./dat_set_nhist.html", "dat_set_nhist.pro", 
   
   
 
-libdata[libdataItem++] = new Array("./dat_set_sampling_data.html", "dat_set_sampling_data.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_set_sampling_data.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("./dat_set_sampling_data.html#dat_set_sampling_data", "dat_set_sampling_data", 'routine in <a href="./dat_set_sampling_data.html">dat_set_sampling_data.pro</a>', "dat_set_sampling_data.pro", "", "dat_set_sampling_data", "	Replaces the sampling function data associated with a data descriptor.    ", "noeventdd		Data descriptor.   data", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
-  
-  
-
 libdata[libdataItem++] = new Array("./dat_set_sampling_fn.html", "dat_set_sampling_fn.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_set_sampling_fn.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./dat_set_sampling_fn.html#dat_set_sampling_fn", "dat_set_sampling_fn", 'routine in <a href="./dat_set_sampling_fn.html">dat_set_sampling_fn.pro</a>', "dat_set_sampling_fn.pro", "", "dat_set_sampling_fn", "	Replaces the sampling function associated with a data descriptor.    ", "noeventdd	Data descriptor.   sampling_fnNew sampling function.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
+  
+  
+
+libdata[libdataItem++] = new Array("./dat_set_sampling_fn_data.html", "dat_set_sampling_fn_data.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_set_sampling_fn_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("./dat_set_sampling_fn_data.html#dat_set_sampling_fn_data", "dat_set_sampling_fn_data", 'routine in <a href="./dat_set_sampling_fn_data.html">dat_set_sampling_fn_data.pro</a>', "dat_set_sampling_fn_data.pro", "", "dat_set_sampling_fn_data", "	Replaces the sampling function data associated with a data descriptor.    ", "noeventdd		Data descriptor.   sampling_fn_dataNew sampling function data.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
   
   
 
@@ -365,20 +365,6 @@ libdata[libdataItem++] = new Array("./dat_test_dd.html", "dat_test_dd.pro", '.pr
   
   
   libdata[libdataItem++] = new Array("./dat_test_dd.html#dat_test_dd", "dat_test_dd", 'routine in <a href="./dat_test_dd.html">dat_test_dd.pro</a>', "dat_test_dd.pro", "", "dat_test_dd", "	Determines whether the argument is a valid data descriptor.    ", "noeventddData descriptor to test.   ", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	True if the argument is present, is a valid pointer, and 	points to a data descriptor.    STATUS: 	Complete    ");
-  
-  
-
-libdata[libdataItem++] = new Array("./dat_transform_input.html", "dat_transform_input.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_transform_input.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("./dat_transform_input.html#dat_transform_input", "dat_transform_input", 'routine in <a href="./dat_transform_input.html">dat_transform_input.pro</a>', "dat_transform_input.pro", "", "dat_transform_input", "", "silent_dddataheader", "          -1", "");
-  
-  
-
-libdata[libdataItem++] = new Array("./dat_transform_output.html", "dat_transform_output.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_transform_output.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("./dat_transform_output.html#dat_transform_output", "dat_transform_output", 'routine in <a href="./dat_transform_output.html">dat_transform_output.pro</a>', "dat_transform_output.pro", "", "dat_transform_output", "", "silent_dddataheader", "          -1", "");
   
   
 
@@ -441,7 +427,7 @@ libdata[libdataItem++] = new Array("./keyval_struct__define.html", "keyval_struc
 libdata[libdataItem++] = new Array("./ominas_data__define.html", "ominas_data__define.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "ominas_data__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("./ominas_data__define.html#ominas_data::init", "ominas_data::init", 'routine in <a href="./ominas_data__define.html">ominas_data__define.pro</a>', "ominas_data__define.pro", "", "ominas_data::init", "", "crdddabbrevusernametasksudataunameassoc_xdfilenameminmaxdimtypedataabscissanhistheaderfiletypeinput_fnoutput_fnkeyword_fninstrumentinput_translatorsoutput_translatorsinput_transformsoutput_transformsmaintaincompresstab_translatorsiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("./ominas_data__define.html#ominas_data::init", "ominas_data::init", 'routine in <a href="./ominas_data__define.html">ominas_data__define.pro</a>', "ominas_data__define.pro", "", "ominas_data::init", "", "crdddabbrevusernametasksudataunamefilenamedimtypedataabscissanhistheaderfiletypeinput_fnoutput_fnkeyword_fninstrumentinput_translatorsoutput_translatorsinput_transformsoutput_transformsmaintaincompresstab_translatorsiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("./ominas_data__define.html#ominas_data__define", "ominas_data__define", 'routine in <a href="./ominas_data__define.html">ominas_data__define.pro</a>', "ominas_data__define.pro", "", "ominas_data__define", "	Structure defining the data descriptor.    ", "", "NV/SYS", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   

@@ -84,7 +84,7 @@ pro dat_put_value, dd, keyword, value, trs=trs, status=status, $
  ;--------------------------------------------
  ; record any transient keyvals
  ;--------------------------------------------
- _dd = dat_add_transient_keyvals(_dd, trs)
+ dat_add_transient_keyvals, _dd, trs
 
  ;--------------------------------------------
  ; send value through all output translators

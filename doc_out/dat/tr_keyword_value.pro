@@ -18,8 +18,7 @@
 ;
 ; ARGUMENTS:
 ;  INPUT:
-;	dd:		Data descriptor.  If an array, only the first element is 
-;			considered.
+;	dd:		Data descriptor.
 ;
 ;	keyword:	Keyword to look up.
 ;
@@ -97,7 +96,7 @@ end
 function tr_keyword_value, dd, keyword
 @core.include
 
- _dd = cor_dereference(dd[0])
+ _dd = cor_dereference(dd)
 
  ;----------------------------------------------------------------------
  ; first look for transient keyval match
