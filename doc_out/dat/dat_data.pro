@@ -25,7 +25,10 @@
 ;
 ; KEYWORDS:
 ;  INPUT: 
-;	samples:  Samping indices.  If set, only these data elements are
+;	abscissa: If set, the abscissa array is returned instead of the data 
+;		  array.
+;
+;	samples:  Sampling indices.  If set, only these data elements are
 ;		  returned.  May be 1D or the same number of dimensions as
 ;		  the data array.   
 ;
@@ -60,14 +63,14 @@
 ;	
 ;-
 ;=============================================================================
-function dat_data, dd, samples=_samples, nd=nd, true=true, noevent=noevent
+function dat_data, dd, samples=_samples, offset=offset, $
+                  nd=nd, true=true, noevent=noevent, abscissa=_abscissa
 @core.include
  nv_notify, dd, type = 1, noevent=noevent
  _dd = cor_dereference(dd)
 
  sampled = 0
-
- if(NOT ptr_valid(_dd.data_dap)) then return, 0
+ if(NOT keyword_set(offset)) then offset = 0
 
  ;-------------------------------------------------------------------------
  ; If there is a sampling function, but no samples are given, then 
@@ -95,7 +98,7 @@ function dat_data, dd, samples=_samples, nd=nd, true=true, noevent=noevent
    samples = _samples
    if(keyword_set(_dd.sampling_fn)) then $
       samples = call_function(_dd.sampling_fn, dd, samples, $
-                                              *(_dd.sampling_fn_data_p))
+                                                     dat_sampling_data(_dd))
 
    ; - - - - - - - - - - - - - - - - -
    ; convert samples to 1D
@@ -105,7 +108,7 @@ function dat_data, dd, samples=_samples, nd=nd, true=true, noevent=noevent
    if((n_elements(sdim) NE 1) OR keyword_set(nd)) then $
                                  samples = nd_to_w(*(_dd.dim_p), samples)
   end
-
+ if(keyword_set(samples)) then samples = samples + offset
 
 
  ;-------------------------------------------------------------------------
@@ -114,7 +117,8 @@ function dat_data, dd, samples=_samples, nd=nd, true=true, noevent=noevent
  ;  files.  The problem is that we need to know whether to reload a data 
  ;  array that has previously been subsampled.
  ;-------------------------------------------------------------------------
- if(NOT data_archive_defined(_dd.data_dap, _dd.dap_index)) then dat_load_data, dd
+ if(NOT data_archive_defined(_dd.data_dap, _dd.dap_index)) then $
+                                      dat_load_data, dd, sample=samples
  _dd = cor_dereference(dd)
 
  ;-------------------------------------------------------------------------
@@ -123,12 +127,13 @@ function dat_data, dd, samples=_samples, nd=nd, true=true, noevent=noevent
  if(NOT keyword_set(_dd.compress)) then $
   begin
    data = data_archive_get(_dd.data_dap, _dd.dap_index, samples=samples)
+   abscissa = data_archive_get(_dd.abscissa_dap, _dd.dap_index, samples=samples)
    if(keyword_set(data)) then sampled = 1
   end $
  else $
   begin
    data = data_archive_get(_dd.data_dap, _dd.dap_index)
-   data = call_function('dat_uncompress_data_' + _dd.compress, _dd, data)
+   data = call_function('dat_uncompress_data_' + _dd.compress, _dd, data, abscissa=abscissa)
   end
 
 
@@ -137,7 +142,11 @@ function dat_data, dd, samples=_samples, nd=nd, true=true, noevent=noevent
  ;-------------------------------------------------------------------------
  if(defined(samples)) then $
   begin
-   if(NOT sampled) then data = data[samples]
+   if(NOT sampled) then $
+    begin
+     data = data[samples]
+     if(keyword_set(abscissa)) then abscissa = abscissa[samples]
+    end
 
    w = where(samples EQ -1)
    if(w[0] NE -1) then samples[w] = 0
@@ -148,11 +157,15 @@ function dat_data, dd, samples=_samples, nd=nd, true=true, noevent=noevent
  ; If possible, reorganize to the proper dimensions.  This is not possible
  ; if the data array is being subsampled.
  ;-------------------------------------------------------------------------
- if(full_array) then data = reform(data, *_dd.dim_p, /over)
+ if(full_array) then $
+  begin
+   data = reform(data, *_dd.dim_p, /over)
+   if(keyword_set(abscissa)) then abscissa = reform(abscissa, *_dd.dim_p, /over)
+  end
 
 
  ;-------------------------------------------------------------------------
- ; compute data ranges
+ ; compute data ranges -- not accurate if data array is being subsampled
  ;-------------------------------------------------------------------------
  max = max(data)
  min = min(data)
@@ -161,6 +174,16 @@ function dat_data, dd, samples=_samples, nd=nd, true=true, noevent=noevent
  if(min LT _dd.min) then _dd.min = min
 
  cor_rereference, dd, _dd
+
+ ;-------------------------------------------------------------------------
+ ; get abscissa
+ ;-------------------------------------------------------------------------
+ if(keyword_set(abscissa)) then _abscissa = abscissa $
+ else $
+  begin
+   if(keyword_set(samples)) then _abscissa = samples $
+   else _abscissa = lindgen(*_dd.dim_p)
+  end
 
  return, data
 end
