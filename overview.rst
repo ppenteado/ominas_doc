@@ -75,3 +75,33 @@ batch files and run autonomously. There is also a graphical
 interface called `GRIM <./gr/index.html>`
 (GRaphical Interface to oMinas).
 
+    Architecture
+    ------------
+    The following diagram illustrates the relationships among the
+    various components of a OMINAS installation.
+
+    .. image:: arch.png
+
+    The core OMINAS code is completely independent of the source of
+    the data and the type of file in which it is stored. Those details
+    are configured based on the intended purpose of a particular
+    OMINAS installation. For example, the Cassini ISS installation
+    contains configuration code that reads and writes VICAR image
+    files and SPICE kernels.
+
+    The separation between the data processing and I/O is maintained
+    by a portion of the OMINAS system called NV. NV uses
+    application-specific configuration tables to determine how to
+    transform ancillary data from external sources into the standard
+    data objects recognized in OMINAS. NV is described in detail in
+    nv_description.txt.
+
+    The OMINAS object library defines and manipulates the the basic
+    data objects used to describe the various entities -- cameras,
+    planets, rings, etc., -- of interest to the user. The object
+    library is described in lib_description.txt.
+
+    The typical OMINAS user will operate at the command level, which
+    consists of the image display program `TVIM`, the NV I/O commands `NV_READ` and 
+    `NV_WRITE`, and a set of programs based on the underlying object library and utility
+    routines referred to as `PG <./com/pg/index.html>`.
