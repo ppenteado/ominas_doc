@@ -35,21 +35,21 @@ libdata[libdataItem++] = new Array("obj/pnt/_pnt_resize.html", "_pnt_resize.pro"
 libdata[libdataItem++] = new Array("obj/tools/abcorr.html", "abcorr.pro", '.pro file in <a href="obj/tools/dir-overview.html">obj/tools/ directory</a>', "abcorr.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/tools/abcorr.html#abcorr", "abcorr", 'routine in <a href="obj/tools/abcorr.html">abcorr.pro</a>', "abcorr.pro", "", "abcorr", "	Performs stellar aberration and light-travel-time corrections.    ", "citerateepsilonfastobs_bxArray(nt) of any subclass of BODY describing the targets.   targ_bx", "NV/LIB/TOOLS", "       Written by:     Spitale   ");
+  libdata[libdataItem++] = new Array("obj/tools/abcorr.html#abcorr", "abcorr", 'routine in <a href="obj/tools/abcorr.html">abcorr.pro</a>', "abcorr.pro", "", "abcorr", "	Performs stellar aberration and light-travel-time corrections.    ", "citerateepsilonfastobs_bx  Any subclass of BODY describing the observer.   targ_bx0Array(nt) of any subclass of BODY describing the targets.   ", "NV/LIB/TOOLS", "       Written by:     Spitale   	New target descriptors.     ");
   
   
 
 libdata[libdataItem++] = new Array("obj/arr/arr_create_descriptors.html", "arr_create_descriptors.pro", '.pro file in <a href="obj/arr/dir-overview.html">obj/arr/ directory</a>', "arr_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/arr/arr_create_descriptors.html#arr_create_descriptors", "arr_create_descriptors", 'routine in <a href="obj/arr/arr_create_descriptors.html">arr_create_descriptors.pro</a>', "arr_create_descriptors.pro", "", "arr_create_descriptors", "	Init method for the ARRAY class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   ardStation descriptor(s) to initialize, instead of creating new 		ones.   abbrevusernametasksudataunameprimaryArray (n) of primary strings.   surface_ptsn     Number of array descriptors.   end_keywords", "NV/LIB/arr", "       Written by:     Spitale  	Adapted by:	Spitale, 5/2016          An array (n) of array descriptors.   STATUS:        Completed.    ");
+  libdata[libdataItem++] = new Array("obj/arr/arr_create_descriptors.html#arr_create_descriptors", "arr_create_descriptors", 'routine in <a href="obj/arr/arr_create_descriptors.html">arr_create_descriptors.pro</a>', "arr_create_descriptors.pro", "", "arr_create_descriptors", "	Init method for the ARRAY class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   ardStation descriptor(s) to initialize, instead of creating new 		ones.   abbrevusernametasksudataunameassoc_xdprimaryArray (n) of primary strings.   surface_ptsn     Number of array descriptors.   end_keywords", "NV/LIB/arr", "       Written by:     Spitale  	Adapted by:	Spitale, 5/2016          An array (n) of array descriptors.   STATUS:        Completed.    ");
   
   
 
 libdata[libdataItem++] = new Array("obj/arr/arr_primary.html", "arr_primary.pro", '.pro file in <a href="obj/arr/dir-overview.html">obj/arr/ directory</a>', "arr_primary.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/arr/arr_primary.html#arr_primary", "arr_primary", 'routine in <a href="obj/arr/arr_primary.html">arr_primary.pro</a>', "arr_primary.pro", "", "arr_primary", "	Returns the primary string for each given array descriptor.    ", "noeventard Array (nt) of ARRAY descriptors.   ", "NV/LIB/arr", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Primary string associated with each given array descriptor.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("obj/arr/arr_primary.html#arr_primary", "arr_primary", 'routine in <a href="obj/arr/arr_primary.html">arr_primary.pro</a>', "arr_primary.pro", "", "arr_primary", "	Returns the primary descriptor for each given array descriptor.    ", "noeventard Array (nt) of ARRAY descriptors.   ", "NV/LIB/arr", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Primary descriptors associated with each given array descriptor.    STATUS: 	Complete    ");
   
   
 
@@ -63,14 +63,14 @@ libdata[libdataItem++] = new Array("obj/arr/arr_replicate.html", "arr_replicate.
 libdata[libdataItem++] = new Array("obj/arr/arr_set_primary.html", "arr_set_primary.pro", '.pro file in <a href="obj/arr/dir-overview.html">obj/arr/ directory</a>', "arr_set_primary.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/arr/arr_set_primary.html#arr_set_primary", "arr_set_primary", 'routine in <a href="obj/arr/arr_set_primary.html">arr_set_primary.pro</a>', "arr_set_primary.pro", "", "arr_set_primary", "	Replaces the primary string in each given array descriptor.    ", "noeventardArray (nt) of ARRAY descriptors.   primaryArray (nt) of primary strings.   ", "NV/LIB/arr", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
+  libdata[libdataItem++] = new Array("obj/arr/arr_set_primary.html#arr_set_primary", "arr_set_primary", 'routine in <a href="obj/arr/arr_set_primary.html">arr_set_primary.pro</a>', "arr_set_primary.pro", "", "arr_set_primary", "	Replaces the primary string in each given array descriptor.    ", "noeventardArray (nt) of ARRAY descriptors.   primaryArray (nt) of primary descriptors.   ", "NV/LIB/arr", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
   
   
 
 libdata[libdataItem++] = new Array("obj/arr/arr_set_surface_pts.html", "arr_set_surface_pts.pro", '.pro file in <a href="obj/arr/dir-overview.html">obj/arr/ directory</a>', "arr_set_surface_pts.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/arr/arr_set_surface_pts.html#arr_set_surface_pts", "arr_set_surface_pts", 'routine in <a href="obj/arr/arr_set_surface_pts.html">arr_set_surface_pts.pro</a>', "arr_set_surface_pts.pro", "", "arr_set_surface_pts", "	Replaces the surface_pts vector in each given array descriptor.    ", "noeventardArray (nt) of ARRAY descriptors.   surface_ptsArray (nv,3,nt) of surface_pts vectors.   ", "NV/LIB/arr", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
+  libdata[libdataItem++] = new Array("obj/arr/arr_set_surface_pts.html#arr_set_surface_pts", "arr_set_surface_pts", 'routine in <a href="obj/arr/arr_set_surface_pts.html">arr_set_surface_pts.pro</a>', "arr_set_surface_pts.pro", "", "arr_set_surface_pts", "	Replaces the surface_pts vector in each given array descriptor.    ", "noeventard	Array (nt) of ARRAY descriptors.   surface_ptsArray (nv,3,nt) of surface_pts vectors.   ", "NV/LIB/arr", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
   
   
 
@@ -98,7 +98,16 @@ libdata[libdataItem++] = new Array("obj/bod/bod_avel.html", "bod_avel.pro", '.pr
 libdata[libdataItem++] = new Array("obj/bod/bod_body_to_inertial.html", "bod_body_to_inertial.pro", '.pro file in <a href="obj/bod/dir-overview.html">obj/bod/ directory</a>', "bod_body_to_inertial.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/bod/bod_body_to_inertial.html#bod_body_to_inertial", "bod_body_to_inertial", 'routine in <a href="obj/bod/bod_body_to_inertial.html">bod_body_to_inertial.pro</a>', "bod_body_to_inertial.pro", "", "bod_body_to_inertial", "	Transforms the given column vectors from the body coordinate 	system to the inertial coordinate system.    ", "bdv", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998   	Array (nv,3,nt) of column vectors in the bx inertial frame.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("obj/bod/bod_body_to_inertial.html#bod_body_to_inertial", "bod_body_to_inertial", 'routine in <a href="obj/bod/bod_body_to_inertial.html">bod_body_to_inertial.pro</a>', "bod_body_to_inertial.pro", "", "bod_body_to_inertial", "	Transforms the given column vectors from the body coordinate 	system to the inertial coordinate system.    ", "_subbdv", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998   	Array (nv,3,nt) of column vectors in the bx inertial frame.    STATUS: 	Complete    ");
+  
+  libdata[libdataItem++] = new Array("obj/bod/bod_body_to_inertial.html#bod_body_to_inertial", "bod_body_to_inertial", 'routine in <a href="obj/bod/bod_body_to_inertial.html">bod_body_to_inertial.pro</a>', "bod_body_to_inertial.pro", "", "bod_body_to_inertial", "", "_subbdv", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("obj/bod/bod_body_to_inertial_default.html", "bod_body_to_inertial_default.pro", '.pro file in <a href="obj/bod/dir-overview.html">obj/bod/ directory</a>', "bod_body_to_inertial_default.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("obj/bod/bod_body_to_inertial_default.html#bod_body_to_inertial_default", "bod_body_to_inertial_default", 'routine in <a href="obj/bod/bod_body_to_inertial_default.html">bod_body_to_inertial_default.pro</a>', "bod_body_to_inertial_default.pro", "", "bod_body_to_inertial_default", "	Transforms the given column vectors from the body coordinate 	system to the inertial coordinate system.    ", "_subbdv", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998   	Array (nv,3,nt) of column vectors in the bx inertial frame.    STATUS: 	Complete    ");
   
   
 
@@ -107,12 +116,16 @@ libdata[libdataItem++] = new Array("obj/bod/bod_body_to_inertial_pos.html", "bod
   
   libdata[libdataItem++] = new Array("obj/bod/bod_body_to_inertial_pos.html#bod_body_to_inertial_pos", "bod_body_to_inertial_pos", 'routine in <a href="obj/bod/bod_body_to_inertial_pos.html">bod_body_to_inertial_pos.pro</a>', "bod_body_to_inertial_pos.pro", "", "bod_body_to_inertial_pos", "       Transforms the given column position vectors from the body        coordinate system to the inertial coordinate system.    ", "bdv", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998          Array (nv,3,nt) of column position vectors in the inertial        frame.    STATUS: 	Complete    ");
   
+  libdata[libdataItem++] = new Array("obj/bod/bod_body_to_inertial_pos.html#__bod_body_to_inertial_pos", "__bod_body_to_inertial_pos", 'routine in <a href="obj/bod/bod_body_to_inertial_pos.html">bod_body_to_inertial_pos.pro</a>', "bod_body_to_inertial_pos.pro", "", "__bod_body_to_inertial_pos", "", "bdv", "          -1", "");
+  
   
 
 libdata[libdataItem++] = new Array("obj/bod/bod_body_to_inertial_vel.html", "bod_body_to_inertial_vel.pro", '.pro file in <a href="obj/bod/dir-overview.html">obj/bod/ directory</a>', "bod_body_to_inertial_vel.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("obj/bod/bod_body_to_inertial_vel.html#bod_body_to_inertial_vel", "bod_body_to_inertial_vel", 'routine in <a href="obj/bod/bod_body_to_inertial_vel.html">bod_body_to_inertial_vel.pro</a>', "bod_body_to_inertial_vel.pro", "", "bod_body_to_inertial_vel", "       Transforms the given column velocity vectors from the body        coordinate system to the inertial coordinate system.    ", "bdv", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998          Array (nv,3,nt) of column velocity vectors in the inertial        frame.    STATUS: 	Complete    ");
+  
+  libdata[libdataItem++] = new Array("obj/bod/bod_body_to_inertial_vel.html#bod_body_to_inertial_vel", "bod_body_to_inertial_vel", 'routine in <a href="obj/bod/bod_body_to_inertial_vel.html">bod_body_to_inertial_vel.pro</a>', "bod_body_to_inertial_vel.pro", "", "bod_body_to_inertial_vel", "", "bdv", "          -1", "");
   
   
 
@@ -133,7 +146,7 @@ libdata[libdataItem++] = new Array("obj/bod/bod_body_to_radec_vel.html", "bod_bo
 libdata[libdataItem++] = new Array("obj/bod/bod_create_descriptors.html", "bod_create_descriptors.pro", '.pro file in <a href="obj/bod/dir-overview.html">obj/bod/ directory</a>', "bod_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/bod/bod_create_descriptors.html#bod_create_descriptors", "bod_create_descriptors", 'routine in <a href="obj/bod/bod_create_descriptors.html">bod_create_descriptors.pro</a>', "bod_create_descriptors.pro", "", "bod_create_descriptors", "	Init method for the BODY class.    ", "crdbdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarraynNumber of descriptors to create.   end_keywords", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016  	Newly created or or freshly initialized body descriptors, depending 	on the presence of the bd keyword.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("obj/bod/bod_create_descriptors.html#bod_create_descriptors", "bod_create_descriptors", 'routine in <a href="obj/bod/bod_create_descriptors.html">bod_create_descriptors.pro</a>', "bod_create_descriptors.pro", "", "bod_create_descriptors", "	Init method for the BODY class.    ", "crdbdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarraynNumber of descriptors to create.   end_keywords", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016  	Newly created or or freshly initialized body descriptors, depending 	on the presence of the bd keyword.    STATUS: 	Complete    ");
   
   
 
@@ -158,6 +171,13 @@ libdata[libdataItem++] = new Array("obj/bod/bod_get_radec_ranges.html", "bod_get
   
   
 
+libdata[libdataItem++] = new Array("obj/bod/bod_ib_data.html", "bod_ib_data.pro", '.pro file in <a href="obj/bod/dir-overview.html">obj/bod/ directory</a>', "bod_ib_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("obj/bod/bod_ib_data.html#bod_ib_data", "bod_ib_data", 'routine in <a href="obj/bod/bod_ib_data.html">bod_ib_data.pro</a>', "bod_ib_data.pro", "", "bod_ib_data", "	Returns the function data for a body descriptor.    ", "noeventbd", "NV/LIB/BOD", " 	Adapted by:	Spitale, 7/2016   	Function data associated with the given body descriptor.    STATUS: 	Complete    ");
+  
+  
+
 libdata[libdataItem++] = new Array("obj/bod/bod_inertial.html", "bod_inertial.pro", '.pro file in <a href="obj/bod/dir-overview.html">obj/bod/ directory</a>', "bod_inertial.pro", "", "", "", "", "          -1", "");
   
   
@@ -168,7 +188,16 @@ libdata[libdataItem++] = new Array("obj/bod/bod_inertial.html", "bod_inertial.pr
 libdata[libdataItem++] = new Array("obj/bod/bod_inertial_to_body.html", "bod_inertial_to_body.pro", '.pro file in <a href="obj/bod/dir-overview.html">obj/bod/ directory</a>', "bod_inertial_to_body.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/bod/bod_inertial_to_body.html#bod_inertial_to_body", "bod_inertial_to_body", 'routine in <a href="obj/bod/bod_inertial_to_body.html">bod_inertial_to_body.pro</a>', "bod_inertial_to_body.pro", "", "bod_inertial_to_body", "	Transforms the given column vectors from the inertial coordinate 	system to the body coordinate system.    ", "bdv", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Array (nv,3,nt) of column vectors in the bx body frame.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("obj/bod/bod_inertial_to_body.html#bod_inertial_to_body", "bod_inertial_to_body", 'routine in <a href="obj/bod/bod_inertial_to_body.html">bod_inertial_to_body.pro</a>', "bod_inertial_to_body.pro", "", "bod_inertial_to_body", "	Transforms the given column vectors from the inertial coordinate 	system to the body coordinate system.    ", "_subbdv", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Array (nv,3,nt) of column vectors in the bx body frame.    STATUS: 	Complete    ");
+  
+  libdata[libdataItem++] = new Array("obj/bod/bod_inertial_to_body.html#bod_inertial_to_body", "bod_inertial_to_body", 'routine in <a href="obj/bod/bod_inertial_to_body.html">bod_inertial_to_body.pro</a>', "bod_inertial_to_body.pro", "", "bod_inertial_to_body", "", "_subbdv", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("obj/bod/bod_inertial_to_body_default.html", "bod_inertial_to_body_default.pro", '.pro file in <a href="obj/bod/dir-overview.html">obj/bod/ directory</a>', "bod_inertial_to_body_default.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("obj/bod/bod_inertial_to_body_default.html#bod_inertial_to_body_default", "bod_inertial_to_body_default", 'routine in <a href="obj/bod/bod_inertial_to_body_default.html">bod_inertial_to_body_default.pro</a>', "bod_inertial_to_body_default.pro", "", "bod_inertial_to_body_default", "	Transforms the given column vectors from the inertial coordinate 	system to the body coordinate system.    ", "_subbdv", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Array (nv,3,nt) of column vectors in the bx body frame.    STATUS: 	Complete    ");
   
   
 
@@ -177,12 +206,16 @@ libdata[libdataItem++] = new Array("obj/bod/bod_inertial_to_body_pos.html", "bod
   
   libdata[libdataItem++] = new Array("obj/bod/bod_inertial_to_body_pos.html#bod_inertial_to_body_pos", "bod_inertial_to_body_pos", 'routine in <a href="obj/bod/bod_inertial_to_body_pos.html">bod_inertial_to_body_pos.pro</a>', "bod_inertial_to_body_pos.pro", "", "bod_inertial_to_body_pos", "       Transforms the given column position vectors from the inertial        coordinate system to the body coordinate system.    ", "bdv", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016          Array (nv,3,nt) of column position vectors in the bx body        frame.    STATUS: 	Complete    ");
   
+  libdata[libdataItem++] = new Array("obj/bod/bod_inertial_to_body_pos.html#__bod_inertial_to_body_pos", "__bod_inertial_to_body_pos", 'routine in <a href="obj/bod/bod_inertial_to_body_pos.html">bod_inertial_to_body_pos.pro</a>', "bod_inertial_to_body_pos.pro", "", "__bod_inertial_to_body_pos", "", "bdv", "          -1", "");
+  
   
 
 libdata[libdataItem++] = new Array("obj/bod/bod_inertial_to_body_vel.html", "bod_inertial_to_body_vel.pro", '.pro file in <a href="obj/bod/dir-overview.html">obj/bod/ directory</a>', "bod_inertial_to_body_vel.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("obj/bod/bod_inertial_to_body_vel.html#bod_inertial_to_body_vel", "bod_inertial_to_body_vel", 'routine in <a href="obj/bod/bod_inertial_to_body_vel.html">bod_inertial_to_body_vel.pro</a>', "bod_inertial_to_body_vel.pro", "", "bod_inertial_to_body_vel", "       Transforms the given column velocity vectors from the inertial        coordinate system to the body coordinate system.    ", "bdv", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016          Array (nv,3,nt) of column velocity vectors in the bx body        frame.    STATUS: 	Complete    ");
+  
+  libdata[libdataItem++] = new Array("obj/bod/bod_inertial_to_body_vel.html#__bod_inertial_to_body_vel", "__bod_inertial_to_body_vel", 'routine in <a href="obj/bod/bod_inertial_to_body_vel.html">bod_inertial_to_body_vel.pro</a>', "bod_inertial_to_body_vel.pro", "", "__bod_inertial_to_body_vel", "", "bdv", "          -1", "");
   
   
 
@@ -288,6 +321,13 @@ libdata[libdataItem++] = new Array("obj/bod/bod_set_dlibdt.html", "bod_set_dlibd
   
   
   libdata[libdataItem++] = new Array("obj/bod/bod_set_dlibdt.html#bod_set_dlibdt", "bod_set_dlibdt", 'routine in <a href="obj/bod/bod_set_dlibdt.html">bod_set_dlibdt.pro</a>', "bod_set_dlibdt.pro", "", "bod_set_dlibdt", "       Replaces the frequency of each libration vector for each given        body descriptor.    ", "noeventbddlibdt Array (ndv,nt) of new frequencies.   ", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
+  
+  
+
+libdata[libdataItem++] = new Array("obj/bod/bod_set_ib_data.html", "bod_set_ib_data.pro", '.pro file in <a href="obj/bod/dir-overview.html">obj/bod/ directory</a>', "bod_set_ib_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("obj/bod/bod_set_ib_data.html#bod_set_ib_data", "bod_set_ib_data", 'routine in <a href="obj/bod/bod_set_ib_data.html">bod_set_ib_data.pro</a>', "bod_set_ib_data.pro", "", "bod_set_ib_data", "	Replaces the function data for a body descriptor.    ", "noeventbd Body descriptor.   data New function data.   ", "NV/LIB/BOD", " 	Adapted by:	Spitale, 7/2016   ");
   
   
 
@@ -408,7 +448,7 @@ libdata[libdataItem++] = new Array("obj/cam/cam_body_to_focal.html", "cam_body_t
 libdata[libdataItem++] = new Array("obj/cam/cam_create_descriptors.html", "cam_create_descriptors.pro", '.pro file in <a href="obj/cam/dir-overview.html">obj/cam/ directory</a>', "cam_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/cam/cam_create_descriptors.html#cam_create_descriptors", "cam_create_descriptors", 'routine in <a href="obj/cam/cam_create_descriptors.html">cam_create_descriptors.pro</a>', "cam_create_descriptors.pro", "", "cam_create_descriptors", "	Init method for the CAMERA class.    ", "crdbdcdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayfn_focal_to_imagefn_image_to_focalfn_data_pscaleoaxisexposuresizefn_psffiltersfn_body_to_imagefn_body_to_inertialnNumber of descriptors to create.   end_keywords", "NV/LIB/CAM", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized camera descriptors, depending 	on the presence of the cd keyword.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("obj/cam/cam_create_descriptors.html#cam_create_descriptors", "cam_create_descriptors", 'routine in <a href="obj/cam/cam_create_descriptors.html">cam_create_descriptors.pro</a>', "cam_create_descriptors.pro", "", "cam_create_descriptors", "	Init method for the CAMERA class.    ", "crdbdcdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayfn_focal_to_imagefn_image_to_focalfi_datascaleoaxisexposuresizefn_psffiltersfn_body_to_imagefn_body_to_inertialnNumber of descriptors to create.   end_keywords", "NV/LIB/CAM", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized camera descriptors, depending 	on the presence of the cd keyword.    STATUS: 	Complete    ");
   
   
 
@@ -426,17 +466,17 @@ libdata[libdataItem++] = new Array("obj/cam/cam_exposure.html", "cam_exposure.pr
   
   
 
+libdata[libdataItem++] = new Array("obj/cam/cam_fi_data.html", "cam_fi_data.pro", '.pro file in <a href="obj/cam/dir-overview.html">obj/cam/ directory</a>', "cam_fi_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("obj/cam/cam_fi_data.html#cam_fi_data", "cam_fi_data", 'routine in <a href="obj/cam/cam_fi_data.html">cam_fi_data.pro</a>', "cam_fi_data.pro", "", "cam_fi_data", "	Returns the focal/image function data for a camera descriptor.    ", "noeventcd", "NV/LIB/CAM", " 	Adapted by:	Spitale, 7/2016; adapted from cam_fi_data_p   	Function data associated with the given camera descriptor.    STATUS: 	Complete    ");
+  
+  
+
 libdata[libdataItem++] = new Array("obj/cam/cam_filters.html", "cam_filters.pro", '.pro file in <a href="obj/cam/dir-overview.html">obj/cam/ directory</a>', "cam_filters.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("obj/cam/cam_filters.html#cam_filters", "cam_filters", 'routine in <a href="obj/cam/cam_filters.html">cam_filters.pro</a>', "cam_filters.pro", "", "cam_filters", "	Returns the filter name(s) for a given camera descriptor.    ", "noeventcd Camera descriptor.   i", "NV/LIB/CAM", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Names of requested filters.    STATUS: 	Complete    ");
-  
-  
-
-libdata[libdataItem++] = new Array("obj/cam/cam_fn_data_p.html", "cam_fn_data_p.pro", '.pro file in <a href="obj/cam/dir-overview.html">obj/cam/ directory</a>', "cam_fn_data_p.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("obj/cam/cam_fn_data_p.html#cam_fn_data_p", "cam_fn_data_p", 'routine in <a href="obj/cam/cam_fn_data_p.html">cam_fn_data_p.pro</a>', "cam_fn_data_p.pro", "", "cam_fn_data_p", "	For each given camera descriptor, returns the pointer to the        generic data intended to be used by the user-defined focal        <--> image transformation functions.    ", "noeventcd Array (nt) of CAMERA descriptors.   ", "NV/LIB/CAM", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016          Pointer to user defined data associated with each given camera        descriptor.    STATUS: 	Complete    ");
   
   
 
@@ -622,17 +662,17 @@ libdata[libdataItem++] = new Array("obj/cam/cam_set_exposure.html", "cam_set_exp
   
   
 
+libdata[libdataItem++] = new Array("obj/cam/cam_set_fi_data.html", "cam_set_fi_data.pro", '.pro file in <a href="obj/cam/dir-overview.html">obj/cam/ directory</a>', "cam_set_fi_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("obj/cam/cam_set_fi_data.html#cam_set_fi_data", "cam_set_fi_data", 'routine in <a href="obj/cam/cam_set_fi_data.html">cam_set_fi_data.pro</a>', "cam_set_fi_data.pro", "", "cam_set_fi_data", "	Replaces the focal/image function data for a camera descriptor.    ", "noeventcd Camera descriptor.   data New function data.   ", "NV/LIB/CAM", " 	Adapted by:	Spitale, 7/2016; adapted from cam_set_fi_data_p   ");
+  
+  
+
 libdata[libdataItem++] = new Array("obj/cam/cam_set_filters.html", "cam_set_filters.pro", '.pro file in <a href="obj/cam/dir-overview.html">obj/cam/ directory</a>', "cam_set_filters.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("obj/cam/cam_set_filters.html#cam_set_filters", "cam_set_filters", 'routine in <a href="obj/cam/cam_set_filters.html">cam_set_filters.pro</a>', "cam_set_filters.pro", "", "cam_set_filters", "	Sets the filter name(s) for a given camera descriptor.    ", "noeventcd Camera descriptor.   filteri", "NV/LIB/CAM", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
-  
-  
-
-libdata[libdataItem++] = new Array("obj/cam/cam_set_fn_data_p.html", "cam_set_fn_data_p.pro", '.pro file in <a href="obj/cam/dir-overview.html">obj/cam/ directory</a>', "cam_set_fn_data_p.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("obj/cam/cam_set_fn_data_p.html#cam_set_fn_data_p", "cam_set_fn_data_p", 'routine in <a href="obj/cam/cam_set_fn_data_p.html">cam_set_fn_data_p.pro</a>', "cam_set_fn_data_p.pro", "", "cam_set_fn_data_p", "       For each given camera descriptor, sets the pointer to the        generic data intended to be used by the user-defined focal        <--> image transformation functions.    ", "noeventcdArray (nt) of CAMERA descriptors.   fn_data_p", "NV/LIB/CAM", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
   
   
 
@@ -852,6 +892,13 @@ libdata[libdataItem++] = new Array("obj/cor/cor_add_task.html", "cor_add_task.pr
   
   
 
+libdata[libdataItem++] = new Array("obj/cor/cor_assoc_xd.html", "cor_assoc_xd.pro", '.pro file in <a href="obj/cor/dir-overview.html">obj/cor/ directory</a>', "cor_assoc_xd.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("obj/cor/cor_assoc_xd.html#cor_assoc_xd", "cor_assoc_xd", 'routine in <a href="obj/cor/cor_assoc_xd.html">cor_assoc_xd.pro</a>', "cor_assoc_xd.pro", "", "cor_assoc_xd", "	Returns the associated descriptor for a CORE object.    ", "noeventIf set, no event is generated.   crdCORE object.   ", "NV/SYS/COR", " 	Written by:	Spitale, 11/2015   	The associated descriptor for the POINT object.    STATUS: 	Complete    SEE ALSO: 	cor_set_assoc_xd     ");
+  
+  
+
 libdata[libdataItem++] = new Array("obj/cor/cor_class.html", "cor_class.pro", '.pro file in <a href="obj/cor/dir-overview.html">obj/cor/ directory</a>', "cor_class.pro", "", "", "", "", "          -1", "");
   
   
@@ -862,7 +909,7 @@ libdata[libdataItem++] = new Array("obj/cor/cor_class.html", "cor_class.pro", '.
 libdata[libdataItem++] = new Array("obj/cor/cor_create_descriptors.html", "cor_create_descriptors.pro", '.pro file in <a href="obj/cor/dir-overview.html">obj/cor/ directory</a>', "cor_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/cor/cor_create_descriptors.html#cor_create_descriptors", "cor_create_descriptors", 'routine in <a href="obj/cor/cor_create_descriptors.html">cor_create_descriptors.pro</a>', "cor_create_descriptors.pro", "", "cor_create_descriptors", "	Init method for the CORE class.    ", "crdCore descriptor(s) to initialize, instead of creating a new one.   abbrevusernametasksudataunamen Number of descriptors to create.   end_keywords", "NV/LIB/COR", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized core descriptors depending 	on the presence of the crd keyword.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("obj/cor/cor_create_descriptors.html#cor_create_descriptors", "cor_create_descriptors", 'routine in <a href="obj/cor/cor_create_descriptors.html">cor_create_descriptors.pro</a>', "cor_create_descriptors.pro", "", "cor_create_descriptors", "	Init method for the CORE class.    ", "crdCore descriptor(s) to initialize, instead of creating a new one.   abbrevusernametasksudataunameassoc_xdn Number of descriptors to create.   end_keywords", "NV/LIB/COR", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized core descriptors depending 	on the presence of the crd keyword.    STATUS: 	Complete    ");
   
   
 
@@ -919,6 +966,13 @@ libdata[libdataItem++] = new Array("obj/cor/cor_select.html", "cor_select.pro", 
   
   
   libdata[libdataItem++] = new Array("obj/cor/cor_select.html#cor_select", "cor_select", 'routine in <a href="obj/cor/cor_select.html">cor_select.pro</a>', "cor_select.pro", "", "cor_select", "	Selects descriptors based on given criteria.    ", "indicesrmnoeventnameclasscrx Array of descriptors of any subclass of CORE.   key Array of key to select.   ", "NV/SYS/COR", " 	Written by:	Spitale, 1/1998  	Rewritten by:	Spitale, 4/2016   	All descriptors in crx whose parameters match the given key. 	0 if no matches found.    STATUS: 	Complete    ");
+  
+  
+
+libdata[libdataItem++] = new Array("obj/cor/cor_set_assoc_xd.html", "cor_set_assoc_xd.pro", '.pro file in <a href="obj/cor/dir-overview.html">obj/cor/ directory</a>', "cor_set_assoc_xd.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("obj/cor/cor_set_assoc_xd.html#cor_set_assoc_xd", "cor_set_assoc_xd", 'routine in <a href="obj/cor/cor_set_assoc_xd.html">cor_set_assoc_xd.pro</a>', "cor_set_assoc_xd.pro", "", "cor_set_assoc_xd", "	Replaces the assoc_xd field in a CORE object.    ", "noeventIf set, no event is generated.   crd	CORE object.   assoc_xdNew assoc_xd.   ", "NV/SYS/COR", " 	Written by:	Spitale		11/2015   ");
   
   
 
@@ -1030,14 +1084,14 @@ libdata[libdataItem++] = new Array("obj/dat/dat_compress_data_mask.html", "dat_c
 libdata[libdataItem++] = new Array("obj/dat/dat_create_descriptors.html", "dat_create_descriptors.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/dat/dat_create_descriptors.html#dat_create_descriptors", "dat_create_descriptors", 'routine in <a href="obj/dat/dat_create_descriptors.html">dat_create_descriptors.pro</a>', "dat_create_descriptors.pro", "", "dat_create_descriptors", "	Creates and initializes a data descriptor.    ", "crdddsilent	If set, messages are suppressed.    abbrevusernametasksudataunamefilenameName of data file.   dimArray giving the dimensions of the data array.   typeInteger giving the type code of the data array.   dataData array.   abscissanhistNumber of past version of the data array to archive. 		If not given, the environment variable NV_NHIST is 		used.  If that is not set, then nhist defaults to 1.   headerHeader array.   filetypeFiletype identifier string.  If not given 			an attempt is made to detect it.   input_fnName of function to read data file.   output_fnName of function to write data file.   keyword_fnName of function to read/write header keywords.   instrumentInstrument string.  If not given an 			attempt is made to detect it.   input_translatorsString array giving the names of the 				input translators.   output_translatorsString array giving the names of the 				output translators.     input_transformsString array giving the names of the 				input transforms.   output_transformsString array giving the names of the 				output transforms.   maintainData maintenance mode.   compressCompression suffix.   tab_translatorsn Number of descriptors to create.   end_keywords", "NV/SYS", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created and initialized data descriptor.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("obj/dat/dat_create_descriptors.html#dat_create_descriptors", "dat_create_descriptors", 'routine in <a href="obj/dat/dat_create_descriptors.html">dat_create_descriptors.pro</a>', "dat_create_descriptors.pro", "", "dat_create_descriptors", "	Creates and initializes a data descriptor.    ", "crdddsilent	If set, messages are suppressed.    abbrevusernametasksudataunameassoc_xdfilenameName of data file.   minmaxdimArray giving the dimensions of the data array.   typeInteger giving the type code of the data array.   dataData array.   abscissanhistNumber of past version of the data array to archive. 		If not given, the environment variable NV_NHIST is 		used.  If that is not set, then nhist defaults to 1.   headerHeader array.   filetypeFiletype identifier string.  If not given 			an attempt is made to detect it.   input_fnName of function to read data file.   output_fnName of function to write data file.   keyword_fnName of function to read/write header keywords.   instrumentInstrument string.  If not given an 			attempt is made to detect it.   input_translatorsString array giving the names of the 				input translators.   output_translatorsString array giving the names of the 				output translators.     input_transformsString array giving the names of the 				input transforms.   output_transformsString array giving the names of the 				output transforms.   maintainData maintenance mode.   compressCompression suffix.   tab_translatorsn Number of descriptors to create.   end_keywords", "NV/SYS", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created and initialized data descriptor.    STATUS: 	Complete    ");
   
   
 
 libdata[libdataItem++] = new Array("obj/dat/dat_data.html", "dat_data.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_data.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/dat/dat_data.html#dat_data", "dat_data", 'routine in <a href="obj/dat/dat_data.html">dat_data.pro</a>', "dat_data.pro", "", "dat_data", "	Returns the data array associated with a data descriptor.    ", "samples Sampling indices.  If set, only these data elements are 		  returned.  May be 1D or the same number of dimensions as 		  the data array.   nd      If set, the samples input is taken to be an ND coordinate 	          rather than a 1D subscript.  dat_data can normally tell 	          the difference automatically, but there is an ambiguity 	          if a single ND point is requested.  In that case, dat_data 	          interprets that as an array of 1D subscripts, unless /nd 	          is set.   true    If set, the actual data array is returned, even if there is 	          a sampling function.   noeventabscissaIf set, the abscissa array is returned instead of the data 		  array.   ddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 2/1998  	Adapted by:	Spitale, 5/2016   	The data array associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_data    ");
+  libdata[libdataItem++] = new Array("obj/dat/dat_data.html#dat_data", "dat_data", 'routine in <a href="obj/dat/dat_data.html">dat_data.pro</a>', "dat_data.pro", "", "dat_data", "	Returns the data array associated with a data descriptor.    ", "samples Sampling indices.  If set, only these data elements are 		  returned.  May be 1D or the same number of dimensions as 		  the data array.   offsetnd      If set, the samples input is taken to be an ND coordinate 	          rather than a 1D subscript.  dat_data can normally tell 	          the difference automatically, but there is an ambiguity 	          if a single ND point is requested.  In that case, dat_data 	          interprets that as an array of 1D subscripts, unless /nd 	          is set.   true    If set, the actual data array is returned, even if there is 	          a sampling function.   noeventabscissaIf set, the abscissa array is returned instead of the data 		  array.   ddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 2/1998  	Adapted by:	Spitale, 5/2016   	The data array associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_data    ");
   
   
 
@@ -1062,17 +1116,17 @@ libdata[libdataItem++] = new Array("obj/dat/dat_dim.html", "dat_dim.pro", '.pro 
   
   
 
+libdata[libdataItem++] = new Array("obj/dat/dat_dim_data.html", "dat_dim_data.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_dim_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("obj/dat/dat_dim_data.html#dat_dim_data", "dat_dim_data", 'routine in <a href="obj/dat/dat_dim_data.html">dat_dim_data.pro</a>', "dat_dim_data.pro", "", "dat_dim_data", "	Returns the dimension function associated with a data descriptor.    ", "noeventddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	The dim_data associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_dim_data    ");
+  
+  
+
 libdata[libdataItem++] = new Array("obj/dat/dat_dim_fn.html", "dat_dim_fn.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_dim_fn.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("obj/dat/dat_dim_fn.html#dat_dim_fn", "dat_dim_fn", 'routine in <a href="obj/dat/dat_dim_fn.html">dat_dim_fn.pro</a>', "dat_dim_fn.pro", "", "dat_dim_fn", "	Returns the dimension function associated with a data descriptor.    ", "noeventddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	The dim_fn associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_dim_fn    ");
-  
-  
-
-libdata[libdataItem++] = new Array("obj/dat/dat_dim_fn_data.html", "dat_dim_fn_data.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_dim_fn_data.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("obj/dat/dat_dim_fn_data.html#dat_dim_fn_data", "dat_dim_fn_data", 'routine in <a href="obj/dat/dat_dim_fn_data.html">dat_dim_fn_data.pro</a>', "dat_dim_fn_data.pro", "", "dat_dim_fn_data", "	Returns the dimension function associated with a data descriptor.    ", "noeventddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	The dim_fn_data associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_dim_fn_data    ");
   
   
 
@@ -1086,7 +1140,7 @@ libdata[libdataItem++] = new Array("obj/dat/dat_filetype.html", "dat_filetype.pr
 libdata[libdataItem++] = new Array("obj/dat/dat_get_value.html", "dat_get_value.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_get_value.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/dat/dat_get_value.html#dat_get_value", "dat_get_value", 'routine in <a href="obj/dat/dat_get_value.html">dat_get_value.pro</a>', "dat_get_value.pro", "", "dat_get_value", "	Calls input translators, supplying the given keyword, and builds 	a list of  returned values.    ", "status	0 if at least one translator call was successful, 			-1 otherwise.    trs	Transient argument string.   tr_disableIf set, dat_get_value returns without performing 			any action.   tr_overrideComma-delimited list of translators to use instead 			of those stored in dd.   tr_firstIf set, dat_get_value returns after the first 			successful translator.   key1key2key3key4key5key6key7key8dd	Data descriptor.   keywordKeyword to pass to translators, describing the 			requested quantity.   end_keywords", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Array of values returned from all successful translator calls. 	Values are returned in the same order that the corresponding 	translators were called.  The dimensions are determined by the 	output of the first translator call.  Dimensions are (dim,n_values), 	where n_objects is the total number of returned values (there may 	be more than one per translator), and dim is the dimensions of 	each value.  If dim == 1, the dimensions of the dat_get_value result 	are (n_values).    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("obj/dat/dat_get_value.html#dat_get_value", "dat_get_value", 'routine in <a href="obj/dat/dat_get_value.html">dat_get_value.pro</a>', "dat_get_value.pro", "", "dat_get_value", "	Calls input translators, supplying the given keyword, and builds 	a list of returned descriptors.    ", "status	0 if at least one translator call was successful, 			-1 otherwise.    trs	Transient argument string.   tr_disableIf set, dat_get_value returns without performing 			any action.   tr_overrideComma-delimited list of translators to use instead 			of those stored in dd.   tr_firstIf set, dat_get_value returns after the first 			successful translator.   tr_nosortBy default, output descriptors are sorted to remove 			those with duplicate names, retaining only the first 			descriptor of a given name for each input data 			descriptor.  /tr_nosort disables this action.   key1key2key3key4key5key6key7key8dd	Data descriptors.  Must all have the same instrument 			string.   keywordKeyword to pass to translators, describing the 			requested quantity.   end_keywords", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Array of descriptors returned from all successful translator calls. 	Descriptors are returned in the same order that the corresponding 	translators were called.  Each translator may produce multiple 	descriptors.    STATUS: 	Complete    ");
   
   
 
@@ -1114,7 +1168,7 @@ libdata[libdataItem++] = new Array("obj/dat/dat_instrument.html", "dat_instrumen
 libdata[libdataItem++] = new Array("obj/dat/dat_load_data.html", "dat_load_data.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_load_data.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/dat/dat_load_data.html#dat_load_data", "dat_load_data", 'routine in <a href="obj/dat/dat_load_data.html">dat_load_data.pro</a>', "dat_load_data.pro", "", "dat_load_data", "	Loads the data array for a given data descriptor.  Adds to 	NV state maintained list if maintain == 1.    ", "sampleddData descriptor to test.   ", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Loaded data array.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("obj/dat/dat_load_data.html#dat_load_data", "dat_load_data", 'routine in <a href="obj/dat/dat_load_data.html">dat_load_data.pro</a>', "dat_load_data.pro", "", "dat_load_data", "	Loads the data array for a given data descriptor.  Adds to 	NV state maintained list if maintain == 1.    ", "sampledataddData descriptor to test.   ", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Loaded data array.    STATUS: 	Complete    ");
   
   
 
@@ -1205,7 +1259,7 @@ libdata[libdataItem++] = new Array("obj/dat/dat_parse_transient_keyvals.html", "
 libdata[libdataItem++] = new Array("obj/dat/dat_put_value.html", "dat_put_value.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_put_value.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/dat/dat_put_value.html#dat_put_value", "dat_put_value", 'routine in <a href="obj/dat/dat_put_value.html">dat_put_value.pro</a>', "dat_put_value.pro", "", "dat_put_value", "	Calls output translators, supplying the given keyword and value.    ", "trs	Transient argument string.   status	0 if at least one translator call was successful, 			-1 otherwise.    tr_disableIf set, dat_get_value returns without performing 			any action.   tr_overrideComma-delimited list of translators to use instead 			of those stored in dd.   tr_firstIf set, dat_get_value returns after the first 			successful translator.   key1key2key3key4key5key6key7key8dd	Data descriptor.   keywordKeyword to pass to translators, describing the 			requested quantity.   value	Value to write through the translators.   end_keywords", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
+  libdata[libdataItem++] = new Array("obj/dat/dat_put_value.html#dat_put_value", "dat_put_value", 'routine in <a href="obj/dat/dat_put_value.html">dat_put_value.pro</a>', "dat_put_value.pro", "", "dat_put_value", "	Calls output translators, supplying the given keyword and value.    ", "trs	Transient argument string.   status	0 if at least one translator call was successful, 			-1 otherwise.    tr_disableIf set, dat_get_value returns without performing 			any action.   tr_overrideComma-delimited list of translators to use instead 			of those stored in dd.   tr_firstIf set, dat_get_value returns after the first 			successful translator.   tr_nosortkey1key2key3key4key5key6key7key8dd	Data descriptor.   keywordKeyword to pass to translators, describing the 			requested quantity.   value	Value to write through the translators.   end_keywords", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
   
   
 
@@ -1237,17 +1291,17 @@ libdata[libdataItem++] = new Array("obj/dat/dat_replicate.html", "dat_replicate.
   
   
 
+libdata[libdataItem++] = new Array("obj/dat/dat_sampling_data.html", "dat_sampling_data.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_sampling_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("obj/dat/dat_sampling_data.html#dat_sampling_data", "dat_sampling_data", 'routine in <a href="obj/dat/dat_sampling_data.html">dat_sampling_data.pro</a>', "dat_sampling_data.pro", "", "dat_sampling_data", "	Returns the sampling function associated with a data descriptor.    ", "noeventddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	The sampling_data associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_sampling_data    ");
+  
+  
+
 libdata[libdataItem++] = new Array("obj/dat/dat_sampling_fn.html", "dat_sampling_fn.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_sampling_fn.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("obj/dat/dat_sampling_fn.html#dat_sampling_fn", "dat_sampling_fn", 'routine in <a href="obj/dat/dat_sampling_fn.html">dat_sampling_fn.pro</a>', "dat_sampling_fn.pro", "", "dat_sampling_fn", "	Returns the sampling function associated with a data descriptor.    ", "noeventddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	The sampling_fn associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_sampling_fn    ");
-  
-  
-
-libdata[libdataItem++] = new Array("obj/dat/dat_sampling_fn_data.html", "dat_sampling_fn_data.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_sampling_fn_data.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("obj/dat/dat_sampling_fn_data.html#dat_sampling_fn_data", "dat_sampling_fn_data", 'routine in <a href="obj/dat/dat_sampling_fn_data.html">dat_sampling_fn_data.pro</a>', "dat_sampling_fn_data.pro", "", "dat_sampling_fn_data", "	Returns the sampling function associated with a data descriptor.    ", "noeventddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	The sampling_fn_data associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_sampling_fn_data    ");
   
   
 
@@ -1265,17 +1319,17 @@ libdata[libdataItem++] = new Array("obj/dat/dat_set_data.html", "dat_set_data.pr
   
   
 
+libdata[libdataItem++] = new Array("obj/dat/dat_set_dim_data.html", "dat_set_dim_data.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_set_dim_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("obj/dat/dat_set_dim_data.html#dat_set_dim_data", "dat_set_dim_data", 'routine in <a href="obj/dat/dat_set_dim_data.html">dat_set_dim_data.pro</a>', "dat_set_dim_data.pro", "", "dat_set_dim_data", "	Replaces the dimension function data associated with a data descriptor.    ", "noeventdd		Data descriptor.   data", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
+  
+  
+
 libdata[libdataItem++] = new Array("obj/dat/dat_set_dim_fn.html", "dat_set_dim_fn.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_set_dim_fn.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("obj/dat/dat_set_dim_fn.html#dat_set_dim_fn", "dat_set_dim_fn", 'routine in <a href="obj/dat/dat_set_dim_fn.html">dat_set_dim_fn.pro</a>', "dat_set_dim_fn.pro", "", "dat_set_dim_fn", "	Replaces the dimension function associated with a data descriptor.    ", "noeventdd	Data descriptor.   dim_fnNew sampling function.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
-  
-  
-
-libdata[libdataItem++] = new Array("obj/dat/dat_set_dim_fn_data.html", "dat_set_dim_fn_data.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_set_dim_fn_data.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("obj/dat/dat_set_dim_fn_data.html#dat_set_dim_fn_data", "dat_set_dim_fn_data", 'routine in <a href="obj/dat/dat_set_dim_fn_data.html">dat_set_dim_fn_data.pro</a>', "dat_set_dim_fn_data.pro", "", "dat_set_dim_fn_data", "	Replaces the dimension function data associated with a data descriptor.    ", "noeventdd		Data descriptor.   dim_fn_dataNew sampling function data.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
   
   
 
@@ -1321,17 +1375,17 @@ libdata[libdataItem++] = new Array("obj/dat/dat_set_nhist.html", "dat_set_nhist.
   
   
 
+libdata[libdataItem++] = new Array("obj/dat/dat_set_sampling_data.html", "dat_set_sampling_data.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_set_sampling_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("obj/dat/dat_set_sampling_data.html#dat_set_sampling_data", "dat_set_sampling_data", 'routine in <a href="obj/dat/dat_set_sampling_data.html">dat_set_sampling_data.pro</a>', "dat_set_sampling_data.pro", "", "dat_set_sampling_data", "	Replaces the sampling function data associated with a data descriptor.    ", "noeventdd		Data descriptor.   data", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
+  
+  
+
 libdata[libdataItem++] = new Array("obj/dat/dat_set_sampling_fn.html", "dat_set_sampling_fn.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_set_sampling_fn.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("obj/dat/dat_set_sampling_fn.html#dat_set_sampling_fn", "dat_set_sampling_fn", 'routine in <a href="obj/dat/dat_set_sampling_fn.html">dat_set_sampling_fn.pro</a>', "dat_set_sampling_fn.pro", "", "dat_set_sampling_fn", "	Replaces the sampling function associated with a data descriptor.    ", "noeventdd	Data descriptor.   sampling_fnNew sampling function.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
-  
-  
-
-libdata[libdataItem++] = new Array("obj/dat/dat_set_sampling_fn_data.html", "dat_set_sampling_fn_data.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_set_sampling_fn_data.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("obj/dat/dat_set_sampling_fn_data.html#dat_set_sampling_fn_data", "dat_set_sampling_fn_data", 'routine in <a href="obj/dat/dat_set_sampling_fn_data.html">dat_set_sampling_fn_data.pro</a>', "dat_set_sampling_fn_data.pro", "", "dat_set_sampling_fn_data", "	Replaces the sampling function data associated with a data descriptor.    ", "noeventdd		Data descriptor.   sampling_fn_dataNew sampling function data.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
   
   
 
@@ -1360,6 +1414,20 @@ libdata[libdataItem++] = new Array("obj/dat/dat_test_dd.html", "dat_test_dd.pro"
   
   
   libdata[libdataItem++] = new Array("obj/dat/dat_test_dd.html#dat_test_dd", "dat_test_dd", 'routine in <a href="obj/dat/dat_test_dd.html">dat_test_dd.pro</a>', "dat_test_dd.pro", "", "dat_test_dd", "	Determines whether the argument is a valid data descriptor.    ", "noeventddData descriptor to test.   ", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	True if the argument is present, is a valid pointer, and 	points to a data descriptor.    STATUS: 	Complete    ");
+  
+  
+
+libdata[libdataItem++] = new Array("obj/dat/dat_transform_input.html", "dat_transform_input.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_transform_input.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("obj/dat/dat_transform_input.html#dat_transform_input", "dat_transform_input", 'routine in <a href="obj/dat/dat_transform_input.html">dat_transform_input.pro</a>', "dat_transform_input.pro", "", "dat_transform_input", "", "silent_dddataheader", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("obj/dat/dat_transform_output.html", "dat_transform_output.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_transform_output.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("obj/dat/dat_transform_output.html#dat_transform_output", "dat_transform_output", 'routine in <a href="obj/dat/dat_transform_output.html">dat_transform_output.pro</a>', "dat_transform_output.pro", "", "dat_transform_output", "", "silent_dddataheader", "          -1", "");
   
   
 
@@ -1591,7 +1659,7 @@ libdata[libdataItem++] = new Array("obj/tools/dsk_cat_by_name.html", "dsk_cat_by
 libdata[libdataItem++] = new Array("obj/dsk/dsk_create_descriptors.html", "dsk_create_descriptors.pro", '.pro file in <a href="obj/dsk/dir-overview.html">obj/dsk/ directory</a>', "dsk_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/dsk/dsk_create_descriptors.html#dsk_create_descriptors", "dsk_create_descriptors", 'routine in <a href="obj/dsk/dsk_create_descriptors.html">dsk_create_descriptors.pro</a>', "dsk_create_descriptors.pro", "", "dsk_create_descriptors", "	Init method for the DISK class.    ", "crdbdslddkdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedosmaeccdapscalenm_memtapmdtapmdtlibamlibmdlibmdtnl_liltaanldtaanldtliballibldlibldtnNumber of descriptors to create.   end_keywords", "NV/LIB/DSK", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized disk descriptors, depending 	on the presence of the dkd keyword.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("obj/dsk/dsk_create_descriptors.html#dsk_create_descriptors", "dsk_create_descriptors", 'routine in <a href="obj/dsk/dsk_create_descriptors.html">dsk_create_descriptors.pro</a>', "dsk_create_descriptors.pro", "", "dsk_create_descriptors", "	Init method for the DISK class.    ", "crdbdslddkdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedosmaeccdapscalenm_memtapmdtapmdtlibamlibmdlibmdtnl_liltaanldtaanldtliballibldlibldtnNumber of descriptors to create.   end_keywords", "NV/LIB/DSK", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized disk descriptors, depending 	on the presence of the dkd keyword.    STATUS: 	Complete    ");
   
   
 
@@ -2332,7 +2400,7 @@ libdata[libdataItem++] = new Array("obj/tools/fill_ring.html", "fill_ring.pro", 
 libdata[libdataItem++] = new Array("obj/tools/footprint.html", "footprint.pro", '.pro file in <a href="obj/tools/dir-overview.html">obj/tools/ directory</a>', "footprint.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/tools/footprint.html#footprint", "footprint", 'routine in <a href="obj/tools/footprint.html">footprint.pro</a>', "footprint.pro", "", "footprint", "	Computes the footprint of a camera on a given body.    ", "slop	Number of pixels by which to expand the image in each 			direction.   cornersArray(2,2) giving corers of image region to consider.   image_ptsFootprint points in the image frame.   body_ptsFootprint points in the body frame.   valid 	Indices of valid output points.   sample	Sampling rate; default is 1 pixel.    cd	Camera descripor.   bx	Body descriptor; globe or disk.   ", "NV/LIB/TOOLS", "       Written by:     Spitale		5/2014   	Array nv,3,nt of surface points.    ");
+  libdata[libdataItem++] = new Array("obj/tools/footprint.html#footprint", "footprint", 'routine in <a href="obj/tools/footprint.html">footprint.pro</a>', "footprint.pro", "", "footprint", "	Computes the footprint of a camera on a given body.    ", "slop	Number of pixels by which to expand the image in each 			direction.   cornersArray(2,2) giving corers of image region to consider.   hit_indicesArray (nhit) of bx indices.   image_ptsFootprint points in the image frame.   body_p	Array (nhit) of pointers to body footprint points for 			each body hit.   sample	Sampling rate; default is 1 pixel.    cd	Camera descripor.  Only one allowed.   bx	Body descriptors.   ", "NV/LIB/TOOLS", "       Written by:     Spitale		5/2014   	Array (nhit) of pointers to inertial footprint points for each body hit. 	Zero is returned if no bodies are hit.    ");
   
   
 
@@ -2507,7 +2575,7 @@ libdata[libdataItem++] = new Array("obj/glb/glb_body_to_local.html", "glb_body_t
 libdata[libdataItem++] = new Array("obj/glb/glb_create_descriptors.html", "glb_create_descriptors.pro", '.pro file in <a href="obj/glb/dir-overview.html">obj/glb/ directory</a>', "glb_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/glb/glb_create_descriptors.html#glb_create_descriptors", "glb_create_descriptors", 'routine in <a href="obj/glb/glb_create_descriptors.html">glb_create_descriptors.pro</a>', "glb_create_descriptors.pro", "", "glb_create_descriptors", "	Init method for the GLOBE class.    ", "crdbdsldgbdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJnNumber of descriptors to create.   end_keywords", "NV/LIB/GLB", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized globe descriptors, depending 	on the presence of the bd keyword.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("obj/glb/glb_create_descriptors.html#glb_create_descriptors", "glb_create_descriptors", 'routine in <a href="obj/glb/glb_create_descriptors.html">glb_create_descriptors.pro</a>', "glb_create_descriptors.pro", "", "glb_create_descriptors", "	Init method for the GLOBE class.    ", "crdbdsldgbdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJnNumber of descriptors to create.   end_keywords", "NV/LIB/GLB", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized globe descriptors, depending 	on the presence of the bd keyword.    STATUS: 	Complete    ");
   
   
 
@@ -2807,7 +2875,7 @@ libdata[libdataItem++] = new Array("obj/tools/composite/globe_to_map.html", "glo
 libdata[libdataItem++] = new Array("gr/interface/gr_draw.html", "gr_draw.pro", '.pro file in <a href="gr/interface/dir-overview.html">gr/interface/ directory</a>', "gr_draw.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("gr/interface/gr_draw.html#gr_draw", "gr_draw", 'routine in <a href="gr/interface/gr_draw.html">gr_draw.pro</a>', "gr_draw.pro", "", "gr_draw", "	xx    Environment variables:   	xx:	xx  	xx:	xx    	xx:	xx  	xx:	xx    	xx    	xx    	xx    ", "gdcdpdrdsdsundodpsymsymsizecolortagpngrnumpp", "NV/GR", " 	Written by:	xx, xx/xx/xxxx   	xx    STATUS: 	xx    SEE ALSO: 	xx, xx, xx 	xx    ");
+  libdata[libdataItem++] = new Array("gr/interface/gr_draw.html#gr_draw", "gr_draw", 'routine in <a href="gr/interface/gr_draw.html">gr_draw.pro</a>', "gr_draw.pro", "", "gr_draw", "	xx    Environment variables:   	xx:	xx  	xx:	xx    	xx:	xx  	xx:	xx    	xx    	xx    	xx    ", "gdcdpdrdsdardstdsundodpsymsymsizecolortagpngrnumpp", "NV/GR", " 	Written by:	xx, xx/xx/xxxx   	xx    STATUS: 	xx    SEE ALSO: 	xx, xx, xx 	xx    ");
   
   
 
@@ -3079,7 +3147,7 @@ libdata[libdataItem++] = new Array("gr/grim.html", "grim.pro", '.pro file in <a 
   
   libdata[libdataItem++] = new Array("gr/grim.html#grim_blank", "grim_blank", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_blank", "", "xsizeysize", "          -1", "");
   
-  libdata[libdataItem++] = new Array("gr/grim.html#grim_init", "grim_init", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_init", "", "dd0zoomwnumgrnumfilterretainuser_callbacksuser_psymuser_graphics_fnuser_thickuser_linefaintcursor_swappathsave_pathload_pathfovtrs_cdtrs_pdtrs_rdtrs_sdtrs_stdtrs_ardtrs_sundfiletypehidetypecolorxrangeyrangenpointsthicknsumxtitleytitlepsymcursor_modesreadout_fnssymsizenhistmaintainworkdircompressextensionsmaxbetatiepoint_syncingcurve_syncingvisibilitychanneltitleslave_overlaysrender_samplerender_pht_mindata_offsetsdd", "          -1", "");
+  libdata[libdataItem++] = new Array("gr/grim.html#grim_init", "grim_init", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_init", "", "dd0zoomwnumgrnumfilterretainuser_callbacksuser_psymuser_graphics_fnuser_thickuser_linefaintcursor_swappathsave_pathload_pathfovtrs_cdtrs_pdtrs_rdtrs_sdtrs_stdtrs_ardtrs_sundfiletypehidetypecolorxrangeyrangenpointsthicknsumxtitleytitlepsymcursor_modesreadout_fnssymsizenhistmaintainworkdircompressextensionsmaxbetaplane_syncingtiepoint_syncingcurve_syncingvisibilitychanneltitleslave_overlaysrender_samplerender_pht_mindata_offsetsdd", "          -1", "");
   
   libdata[libdataItem++] = new Array("gr/grim.html#grim_exists", "grim_exists", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_exists", "", "grim_data", "          -1", "");
   
@@ -3119,11 +3187,15 @@ libdata[libdataItem++] = new Array("gr/grim.html", "grim.pro", '.pro file in <a 
   
   libdata[libdataItem++] = new Array("gr/grim.html#grim_test_map", "grim_test_map", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_test_map", "", "planegrim_data", "          -1", "");
   
-  libdata[libdataItem++] = new Array("gr/grim.html#grim_jump_to_plane", "grim_jump_to_plane", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_jump_to_plane", "", "validgrim_datapn", "          -1", "");
+  libdata[libdataItem++] = new Array("gr/grim.html#grim_jump_to_plane", "grim_jump_to_plane", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_jump_to_plane", "", "validnosyncgrim_datapn", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("gr/grim.html#grim_sync_planes", "grim_sync_planes", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_sync_planes", "", "norefreshgrim_data", "          -1", "");
   
   libdata[libdataItem++] = new Array("gr/grim.html#grim_user_ptd_struct__define", "grim_user_ptd_struct__define", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_user_ptd_struct__define", "", "", "          -1", "");
   
   libdata[libdataItem++] = new Array("gr/grim.html#grim_add_user_points", "grim_add_user_points", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_add_user_points", "", "grnumupdatecolorshade_fnpsymthicklinesymsizeshade_thresholdgraphics_fnxgraphicsnodrawinactiveno_refreshplaneuser_ptdtag", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("gr/grim.html#grim_user_notify", "grim_user_notify", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_user_notify", "", "planegrim_data", "          -1", "");
   
   libdata[libdataItem++] = new Array("gr/grim.html#grim_update_user_points", "grim_update_user_points", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_update_user_points", "", "planegrnumcolorshade_fnpsymthicklinesymsizeshade_thresholdgraphics_fnxgraphicsnodrawno_refreshuser_ptdtag", "          -1", "");
   
@@ -3245,7 +3317,7 @@ libdata[libdataItem++] = new Array("gr/grim.html", "grim.pro", '.pro file in <a 
   
   libdata[libdataItem++] = new Array("gr/grim.html#grim_fill", "grim_fill", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_fill", "", "ptdnamecolor", "          -1", "");
   
-  libdata[libdataItem++] = new Array("gr/grim.html#grim_draw_standard_points", "grim_draw_standard_points", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_draw_standard_points", "", "psympsizeplabelsgrim_dataplane_ptdnamedatacolortshadeshade", "          -1", "");
+  libdata[libdataItem++] = new Array("gr/grim.html#grim_draw_standard_points", "grim_draw_standard_points", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_draw_standard_points", "", "psympsizeplabelslabel_shadegrim_dataplane_ptdnamedatacolortshadeshade", "          -1", "");
   
   libdata[libdataItem++] = new Array("gr/grim.html#grim_draw_standard_overlays", "grim_draw_standard_overlays", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_draw_standard_overlays", "", "updatemlabgrim_dataplaneinactive_color", "          -1", "");
   
@@ -3337,7 +3409,7 @@ libdata[libdataItem++] = new Array("gr/grim.html", "grim.pro", '.pro file in <a 
   
   libdata[libdataItem++] = new Array("gr/grim.html#grim_replace_tiepoints", "grim_replace_tiepoints", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_replace_tiepoints", "", "planegrim_dataiip", "          -1", "");
   
-  libdata[libdataItem++] = new Array("gr/grim.html#grim_image_to_surface", "grim_image_to_surface", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_image_to_surface", "", "body_ptsfar_ptsnamesvalidbxgrim_dataplaneimage_pts", "          -1", "");
+  libdata[libdataItem++] = new Array("gr/grim.html#grim_image_to_surface", "grim_image_to_surface", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_image_to_surface", "", "body_ptsfar_ptsnamesbxgrim_dataplaneimage_pts", "          -1", "");
   
   libdata[libdataItem++] = new Array("gr/grim.html#grim_surface_to_image", "grim_surface_to_image", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_surface_to_image", "", "validgrim_dataplanesurf_ptsnames", "          -1", "");
   
@@ -3417,7 +3489,7 @@ libdata[libdataItem++] = new Array("gr/grim.html", "grim.pro", '.pro file in <a 
   
   libdata[libdataItem++] = new Array("gr/grim.html#grim_mark_descriptors", "grim_mark_descriptors", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_mark_descriptors", "", "allcdpdrdsdstdardsundplanesgrim_dataval", "          -1", "");
   
-  libdata[libdataItem++] = new Array("gr/grim.html#grim_add_descriptor", "grim_add_descriptor", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_add_descriptor", "", "onereplacenoregistergrim_dataxdpxd", "          -1", "");
+  libdata[libdataItem++] = new Array("gr/grim.html#grim_add_descriptor", "grim_add_descriptor", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_add_descriptor", "", "onereplacenoregisterassoc_xdgrim_dataxdp_xd", "          -1", "");
   
   libdata[libdataItem++] = new Array("gr/grim.html#grim_get_cameras", "grim_get_cameras", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_get_cameras", "", "replaceplanegrim_data", "          -1", "");
   
@@ -3772,6 +3844,10 @@ libdata[libdataItem++] = new Array("gr/grim.html", "grim.pro", '.pro file in <a 
   libdata[libdataItem++] = new Array("gr/grim.html#grim_menu_plane_toggle_tiepoint_syncing_help_event", "grim_menu_plane_toggle_tiepoint_syncing_help_event", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_toggle_tiepoint_syncing_help_event", "	Toggles tiepoint syncing on/off.    ", "event", "NV/GR", " 	Written by:	Spitale, 10/2012   ");
   
   libdata[libdataItem++] = new Array("gr/grim.html#grim_menu_plane_toggle_tiepoint_syncing_event", "grim_menu_plane_toggle_tiepoint_syncing_event", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_toggle_tiepoint_syncing_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("gr/grim.html#grim_menu_plane_toggle_plane_syncing_help_event", "grim_menu_plane_toggle_plane_syncing_help_event", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_toggle_plane_syncing_help_event", "	Toggles plane syncing on/off.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2016   ");
+  
+  libdata[libdataItem++] = new Array("gr/grim.html#grim_menu_plane_toggle_plane_syncing_event", "grim_menu_plane_toggle_plane_syncing_event", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_toggle_plane_syncing_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("gr/grim.html#grim_menu_plane_propagate_tiepoints_help_event", "grim_menu_plane_propagate_tiepoints_help_event", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_propagate_tiepoints_help_event", "	Copies all tieppoints from the current plane to all other planes.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2004   ");
   
@@ -4135,15 +4211,17 @@ libdata[libdataItem++] = new Array("gr/grim.html", "grim.pro", '.pro file in <a 
   
   libdata[libdataItem++] = new Array("gr/grim.html#grim_get_args_recurse", "grim_get_args_recurse", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_get_args_recurse", "", "ddgrnumnhistmaintaincompressextensionsrgbarg_ps", "          -1", "");
   
-  libdata[libdataItem++] = new Array("gr/grim.html#grim_get_args", "grim_get_args", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_get_args", "", "ddgrnumtypexzeronhistmaintaincompressextensionsrgbarg1arg2dd0", "          -1", "");
+  libdata[libdataItem++] = new Array("gr/grim.html#__grim_get_args", "__grim_get_args", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "__grim_get_args", "", "ddgrnumtypexzeronhistmaintaincompressextensionsrgbarg1arg2dd0", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("gr/grim.html#grim_cube_dim_fn", "grim_cube_dim_fn", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_cube_dim_fn", "", "dddat", "          -1", "");
   
   libdata[libdataItem++] = new Array("gr/grim.html#grim_get_arg", "grim_get_arg", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_get_arg", "", "ddgrnumextensionsarg", "          -1", "");
   
-  libdata[libdataItem++] = new Array("gr/grim.html#__grim_get_args", "__grim_get_args", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "__grim_get_args", "", "ddgrnumtypexzeronhistmaintaincompressextensionsrgboffsetsarg1arg2", "          -1", "");
+  libdata[libdataItem++] = new Array("gr/grim.html#grim_get_args", "grim_get_args", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_get_args", "", "ddgrnumtypexzeronhistmaintaincompressextensionsrgboffsetsarg1arg2", "          -1", "");
   
   libdata[libdataItem++] = new Array("gr/grim.html#grim_create_cursor_mode", "grim_create_cursor_mode", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim_create_cursor_mode", "", "nameargcursor_modes", "          -1", "");
   
-  libdata[libdataItem++] = new Array("gr/grim.html#grim", "grim", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim", "", "gdcdpdrdsdstdsundodsilentnewinheritxsizeysizedefaultpreviousrestoreactivatedoffsetno_erasefilterrgbvisibilitychannelexitzoomrotateorderoffsetretainmaintainset_infomodemodalxzeroframerefresh_callbacksrefresh_callback_data_psplane_callbacksplane_callback_data_psnhistcompresspathsymsizecursor_modesuser_psymupsworkdirsave_pathload_pathoverlayspnfaintmenu_fnamecursor_swapfovhidemenu_extensionsbutton_extensionsarg_extensionsloadctmaxgrnumextensionsbetarenderingnpointstrs_cdtrs_pdtrs_rdtrs_sdtrs_sundtrs_stdtrs_ardreadout_fnstiepoint_syncingcurve_syncingrender_samplerender_pht_minslave_overlayscolorxrangeyrangethicknsumnddxtitleytitlepsymtitlearg1arg2", "          -1", "");
+  libdata[libdataItem++] = new Array("gr/grim.html#grim", "grim", 'routine in <a href="gr/grim.html">grim.pro</a>', "grim.pro", "", "grim", "", "gdcdpdrdsdstdardsundodsilentnewinheritxsizeysizedefaultpreviousrestoreactivatedoffsetno_erasefilterrgbvisibilitychannelexitzoomrotateorderoffsetretainmaintainset_infomodemodalxzeroframerefresh_callbacksrefresh_callback_data_psplane_callbacksplane_callback_data_psnhistcompresspathsymsizecursor_modesuser_psymupsworkdirsave_pathload_pathoverlayspnfaintmenu_fnamecursor_swapfovhidemenu_extensionsbutton_extensionsarg_extensionsloadctmaxgrnumextensionsbetarenderingnpointstrs_cdtrs_pdtrs_rdtrs_sdtrs_sundtrs_stdtrs_ardreadout_fnsplane_syncingtiepoint_syncingcurve_syncingrender_samplerender_pht_minslave_overlayscolorxrangeyrangethicknsumnddxtitleytitlepsymtitlearg1arg2", "          -1", "");
   
   
 
@@ -4177,9 +4255,13 @@ libdata[libdataItem++] = new Array("gr/grim_colortool.html", "grim_colortool.pro
 libdata[libdataItem++] = new Array("gr/grim_default_menus.html", "grim_default_menus.pro", '.pro file in <a href="gr/dir-overview.html">gr/ directory</a>', "grim_default_menus.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("gr/grim_default_menus.html#grim_menu_image_profile_help_event", "grim_menu_image_profile_help_event", 'routine in <a href="gr/grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_image_profile_help_event", "	This option allows you extract a brightness profile in an arbitrary 	direction.  The left button selects the region's length and then 	width; the right button selects a region with a width of one-pixel.    ", "event", "NV/GR", " 	Written by:	Spitale, 6/2005   ");
+  libdata[libdataItem++] = new Array("gr/grim_default_menus.html#grim_menu_image_profile_help_event", "grim_menu_image_profile_help_event", 'routine in <a href="gr/grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_image_profile_help_event", "	This option allows you extract a brightness profile in an arbitrary 	direction in the image.  The left button selects the region's length 	and then width; the right button selects a region with a width of 	one-pixel.    ", "event", "NV/GR", " 	Written by:	Spitale, 6/2005   ");
   
   libdata[libdataItem++] = new Array("gr/grim_default_menus.html#grim_menu_image_profile_event", "grim_menu_image_profile_event", 'routine in <a href="gr/grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_image_profile_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("gr/grim_default_menus.html#grim_menu_core_help_event", "grim_menu_core_help_event", 'routine in <a href="gr/grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_core_help_event", "	This option allows you extract a brightness profile at the selected 	location for each plane in the image.  The left button selects a single 	point, and the right button selects a region to average over.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2016   ");
+  
+  libdata[libdataItem++] = new Array("gr/grim_default_menus.html#grim_menu_core_event", "grim_menu_core_event", 'routine in <a href="gr/grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_core_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("gr/grim_default_menus.html#grim_menu_ring_box_profile_radial_help_event", "grim_menu_ring_box_profile_radial_help_event", 'routine in <a href="gr/grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_ring_box_profile_radial_help_event", "  This option allows you create a radial brightness profile from a   rectangular image region.     1) Activate the ring from which you wish to extract the profile.     2) Select this option and use the mouse to outline a ring sector:    ", "event", "NV/GR", " 	Written by:	Spitale, 6/2003   ");
   
@@ -4713,7 +4795,7 @@ libdata[libdataItem++] = new Array("gr/grim_rc_settings.html", "grim_rc_settings
   
   libdata[libdataItem++] = new Array("gr/grim_rc_settings.html#grim_rc_value", "grim_rc_value", 'routine in <a href="gr/grim_rc_settings.html">grim_rc_settings.pro</a>', "grim_rc_settings.pro", "", "grim_rc_value", "", "keywordsvalue_pskeyword", "          -1", "");
   
-  libdata[libdataItem++] = new Array("gr/grim_rc_settings.html#grim_rc_settings", "grim_rc_settings", 'routine in <a href="gr/grim_rc_settings.html">grim_rc_settings.pro</a>', "grim_rc_settings.pro", "", "grim_rc_settings", "", "rcfilesilentnewxsizeysizemodenpointszoomrotateorderoffsetfilterretainpathsave_pathload_pathsymsizeoverlaysmenu_fnamecursor_swapfovmenu_extensionsbutton_extensionstrs_cdtrs_pdtrs_rdtrs_sdtrs_stdtrs_ardtrs_sundfiletypehidereadout_fnsxzerorgbpsymnhistmaintainnddworkdiractivateframecompressloadctmaxarg_extensionsextensionsbetarenderingtiepoint_syncingcurve_syncingvisibilitychannelrender_samplerender_pht_minslave_overlays", "          -1", "");
+  libdata[libdataItem++] = new Array("gr/grim_rc_settings.html#grim_rc_settings", "grim_rc_settings", 'routine in <a href="gr/grim_rc_settings.html">grim_rc_settings.pro</a>', "grim_rc_settings.pro", "", "grim_rc_settings", "", "rcfilesilentnewxsizeysizemodenpointszoomrotateorderoffsetfilterretainpathsave_pathload_pathsymsizeoverlaysmenu_fnamecursor_swapfovmenu_extensionsbutton_extensionstrs_cdtrs_pdtrs_rdtrs_sdtrs_stdtrs_ardtrs_sundfiletypehidereadout_fnsxzerorgbpsymnhistmaintainnddworkdiractivateframecompressloadctmaxarg_extensionsextensionsbetarenderingplane_syncingtiepoint_syncingcurve_syncingvisibilitychannelrender_samplerender_pht_minslave_overlays", "          -1", "");
   
   
 
@@ -5072,7 +5154,7 @@ libdata[libdataItem++] = new Array("obj/dat/keyval_struct__define.html", "keyval
 libdata[libdataItem++] = new Array("obj/tools/ltcorr.html", "ltcorr.pro", '.pro file in <a href="obj/tools/dir-overview.html">obj/tools/ directory</a>', "ltcorr.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/tools/ltcorr.html#ltcorr", "ltcorr", 'routine in <a href="obj/tools/ltcorr.html">ltcorr.pro</a>', "ltcorr.pro", "", "ltcorr", "	Performs a light-travel-time correction.    ", "cepsiloniterateobs_bxArray(nt) of any subclass of BODY describing the targets.   targ_bx", "NV/LIB/TOOLS", "       Written by:     Spitale   ");
+  libdata[libdataItem++] = new Array("obj/tools/ltcorr.html#ltcorr", "ltcorr", 'routine in <a href="obj/tools/ltcorr.html">ltcorr.pro</a>', "ltcorr.pro", "", "ltcorr", "	Performs a light-travel-time correction.    ", "cepsiloniterateobs_bx Any subclass of BODY describing the observer.   targ_bx", "NV/LIB/TOOLS", "       Written by:     Spitale   	New target descriptors.    ");
   
   
 
@@ -5100,14 +5182,14 @@ libdata[libdataItem++] = new Array("obj/map/map_condense.html", "map_condense.pr
 libdata[libdataItem++] = new Array("obj/map/map_create_descriptors.html", "map_create_descriptors.pro", '.pro file in <a href="obj/map/dir-overview.html">obj/map/ directory</a>', "map_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/map/map_create_descriptors.html#map_create_descriptors", "map_create_descriptors", 'routine in <a href="obj/map/map_create_descriptors.html">map_create_descriptors.pro</a>', "map_create_descriptors.pro", "", "map_create_descriptors", "	Init method for the MAP class.    ", "crdmdabbrevusernametasksudataunametypefn_data_psizeorigincenterrangescaleunitsgraphicrotateradiinNumber of descriptors to create.   end_keywords", "NV/LIB/DSK", " 	Written by:	Spitale, 1/1998   	Newly created or or freshly initialized disk descriptors, depending 	on the presence of the dkd keyword.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("obj/map/map_create_descriptors.html#map_create_descriptors", "map_create_descriptors", 'routine in <a href="obj/map/map_create_descriptors.html">map_create_descriptors.pro</a>', "map_create_descriptors.pro", "", "map_create_descriptors", "	Init method for the MAP class.    ", "crdmdabbrevusernametasksudataunameassoc_xdtypefn_datasizeorigincenterrangescaleunitsgraphicrotateradiipolenNumber of descriptors to create.   end_keywords", "NV/LIB/DSK", " 	Written by:	Spitale, 1/1998   	Newly created or or freshly initialized disk descriptors, depending 	on the presence of the dkd keyword.    STATUS: 	Complete    ");
   
   
 
-libdata[libdataItem++] = new Array("obj/map/map_fn_data_p.html", "map_fn_data_p.pro", '.pro file in <a href="obj/map/dir-overview.html">obj/map/ directory</a>', "map_fn_data_p.pro", "", "", "", "", "          -1", "");
+libdata[libdataItem++] = new Array("obj/map/map_fn_data.html", "map_fn_data.pro", '.pro file in <a href="obj/map/dir-overview.html">obj/map/ directory</a>', "map_fn_data.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/map/map_fn_data_p.html#map_fn_data_p", "map_fn_data_p", 'routine in <a href="obj/map/map_fn_data_p.html">map_fn_data_p.pro</a>', "map_fn_data_p.pro", "", "map_fn_data_p", "	Returns the function data pointer for each given map descriptor.    ", "noeventmd", "NV/LIB/MAP", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Function data pointer associated with each given map descriptor.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("obj/map/map_fn_data.html#map_fn_data", "map_fn_data", 'routine in <a href="obj/map/map_fn_data.html">map_fn_data.pro</a>', "map_fn_data.pro", "", "map_fn_data", "	Returns the function data for a map descriptor.    ", "noeventmd", "NV/LIB/MAP", " 	Adapted by:	Spitale, 7/2016; adapted from map_fn_data_p   	Function data associated with the given map descriptor.    STATUS: 	Complete    ");
   
   
 
@@ -5439,10 +5521,10 @@ libdata[libdataItem++] = new Array("obj/map/map_set_center.html", "map_set_cente
   
   
 
-libdata[libdataItem++] = new Array("obj/map/map_set_fn_data_p.html", "map_set_fn_data_p.pro", '.pro file in <a href="obj/map/dir-overview.html">obj/map/ directory</a>', "map_set_fn_data_p.pro", "", "", "", "", "          -1", "");
+libdata[libdataItem++] = new Array("obj/map/map_set_fn_data.html", "map_set_fn_data.pro", '.pro file in <a href="obj/map/dir-overview.html">obj/map/ directory</a>', "map_set_fn_data.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/map/map_set_fn_data_p.html#map_set_fn_data_p", "map_set_fn_data_p", 'routine in <a href="obj/map/map_set_fn_data_p.html">map_set_fn_data_p.pro</a>', "map_set_fn_data_p.pro", "", "map_set_fn_data_p", "	Replaces the function data pointer for each given map descriptor.    ", "noeventmd Array (nt) of map descriptors.   p", "NV/LIB/MAP", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
+  libdata[libdataItem++] = new Array("obj/map/map_set_fn_data.html#map_set_fn_data", "map_set_fn_data", 'routine in <a href="obj/map/map_set_fn_data.html">map_set_fn_data.pro</a>', "map_set_fn_data.pro", "", "map_set_fn_data", "	Replaces the function data for a map descriptor.    ", "noeventmd Map descriptor.   data New function data.   ", "NV/LIB/MAP", " 	Adapted by:	Spitale, 7/2016; adapted from map_set_fn_data_p   ");
   
   
 
@@ -5773,13 +5855,6 @@ libdata[libdataItem++] = new Array("sys/util/nv_free.html", "nv_free.pro", '.pro
   
   
 
-libdata[libdataItem++] = new Array("sys/util/nv_get_directive.html", "nv_get_directive.pro", '.pro file in <a href="sys/util/dir-overview.html">sys/util/ directory</a>', "nv_get_directive.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("sys/util/nv_get_directive.html#nv_get_directive", "nv_get_directive", 'routine in <a href="sys/util/nv_get_directive.html">nv_get_directive.pro</a>', "nv_get_directive.pro", "", "nv_get_directive", "	Extracts the directive string from a directive struct.    ", "dst	Structure to test.    ", "NV/SYS", " 	Written by:	Spitale, 5/2015   	Value of the directive string.    STATUS: 	Complete     ");
-  
-  
-
 libdata[libdataItem++] = new Array("sys/util/nv_help.html", "nv_help.pro", '.pro file in <a href="sys/util/dir-overview.html">sys/util/ directory</a>', "nv_help.pro", "", "", "	Prints information about various OMINAS objects.    ", "", "          -1", " 	Written by:	Spitale, 2/1998   ");
   
   
@@ -5857,6 +5932,13 @@ libdata[libdataItem++] = new Array("sys/event/nv_ping.html", "nv_ping.pro", '.pr
   
   
 
+libdata[libdataItem++] = new Array("sys/util/nv_protected.html", "nv_protected.pro", '.pro file in <a href="sys/util/dir-overview.html">sys/util/ directory</a>', "nv_protected.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("sys/util/nv_protected.html#nv_protected", "nv_protected", 'routine in <a href="sys/util/nv_protected.html">nv_protected.pro</a>', "nv_protected.pro", "", "nv_protected", "	Tests whether a structure field is protected.    ", "tag	Structure tag to test.    ", "NV/SYS", " 	Written by:	Spitale, 7/2016   	1 if protected, 0 if not.    STATUS: 	Complete     ");
+  
+  
+
 libdata[libdataItem++] = new Array("sys/util/nv_ptr_free.html", "nv_ptr_free.pro", '.pro file in <a href="sys/util/dir-overview.html">sys/util/ directory</a>', "nv_ptr_free.pro", "", "", "", "", "          -1", "");
   
   
@@ -5902,7 +5984,7 @@ libdata[libdataItem++] = new Array("sys/event/nv_suspend_events.html", "nv_suspe
 libdata[libdataItem++] = new Array("obj/arr/ominas_array__define.html", "ominas_array__define.pro", '.pro file in <a href="obj/arr/dir-overview.html">obj/arr/ directory</a>', "ominas_array__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/arr/ominas_array__define.html#ominas_array::init", "ominas_array::init", 'routine in <a href="obj/arr/ominas_array__define.html">ominas_array__define.pro</a>', "ominas_array__define.pro", "", "ominas_array::init", "", "crdardabbrevusernametasksudataunameprimarysurface_ptsiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("obj/arr/ominas_array__define.html#ominas_array::init", "ominas_array::init", 'routine in <a href="obj/arr/ominas_array__define.html">ominas_array__define.pro</a>', "ominas_array__define.pro", "", "ominas_array::init", "", "crdardabbrevusernametasksudataunameassoc_xdprimarysurface_ptsiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("obj/arr/ominas_array__define.html#ominas_array__define", "ominas_array__define", 'routine in <a href="obj/arr/ominas_array__define.html">ominas_array__define.pro</a>', "ominas_array__define.pro", "", "ominas_array__define", "	Class structure for the ARRAY class.    ", "", "NV/LIB/arr", " 	Written by:	Spitale, 10/2012  	Adapted by:	Spitale, 5/2016  ");
   
@@ -5911,7 +5993,7 @@ libdata[libdataItem++] = new Array("obj/arr/ominas_array__define.html", "ominas_
 libdata[libdataItem++] = new Array("obj/bod/ominas_body__define.html", "ominas_body__define.pro", '.pro file in <a href="obj/bod/dir-overview.html">obj/bod/ directory</a>', "ominas_body__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/bod/ominas_body__define.html#ominas_body::init", "ominas_body::init", 'routine in <a href="obj/bod/ominas_body__define.html">ominas_body__define.pro</a>', "ominas_body__define.pro", "", "ominas_body::init", "", "crdbdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("obj/bod/ominas_body__define.html#ominas_body::init", "ominas_body::init", 'routine in <a href="obj/bod/ominas_body__define.html">ominas_body__define.pro</a>', "ominas_body__define.pro", "", "ominas_body::init", "", "crdbdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("obj/bod/ominas_body__define.html#ominas_body__define", "ominas_body__define", 'routine in <a href="obj/bod/ominas_body__define.html">ominas_body__define.pro</a>', "ominas_body__define.pro", "", "ominas_body__define", "	Class structure for the BODY class.    ", "", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -5920,7 +6002,7 @@ libdata[libdataItem++] = new Array("obj/bod/ominas_body__define.html", "ominas_b
 libdata[libdataItem++] = new Array("obj/cam/ominas_camera__define.html", "ominas_camera__define.pro", '.pro file in <a href="obj/cam/dir-overview.html">obj/cam/ directory</a>', "ominas_camera__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/cam/ominas_camera__define.html#ominas_camera::init", "ominas_camera::init", 'routine in <a href="obj/cam/ominas_camera__define.html">ominas_camera__define.pro</a>', "ominas_camera__define.pro", "", "ominas_camera::init", "", "crdbdcdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayfn_focal_to_imagefn_image_to_focalfn_data_pscaleoaxisexposuresizefn_psffiltersfn_body_to_imagefn_body_to_inertialiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("obj/cam/ominas_camera__define.html#ominas_camera::init", "ominas_camera::init", 'routine in <a href="obj/cam/ominas_camera__define.html">ominas_camera__define.pro</a>', "ominas_camera__define.pro", "", "ominas_camera::init", "", "crdbdcdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayfn_focal_to_imagefn_image_to_focalfi_datascaleoaxisexposuresizefn_psffiltersfn_body_to_imagefn_body_to_inertialiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("obj/cam/ominas_camera__define.html#ominas_camera__define", "ominas_camera__define", 'routine in <a href="obj/cam/ominas_camera__define.html">ominas_camera__define.pro</a>', "ominas_camera__define.pro", "", "ominas_camera__define", "	Class structure fo the CAMERA class.    ", "", "NV/LIB/CAM", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -5933,7 +6015,7 @@ libdata[libdataItem++] = new Array("obj/cor/ominas_core__define.html", "ominas_c
   
   libdata[libdataItem++] = new Array("obj/cor/ominas_core__define.html#ominas_core::dereference", "ominas_core::dereference", 'routine in <a href="obj/cor/ominas_core__define.html">ominas_core__define.pro</a>', "ominas_core__define.pro", "", "ominas_core::dereference", "", "struct", "          -1", "");
   
-  libdata[libdataItem++] = new Array("obj/cor/ominas_core__define.html#ominas_core::init", "ominas_core::init", 'routine in <a href="obj/cor/ominas_core__define.html">ominas_core__define.pro</a>', "ominas_core__define.pro", "", "ominas_core::init", "", "crdabbrevusernametasksudataunameiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("obj/cor/ominas_core__define.html#ominas_core::init", "ominas_core::init", 'routine in <a href="obj/cor/ominas_core__define.html">ominas_core__define.pro</a>', "ominas_core__define.pro", "", "ominas_core::init", "", "crdabbrevusernametasksudataunameassoc_xdiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("obj/cor/ominas_core__define.html#ominas_core__define", "ominas_core__define", 'routine in <a href="obj/cor/ominas_core__define.html">ominas_core__define.pro</a>', "ominas_core__define.pro", "", "ominas_core__define", "	Class structure for the CORE class.    ", "", "NV/SYS/COR", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -5942,7 +6024,7 @@ libdata[libdataItem++] = new Array("obj/cor/ominas_core__define.html", "ominas_c
 libdata[libdataItem++] = new Array("obj/dat/ominas_data__define.html", "ominas_data__define.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "ominas_data__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/dat/ominas_data__define.html#ominas_data::init", "ominas_data::init", 'routine in <a href="obj/dat/ominas_data__define.html">ominas_data__define.pro</a>', "ominas_data__define.pro", "", "ominas_data::init", "", "crdddabbrevusernametasksudataunamefilenamedimtypedataabscissanhistheaderfiletypeinput_fnoutput_fnkeyword_fninstrumentinput_translatorsoutput_translatorsinput_transformsoutput_transformsmaintaincompresstab_translatorsiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("obj/dat/ominas_data__define.html#ominas_data::init", "ominas_data::init", 'routine in <a href="obj/dat/ominas_data__define.html">ominas_data__define.pro</a>', "ominas_data__define.pro", "", "ominas_data::init", "", "crdddabbrevusernametasksudataunameassoc_xdfilenameminmaxdimtypedataabscissanhistheaderfiletypeinput_fnoutput_fnkeyword_fninstrumentinput_translatorsoutput_translatorsinput_transformsoutput_transformsmaintaincompresstab_translatorsiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("obj/dat/ominas_data__define.html#ominas_data__define", "ominas_data__define", 'routine in <a href="obj/dat/ominas_data__define.html">ominas_data__define.pro</a>', "ominas_data__define.pro", "", "ominas_data__define", "	Structure defining the data descriptor.    ", "", "NV/SYS", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -5951,7 +6033,7 @@ libdata[libdataItem++] = new Array("obj/dat/ominas_data__define.html", "ominas_d
 libdata[libdataItem++] = new Array("obj/dsk/ominas_disk__define.html", "ominas_disk__define.pro", '.pro file in <a href="obj/dsk/dir-overview.html">obj/dsk/ directory</a>', "ominas_disk__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/dsk/ominas_disk__define.html#ominas_disk::init", "ominas_disk::init", 'routine in <a href="obj/dsk/ominas_disk__define.html">ominas_disk__define.pro</a>', "ominas_disk__define.pro", "", "ominas_disk::init", "", "crdbdslddkdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedosmaeccdapscalenm_memtapmdtapmdtlibamlibmdlibmdtnl_liltaanldtaanldtliballibldlibldtiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("obj/dsk/ominas_disk__define.html#ominas_disk::init", "ominas_disk::init", 'routine in <a href="obj/dsk/ominas_disk__define.html">ominas_disk__define.pro</a>', "ominas_disk__define.pro", "", "ominas_disk::init", "", "crdbdslddkdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedosmaeccdapscalenm_memtapmdtapmdtlibamlibmdlibmdtnl_liltaanldtaanldtliballibldlibldtiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("obj/dsk/ominas_disk__define.html#ominas_disk__define", "ominas_disk__define", 'routine in <a href="obj/dsk/ominas_disk__define.html">ominas_disk__define.pro</a>', "ominas_disk__define.pro", "", "ominas_disk__define", "	Class structure for the DISK class.    ", "", "NV/LIB/DSK", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -5960,7 +6042,7 @@ libdata[libdataItem++] = new Array("obj/dsk/ominas_disk__define.html", "ominas_d
 libdata[libdataItem++] = new Array("obj/glb/ominas_globe__define.html", "ominas_globe__define.pro", '.pro file in <a href="obj/glb/dir-overview.html">obj/glb/ directory</a>', "ominas_globe__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/glb/ominas_globe__define.html#ominas_globe::init", "ominas_globe::init", 'routine in <a href="obj/glb/ominas_globe__define.html">ominas_globe__define.pro</a>', "ominas_globe__define.pro", "", "ominas_globe::init", "", "crdbdsldgbdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("obj/glb/ominas_globe__define.html#ominas_globe::init", "ominas_globe::init", 'routine in <a href="obj/glb/ominas_globe__define.html">ominas_globe__define.pro</a>', "ominas_globe__define.pro", "", "ominas_globe::init", "", "crdbdsldgbdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("obj/glb/ominas_globe__define.html#ominas_globe__define", "ominas_globe__define", 'routine in <a href="obj/glb/ominas_globe__define.html">ominas_globe__define.pro</a>', "ominas_globe__define.pro", "", "ominas_globe__define", "	Class structure fo the GLOBE class.    ", "", "NV/LIB/CAM", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -5969,7 +6051,7 @@ libdata[libdataItem++] = new Array("obj/glb/ominas_globe__define.html", "ominas_
 libdata[libdataItem++] = new Array("obj/map/ominas_map__define.html", "ominas_map__define.pro", '.pro file in <a href="obj/map/dir-overview.html">obj/map/ directory</a>', "ominas_map__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/map/ominas_map__define.html#ominas_map::init", "ominas_map::init", 'routine in <a href="obj/map/ominas_map__define.html">ominas_map__define.pro</a>', "ominas_map__define.pro", "", "ominas_map::init", "", "crdmdabbrevusernametasksudataunametypefn_data_psizeorigincenterrangescaleunitsgraphicrotateradiiiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("obj/map/ominas_map__define.html#ominas_map::init", "ominas_map::init", 'routine in <a href="obj/map/ominas_map__define.html">ominas_map__define.pro</a>', "ominas_map__define.pro", "", "ominas_map::init", "", "crdmdabbrevusernametasksudataunameassoc_xdtypefn_datasizeorigincenterrangescaleunitsgraphicrotateradiipoleiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("obj/map/ominas_map__define.html#ominas_map__define", "ominas_map__define", 'routine in <a href="obj/map/ominas_map__define.html">ominas_map__define.pro</a>', "ominas_map__define.pro", "", "ominas_map__define", "	Class structure fo the MAP class.    ", "", "NV/LIB/CAM", " 	Written by:	Spitale, 1/1998   ");
   
@@ -5978,7 +6060,7 @@ libdata[libdataItem++] = new Array("obj/map/ominas_map__define.html", "ominas_ma
 libdata[libdataItem++] = new Array("obj/plt/ominas_planet__define.html", "ominas_planet__define.pro", '.pro file in <a href="obj/plt/dir-overview.html">obj/plt/ directory</a>', "ominas_planet__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/plt/ominas_planet__define.html#ominas_planet::init", "ominas_planet::init", 'routine in <a href="obj/plt/ominas_planet__define.html">ominas_planet__define.pro</a>', "ominas_planet__define.pro", "", "ominas_planet::init", "", "crdbdsldgbdpdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("obj/plt/ominas_planet__define.html#ominas_planet::init", "ominas_planet::init", 'routine in <a href="obj/plt/ominas_planet__define.html">ominas_planet__define.pro</a>', "ominas_planet__define.pro", "", "ominas_planet::init", "", "crdbdsldgbdpdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("obj/plt/ominas_planet__define.html#ominas_planet__define", "ominas_planet__define", 'routine in <a href="obj/plt/ominas_planet__define.html">ominas_planet__define.pro</a>', "ominas_planet__define.pro", "", "ominas_planet__define", "	Class structure for the PLANET class.    ", "", "NV/LIB/PLT", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -5987,16 +6069,16 @@ libdata[libdataItem++] = new Array("obj/plt/ominas_planet__define.html", "ominas
 libdata[libdataItem++] = new Array("obj/pnt/ominas_point__define.html", "ominas_point__define.pro", '.pro file in <a href="obj/pnt/dir-overview.html">obj/pnt/ directory</a>', "ominas_point__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/pnt/ominas_point__define.html#ominas_point::init", "ominas_point::init", 'routine in <a href="obj/pnt/ominas_point__define.html">ominas_point__define.pro</a>', "ominas_point__define.pro", "", "ominas_point::init", "", "crdptdabbrevusernametasksudataunamedescinputpointsvectorsflagstagsdataassoc_xdiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("obj/pnt/ominas_point__define.html#ominas_point::init", "ominas_point::init", 'routine in <a href="obj/pnt/ominas_point__define.html">ominas_point__define.pro</a>', "ominas_point__define.pro", "", "ominas_point::init", "", "crdptdabbrevusernametasksudataunameassoc_xddescinputpointsvectorsflagstagsdataiiend_keywords", "          -1", "");
   
-  libdata[libdataItem++] = new Array("obj/pnt/ominas_point__define.html#ominas_point__define", "ominas_point__define", 'routine in <a href="obj/pnt/ominas_point__define.html">ominas_point__define.pro</a>', "ominas_point__define.pro", "", "ominas_point__define", "	Structure for managing points.    ", "", "NV/SYS/PS", "  Spitale, 11/2015; 	Adapted from pg_POINT__define   ");
+  libdata[libdataItem++] = new Array("obj/pnt/ominas_point__define.html#ominas_point__define", "ominas_point__define", 'routine in <a href="obj/pnt/ominas_point__define.html">ominas_point__define.pro</a>', "ominas_point__define.pro", "", "ominas_point__define", "	Structure for managing points.    ", "", "NV/SYS/PS", "  Spitale, 11/2015; 	Adapted from pg_points_struct__define   ");
   
   
 
 libdata[libdataItem++] = new Array("obj/rng/ominas_ring__define.html", "ominas_ring__define.pro", '.pro file in <a href="obj/rng/dir-overview.html">obj/rng/ directory</a>', "ominas_ring__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/rng/ominas_ring__define.html#ominas_ring::init", "ominas_ring::init", 'routine in <a href="obj/rng/ominas_ring__define.html">ominas_ring__define.pro</a>', "ominas_ring__define.pro", "", "ominas_ring::init", "", "crdbdslddkdrdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedosmaeccdapscalenm_memtapmdtapmdtlibamlibmdlibmdtnl_liltaanldtaanldtliballibldlibldtprimarydesciiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("obj/rng/ominas_ring__define.html#ominas_ring::init", "ominas_ring::init", 'routine in <a href="obj/rng/ominas_ring__define.html">ominas_ring__define.pro</a>', "ominas_ring__define.pro", "", "ominas_ring::init", "", "crdbdslddkdrdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedosmaeccdapscalenm_memtapmdtapmdtlibamlibmdlibmdtnl_liltaanldtaanldtliballibldlibldtprimarydesciiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("obj/rng/ominas_ring__define.html#ominas_ring__define", "ominas_ring__define", 'routine in <a href="obj/rng/ominas_ring__define.html">ominas_ring__define.pro</a>', "ominas_ring__define.pro", "", "ominas_ring__define", "	Class structure for the RING class.    ", "", "NV/LIB/RNG", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -6005,7 +6087,7 @@ libdata[libdataItem++] = new Array("obj/rng/ominas_ring__define.html", "ominas_r
 libdata[libdataItem++] = new Array("obj/sld/ominas_solid__define.html", "ominas_solid__define.pro", '.pro file in <a href="obj/sld/dir-overview.html">obj/sld/ directory</a>', "ominas_solid__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/sld/ominas_solid__define.html#ominas_solid::init", "ominas_solid::init", 'routine in <a href="obj/sld/ominas_solid__define.html">ominas_solid__define.pro</a>', "ominas_solid__define.pro", "", "ominas_solid::init", "", "crdbdsldabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedoiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("obj/sld/ominas_solid__define.html#ominas_solid::init", "ominas_solid::init", 'routine in <a href="obj/sld/ominas_solid__define.html">ominas_solid__define.pro</a>', "ominas_solid__define.pro", "", "ominas_solid::init", "", "crdbdsldabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedoiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("obj/sld/ominas_solid__define.html#ominas_solid__define", "ominas_solid__define", 'routine in <a href="obj/sld/ominas_solid__define.html">ominas_solid__define.pro</a>', "ominas_solid__define.pro", "", "ominas_solid__define", "	Class structure fo the SOLID class.    ", "", "NV/LIB/SLD", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   ");
   
@@ -6014,7 +6096,7 @@ libdata[libdataItem++] = new Array("obj/sld/ominas_solid__define.html", "ominas_
 libdata[libdataItem++] = new Array("obj/str/ominas_star__define.html", "ominas_star__define.pro", '.pro file in <a href="obj/str/dir-overview.html">obj/str/ directory</a>', "ominas_star__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/str/ominas_star__define.html#ominas_star::init", "ominas_star::init", 'routine in <a href="obj/str/ominas_star__define.html">ominas_star__define.pro</a>', "ominas_star__define.pro", "", "ominas_star::init", "", "crdbdsldgbdsdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJlumspiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("obj/str/ominas_star__define.html#ominas_star::init", "ominas_star::init", 'routine in <a href="obj/str/ominas_star__define.html">ominas_star__define.pro</a>', "ominas_star__define.pro", "", "ominas_star::init", "", "crdbdsldgbdsdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJlumspiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("obj/str/ominas_star__define.html#ominas_star__define", "ominas_star__define", 'routine in <a href="obj/str/ominas_star__define.html">ominas_star__define.pro</a>', "ominas_star__define.pro", "", "ominas_star__define", "	Class structure for the STAR class.    ", "", "NV/LIB/STR", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -6023,7 +6105,7 @@ libdata[libdataItem++] = new Array("obj/str/ominas_star__define.html", "ominas_s
 libdata[libdataItem++] = new Array("obj/stn/ominas_station__define.html", "ominas_station__define.pro", '.pro file in <a href="obj/stn/dir-overview.html">obj/stn/ directory</a>', "ominas_station__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/stn/ominas_station__define.html#ominas_station::init", "ominas_station::init", 'routine in <a href="obj/stn/ominas_station__define.html">ominas_station__define.pro</a>', "ominas_station__define.pro", "", "ominas_station::init", "", "crdbdstdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("obj/stn/ominas_station__define.html#ominas_station::init", "ominas_station::init", 'routine in <a href="obj/stn/ominas_station__define.html">ominas_station__define.pro</a>', "ominas_station__define.pro", "", "ominas_station::init", "", "crdbdstdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayprimarysurface_ptiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("obj/stn/ominas_station__define.html#ominas_station__define", "ominas_station__define", 'routine in <a href="obj/stn/ominas_station__define.html">ominas_station__define.pro</a>', "ominas_station__define.pro", "", "ominas_station__define", "	Class structure for the STATION class.    ", "", "NV/LIB/STN", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -6636,6 +6718,15 @@ libdata[libdataItem++] = new Array("com/pg/pg_coadd.html", "pg_coadd.pro", '.pro
   
   
 
+libdata[libdataItem++] = new Array("com/pg/pg_core.html", "pg_core.pro", '.pro file in <a href="com/pg/dir-overview.html">com/pg/ directory</a>', "pg_core.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("com/pg/pg_core.html#pg_core", "pg_core", 'routine in <a href="com/pg/pg_core.html">pg_core.pro</a>', "pg_core.pro", "", "pg_core", "	Generates a dn profile through a cube, or stack of images.   ", "cdCamera descriptor.  Needed for sinc interpolation. (to get PSF)   gd  Optional generic descriptor containing cd.   distance Array giving the distance, in pixels, along the profile.   interp  Type of interpolation to use.  Options are:                'nearest', 'mean', 'bilinear', 'cubic', 'sinc'.   arg_interp  Arguments to pass to the interpolation function.    sigma  Array giving the standard deviation at each point in the 		profile.   profile  The profile.   image_pts Image point for each point along the profile.    bgUniform value to subtract from profile.   dd Data descriptor(s).   outline_ptd  POINT descriptor giving the outline of the region to plot,                 as produced by the pg_select_region.   ", "NV/PG", "       Written by:     Spitale, 7/2016   	Two data descriptors: the first contains the profile; the second contains 	the profile sigma.    ");
+  
+  libdata[libdataItem++] = new Array("com/pg/pg_core.html#test", "test", 'routine in <a href="com/pg/pg_core.html">pg_core.pro</a>', "pg_core.pro", "", "test", "", "", "          -1", "");
+  
+  
+
 libdata[libdataItem++] = new Array("com/pg/pg_coregister.html", "pg_coregister.pro", '.pro file in <a href="com/pg/dir-overview.html">com/pg/ directory</a>', "pg_coregister.pro", "", "", "", "", "          -1", "");
   
   
@@ -6827,21 +6918,21 @@ libdata[libdataItem++] = new Array("com/pg/sub/pg_fit_coeff_struct__define.html"
 libdata[libdataItem++] = new Array("com/pg/pg_footprint.html", "pg_footprint.pro", '.pro file in <a href="com/pg/dir-overview.html">com/pg/ directory</a>', "pg_footprint.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("com/pg/pg_footprint.html#pg_footprint", "pg_footprint", 'routine in <a href="com/pg/pg_footprint.html">pg_footprint.pro</a>', "pg_footprint.pro", "", "pg_footprint", "	Computes the footprint of a camera on a given body.    ", "cdArray (n_timesteps) of camera descriptors.   odbxArray (n_objects, n_timesteps) of descriptors of objects 		which must be a subclass of BODY.   gdGeneric descriptor.  If given, the cd and bx inputs 		are taken from the cd and bx fields of this structure 		instead of from those keywords.   fov If set points are computed only within this many camera 		 fields of view.   sample Sampling rate; default is 1 pixel.   ", "NV/PG", " 	Written by:	Spitale, 5/2014   	Array (n_objects) of POINT containing image points and 	the corresponding inertial vectors.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("com/pg/pg_footprint.html#pg_footprint", "pg_footprint", 'routine in <a href="com/pg/pg_footprint.html">pg_footprint.pro</a>', "pg_footprint.pro", "", "pg_footprint", "	Computes the footprint of a camera on a given body.    ", "cdArray (n_timesteps) of camera descriptors.   bxArray (n_objects, n_timesteps) of descriptors of objects 		which must be a subclass of BODY.   gdGeneric descriptor.  If given, the cd, od, and bx inputs 		are taken from this structure instead of from those keywords.   fov If set, points are computed only within this many camera 		 fields of view.   sample Sampling rate; default is 1 pixel.   ", "NV/PG", " 	Written by:	Spitale, 5/2014   	Array (n_objects) of POINT containing image points and 	the corresponding inertial vectors.    STATUS: 	Complete    ");
   
   
 
 libdata[libdataItem++] = new Array("com/pg/pg_get_arrays.html", "pg_get_arrays.pro", '.pro file in <a href="com/pg/dir-overview.html">com/pg/ directory</a>', "pg_get_arrays.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("com/pg/pg_get_arrays.html#pg_get_arrays", "pg_get_arrays", 'routine in <a href="com/pg/pg_get_arrays.html">pg_get_arrays.pro</a>', "pg_get_arrays.pro", "", "pg_get_arrays", "	Obtains a array descriptor for the given data descriptor.    	If /override, then a array descriptor is created and initialized 	using the specified values.  Otherwise, the descriptor is obtained 	through the translators.  Note that if /override is not used, 	values (except arr_name) can still be overridden by specifying 	them as keyword parameters.  If arr_name is specified, then 	only descriptors corresponding to those names will be returned.     ", "odbxard	Input array descriptors; used by some translators.   gdno_sortUnless this keyword is set, only the first descriptor 			encountered with a given name is returned.  This allows 			translators to be arranged in the translators table such 			by order of priority.   overrideCreate a data descriptor and initilaize with the 			given values.  Translators will not be called.  	arr_*:		All array override keywords are accepted.  See 			array_keywords.include.  			If arr_name is specified, then only descriptors with 			those names are returned.   verbatimIf set, the descriptors requested using arr_name 			are returned in the order requested.  Otherwise, the 			order is determined by the translators.   arr_namearr_primarytr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.    tr_firstdddata descriptor   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 10/2012   	Array of array descriptors, 0 if an error occurs.    ");
+  libdata[libdataItem++] = new Array("com/pg/pg_get_arrays.html#pg_get_arrays", "pg_get_arrays", 'routine in <a href="com/pg/pg_get_arrays.html">pg_get_arrays.pro</a>', "pg_get_arrays.pro", "", "pg_get_arrays", "	Obtains a array descriptor for the given data descriptor.    	If /override, then a array descriptor is created and initialized 	using the specified values.  Otherwise, the descriptor is obtained 	through the translators.  Note that if /override is not used, 	values (except arr_name) can still be overridden by specifying 	them as keyword parameters.  If arr_name is specified, then 	only descriptors corresponding to those names will be returned.     ", "odbxard	Input array descriptors; used by some translators.   gdoverrideCreate a data descriptor and initilaize with the 			given values.  Translators will not be called.  	arr_*:		All array override keywords are accepted.  See 			array_keywords.include.  			If arr_name is specified, then only descriptors with 			those names are returned.   verbatimIf set, the descriptors requested using arr_name 			are returned in the order requested.  Otherwise, the 			order is determined by the translators.   nameprimarytr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.    tr_firsttr_nosortdddata descriptor   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 10/2012   	Array of array descriptors, 0 if an error occurs.    ");
   
   
 
 libdata[libdataItem++] = new Array("com/pg/pg_get_cameras.html", "pg_get_cameras.pro", '.pro file in <a href="com/pg/dir-overview.html">com/pg/ directory</a>', "pg_get_cameras.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("com/pg/pg_get_cameras.html#pg_get_cameras", "pg_get_cameras", 'routine in <a href="com/pg/pg_get_cameras.html">pg_get_cameras.pro</a>', "pg_get_cameras.pro", "", "pg_get_cameras", "	Obtains a camera descriptor for the given data descriptor.    	If /override, then a camera descriptor is created and initialized 	using the specified values.  Otherwise, the descriptor is obtained 	through the translators.  Note that if /override is not used, 	values (except cam_name) can still be overridden by specifying 	them as keyword parameters.  If cam_name is specified, then 	only descriptors corresponding to those names will be returned.     ", "cds	Input camera descriptors; used by some translators.   odpdgd	Generic descriptor containing the above descriptors.   no_sortUnless this keyword is set, only the first descriptor 			encountered with a given name is returned.  This allows 			translators to be arranged in the translators table such 			by order of priority.   overrideCreate a data descriptor and initilaize with the 			given values.  Translators will not be called.  	cam_*:		All camera override keywords are accepted.  See 			camera_keywords.include.  			If cam_name is specified, then only descriptors with 			those names are returned.   verbatimIf set, the descriptors requested using cam_name 			are returned in the order requested.  Otherwise, the 			order is determined by the translators.   orient	Default orientation matrix to use if camera 			orientation is not available.  If not specified, 			the identity matrix is used.    no_defaultcam_namecam_timecam_orientcam_avelcam_poscam_velcam_scalecam_oaxiscam_sizecam_fn_psfcam_opaquecam_exposurecam_fn_focal_to_imagecam_fn_image_to_focalcam_fn_datacam_filterscam_fn_filtertr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.   tr_firstdddata descriptor   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998 	Modified:	Spitale, 8/2001   	Array of camera descriptors, 0 if an error occurs.    ");
+  libdata[libdataItem++] = new Array("com/pg/pg_get_cameras.html#pg_get_cameras", "pg_get_cameras", 'routine in <a href="com/pg/pg_get_cameras.html">pg_get_cameras.pro</a>', "pg_get_cameras.pro", "", "pg_get_cameras", "	Obtains a camera descriptor for the given data descriptor.    	If /override, then a camera descriptor is created and initialized 	using the specified values.  Otherwise, the descriptor is obtained 	through the translators.  Note that if /override is not used, 	values (except cam_name) can still be overridden by specifying 	them as keyword parameters.  If cam_name is specified, then 	only descriptors corresponding to those names will be returned.     ", "cds	Input camera descriptors; used by some translators.   odpdgd	Generic descriptor containing the above descriptors.   overrideCreate a data descriptor and initilaize with the 			given values.  Translators will not be called.  	cam_*:		All camera override keywords are accepted.  See 			camera_keywords.include.  			If cam_name is specified, then only descriptors with 			those names are returned.   verbatimIf set, the descriptors requested using cam_name 			are returned in the order requested.  Otherwise, the 			order is determined by the translators.   default_orient	Default orientation matrix to use if camera 				orientation is not available.  If not specified, 				the identity matrix is used.    no_defaultnametimeorientavelposvelscaleoaxissizefn_psfopaqueexposurefn_focal_to_imagefn_image_to_focalfi_datafiltersfn_filtertr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.   tr_firsttr_nosortdddata descriptor   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998 	Modified:	Spitale, 8/2001   	Array of camera descriptors, 0 if an error occurs.    ");
   
   
 
@@ -6855,35 +6946,35 @@ libdata[libdataItem++] = new Array("com/pg/pg_get_celestial_sphere.html", "pg_ge
 libdata[libdataItem++] = new Array("com/pg/pg_get_maps.html", "pg_get_maps.pro", '.pro file in <a href="com/pg/dir-overview.html">com/pg/ directory</a>', "pg_get_maps.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("com/pg/pg_get_maps.html#pg_get_maps", "pg_get_maps", 'routine in <a href="com/pg/pg_get_maps.html">pg_get_maps.pro</a>', "pg_get_maps.pro", "", "pg_get_maps", "	Obtains a map descriptor for the given data descriptor.    	If /override, then a map descriptor is created and initialized 	using the specified values.  Otherwise, the descriptor is obtained 	through the translators.  Note that if /override is not used, 	values (except map_name) can still be overridden by specifying 	them as keyword parameters.  If map_name is specified, then 	only descriptors corresponding to those names will be returned.     ", "mds	Input map descriptors; used by some translators.   gbxdkxbxgdno_sortUnless this keyword is set, only the first descriptor 			encountered with a given name is returned.  This allows 			translators to be arranged in the translators table such 			by order of priority.   overrideCreate a data descriptor and initilaize with the 			given values.  Translators will not be called.  	map_*:		All map override keywords are accepted.  See 			map_keywords.include.  			If map_name is specified, then only descriptors with 			those names are returned.  			If /override and map name is not specified, then 			the name is taken from the globe descriptor.   verbatimIf set, the descriptors requested using map_name 			are returned in the order requested.  Otherwise, the 			order is determined by the translators.   map_namemap_typemap_sizemap_scalemap_eccmap_originmap_centermap_rangemap_offsetmap_limitsmap_fn_map_to_imagemap_fn_image_to_mapmap_fn_data_pmap_unitsmap_graphicmap_rotatemap_radiitr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.    tr_firstdddata descriptor   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998 	Modified:	Spitale, 8/2001   	Array of map descriptors, 0 if an error occurs.    ");
+  libdata[libdataItem++] = new Array("com/pg/pg_get_maps.html#pg_get_maps", "pg_get_maps", 'routine in <a href="com/pg/pg_get_maps.html">pg_get_maps.pro</a>', "pg_get_maps.pro", "", "pg_get_maps", "	Obtains a map descriptor for the given data descriptor.    	If /override, then a map descriptor is created and initialized 	using the specified values.  Otherwise, the descriptor is obtained 	through the translators.  Note that if /override is not used, 	values (except map_name) can still be overridden by specifying 	them as keyword parameters.  If map_name is specified, then 	only descriptors corresponding to those names will be returned.     ", "mds	Input map descriptors; used by some translators.   gbxdkxbxgdoverrideCreate a data descriptor and initilaize with the 			given values.  Translators will not be called.  	map_*:		All map override keywords are accepted.  See 			map_keywords.include.  			If map_name is specified, then only descriptors with 			those names are returned.  			If /override and map name is not specified, then 			the name is taken from the globe descriptor.   verbatimIf set, the descriptors requested using map_name 			are returned in the order requested.  Otherwise, the 			order is determined by the translators.   nametypesizescaleeccorigincenterrangeoffsetlimitsfn_map_to_imagefn_image_to_mapfn_dataunitsgraphicrotateradiipoletr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.    tr_firsttr_nosortdddata descriptor   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998 	Modified:	Spitale, 8/2001   	Array of map descriptors, 0 if an error occurs.    ");
   
   
 
 libdata[libdataItem++] = new Array("com/pg/pg_get_planets.html", "pg_get_planets.pro", '.pro file in <a href="com/pg/dir-overview.html">com/pg/ directory</a>', "pg_get_planets.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("com/pg/pg_get_planets.html#pg_get_planets", "pg_get_planets", 'routine in <a href="com/pg/pg_get_planets.html">pg_get_planets.pro</a>', "pg_get_planets.pro", "", "pg_get_planets", "	Obtains planet descriptors for the given data descriptor.    	If /override, then a planet descriptor is created and initialized 	using the specified values.  Otherwise, the descriptor is obtained 	through the translators.  Note that if /override is not used, 	values (except plt_name) can still be overridden by specifying 	them as keyword parameters.  If plt_name is specified, then 	only descriptors corresponding to those names will be returned.     ", "pd	Input planet descriptors; used by some translators.   od	Observer descriptor, typically a camera descriptor. 			If given, then planet positions will be corrected 			for light travel time and stellar aberration relative 			to this observer unless /raw is set.   sd	Primary star descriptor; needed by some translators.   gd	Generic descriptors.  Can be used in place of od and sd.   no_sortUnless this keyword is set, only the first descriptor 			encountered with a given name is returned.  This allows 			translators to be arranged in the translators table such 			by order of priority.   overrideCreate a data descriptor and initilaize with the 			given values.  Translators will not be called.  	plt_*:		All planet override keywords are accepted.  See 			planet_keywords.include.  			If plt_name is specified, then only descriptors with 			those names are returned.   verbatimIf set, the descriptors requested using plt_name 			are returned in the order requested.  Otherwise, the 			order is determined by the translators.   raw	If set, no aberration corrections are performed.   plt_nameplt_timeplt_orientplt_avelplt_posplt_velplt_radiiplt_loraplt_opaqueplt_opacityplt_massplt_refl_fnplt_refl_parmplt_phase_fnplt_phase_parmplt_albedotr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.    tr_firstdddata descriptor   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998 	Modified:	Spitale, 8/2001   	Array of planet descriptors, 0 if an error occurs.    ");
+  libdata[libdataItem++] = new Array("com/pg/pg_get_planets.html#pg_get_planets", "pg_get_planets", 'routine in <a href="com/pg/pg_get_planets.html">pg_get_planets.pro</a>', "pg_get_planets.pro", "", "pg_get_planets", "	Obtains planet descriptors for the given data descriptor.    	If /override, then a planet descriptor is created and initialized 	using the specified values.  Otherwise, the descriptor is obtained 	through the translators.  Note that if /override is not used, 	values (except name) can still be overridden by specifying 	them as keyword parameters.  If name is specified, then 	only descriptors corresponding to those names will be returned.     ", "pd	Input planet descriptors; used by some translators.   od	Observer descriptor, typically a camera descriptor. 			If given, then planet positions will be corrected 			for light travel time and stellar aberration relative 			to this observer unless /raw is set.   sd	Primary star descriptor; needed by some translators.   gd	Generic descriptors.  Can be used in place of od and sd.   overrideCreate a data descriptor and initilaize with the 			given values.  Translators will not be called.  	plt_*:		All planet override keywords are accepted.  See 			planet_keywords.include.  			If name is specified, then only descriptors with 			those names are returned.   verbatimIf set, the descriptors requested using name 			are returned in the order requested.  Otherwise, the 			order is determined by the translators.   raw	If set, no aberration corrections are performed.   nametimeorientavelposvelradiiloraopaqueopacitymassrefl_fnrefl_parmphase_fnphase_parmalbedotr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.    tr_firsttr_nosortdddata descriptor   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998 	Modified:	Spitale, 8/2001   	Array of planet descriptors, 0 if an error occurs.    ");
   
   
 
 libdata[libdataItem++] = new Array("com/pg/pg_get_rings.html", "pg_get_rings.pro", '.pro file in <a href="com/pg/dir-overview.html">com/pg/ directory</a>', "pg_get_rings.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("com/pg/pg_get_rings.html#pg_get_rings", "pg_get_rings", 'routine in <a href="com/pg/pg_get_rings.html">pg_get_rings.pro</a>', "pg_get_rings.pro", "", "pg_get_rings", "	Obtains ring descriptors for the given data descriptor.    	If /override, then a ring descriptor is created and initialized 	using the specified values.  Otherwise, the descriptor is obtained 	through the translators.  Note that if /override is not used, 	values (except rng_name) can still be overridden by specifying 	them as keyword parameters.  If rng_name is specified, then 	only descriptors corresponding to those names will be returned.     SEE ALSO: 	xx, xx, xx    ", "rd	Input ring descriptors; used by some translators.   pd	Planet descriptors for primary objects.   od	Observer descriptors.   gd	Generic descriptors.  Can be used in place of od.   no_sortUnless this keyword is set, only the first descriptor 			encountered with a given name is returned.  This allows 			translators to be arranged in the translators table such 			by order of priority.   overrideCreate a data descriptor and initilaize with the 			given values.  Translators will not be called.  	rng_*:		All ring override keywords are accepted.  See 			ring_keywords.include.  			If rng_name is specified, then only descriptors with 			those names are returned.   verbatimIf set, the descriptors requested using rng_name 			are returned in the order requested.  Otherwise, the 			order is determined by the translators.   rng_namerng_primaryrng_timerng_orientrng_avelrng_posrng_velrng_smarng_eccrng_daprng_opaquerng_opacityrng_nmrng_mrng_emrng_wmrng_dwmdttr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.    tr_firstdddata descriptor   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998 	Modified:	Spitale, 8/2001   	Ring descriptors obtained from the translators, 0 if an error occurs.    ");
+  libdata[libdataItem++] = new Array("com/pg/pg_get_rings.html#pg_get_rings", "pg_get_rings", 'routine in <a href="com/pg/pg_get_rings.html">pg_get_rings.pro</a>', "pg_get_rings.pro", "", "pg_get_rings", "	Obtains ring descriptors for the given data descriptor.    	If /override, then a ring descriptor is created and initialized 	using the specified values.  Otherwise, the descriptor is obtained 	through the translators.  Note that if /override is not used, 	values (except rng_name) can still be overridden by specifying 	them as keyword parameters.  If rng_name is specified, then 	only descriptors corresponding to those names will be returned.     SEE ALSO: 	xx, xx, xx    ", "rd	Input ring descriptors; used by some translators.   pd	Planet descriptors for primary objects.   od	Observer descriptors.   gd	Generic descriptors.  Can be used in place of od.   overrideCreate a data descriptor and initilaize with the 			given values.  Translators will not be called.  	rng_*:		All ring override keywords are accepted.  See 			ring_keywords.include.  			If rng_name is specified, then only descriptors with 			those names are returned.   verbatimIf set, the descriptors requested using rng_name 			are returned in the order requested.  Otherwise, the 			order is determined by the translators.   nameprimarytimeorientavelposvelsmaeccdapopaqueopacitynmmemwmdwmdttr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.    tr_firsttr_nosortdddata descriptor   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998 	Modified:	Spitale, 8/2001   	Ring descriptors obtained from the translators, 0 if an error occurs.    ");
   
   
 
 libdata[libdataItem++] = new Array("com/pg/pg_get_stars.html", "pg_get_stars.pro", '.pro file in <a href="com/pg/dir-overview.html">com/pg/ directory</a>', "pg_get_stars.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("com/pg/pg_get_stars.html#pg_get_stars", "pg_get_stars", 'routine in <a href="com/pg/pg_get_stars.html">pg_get_stars.pro</a>', "pg_get_stars.pro", "", "pg_get_stars", "	Obtain star descriptors for the given data descriptor.    	If /override, then a star descriptor is created and initialized 	using the specified values.  Otherwise, the descriptor is obtained 	through the translators.  Note that if /override is not used, 	values (except str_name) can still be overridden by specifying 	them as keyword parameters.  If str_name is specified, then 	only descriptors corresponding to those names will be returned.     SEE ALSO: 	xx, xx, xx    ", "sd	Input star descriptors; used by some translators.   od	Observer descriptor, typically a camera descriptor. 			If given, then star positions will be corrected 			for stellar aberration (but not light-travel time, 			which is inherently accounted for in star catalogs) 			relative to this observer, unless /raw is set.   sund	Star descriptors for the sun.  Used to correct for 			stellar aberration.   gd	Generic descriptors.  Can be used in place of od.   no_sortUnless this keyword is set, only the first descriptor 			encountered with a given name is returned.  This allows 			translators to be arranged in the translators table such 			by order of priority.   overrideCreate a data descriptor and initilaize with the 			given values.  Translators will not be called.  	str_*:		All star override keywords are accepted.  See 			star_keywords.include.  			If str_name is specified, then only descriptors with 			those names are returned.   verbatimIf set, the descriptors requested using str_name 			are returned in the order requested.  Otherwise, the 			order is determined by the translators.   raw	If set, no aberration corrections are performed.   radeccornersstr_namestr_timestr_orientstr_avelstr_posstr_velstr_radiistr_lorastr_lumstr_spstr_opaquestr_opacitytr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.    tr_firstdddata descriptor   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998 	Modified:	Spitale, 8/2001   	Star descriptors obtained from the translators, 0 if an error occurs.    ");
+  libdata[libdataItem++] = new Array("com/pg/pg_get_stars.html#pg_get_stars", "pg_get_stars", 'routine in <a href="com/pg/pg_get_stars.html">pg_get_stars.pro</a>', "pg_get_stars.pro", "", "pg_get_stars", "	Obtain star descriptors for the given data descriptor.    	If /override, then a star descriptor is created and initialized 	using the specified values.  Otherwise, the descriptor is obtained 	through the translators.  Note that if /override is not used, 	values (except str_name) can still be overridden by specifying 	them as keyword parameters.  If str_name is specified, then 	only descriptors corresponding to those names will be returned.     SEE ALSO: 	xx, xx, xx    ", "sd	Input star descriptors; used by some translators.   od	Observer descriptor, typically a camera descriptor. 			If given, then star positions will be corrected 			for stellar aberration (but not light-travel time, 			which is inherently accounted for in star catalogs) 			relative to this observer, unless /raw is set.   sund	Star descriptors for the sun.  Used to correct for 			stellar aberration.   gd	Generic descriptors.  Can be used in place of od.   overrideCreate a data descriptor and initilaize with the 			given values.  Translators will not be called.  	str_*:		All star override keywords are accepted.  See 			star_keywords.include.  			If str_name is specified, then only descriptors with 			those names are returned.   verbatimIf set, the descriptors requested using str_name 			are returned in the order requested.  Otherwise, the 			order is determined by the translators.   raw	If set, no aberration corrections are performed.   radeccornersnametimeorientavelposvelradiiloralumspopaqueopacitytr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.    tr_firsttr_nosortdddata descriptor   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998 	Modified:	Spitale, 8/2001   	Star descriptors obtained from the translators, 0 if an error occurs.    ");
   
   
 
 libdata[libdataItem++] = new Array("com/pg/pg_get_stations.html", "pg_get_stations.pro", '.pro file in <a href="com/pg/dir-overview.html">com/pg/ directory</a>', "pg_get_stations.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("com/pg/pg_get_stations.html#pg_get_stations", "pg_get_stations", 'routine in <a href="com/pg/pg_get_stations.html">pg_get_stations.pro</a>', "pg_get_stations.pro", "", "pg_get_stations", "	Obtains a station descriptor for the given data descriptor.    	If /override, then a station descriptor is created and initialized 	using the specified values.  Otherwise, the descriptor is obtained 	through the translators.  Note that if /override is not used, 	values (except stn_name) can still be overridden by specifying 	them as keyword parameters.  If stn_name is specified, then 	only descriptors corresponding to those names will be returned.     ", "odpdstd	Input station descriptors; used by some translators.   gdno_sortUnless this keyword is set, only the first descriptor 			encountered with a given name is returned.  This allows 			translators to be arranged in the translators table such 			by order of priority.   overrideCreate a data descriptor and initilaize with the 			given values.  Translators will not be called.  	stn_*:		All station override keywords are accepted.  See 			station_keywords.include.  			If stn_name is specified, then only descriptors with 			those names are returned.   verbatimIf set, the descriptors requested using stn_name 			are returned in the order requested.  Otherwise, the 			order is determined by the translators.   stn_namestn_timestn_primarytr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.    tr_firstdddata descriptor   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 2/2009   	Array of station descriptors, 0 if an error occurs.    ");
+  libdata[libdataItem++] = new Array("com/pg/pg_get_stations.html#pg_get_stations", "pg_get_stations", 'routine in <a href="com/pg/pg_get_stations.html">pg_get_stations.pro</a>', "pg_get_stations.pro", "", "pg_get_stations", "	Obtains a station descriptor for the given data descriptor.    	If /override, then a station descriptor is created and initialized 	using the specified values.  Otherwise, the descriptor is obtained 	through the translators.  Note that if /override is not used, 	values (except stn_name) can still be overridden by specifying 	them as keyword parameters.  If stn_name is specified, then 	only descriptors corresponding to those names will be returned.     ", "odbxstd	Input station descriptors; used by some translators.   gdoverrideCreate a data descriptor and initilaize with the 			given values.  Translators will not be called.  	stn_*:		All station override keywords are accepted.  See 			station_keywords.include.  			If stn_name is specified, then only descriptors with 			those names are returned.   verbatimIf set, the descriptors requested using stn_name 			are returned in the order requested.  Otherwise, the 			order is determined by the translators.   nametimeprimarytr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.    tr_firsttr_nosortdddata descriptor   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 2/2009   	Array of station descriptors, 0 if an error occurs.    ");
   
   
 
@@ -7152,35 +7243,35 @@ libdata[libdataItem++] = new Array("com/pg/pg_ptscan_coeff.html", "pg_ptscan_coe
 libdata[libdataItem++] = new Array("com/pg/pg_put_cameras.html", "pg_put_cameras.pro", '.pro file in <a href="com/pg/dir-overview.html">com/pg/ directory</a>', "pg_put_cameras.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("com/pg/pg_put_cameras.html#pg_put_cameras", "pg_put_cameras", 'routine in <a href="com/pg/pg_put_cameras.html">pg_put_cameras.pro</a>', "pg_put_cameras.pro", "", "pg_put_cameras", "	Outputs camera descriptors through the translators.    	Translator-dependent.  The data descriptor may be affected.    	Camera descriptors are passed to the translators.  Any camera 	keywords are used to override the corresponding quantities in the 	output descriptors.    STATUS: 	Complete    SEE ALSO: 	pg_put_planets, pg_put_rings, pg_put_stars, pg_put_maps    ", "gdGeneric descriptor.  If present, camera descriptors are 		taken from the gd.cd field.  	cam_*:		All camera override keywords are accepted.   cdsCamera descriptors to output.   cam_namecam_timecam_orientcam_avelcam_poscam_velcam_scalecam_oaxiscam_sizecam_fn_psfcam_opaquecam_exposurecam_fn_focal_to_imagecam_fn_image_to_focalcam_fn_datacam_filterscam_fn_filtertr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.   tr_firstddData descriptor.   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998   	NONE    ");
+  libdata[libdataItem++] = new Array("com/pg/pg_put_cameras.html#pg_put_cameras", "pg_put_cameras", 'routine in <a href="com/pg/pg_put_cameras.html">pg_put_cameras.pro</a>', "pg_put_cameras.pro", "", "pg_put_cameras", "	Outputs camera descriptors through the translators.    	Translator-dependent.  The data descriptor may be affected.    	Camera descriptors are passed to the translators.  Any camera 	keywords are used to override the corresponding quantities in the 	output descriptors.    STATUS: 	Complete    SEE ALSO: 	pg_put_planets, pg_put_rings, pg_put_stars, pg_put_maps    ", "gdGeneric descriptor.  If present, camera descriptors are 		taken from the gd.cd field.  	cam_*:		All camera override keywords are accepted.   cdsCamera descriptors to output.   nametimeorientavelposvelscaleoaxissizefn_psfopaqueexposurefn_focal_to_imagefn_image_to_focalfi_datafiltersfn_filtertr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.   tr_firsttr_nosortddData descriptor.   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998   	NONE    ");
   
   
 
 libdata[libdataItem++] = new Array("com/pg/pg_put_maps.html", "pg_put_maps.pro", '.pro file in <a href="com/pg/dir-overview.html">com/pg/ directory</a>', "pg_put_maps.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("com/pg/pg_put_maps.html#pg_put_maps", "pg_put_maps", 'routine in <a href="com/pg/pg_put_maps.html">pg_put_maps.pro</a>', "pg_put_maps.pro", "", "pg_put_maps", "	Outputs map descriptors through the translators.    	Translator-dependent.  The data descriptor may be affected.    	Map descriptors are passed to the translators.  Any map 	keywords are used to override the corresponding quantities in the 	output descriptors.    STATUS: 	Complete    SEE ALSO: 	pg_put_planets, pg_put_rings, pg_put_stars, pg_put_cameras    ", "gdGeneric descriptor.  If present, map descriptors are 		taken from the gd.md field.  	map_*:		All map override keywords are accepted.   mdsMap descriptors to output.   map_namemap_typemap_sizemap_scalemap_eccmap_originmap_centermap_rangemap_offsetmap_limitsmap_fn_map_to_imagemap_fn_image_to_mapmap_fn_data_pmap_unitsmap_graphicmap_rotatemap_radiitr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.   tr_firstddData descriptor.   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998   	NONE    ");
+  libdata[libdataItem++] = new Array("com/pg/pg_put_maps.html#pg_put_maps", "pg_put_maps", 'routine in <a href="com/pg/pg_put_maps.html">pg_put_maps.pro</a>', "pg_put_maps.pro", "", "pg_put_maps", "	Outputs map descriptors through the translators.    	Translator-dependent.  The data descriptor may be affected.    	Map descriptors are passed to the translators.  Any map 	keywords are used to override the corresponding quantities in the 	output descriptors.    STATUS: 	Complete    SEE ALSO: 	pg_put_planets, pg_put_rings, pg_put_stars, pg_put_cameras    ", "gdGeneric descriptor.  If present, map descriptors are 		taken from the gd.md field.  	map_*:		All map override keywords are accepted.   mdsMap descriptors to output.   nametypesizescaleeccorigincenterrangeoffsetlimitsfn_map_to_imagefn_image_to_mapfn_dataunitsgraphicrotateradiipoletr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.   tr_firsttr_nosortddData descriptor.   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998   	NONE    ");
   
   
 
 libdata[libdataItem++] = new Array("com/pg/pg_put_planets.html", "pg_put_planets.pro", '.pro file in <a href="com/pg/dir-overview.html">com/pg/ directory</a>', "pg_put_planets.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("com/pg/pg_put_planets.html#pg_put_planets", "pg_put_planets", 'routine in <a href="com/pg/pg_put_planets.html">pg_put_planets.pro</a>', "pg_put_planets.pro", "", "pg_put_planets", "	Outputs planet descriptors through the translators.    	Translator-dependent.  The data descriptor may be affected.    	Planet descriptors are passed to the translators.  Any planet 	keywords are used to override the corresponding quantities in the 	output descriptors.    STATUS: 	Complete    SEE ALSO: 	pg_put_cameras, pg_put_rings, pg_put_stars, pg_put_maps    ", "pdsPlanet descriptors to output.   odsgdGeneric descriptor.  If present, planet descriptors are 		taken from the gd.pd field.  	plt_*:		All planet override keywords are accepted.   plt_nameplt_timeplt_orientplt_avelplt_posplt_velplt_radiiplt_loraplt_opaqueplt_opacityplt_massplt_refl_fnplt_refl_parmplt_phase_fnplt_phase_parmplt_albedotr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.   tr_firstddData descriptor.   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998   	NONE    ");
+  libdata[libdataItem++] = new Array("com/pg/pg_put_planets.html#pg_put_planets", "pg_put_planets", 'routine in <a href="com/pg/pg_put_planets.html">pg_put_planets.pro</a>', "pg_put_planets.pro", "", "pg_put_planets", "	Outputs planet descriptors through the translators.    	Translator-dependent.  The data descriptor may be affected.    	Planet descriptors are passed to the translators.  Any planet 	keywords are used to override the corresponding quantities in the 	output descriptors.    STATUS: 	Complete    SEE ALSO: 	pg_put_cameras, pg_put_rings, pg_put_stars, pg_put_maps    ", "pdsPlanet descriptors to output.   odsgdGeneric descriptor.  If present, planet descriptors are 		taken from the gd.pd field.  	plt_*:		All planet override keywords are accepted.   nametimeorientavelposvelradiiloraopaqueopacitymassrefl_fnrefl_parmphase_fnphase_parmalbedotr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.   tr_firsttr_nosortddData descriptor.   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998   	NONE    ");
   
   
 
 libdata[libdataItem++] = new Array("com/pg/pg_put_rings.html", "pg_put_rings.pro", '.pro file in <a href="com/pg/dir-overview.html">com/pg/ directory</a>', "pg_put_rings.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("com/pg/pg_put_rings.html#pg_put_rings", "pg_put_rings", 'routine in <a href="com/pg/pg_put_rings.html">pg_put_rings.pro</a>', "pg_put_rings.pro", "", "pg_put_rings", "	Outputs ring descriptors through the translators.    	Translator-dependent.  The data descriptor may be affected.    	Ring descriptors are passed to the translators.  Any ring 	keywords are used to override the corresponding quantities in the 	output descriptors.    STATUS: 	Complete    SEE ALSO: 	pg_put_planets, pg_put_cameras, pg_put_stars, pg_put_maps    ", "rdsRing descriptors to output.   odsgdGeneric descriptor.  If present, ring descriptors are 		taken from the gd.rd field.  	rng_*:		All ring override keywords are accepted.   rng_namerng_primaryrng_timerng_orientrng_avelrng_posrng_velrng_smarng_eccrng_daprng_opaquerng_opacityrng_nmrng_mrng_emrng_wmrng_dwmdttr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.   tr_firstddData descriptor.   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998   	NONE    ");
+  libdata[libdataItem++] = new Array("com/pg/pg_put_rings.html#pg_put_rings", "pg_put_rings", 'routine in <a href="com/pg/pg_put_rings.html">pg_put_rings.pro</a>', "pg_put_rings.pro", "", "pg_put_rings", "	Outputs ring descriptors through the translators.    	Translator-dependent.  The data descriptor may be affected.    	Ring descriptors are passed to the translators.  Any ring 	keywords are used to override the corresponding quantities in the 	output descriptors.    STATUS: 	Complete    SEE ALSO: 	pg_put_planets, pg_put_cameras, pg_put_stars, pg_put_maps    ", "rdsRing descriptors to output.   odsgdGeneric descriptor.  If present, ring descriptors are 		taken from the gd.rd field.  	rng_*:		All ring override keywords are accepted.   nameprimarytimeorientavelposvelsmaeccdapopaqueopacitynmmemwmdwmdttr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.   tr_firsttr_nosortddData descriptor.   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998   	NONE    ");
   
   
 
 libdata[libdataItem++] = new Array("com/pg/pg_put_stars.html", "pg_put_stars.pro", '.pro file in <a href="com/pg/dir-overview.html">com/pg/ directory</a>', "pg_put_stars.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("com/pg/pg_put_stars.html#pg_put_stars", "pg_put_stars", 'routine in <a href="com/pg/pg_put_stars.html">pg_put_stars.pro</a>', "pg_put_stars.pro", "", "pg_put_stars", "	Outputs star descriptors through the translators.    	Translator-dependent.  The data descriptor may be affected.    	CameStarra descriptors are passed to the translators.  Any star 	keywords are used to override the corresponding quantities in the 	output descriptors.    STATUS: 	Complete    SEE ALSO: 	pg_put_planets, pg_put_rings, pg_put_cameras, pg_put_maps    ", "sdsStar descriptors to output.   odsgdGeneric descriptor.  If present, star descriptors are 		taken from the gd.sd field.  	str_*:		All star override keywords are accepted.   str_namestr_timestr_orientstr_avelstr_posstr_velstr_radiistr_lorastr_lumstr_spstr_opaquestr_opacitytr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.   tr_firstddData descriptor.   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998   	NONE    ");
+  libdata[libdataItem++] = new Array("com/pg/pg_put_stars.html#pg_put_stars", "pg_put_stars", 'routine in <a href="com/pg/pg_put_stars.html">pg_put_stars.pro</a>', "pg_put_stars.pro", "", "pg_put_stars", "	Outputs star descriptors through the translators.    	Translator-dependent.  The data descriptor may be affected.    	CameStarra descriptors are passed to the translators.  Any star 	keywords are used to override the corresponding quantities in the 	output descriptors.    STATUS: 	Complete    SEE ALSO: 	pg_put_planets, pg_put_rings, pg_put_cameras, pg_put_maps    ", "sdsStar descriptors to output.   odsgdGeneric descriptor.  If present, star descriptors are 		taken from the gd.sd field.  	str_*:		All star override keywords are accepted.   nametimeorientavelposvelradiiloralumspopaqueopacitytr_disabletr_overrideString giving a comma-separated list of translators 			to use instead of those in the translators table.  If 			this keyword is specified, no translators from the 			table are called, but the translators keywords 			from the table are still used.   tr_firsttr_nosortddData descriptor.   trsString containing keywords and values to be passed directly 		to the translators as if they appeared as arguments in the 		translators table.  These arguments are passed to every 		translator called, so the user should be aware of possible 		conflicts.  Keywords passed using this mechanism take 		precedence over keywords appearing in the translators table.   end_keywords", "NV/PG", " 	Written by:	Spitale, 1998   	NONE    ");
   
   
 
@@ -7374,7 +7465,7 @@ libdata[libdataItem++] = new Array("com/pg/pg_select_points.html", "pg_select_po
 libdata[libdataItem++] = new Array("com/pg/pg_select_region.html", "pg_select_region.pro", '.pro file in <a href="com/pg/dir-overview.html">com/pg/ directory</a>', "pg_select_region.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("com/pg/pg_select_region.html#pg_select_region", "pg_select_region", 'routine in <a href="com/pg/pg_select_region.html">pg_select_region.pro</a>', "pg_select_region.pro", "", "pg_select_region", "	Allows the user to select regions in an image using the mouse.    ", "color	Color to use for graphics overlays.    select_buttonIndex of button to use as the select button instead 			of the left button (1).   cancel_buttonIndex of mouse button to be used as a cancel 			button instead of left+middle, (3).   end_buttonIndex of button to use as the end button instead 			of the right button (4).   noverbose	If set, turns off the notification that cursor 			movement is required.   p0	First point of line.  If set, then the routine 			immediately begins to drag from that point until a 			button is released.   autocloseIf set, the region is automaticaly closed when the 			end button is pressed.   points	If set, the selected points are returned instead 			of enclosed indices.   noclosedatabox	If set, a rectanguar region is selected.    image_ptsddData descriptor containing the image.   ", "NV/PG", " 	Written by:	Spitale, 2/1998   	Array of subscripts of all image points which lie within the selected 	region.  -1 is returned if the cancel button is pressed.    STATUS: 	Complete    SEE ALSO: 	pg_trim    ");
+  libdata[libdataItem++] = new Array("com/pg/pg_select_region.html#pg_select_region", "pg_select_region", 'routine in <a href="com/pg/pg_select_region.html">pg_select_region.pro</a>', "pg_select_region.pro", "", "pg_select_region", "	Allows the user to select regions in an image using the mouse.    ", "color	Color to use for graphics overlays.    select_buttonIndex of button to use as the select button instead 			of the left button (1).   cancel_buttonIndex of mouse button to be used as a cancel 			button instead of left+middle, (3).   end_buttonIndex of button to use as the end button instead 			of the right button (4).   noverbose	If set, turns off the notification that cursor 			movement is required.   p0	First point of line.  If set, then the routine 			immediately begins to drag from that point until a 			button is released.   autocloseIf set, the region is automaticaly closed when the 			end button is pressed.   points	If set, the selected points are returned instead 			of enclosed indices.   noclosedatabox	If set, a rectanguar region is selected.    image_ptsddData descriptor containing an image.   ", "NV/PG", " 	Written by:	Spitale, 2/1998   	Array of subscripts of all image points which lie within the selected 	region.  -1 is returned if the cancel button is pressed.    STATUS: 	Complete    SEE ALSO: 	pg_trim    ");
   
   
 
@@ -7521,7 +7612,7 @@ libdata[libdataItem++] = new Array("com/pg/sub/pgs_desc_suffix.html", "pgs_desc_
 libdata[libdataItem++] = new Array("com/pg/sub/pgs_gd.html", "pgs_gd.pro", '.pro file in <a href="com/pg/sub/dir-overview.html">com/pg/sub/ directory</a>', "pgs_gd.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("com/pg/sub/pgs_gd.html#pgs_gd", "pgs_gd", 'routine in <a href="com/pg/sub/pgs_gd.html">pgs_gd.pro</a>', "pgs_gd.pro", "", "pgs_gd", "	Dereferences a generic descriptor.    ", "ddcrdbdmddkxgbxdkdgbdpdsdstdrdcdsundbxodardframe_bdgdGeneric descriptor.   ", "NV/PGS", " 	Written by:	Spitale   ");
+  libdata[libdataItem++] = new Array("com/pg/sub/pgs_gd.html#pgs_gd", "pgs_gd", 'routine in <a href="com/pg/sub/pgs_gd.html">pgs_gd.pro</a>', "pgs_gd.pro", "", "pgs_gd", "	Dereferences a generic descriptor.    ", "ddcrdbdmddkxgbxdkdgbdpdsdstdrdcdsundbxodardxdframe_bdgdGeneric descriptor.   ", "NV/PGS", " 	Written by:	Spitale   ");
   
   
 
@@ -7529,13 +7620,6 @@ libdata[libdataItem++] = new Array("com/pg/sub/pgs_make_gd.html", "pgs_make_gd.p
   
   
   libdata[libdataItem++] = new Array("com/pg/sub/pgs_make_gd.html#pgs_make_gd", "pgs_make_gd", 'routine in <a href="com/pg/sub/pgs_make_gd.html">pgs_make_gd.pro</a>', "pgs_make_gd.pro", "", "pgs_make_gd", "	Creates a generic descriptor.    ", "gdGeneric descriptor.  Fields from this descriptor will 		be included in the output generic descriptor.  	<x>d:	There is an input keyword for each descriptor type.   ddcrdbdmddkxgbxdkdgbdpdsdstdardrdcdsundbxodxds", "NV/PGS", " 	Written by:	Spitale   	Generic descriptor containing all of the input fields, and any 	descripors contained in gd.  Note that no descriptors are cloned; 	only the pointers are copied.     ");
-  
-  
-
-libdata[libdataItem++] = new Array("com/pg/sub/pgs_name_sort.html", "pgs_name_sort.pro", '.pro file in <a href="com/pg/sub/dir-overview.html">com/pg/sub/ directory</a>', "pgs_name_sort.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("com/pg/sub/pgs_name_sort.html#pgs_name_sort", "pgs_name_sort", 'routine in <a href="com/pg/sub/pgs_name_sort.html">pgs_name_sort.pro</a>', "pgs_name_sort.pro", "", "pgs_name_sort", "", "_names", "          -1", "");
   
   
 
@@ -7640,7 +7724,7 @@ libdata[libdataItem++] = new Array("obj/tools/plot_inertial.html", "plot_inertia
 libdata[libdataItem++] = new Array("obj/plt/plt_create_descriptors.html", "plt_create_descriptors.pro", '.pro file in <a href="obj/plt/dir-overview.html">obj/plt/ directory</a>', "plt_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/plt/plt_create_descriptors.html#plt_create_descriptors", "plt_create_descriptors", 'routine in <a href="obj/plt/plt_create_descriptors.html">plt_create_descriptors.pro</a>', "plt_create_descriptors.pro", "", "plt_create_descriptors", "	Init method for the PLANET class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   bdBody descriptor(s) to pass to bod_create_descriptors.   sldSolid descriptor(s) to pass to sld_create_descriptors.   gbdGlobe descriptor(s) to pass to glb_create_descriptors.   pdPlanet descriptor(s) to initialize, instead of creating new ones.   abbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJn     Number of planet descriptors.   end_keywords", "NV/LIB/PLT", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016          An array (n) of planet descriptors.   STATUS:        Completed.    ");
+  libdata[libdataItem++] = new Array("obj/plt/plt_create_descriptors.html#plt_create_descriptors", "plt_create_descriptors", 'routine in <a href="obj/plt/plt_create_descriptors.html">plt_create_descriptors.pro</a>', "plt_create_descriptors.pro", "", "plt_create_descriptors", "	Init method for the PLANET class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   bdBody descriptor(s) to pass to bod_create_descriptors.   sldSolid descriptor(s) to pass to sld_create_descriptors.   gbdGlobe descriptor(s) to pass to glb_create_descriptors.   pdPlanet descriptor(s) to initialize, instead of creating new ones.   abbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJn     Number of planet descriptors.   end_keywords", "NV/LIB/PLT", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016          An array (n) of planet descriptors.   STATUS:        Completed.    ");
   
   
 
@@ -7655,13 +7739,6 @@ libdata[libdataItem++] = new Array("obj/plt/plt_replicate.html", "plt_replicate.
   
   
   libdata[libdataItem++] = new Array("obj/plt/plt_replicate.html#plt_replicate", "plt_replicate", 'routine in <a href="obj/plt/plt_replicate.html">plt_replicate.pro</a>', "plt_replicate.pro", "", "plt_replicate", "	Replicates the given descriptor, producing an array of the given 	dimensions containing cloned versions of the input descriptor.    ", "pd Planet descriptor.   dim Dimensions of the result.   ", "NV/LIB/PLT", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Array of the given dimensions containing cloned versions of the input 	descriptor.    STATUS: 	Complete    ");
-  
-  
-
-libdata[libdataItem++] = new Array("obj/pnt/pnt_assoc_xd.html", "pnt_assoc_xd.pro", '.pro file in <a href="obj/pnt/dir-overview.html">obj/pnt/ directory</a>', "pnt_assoc_xd.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("obj/pnt/pnt_assoc_xd.html#pnt_assoc_xd", "pnt_assoc_xd", 'routine in <a href="obj/pnt/pnt_assoc_xd.html">pnt_assoc_xd.pro</a>', "pnt_assoc_xd.pro", "", "pnt_assoc_xd", "	Returns the associated descriptor for a POINT object.    ", "noeventIf set, no event is generated.   ptdPoints object.   ", "NV/SYS/PS", " 	Written by:	Spitale, 11/2015   	The associated descriptor for the POINT object.    STATUS: 	Complete    SEE ALSO: 	pnt_set_assoc_xd     ");
   
   
 
@@ -7686,7 +7763,7 @@ libdata[libdataItem++] = new Array("obj/pnt/pnt_condition.html", "pnt_condition.
 libdata[libdataItem++] = new Array("obj/pnt/pnt_create_descriptors.html", "pnt_create_descriptors.pro", '.pro file in <a href="obj/pnt/dir-overview.html">obj/pnt/ directory</a>', "pnt_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/pnt/pnt_create_descriptors.html#pnt_create_descriptors", "pnt_create_descriptors", 'routine in <a href="obj/pnt/pnt_create_descriptors.html">pnt_create_descriptors.pro</a>', "pnt_create_descriptors.pro", "", "pnt_create_descriptors", "	Creates and initializes a POINT object.    ", "crdptdabbrevusernametasksudataunamedescinputpointsvectorsflagstagsdataassoc_xdnend_keywords", "NV/SYS/PS", " 	Written by:	Spitale, 11/2015   	Newly created and initialized POINT object.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("obj/pnt/pnt_create_descriptors.html#pnt_create_descriptors", "pnt_create_descriptors", 'routine in <a href="obj/pnt/pnt_create_descriptors.html">pnt_create_descriptors.pro</a>', "pnt_create_descriptors.pro", "", "pnt_create_descriptors", "	Creates and initializes a POINT object.    ", "crdptdabbrevusernametasksudataunameassoc_xddescinputpointsvectorsflagstagsdatanend_keywords", "NV/SYS/PS", " 	Written by:	Spitale, 11/2015   	Newly created and initialized POINT object.    STATUS: 	Complete    ");
   
   
 
@@ -7801,13 +7878,6 @@ libdata[libdataItem++] = new Array("obj/pnt/pnt_set.html", "pnt_set.pro", '.pro 
   
   
   libdata[libdataItem++] = new Array("obj/pnt/pnt_set.html#pnt_set", "pnt_set", 'routine in <a href="obj/pnt/pnt_set.html">pnt_set.pro</a>', "pnt_set.pro", "", "pnt_set", "	Replaces fields in a POINT object.  This is a convenient way of 	setting multiple fields in one call, and only a single event is 	generated.    ", "pointsvectorsflagsnamedescinputdatatagsudataunameassoc_xdnoeventIf set, no event is generated.   ptd	POINT object.   ", "NV/SYS", " 	Written by:	Spitale		12/2015   ");
-  
-  
-
-libdata[libdataItem++] = new Array("obj/pnt/pnt_set_assoc_xd.html", "pnt_set_assoc_xd.pro", '.pro file in <a href="obj/pnt/dir-overview.html">obj/pnt/ directory</a>', "pnt_set_assoc_xd.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("obj/pnt/pnt_set_assoc_xd.html#pnt_set_assoc_xd", "pnt_set_assoc_xd", 'routine in <a href="obj/pnt/pnt_set_assoc_xd.html">pnt_set_assoc_xd.pro</a>', "pnt_set_assoc_xd.pro", "", "pnt_set_assoc_xd", "	Replaces the assoc_xd field in a POINT object.    ", "noeventIf set, no event is generated.   ps	POINT object.   assoc_xdNew assoc_xd.   ", "NV/SYS", " 	Written by:	Spitale		11/2015   ");
   
   
 
@@ -8050,7 +8120,7 @@ libdata[libdataItem++] = new Array("obj/tools/ringplane_radial_bounds.html", "ri
 libdata[libdataItem++] = new Array("obj/rng/rng_create_descriptors.html", "rng_create_descriptors.pro", '.pro file in <a href="obj/rng/dir-overview.html">obj/rng/ directory</a>', "rng_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/rng/rng_create_descriptors.html#rng_create_descriptors", "rng_create_descriptors", 'routine in <a href="obj/rng/rng_create_descriptors.html">rng_create_descriptors.pro</a>', "rng_create_descriptors.pro", "", "rng_create_descriptors", "	Init method for the RING class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   bdBody descriptor(s) to pass to bod_create_descriptors.   sldSolid descriptor(s) to pass to sld_create_descriptors.   dkdDisk descriptor(s) to pass to dsk_create_descriptors.   rdRing descriptor(s) to initialize, instead of creating new 		ones.   abbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedosmaeccdapscalenm_memtapmdtapmdtlibamlibmdlibmdtnl_liltaanldtaanldtliballibldlibldtprimaryArray (n) of primary strings.   descArray (n) of description strings.   n     Number of ring descriptors.   end_keywords", "NV/LIB/RNG", "       Written by:     Spitale  	Adapted by:	Spitale, 5/2016          An array (n) of ring descriptors.   STATUS:        Completed.    ");
+  libdata[libdataItem++] = new Array("obj/rng/rng_create_descriptors.html#rng_create_descriptors", "rng_create_descriptors", 'routine in <a href="obj/rng/rng_create_descriptors.html">rng_create_descriptors.pro</a>', "rng_create_descriptors.pro", "", "rng_create_descriptors", "	Init method for the RING class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   bdBody descriptor(s) to pass to bod_create_descriptors.   sldSolid descriptor(s) to pass to sld_create_descriptors.   dkdDisk descriptor(s) to pass to dsk_create_descriptors.   rdRing descriptor(s) to initialize, instead of creating new 		ones.   abbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedosmaeccdapscalenm_memtapmdtapmdtlibamlibmdlibmdtnl_liltaanldtaanldtliballibldlibldtprimaryArray (n) of primary descriptors.   descArray (n) of description strings.   n     Number of ring descriptors.   end_keywords", "NV/LIB/RNG", "       Written by:     Spitale  	Adapted by:	Spitale, 5/2016          An array (n) of ring descriptors.   STATUS:        Completed.    ");
   
   
 
@@ -8092,7 +8162,7 @@ libdata[libdataItem++] = new Array("obj/rng/rng_set_desc.html", "rng_set_desc.pr
 libdata[libdataItem++] = new Array("obj/rng/rng_set_primary.html", "rng_set_primary.pro", '.pro file in <a href="obj/rng/dir-overview.html">obj/rng/ directory</a>', "rng_set_primary.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/rng/rng_set_primary.html#rng_set_primary", "rng_set_primary", 'routine in <a href="obj/rng/rng_set_primary.html">rng_set_primary.pro</a>', "rng_set_primary.pro", "", "rng_set_primary", "	Replaces the primary string in each given ring descriptor.    ", "noeventrdArray (nt) of STATION descriptor.   primaryArray (nt) of primary strings.   ", "NV/LIB/RNG", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
+  libdata[libdataItem++] = new Array("obj/rng/rng_set_primary.html#rng_set_primary", "rng_set_primary", 'routine in <a href="obj/rng/rng_set_primary.html">rng_set_primary.pro</a>', "rng_set_primary.pro", "", "rng_set_primary", "	Replaces the primary string in each given ring descriptor.    ", "noeventrdArray (nt) of STATION descriptor.   xd", "NV/LIB/RNG", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
   
   
 
@@ -8120,7 +8190,7 @@ libdata[libdataItem++] = new Array("obj/sld/sld_albedo.html", "sld_albedo.pro", 
 libdata[libdataItem++] = new Array("obj/sld/sld_create_descriptors.html", "sld_create_descriptors.pro", '.pro file in <a href="obj/sld/dir-overview.html">obj/sld/ directory</a>', "sld_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/sld/sld_create_descriptors.html#sld_create_descriptors", "sld_create_descriptors", 'routine in <a href="obj/sld/sld_create_descriptors.html">sld_create_descriptors.pro</a>', "sld_create_descriptors.pro", "", "sld_create_descriptors", "	Init method for the SOLID class.    ", "crdbdsldabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedonNumber of descriptors to create.   end_keywords", "NV/LIB/SLD", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized solid descriptors, depending 	on the presence of the bd keyword.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("obj/sld/sld_create_descriptors.html#sld_create_descriptors", "sld_create_descriptors", 'routine in <a href="obj/sld/sld_create_descriptors.html">sld_create_descriptors.pro</a>', "sld_create_descriptors.pro", "", "sld_create_descriptors", "	Init method for the SOLID class.    ", "crdbdsldabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedonNumber of descriptors to create.   end_keywords", "NV/LIB/SLD", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized solid descriptors, depending 	on the presence of the bd keyword.    STATUS: 	Complete    ");
   
   
 
@@ -8292,7 +8362,7 @@ libdata[libdataItem++] = new Array("obj/tools/stereo_split.html", "stereo_split.
 libdata[libdataItem++] = new Array("obj/stn/stn_create_descriptors.html", "stn_create_descriptors.pro", '.pro file in <a href="obj/stn/dir-overview.html">obj/stn/ directory</a>', "stn_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/stn/stn_create_descriptors.html#stn_create_descriptors", "stn_create_descriptors", 'routine in <a href="obj/stn/stn_create_descriptors.html">stn_create_descriptors.pro</a>', "stn_create_descriptors.pro", "", "stn_create_descriptors", "	Init method for the STATION class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   bdBody descriptor(s) to pass to bod_create_descriptors.   stdStation descriptor(s) to initialize, instead of creating new 		ones.   abbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayn     Number of station descriptors.   end_keywords", "NV/LIB/STN", "       Written by:     Spitale  	Adapted by:	Spitale, 5/2016          An array (n) of station descriptors.   STATUS:        Completed.    ");
+  libdata[libdataItem++] = new Array("obj/stn/stn_create_descriptors.html#stn_create_descriptors", "stn_create_descriptors", 'routine in <a href="obj/stn/stn_create_descriptors.html">stn_create_descriptors.pro</a>', "stn_create_descriptors.pro", "", "stn_create_descriptors", "	Init method for the STATION class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   bdBody descriptor(s) to pass to bod_create_descriptors.   stdStation descriptor(s) to initialize, instead of creating new 		ones.   abbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayprimaryArray (n) of primary descriptors.   surface_ptn     Number of station descriptors.   end_keywords", "NV/LIB/STN", "       Written by:     Spitale  	Adapted by:	Spitale, 5/2016          An array (n) of station descriptors.   STATUS:        Completed.    ");
   
   
 
@@ -8306,7 +8376,7 @@ libdata[libdataItem++] = new Array("obj/stn/stn_evolve.html", "stn_evolve.pro", 
 libdata[libdataItem++] = new Array("obj/stn/stn_primary.html", "stn_primary.pro", '.pro file in <a href="obj/stn/dir-overview.html">obj/stn/ directory</a>', "stn_primary.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/stn/stn_primary.html#stn_primary", "stn_primary", 'routine in <a href="obj/stn/stn_primary.html">stn_primary.pro</a>', "stn_primary.pro", "", "stn_primary", "	Returns the primary string for each given station descriptor.    ", "noeventstd Array (nt) of STATION descriptors.   ", "NV/LIB/STN", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Primary string associated with each given station descriptor.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("obj/stn/stn_primary.html#stn_primary", "stn_primary", 'routine in <a href="obj/stn/stn_primary.html">stn_primary.pro</a>', "stn_primary.pro", "", "stn_primary", "	Returns the primary string for each given station descriptor.    ", "noeventstd Array (nt) of STATION descriptors.   ", "NV/LIB/STN", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Primary descriptor associated with each given station descriptor.    STATUS: 	Complete    ");
   
   
 
@@ -8320,7 +8390,7 @@ libdata[libdataItem++] = new Array("obj/stn/stn_replicate.html", "stn_replicate.
 libdata[libdataItem++] = new Array("obj/stn/stn_set_primary.html", "stn_set_primary.pro", '.pro file in <a href="obj/stn/dir-overview.html">obj/stn/ directory</a>', "stn_set_primary.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/stn/stn_set_primary.html#stn_set_primary", "stn_set_primary", 'routine in <a href="obj/stn/stn_set_primary.html">stn_set_primary.pro</a>', "stn_set_primary.pro", "", "stn_set_primary", "	Replaces the primary string in each given station descriptor.    ", "noeventstdArray (nt) of STATION descriptors.   primaryArray (nt) of primary strings.   ", "NV/LIB/STN", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
+  libdata[libdataItem++] = new Array("obj/stn/stn_set_primary.html#stn_set_primary", "stn_set_primary", 'routine in <a href="obj/stn/stn_set_primary.html">stn_set_primary.pro</a>', "stn_set_primary.pro", "", "stn_set_primary", "	Replaces the primary string in each given station descriptor.    ", "noeventstdArray (nt) of STATION descriptors.   primaryArray (nt) of primary descriptors.   ", "NV/LIB/STN", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
   
   
 
@@ -8341,7 +8411,7 @@ libdata[libdataItem++] = new Array("obj/stn/stn_surface_pt.html", "stn_surface_p
 libdata[libdataItem++] = new Array("obj/str/str_create_descriptors.html", "str_create_descriptors.pro", '.pro file in <a href="obj/str/dir-overview.html">obj/str/ directory</a>', "str_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/str/str_create_descriptors.html#str_create_descriptors", "str_create_descriptors", 'routine in <a href="obj/str/str_create_descriptors.html">str_create_descriptors.pro</a>', "str_create_descriptors.pro", "", "str_create_descriptors", "	Init method for the STAR class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   bdBody descriptor(s) to pass to bod_create_descriptors.   sldSolid descriptor(s) to pass to sld_create_descriptors.   gbdGlobe descriptor(s) to pass to glb_create_descriptors.   sdStar descriptor(s) to initialize, instead of creating new ones.   abbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJlumArray (n) of luminosity values.   spArray (n) of spectral class strings.   n     Number of star descriptors.   end_keywords", "NV/LIB/STR", "       Written by:     Haemmerle, 5/1998  	Adapted by:	Spitale, 5/2016          An array (n) of star descriptors.   STATUS:        Completed.    ");
+  libdata[libdataItem++] = new Array("obj/str/str_create_descriptors.html#str_create_descriptors", "str_create_descriptors", 'routine in <a href="obj/str/str_create_descriptors.html">str_create_descriptors.pro</a>', "str_create_descriptors.pro", "", "str_create_descriptors", "	Init method for the STAR class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   bdBody descriptor(s) to pass to bod_create_descriptors.   sldSolid descriptor(s) to pass to sld_create_descriptors.   gbdGlobe descriptor(s) to pass to glb_create_descriptors.   sdStar descriptor(s) to initialize, instead of creating new ones.   abbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJlumArray (n) of luminosity values.   spArray (n) of spectral class strings.   n     Number of star descriptors.   end_keywords", "NV/LIB/STR", "       Written by:     Haemmerle, 5/1998  	Adapted by:	Spitale, 5/2016          An array (n) of star descriptors.   STATUS:        Completed.    ");
   
   
 

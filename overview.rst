@@ -59,7 +59,7 @@ the particular instrument that generated the input data, or upon
 the organization of the file in which the data resides. Because
 IDL compiles code dynamically, this requirement is met in OMINAS
 by allowing for external "user"-written configuration code that
-contains all of the specifics of a particular data source.</p>
+contains all of the specifics of a particular data source.
 
 Scripting
 ~~~~~~~~~
