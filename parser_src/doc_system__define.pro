@@ -1115,7 +1115,7 @@ pro doc_system::loadParsers
 
   ; tree node parsers
   self.parsers->put, 'htmloutput', obj_new('MGtmHTML')
-  self.parsers->put, 'rstoutput', obj_new('MGtmRST')
+  self.parsers->put, 'rstoutput', obj_new('pptmRST')
   self.parsers->put, 'latexoutput', obj_new('MGtmLaTeX')
   self.parsers->put, 'plainoutput', obj_new('MGtmPlain')
   self.parsers->put, 'docbookoutput', obj_new('MGtmDocbook')

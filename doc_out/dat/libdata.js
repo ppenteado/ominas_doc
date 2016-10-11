@@ -11,10 +11,38 @@ libdataItem = 0;
 
 
 
+libdata[libdataItem++] = new Array("./_dat_compress_data.html", "_dat_compress_data.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "_dat_compress_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("./_dat_compress_data.html#_dat_compress_data", "_dat_compress_data", 'routine in <a href="./_dat_compress_data.html">_dat_compress_data.pro</a>', "_dat_compress_data.pro", "", "_dat_compress_data", "", "cdatacabscissa_dd", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("./_dat_compute_size.html", "_dat_compute_size.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "_dat_compute_size.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("./_dat_compute_size.html#_dat_compute_size", "_dat_compute_size", 'routine in <a href="./_dat_compute_size.html">_dat_compute_size.pro</a>', "_dat_compute_size.pro", "", "_dat_compute_size", "", "_ddsamples", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("./_dat_uncompress_data.html", "_dat_uncompress_data.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "_dat_uncompress_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("./_dat_uncompress_data.html#_dat_uncompress_data", "_dat_uncompress_data", 'routine in <a href="./_dat_uncompress_data.html">_dat_uncompress_data.pro</a>', "_dat_uncompress_data.pro", "", "_dat_uncompress_data", "", "cdatacabscissa_dd", "          -1", "");
+  
+  
+
 libdata[libdataItem++] = new Array("./dat_add_transient_keyvals.html", "dat_add_transient_keyvals.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_add_transient_keyvals.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./dat_add_transient_keyvals.html#dat_add_transient_keyvals", "dat_add_transient_keyvals", 'routine in <a href="./dat_add_transient_keyvals.html">dat_add_transient_keyvals.pro</a>', "dat_add_transient_keyvals.pro", "", "dat_add_transient_keyvals", "	Records keyword/value pairs from a transient argument string.    ", "_ddData descriptor in which to record transient keyvals.   trsTransient argument string.   ", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
+  
+  
+
+libdata[libdataItem++] = new Array("./dat_cache.html", "dat_cache.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_cache.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("./dat_cache.html#dat_cache", "dat_cache", 'routine in <a href="./dat_cache.html">dat_cache.pro</a>', "dat_cache.pro", "", "dat_cache", "	Returns a long integer indicating the maximum size of a data array. 	This value may be adjusted using the environment variable 'DAT_CACHE'. 	-1 is returned if it cannot be determined.    ", "", "NV/OBJ/DAT", " 	Written by:	Spitale, 8/2016   	Current cache value.    STATUS: 	Complete    ");
   
   
 
@@ -28,14 +56,14 @@ libdata[libdataItem++] = new Array("./dat_compress.html", "dat_compress.pro", '.
 libdata[libdataItem++] = new Array("./dat_compress_data_mask.html", "dat_compress_data_mask.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_compress_data_mask.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("./dat_compress_data_mask.html#dat_compress_data_mask", "dat_compress_data_mask", 'routine in <a href="./dat_compress_data_mask.html">dat_compress_data_mask.pro</a>', "dat_compress_data_mask.pro", "", "dat_compress_data_mask", "", "abscissa_dddata", "          -1", "");
+  libdata[libdataItem++] = new Array("./dat_compress_data_mask.html#dat_compress_data_mask", "dat_compress_data_mask", 'routine in <a href="./dat_compress_data_mask.html">dat_compress_data_mask.pro</a>', "dat_compress_data_mask.pro", "", "dat_compress_data_mask", "", "_dd", "          -1", "");
   
   
 
 libdata[libdataItem++] = new Array("./dat_create_descriptors.html", "dat_create_descriptors.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("./dat_create_descriptors.html#dat_create_descriptors", "dat_create_descriptors", 'routine in <a href="./dat_create_descriptors.html">dat_create_descriptors.pro</a>', "dat_create_descriptors.pro", "", "dat_create_descriptors", "	Creates and initializes a data descriptor.    ", "crdddsilent	If set, messages are suppressed.    abbrevusernametasksudataunameassoc_xdfilenameName of data file.   minmaxdimArray giving the dimensions of the data array.   typeInteger giving the type code of the data array.   dataData array.   abscissanhistNumber of past version of the data array to archive. 		If not given, the environment variable NV_NHIST is 		used.  If that is not set, then nhist defaults to 1.   headerHeader array.   filetypeFiletype identifier string.  If not given 			an attempt is made to detect it.   input_fnName of function to read data file.   output_fnName of function to write data file.   keyword_fnName of function to read/write header keywords.   instrumentInstrument string.  If not given an 			attempt is made to detect it.   input_translatorsString array giving the names of the 				input translators.   output_translatorsString array giving the names of the 				output translators.     input_transformsString array giving the names of the 				input transforms.   output_transformsString array giving the names of the 				output transforms.   maintainData maintenance mode.   compressCompression suffix.   tab_translatorsn Number of descriptors to create.   end_keywords", "NV/SYS", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created and initialized data descriptor.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("./dat_create_descriptors.html#dat_create_descriptors", "dat_create_descriptors", 'routine in <a href="./dat_create_descriptors.html">dat_create_descriptors.pro</a>', "dat_create_descriptors.pro", "", "dat_create_descriptors", "	Creates and initializes a data descriptor.    ", "crdddsilent	If set, messages are suppressed.    abbrevusernametasksudataunameassoc_xdfilenameName of data file.   minmaxdimArray giving the dimensions of the data array.   cachetypeInteger giving the type code of the data array.   gffdataData array.   abscissanhistNumber of past version of the data array to archive. 		If not given, the environment variable NV_NHIST is 		used.  If that is not set, then nhist defaults to 1.   headerHeader array.   filetypeFiletype identifier string.  If not given 			an attempt is made to detect it.   input_fnName of function to read data file.   output_fnName of function to write data file.   keyword_fnName of function to read/write header keywords.   instrumentInstrument string.  If not given an 			attempt is made to detect it.   input_translatorsString array giving the names of the 				input translators.   output_translatorsString array giving the names of the 				output translators.     input_transformsString array giving the names of the 				input transforms.   output_transformsString array giving the names of the 				output transforms.   maintainData maintenance mode.   compressCompression suffix.   tab_translatorsn Number of descriptors to create.   end_keywords", "NV/SYS", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created and initialized data descriptor.    STATUS: 	Complete    ");
   
   
 
@@ -224,7 +252,7 @@ libdata[libdataItem++] = new Array("./dat_read.html", "dat_read.pro", '.pro file
 libdata[libdataItem++] = new Array("./dat_read_config.html", "dat_read_config.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_read_config.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("./dat_read_config.html#dat_read_config", "dat_read_config", 'routine in <a href="./dat_read_config.html">dat_read_config.pro</a>', "dat_read_config.pro", "", "dat_read_config", "	Reads an NV configuration table.    ", "continueenvName of an environment variable giving the names of the 		configuration files to read, delimited by ':'.   table_pfilenames_p", "NV/SYS", " 	Written by:	Spitale   	table_p:	Pointer to the configuration table contructed by 			concatenating the contents of each file.  	filenames_p:	List of configuration filenames that were read.    ");
+  libdata[libdataItem++] = new Array("./dat_read_config.html#dat_read_config", "dat_read_config", 'routine in <a href="./dat_read_config.html">dat_read_config.pro</a>', "dat_read_config.pro", "", "dat_read_config", "	Reads an NV configuration table.    ", "continuestatusenvName of an environment variable giving the names of the 		configuration files to read, delimited by ':'.   table_pfilenames_p", "NV/SYS", " 	Written by:	Spitale   	table_p:	Pointer to the configuration table contructed by 			concatenating the contents of each file.  	filenames_p:	List of configuration filenames that were read.    ");
   
   
 
@@ -266,7 +294,7 @@ libdata[libdataItem++] = new Array("./dat_set_compress.html", "dat_set_compress.
 libdata[libdataItem++] = new Array("./dat_set_data.html", "dat_set_data.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_set_data.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("./dat_set_data.html#dat_set_data", "dat_set_data", 'routine in <a href="./dat_set_data.html">dat_set_data.pro</a>', "dat_set_data.pro", "", "dat_set_data", "	Replaces the data array associated with a data descriptor.    ", "silentIf set, messages are suppressed.   updateUpdate mode flag.  If not given, it will be taken from dd.   noeventabscissaIf set, the given array is taken as the abscissa.   ddData descriptor.   _dataNew data array.   ", "NV/SYS", " 	Written by:	Spitale, 2/1998  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
+  libdata[libdataItem++] = new Array("./dat_set_data.html#dat_set_data", "dat_set_data", 'routine in <a href="./dat_set_data.html">dat_set_data.pro</a>', "dat_set_data.pro", "", "dat_set_data", "	Replaces the data array associated with a data descriptor.    ", "silentIf set, messages are suppressed.   updateUpdate mode flag.  If not given, it will be taken from dd.   noeventabscissaIf set, the given array is taken as the abscissa.   sampleddData descriptor.   _dataNew data array.   ", "NV/SYS", " 	Written by:	Spitale, 2/1998  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
   
   
 
@@ -392,7 +420,7 @@ libdata[libdataItem++] = new Array("./dat_type.html", "dat_type.pro", '.pro file
 libdata[libdataItem++] = new Array("./dat_uncompress_data_mask.html", "dat_uncompress_data_mask.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "dat_uncompress_data_mask.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("./dat_uncompress_data_mask.html#dat_uncompress_data_mask", "dat_uncompress_data_mask", 'routine in <a href="./dat_uncompress_data_mask.html">dat_uncompress_data_mask.pro</a>', "dat_uncompress_data_mask.pro", "", "dat_uncompress_data_mask", "", "abscissa_ddcdata", "          -1", "");
+  libdata[libdataItem++] = new Array("./dat_uncompress_data_mask.html#dat_uncompress_data_mask", "dat_uncompress_data_mask", 'routine in <a href="./dat_uncompress_data_mask.html">dat_uncompress_data_mask.pro</a>', "dat_uncompress_data_mask.pro", "", "dat_uncompress_data_mask", "", "_dd", "          -1", "");
   
   
 
@@ -441,7 +469,7 @@ libdata[libdataItem++] = new Array("./keyval_struct__define.html", "keyval_struc
 libdata[libdataItem++] = new Array("./ominas_data__define.html", "ominas_data__define.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "ominas_data__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("./ominas_data__define.html#ominas_data::init", "ominas_data::init", 'routine in <a href="./ominas_data__define.html">ominas_data__define.pro</a>', "ominas_data__define.pro", "", "ominas_data::init", "", "crdddabbrevusernametasksudataunameassoc_xdfilenameminmaxdimtypedataabscissanhistheaderfiletypeinput_fnoutput_fnkeyword_fninstrumentinput_translatorsoutput_translatorsinput_transformsoutput_transformsmaintaincompresstab_translatorsiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("./ominas_data__define.html#ominas_data::init", "ominas_data::init", 'routine in <a href="./ominas_data__define.html">ominas_data__define.pro</a>', "ominas_data__define.pro", "", "ominas_data::init", "", "crdddabbrevusernametasksudataunameassoc_xdfilenameminmaxdimcachetypegffdataabscissanhistheaderfiletypeinput_fnoutput_fnkeyword_fninstrumentinput_translatorsoutput_translatorsinput_transformsoutput_transformsmaintaincompresstab_translatorsiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("./ominas_data__define.html#ominas_data__define", "ominas_data__define", 'routine in <a href="./ominas_data__define.html">ominas_data__define.pro</a>', "ominas_data__define.pro", "", "ominas_data__define", "	Structure defining the data descriptor.    ", "", "NV/SYS", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
