@@ -449,7 +449,7 @@ pro docparprofileparser_o::_parseLines, lines, file, format=format, markup=marku
 
     ; if firstToken is one of the end variants then codeLevel--
     ind = where(firstToken eq endVariants, nEndsFound)
-    if (nEndsFound gt 0L && ((codeLevel gt 1) || (firstToken eq 'end'))) then begin
+    if (nEndsFound gt 0L && ((codeLevel gt 0) || (firstToken eq 'end'))) then begin
       codeLevel--
 
       ; ending a routine, setting number of lines of the routine
