@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>radar_example.pro (OMINAS API Documentation)</title>
+    <title>multiinstrument_example.pro (OMINAS API Documentation)</title>
 
     
 
@@ -160,7 +160,7 @@
 
     <script type="text/javascript">
       function setTitle() {
-        parent.document.title="radar_example.pro (OMINAS API Documentation)";
+        parent.document.title="multiinstrument_example.pro (OMINAS API Documentation)";
       }
     </script>
   </head>
@@ -187,7 +187,7 @@
     
         
         <td >
-          <a href="radar_example-code.html" title="Chromocoded source">Source</a> <a href="radar_example.pro" title=".pro file"><img src="idldoc-resources/attach.png" alt="[attach.png]" align="top"/></a>
+          <a href="multiinstrument_example-code.html" title="Chromocoded source">Source</a> <a href="multiinstrument_example.pro" title=".pro file"><img src="idldoc-resources/attach.png" alt="[attach.png]" align="top"/></a>
         </td>
         
     
@@ -238,86 +238,139 @@
 
     <div class="content">
       <h2 class="directory">./</h2>
-      <h1 class="basename">radar_example.pro<span class="file-attributes"></span></h1>
+      <h1 class="basename">multiinstrument_example.pro<span class="file-attributes"></span></h1>
       
 
-      <span class="file_attribute small">batch file</span>
       
+      <span class="file_attribute small">includes main-level program</span>
       
       <br/>
 
       
       <div id="file_comments">
-        <div class="small "><h2> RADAR EXAMPLE</h2>
+        <div class="small "><h2> MULTI-INSTRUMENT EXAMPLE</h2>
 
-<p>   This script demonstrates reading a Cassini RADAR SAR image and projecting it
-   onto an orthographical map for display.
+<p>   This script demonstrates reading Cassini RADAR SAR, VIMS and ISS images and
+   projecting them onto an orthographical map for display as a RGB composite.
 </p>
 
-<p>   The data file, <code>BIFQI22N068_D045_T003S01_V02.IMG</code>, must first be
+<p>   The SAR data file, <code>BIFQI22N068_D045_T003S01_V02.IMG</code>, must first be
    <a href="http://pds-imaging.jpl.nasa.gov/data/cassini/cassini_orbiter/CORADR_0045/DATA/BIDR/BIFQI22N068_D045_T003S01_V02.ZIP">downloaded from PDS</a>,
    then unzipped (the zip file is 202MB).
 </p>
 
 <p>   Setup: The instrument detectors, translators and transforms must contain the
-   RADAR definitions, as is included in <code>demo/data/instrument_detectors.tab</code>,
-   <code>demo/data/translators.tab</code>, and <code>demo/data/transforms.tab</code>. Since the RADAR
-   data is in PDS format, the PDS detector and io functions must also be set up
+   RADAR, ISS and VIMS definitions, as is included in <code>demo/data/instrument_detectors.tab</code>,
+   <code>demo/data/translators.tab</code>, and <code>demo/data/transforms.tab</code>. The PDS detector
+   and io functions must also be set up
    in the corresponding tables, as is in <code>config/tab/filetype_detectors.tab</code>
    and <code>config/tab/io.tab</code>.
 </p>
 
-<p>   There is no need for SPICE/Icy for this example. It can be run just by doing:
+<p>   This example requires SPICE/Icy to have been setup. It can be run just by doing:
 <div><div><code class="listing"><span class="code-output"> img='~/radar/BIFQI22N068_D045_T003S01_V02.IMG'</span>
-<span class="code-output"> @radar_example</span>
+<span class="code-output"> @multiinstrument_example</span>
 </code></div></div>   from the <code>demo</code> directory. Note that you have to set the variable <code>img</code> to the
    location of your data file.
 </p>
 
-<h2> Read SAR file</h2>
+<h2> Read and display SAR file</h2>
 
 <p>   Cassini RADAR SAR image to read must be set in the variable img, otherwise
    this default location is used:
 <div><div><code class="listing"><span class="code-output"> img=n_elements(img) ? img : '~/radar/BIFQI22N068_D045_T003S01_V02.IMG'</span>
 <span class="code-output"> ;Read the file</span>
 <span class="code-output"> dd=dat_read(img)</span>
-</code></div></div></p>
-
-<h2> Display SAR file</h2>
-
-<p>   Saturate the data to make the image better looking, since this is just for display
+</code></div></div>   Saturate the data to make the image better looking, since this is just for display
    purposes:
 <div><div><code class="listing"><span class="code-output"> da=dat_data(dd)</span>
-<span class="code-output"> dat_set_data,dd,da&lt;4.5d0</span>
+<span class="code-output"> dat_set_data,dd,0&gt;da&lt;1d0</span>
 </code></div></div>   Show it a 1/20 resolution:
-<div><div><code class="listing"><span class="code-output"> tvim,da&lt;4.5,zoom=0.05,/order,/new</span>
+<div><div><code class="listing"><span class="code-output"> tvim,0d0&gt;da&lt;1d0,zoom=0.05,/order,/new</span>
 
-</code></div></div>   <img src="sar_ex1.png"/>
+</code></div></div>   <img src="mis_ex1.png"/>
 </p>
 
 <p></p>
 
-<h2> Map SAR file</h2>
+<h2> Read and display VIMS and ISS files</h2>
+
+<p>     Set up a hash containing the file names and precomputed pointing offsets:
+<div><div><code class="listing"><span class="code-output"> hdxy=hash()</span>
+<span class="code-output"> hdxy['data/CM_1503358311_1_ir_eg.cub']=[5d0,-1d0]</span>
+<span class="code-output"> hdxy['data/W1477456695_6.IMG']=[0d0,0d0]</span>
+<span class="code-output"> files=(hdxy.keys()).toarray()</span>
+<span class="code-output"> nv = n_elements(files)</span>
+<span class="code-output"> ddv = dat_read(files)</span>
+<span class="code-output"> sb=bytarr(nv)</span>
+<span class="code-output"> for i=0,nv-1 do sb[i]=strmatch(files[i],'*.IMG')</span>
+</code></div></div>     Create an array of global descriptors and populate it:
+<div><div><code class="listing"><span class="code-output"> gdv = replicate({cd:obj_new(), gbx:obj_new(), dkx:obj_new(), sund:obj_new()}, nv)</span>
+<span class="code-output"> for i=0, nv-1 do gdv[i].cd = pg_get_cameras(ddv[i])</span>
+<span class="code-output"> for i=0, nv-1 do gdv[i].gbx = pg_get_planets(ddv[i], od=gdv[i].cd, name='TITAN')</span>
+<span class="code-output"> for i=0, nv-1 do gdv[i].sund = pg_get_stars(ddv[i], od=gdv[i].cd, name='SUN')</span>
+</code></div></div>     Apply the pointing shifts and compute the limbs:
+<div><div><code class="listing"><span class="code-output"> dxy = dblarr(2,nv)</span>
+<span class="code-output"> limb_psv=objarr(nv)</span>
+<span class="code-output"> for i=0, nv-1 do dxy[*,i] = hdxy[files[i]]</span>
+<span class="code-output"> for i=0, nv-1 do pg_repoint, dxy[*,i], 0d, gd=gdv[i]</span>
+<span class="code-output"> for i=0, nv-1 do limb_psv[i] = pg_limb(gd=gdv[i])</span>
+</code></div></div>     Display the VIMS and ISS images:
+<div><div><code class="listing"><span class="code-output"> band=70</span>
+<span class="code-output"> for i=0,1 do begin</span>
+<span class="code-output">   zoom=sb[i] ? 1 : 8</span>
+<span class="code-output">   offset=sb[i] ? [200d0,200d0] : [-15,-10]</span>
+<span class="code-output">   sband=sb[i] ? 0 : band</span>
+<span class="code-output">   tvim, (dat_data(ddv[i]))[*,*,sband], $</span>
+<span class="code-output">     zoom=zoom,/order, /new,offset=offset,$</span>
+<span class="code-output">     xsize=600,ysize=600</span>
+<span class="code-output">   pg_draw, limb_psv[i]</span>
+<span class="code-output"> endfor</span>
+
+</code></div></div>     <img src="mis_ex2.png"/>
+</p>
+
+<p>     <img src="mis_ex3.png"/>
+</p>
+
+<p>     Correct the illumination with a Lambertian function:
+<div><div><code class="listing"><span class="code-output"> dd_phtv = objarr(nv)</span>
+<span class="code-output"> for i=0, nv-1 do dd_phtv[i] = pg_photom(ddv[i], gd=gdv[i], refl_fn='pht_lamb', $</span>
+<span class="code-output">   refl_parm=[0.9d], outline=limb_psv[i])</span>
+
+</code></div></div></p>
+
+<h2> Map images</h2>
 
 <p>   SAR data is provided in PDS as a map on the target, in an oblique rectangular projection, shown above.
    To use it, first we need to obtain the proper map descriptor from the data object:
 <div><div><code class="listing"><span class="code-output"> mdr=pg_get_maps(dd)</span>
 </code></div></div>   Now we will display it in an orthogonal projection. First we define it:
-<div><div><code class="listing"><span class="code-output"> map_xsize = 4000</span>
-<span class="code-output"> map_ysize = 4000</span>
+<div><div><code class="listing"><span class="code-output"> map_xsize = 1000</span>
+<span class="code-output"> map_ysize = 1000</span>
 </code></div></div>   Create the new map descriptor:
 <div><div><code class="listing"><span class="code-output"> mdp= pg_get_maps(/over,  $</span>
 <span class="code-output">   name='TITAN',$</span>
 <span class="code-output">   type='ORTHOGRAPHIC', $</span>
 <span class="code-output">   size=[map_xsize,map_ysize], $</span>
 <span class="code-output">   origin=[map_xsize,map_ysize]/2, $</span>
-<span class="code-output">   center=[0d0,-0.4d0*!dpi])</span>
-</code></div></div>   Now, do the projection:
-<div><div><code class="listing"><span class="code-output"> dd_map=pg_map(dd,md=mdp,cd=mdr,pc_xsize=800,pc_ysize=800)</span>
-</code></div></div>   Visualize the result, now with grim:
-<div><div><code class="listing"><span class="code-output"> grim,dd_map,cd=mdp,overlays=['planet_grid']</span>
+<span class="code-output">   center=[0d0,-0.6d0*!dpi])</span>
+</code></div></div>   Now, do the projection of all 3 images:
+<div><div><code class="listing"><span class="code-output"> for i=0,nv-1 do dat_set_data,dd_phtv[i],(dat_data(dd_phtv[i]))[*,*,sb[i] ? 0 : band]</span>
+<span class="code-output"> dd_mapv = objarr(nv)</span>
+<span class="code-output"> for i=0, nv-1 do dd_mapv[i] = pg_map(dd_phtv[i], md=mdp, gd=gdv[i], aux=['EMM'])</span>
+<span class="code-output"> dd_map=pg_map(dd,md=mdp,cd=mdr,pc_xsize=500,pc_ysize=500)</span>
+</code></div></div>   Renormalize the data for display, so that all 3 are in the 0-1 range:
+<div><div><code class="listing"><span class="code-output"> mds=[dd_map,dd_mapv]</span>
+<span class="code-output"> for i=0,2 do begin</span>
+<span class="code-output">   mdd=dat_data(mds[i])</span>
+<span class="code-output">   mddr=minmax(mdd)</span>
+<span class="code-output">   dat_set_data,mds[i],(mdd-mddr[0])/(mddr[1]-mddr[0])</span>
+<span class="code-output"> endfor</span>
+</code></div></div>   Visualize the result as 3 planes in grim:
+<div><div><code class="listing"><span class="code-output"> grim,mds,cd=replicate(mdp,3),overlays=['planet_grid'],/new</span>
 
-</code></div></div>   <img src="sar_ex2.png"/>
+</code></div></div>   <img src="mis_ex4.png"/>
 </p>
 
 <p></p>
@@ -350,12 +403,12 @@
         <table class="attribute small" summary="File attributes">
           <tr>
             <td class="name">Modification date:</td>
-            <td>Wed Oct 12 06:28:56 2016</td>
+            <td>Thu Oct 13 10:41:43 2016</td>
           </tr>
 
           <tr>
             <td class="name">Lines:</td>
-            <td>17</td>
+            <td>59</td>
           </tr>
 
           
