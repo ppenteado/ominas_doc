@@ -37,7 +37,7 @@
 ;
 ;	crd:	Core descriptor(s) to pass to cor_create_descriptors.
 ;
-;	primary:	Array (n) of primary strings.
+;	primary:	Array (n) of primary descriptors.
 ;
 ;	desc:	Array (n) of description strings.
 ;
@@ -57,7 +57,7 @@
 ;-
 ;=============================================================================
 function rng_create_descriptors, n, crd=crd0, bd=bd0, sld=sld0, dkd=dkd0, rd=rd0, $
-@ring__keywords.include
+@rng__keywords.include
 end_keywords
 @core.include
  if(NOT keyword_set(n)) then n = 1
@@ -68,7 +68,7 @@ end_keywords
   begin
 
    rd[i] = ominas_ring(i, crd=crd0, bd=bd0, sld=sld0, dkd=dkd0, rd=rd0, $
-@ring__keywords.include
+@rng__keywords.include
 end_keywords)
 
   end

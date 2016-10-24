@@ -3,12 +3,12 @@
 ;
 ;=============================================================================
 function ominas_body::init, ii, crd=crd0, bd=bd0, $
-@body__keywords.include
+@bod__keywords.include
 end_keywords
 @core.include
  
  void = self->ominas_core::init(ii, crd=crd0, $
-@core__keywords.include
+@cor__keywords.include
 end_keywords)
  if(keyword_set(bd0)) then struct_assign, bd0, self
 
@@ -29,6 +29,13 @@ end_keywords)
 
  self.orientT = transpose(self.orient) 
 
+ if(keyword_set(fn_body_to_inertial)) then $
+                        self.fn_body_to_inertial=decrapify(fn_body_to_inertial[ii]) $
+ else self.fn_body_to_inertial = decrapify('bod_body_to_inertial_default')
+ if(keyword_set(fn_inertial_to_body)) then $
+                          self.fn_inertial_to_body=decrapify(fn_inertial_to_body[ii]) $
+ else self.fn_inertial_to_body = decrapify('bod_inertial_to_body_default')
+;;; if(keyword_set(ib_data)) then bod_set_ib_data, bd0, ib_data
 
  return, 1
 end
@@ -132,7 +139,7 @@ end
 ;=============================================================================
 pro ominas_body__define
 
- ndv=bod_ndv()
+ ndv = bod_ndv()
 
  struct = $
     { ominas_body, inherits ominas_core, $
@@ -150,6 +157,10 @@ pro ominas_body__define
 						;  ang. vel. for the avel of
 						;  the preceding order.
 
+	fn_body_to_inertial:   '', $		; user procedures to tranform
+	fn_inertial_to_body:   '', $		;  between body and inertial
+						;  vectors
+
 	; note -- body libration currently disabled; see _bod_evolve
 	libv:		 dblarr(ndv,3), $	; libration vectors -- each 
 						;  higher-order libv is the
@@ -161,6 +172,7 @@ pro ominas_body__define
 
 	pos:		 dblarr(1,3), $		; position of body center
 	vel:		 dblarr(ndv,3) $	; velocity and derivatives
+
     }
 
 end

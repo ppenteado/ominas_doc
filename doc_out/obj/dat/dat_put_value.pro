@@ -84,7 +84,7 @@ pro dat_put_value, dd, keyword, value, trs=trs, status=status, $
  ;--------------------------------------------
  ; record any transient keyvals
  ;--------------------------------------------
- dat_add_transient_keyvals, _dd, trs
+ _dd = dat_add_transient_keyvals(_dd, trs)
 
  ;--------------------------------------------
  ; send value through all output translators
@@ -94,8 +94,9 @@ pro dat_put_value, dd, keyword, value, trs=trs, status=status, $
 ; n=n_elements(translators)
 
  if(NOT keyword__set(tr_override)) then translators=*_dd.output_translators_p $
- else translators = $
-           nv_match(*_dd.output_translators_p, str_nsplit(tr_override, ','))
+ else translators = str_nsplit(tr_override, ',')
+; else translators = $
+;           nv_match(*_dd.output_translators_p, str_nsplit(tr_override, ','))
  n=n_elements(translators)
 
  for i=0, n-1 do $

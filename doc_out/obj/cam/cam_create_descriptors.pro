@@ -48,8 +48,6 @@
 ;	fn_image_to_focal:	Array (n) of image-to-focal function names 
 ;				for each camera.
 ;
-;	fn_data_p:	Array (n) of data pointers for each camera.
-;
 ;	fn_psf:	Array (n) of point-spread function names for each camera.
 ;
 ;
@@ -72,7 +70,7 @@
 ;-
 ;=============================================================================
 function cam_create_descriptors, n, crd=crd0, bd=bd0, cd=cd0, $
-@camera__keywords.include
+@cam__keywords.include
 end_keywords
 @core.include
  if(NOT keyword_set(n)) then n = 1
@@ -83,7 +81,7 @@ end_keywords
   begin
 
    cd[i] = ominas_camera(i, crd=crd0, bd=bd0, cd=cd0, $
-@camera__keywords.include
+@cam__keywords.include
 end_keywords)
 
   end

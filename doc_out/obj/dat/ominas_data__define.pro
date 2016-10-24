@@ -3,12 +3,12 @@
 ;
 ;=============================================================================
 function ominas_data::init, ii, crd=crd0, dd=dd0, $
-@data__keywords.include
+@dat__keywords.include
 end_keywords
 @core.include
 
  void = self->ominas_core::init(ii, crd=crd0, $
-@core__keywords.include
+@cor__keywords.include
 end_keywords)
  if(keyword_set(dd0)) then struct_assign, dd0, self
 
@@ -17,7 +17,6 @@ end_keywords)
  if(NOT keyword_set(nhist)) then nhist = 1
  _nhist = getenv('NV_NHIST')
  if(keyword_set(_nhist)) then nhist = fix(_nhist)
-
 
  ;-----------------------
  ; filename
@@ -38,6 +37,11 @@ end_keywords)
  ; type
  ;-----------------------
  if(keyword_set(type)) then self.type = type
+
+ ;-----------------------
+ ; gff
+ ;-----------------------
+ if(keyword_set(gff)) then self.gffp = nv_ptr_new(gff)
 
  ;-----------------------
  ; file properties
@@ -100,13 +104,12 @@ end_keywords)
  if(keyword_set(dim)) then self.dim_p = nv_ptr_new(dim)
 
 
- ;---------------------------------
- ; fn data
- ;---------------------------------
- if(NOT keyword_set(self.sampling_fn_data_p)) then $
-				  self.sampling_fn_data_p = nv_ptr_new(0)
- if(NOT keyword_set(self.dim_fn_data_p)) then $
-				  self.dim_fn_data_p = nv_ptr_new(0)
+ ;-----------------------
+ ; cache size
+ ;-----------------------
+ if(keyword_set(cache)) then self.cache = cache $
+ else self.cache = dat_cache()
+
 
  ;---------------------------------
  ; transforms
@@ -123,6 +126,10 @@ end_keywords)
  ;-----------------------
  self.max = -1d100
  self.min = 1d100
+
+ if(defined(min)) then self.min = min
+ if(defined(max)) then self.max = max
+
  if(defined(data)) then $
   begin
    self.max = max(data)
@@ -130,16 +137,23 @@ end_keywords)
   end
  
 
-
  ;-----------------------
  ; data and header
  ;-----------------------
- if(defined(data)) then $
-  begin
-   dat_set_data, self, data, /silent
-   dat_set_nhist, self, nhist
-  end  
- 
+ dap = self.sample_dap
+ data_archive_set, dap, -1, nhist=nhist
+ self.sample_dap = dap
+
+ dap = self.order_dap
+ data_archive_set, dap, -1, nhist=nhist
+ self.order_dap = dap
+
+ if(defined(data)) then dat_set_data, self, data, abscissa=abscissa, /silent
+
+
+ dat_set_nhist, self, nhist
+
+
  _header = ''
  if(keyword_set(header)) then _header = header
  dat_set_header, self, _header
@@ -173,11 +187,17 @@ end
 ;	data_dap:	Pointer to data archive containing the data 
 ;			and nhist past versions.
 ;
+;	abscissa_dap:	Pointer to data archive containing the abscissa 
+;			and nhist past versions.
+;
 ;	dap_index:	Index of archived data to use.  
 ;
 ;	max:		Maximum data value.
 ;
 ;	min:		Minimum data value.
+;
+;	cache:		Max cache size data array.  Used to deterine whether 
+;			to load / unload data samples.  -1 means infinite.
 ;
 ;	dim_p:	Pointer to array giving data dimensions.
 ;
@@ -221,15 +241,11 @@ end
 ;
 ;				function sampling_fn, dd, samples, data
 ;
-;	sampling_fn_data_p:	Pointer to data for sampling_fn.
-;
 ;	dim_fn:			Optional function to cause dat_dim() to report
 ;				dimensions other than those stored in the
 ;				data descriptor:
 ;
 ;				function dim_fn, dd, data
-;
-;	dim_fn_data_p:		Pointer to data for dim_fn.
 ;
 ;	compress:	Compression suffix.  The full name of the 
 ;			compression function is dat_compress_data_<suffix>.
@@ -269,14 +285,21 @@ end
 ;=============================================================================
 pro ominas_data__define
 
+
  struct = $
     { ominas_data, inherits ominas_core, $
 	data_dap:		nv_ptr_new(), $	; Pointer to the data archive
+	abscissa_dap:		nv_ptr_new(), $	; Pointer to the abscissa archive
+	sample_dap:		nv_ptr_new(), $	; Pointer to the sample archive
+	order_dap:		nv_ptr_new(), $	; Pointer to the sample load order
 	header_dap:		nv_ptr_new(), $	; Pointer to the generic header archive
         dap_index:		0, $		; data archive index
+
+	cache:			0l, $		; Max. cache size for data array (Mb)
+						;  Doesn't apply to maintenance 0
+
 	max:			0d, $		; Maximum data value
 	min:			0d, $		; Minimum data value
-
 	dim_p:			nv_ptr_new(), $	; data dimensions
 	type:			0b, $		; data type
 
@@ -296,9 +319,9 @@ pro ominas_data__define
 	last_translator:	lonarr(2), $	; Description of last translator
 						; called
 	sampling_fn:		'', $		; Optional sampling function.
-	sampling_fn_data_p:	ptr_new(), $	
 	dim_fn:			'', $		; Optional dimension function.
-	dim_fn_data_p:		ptr_new(), $	
+
+	gffp:			nv_ptr_new(), $	; GFF pointer
 
 ;	segment:		{nv_seg_struct}, $
 

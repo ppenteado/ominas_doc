@@ -11,6 +11,27 @@ libdataItem = 0;
 
 
 
+libdata[libdataItem++] = new Array("dat/_dat_compress_data.html", "_dat_compress_data.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "_dat_compress_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("dat/_dat_compress_data.html#_dat_compress_data", "_dat_compress_data", 'routine in <a href="dat/_dat_compress_data.html">_dat_compress_data.pro</a>', "_dat_compress_data.pro", "", "_dat_compress_data", "", "cdatacabscissa_dd", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("dat/_dat_compute_size.html", "_dat_compute_size.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "_dat_compute_size.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("dat/_dat_compute_size.html#_dat_compute_size", "_dat_compute_size", 'routine in <a href="dat/_dat_compute_size.html">_dat_compute_size.pro</a>', "_dat_compute_size.pro", "", "_dat_compute_size", "", "_ddsamples", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("dat/_dat_uncompress_data.html", "_dat_uncompress_data.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "_dat_uncompress_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("dat/_dat_uncompress_data.html#_dat_uncompress_data", "_dat_uncompress_data", 'routine in <a href="dat/_dat_uncompress_data.html">_dat_uncompress_data.pro</a>', "_dat_uncompress_data.pro", "", "_dat_uncompress_data", "", "cdatacabscissa_dd", "          -1", "");
+  
+  
+
 libdata[libdataItem++] = new Array("glb/_glb_get_surface_normal_body.html", "_glb_get_surface_normal_body.pro", '.pro file in <a href="glb/dir-overview.html">glb/ directory</a>', "_glb_get_surface_normal_body.pro", "", "", "", "", "          -1", "");
   
   
@@ -18,38 +39,45 @@ libdata[libdataItem++] = new Array("glb/_glb_get_surface_normal_body.html", "_gl
   
   
 
+libdata[libdataItem++] = new Array("map/_map_apply_pole.html", "_map_apply_pole.pro", '.pro file in <a href="map/dir-overview.html">map/ directory</a>', "_map_apply_pole.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("map/_map_apply_pole.html#_map_apply_pole", "_map_apply_pole", 'routine in <a href="map/_map_apply_pole.html">_map_apply_pole.pro</a>', "_map_apply_pole.pro", "", "_map_apply_pole", "", "inverse_mdmap_pts", "          -1", "");
+  
+  
+
 libdata[libdataItem++] = new Array("pnt/_pnt_apply_condition.html", "_pnt_apply_condition.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "_pnt_apply_condition.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/_pnt_apply_condition.html#_pnt_apply_condition", "_pnt_apply_condition", 'routine in <a href="pnt/_pnt_apply_condition.html">_pnt_apply_condition.pro</a>', "_pnt_apply_condition.pro", "", "_pnt_apply_condition", "	Selects point in POINT structures based on a given condition structure.    ", "_psconditionCondition structure to compare against the flags 			contained in _ps.  			The condition structure is organized as follows: 			  field	   values 			  -----------------------------------------------------  ", "NV/SYS/PS", "  	Spitale, 11/2015   	Condition structure corresponding to the given keyword.    STATUS: 	Complete    SEE ALSO: pnt_points, pnt_vectors, pnt_data    ");
+  libdata[libdataItem++] = new Array("pnt/_pnt_apply_condition.html#_pnt_apply_condition", "_pnt_apply_condition", 'routine in <a href="pnt/_pnt_apply_condition.html">_pnt_apply_condition.pro</a>', "_pnt_apply_condition.pro", "", "_pnt_apply_condition", "	Selects point in POINT structures based on a given condition structure.    ", "_psconditionCondition structure to compare against the flags 			contained in _ps.  			The condition structure is organized as follows: 			  field	   values 			  -----------------------------------------------------  ", "NV/OBJ/PNT", "  	Spitale, 11/2015   	Condition structure corresponding to the given keyword.    STATUS: 	Complete    SEE ALSO: pnt_points, pnt_vectors, pnt_data    ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/_pnt_resize.html", "_pnt_resize.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "_pnt_resize.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/_pnt_resize.html#_pnt_resize", "_pnt_resize", 'routine in <a href="pnt/_pnt_resize.html">_pnt_resize.pro</a>', "_pnt_resize.pro", "", "_pnt_resize", "	Resizes a POINT structure.  Arrays are padded with zeroes or truncated 	as needed.    ", "nvnt_ptd	POINT struct.  Note this is an actual POINT structure 			rather than an object, as this routine is only 			meant to be called internally.   ", "NV/SYS/PS", " 	Written by:	Spitale		12/2015   ");
+  libdata[libdataItem++] = new Array("pnt/_pnt_resize.html#_pnt_resize", "_pnt_resize", 'routine in <a href="pnt/_pnt_resize.html">_pnt_resize.pro</a>', "_pnt_resize.pro", "", "_pnt_resize", "	Resizes a POINT structure.  Arrays are padded with zeroes or truncated 	as needed.    ", "nvnt_ptd	POINT struct.  Note this is an actual POINT structure 			rather than an object, as this routine is only 			meant to be called internally.   ", "NV/OBJ/PNT", " 	Written by:	Spitale		12/2015   ");
   
   
 
 libdata[libdataItem++] = new Array("tools/abcorr.html", "abcorr.pro", '.pro file in <a href="tools/dir-overview.html">tools/ directory</a>', "abcorr.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("tools/abcorr.html#abcorr", "abcorr", 'routine in <a href="tools/abcorr.html">abcorr.pro</a>', "abcorr.pro", "", "abcorr", "	Performs stellar aberration and light-travel-time corrections.    ", "citerateepsilonfastobs_bxArray(nt) of any subclass of BODY describing the targets.   targ_bx", "NV/LIB/TOOLS", "       Written by:     Spitale   ");
+  libdata[libdataItem++] = new Array("tools/abcorr.html#abcorr", "abcorr", 'routine in <a href="tools/abcorr.html">abcorr.pro</a>', "abcorr.pro", "", "abcorr", "	Performs stellar aberration and light-travel-time corrections.    ", "citerateepsilonfastobs_bx  Any subclass of BODY describing the observer.   targ_bx0Array(nt) of any subclass of BODY describing the targets.   ", "NV/LIB/TOOLS", "       Written by:     Spitale   	New target descriptors.     ");
   
   
 
 libdata[libdataItem++] = new Array("arr/arr_create_descriptors.html", "arr_create_descriptors.pro", '.pro file in <a href="arr/dir-overview.html">arr/ directory</a>', "arr_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("arr/arr_create_descriptors.html#arr_create_descriptors", "arr_create_descriptors", 'routine in <a href="arr/arr_create_descriptors.html">arr_create_descriptors.pro</a>', "arr_create_descriptors.pro", "", "arr_create_descriptors", "	Init method for the ARRAY class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   ardStation descriptor(s) to initialize, instead of creating new 		ones.   abbrevusernametasksudataunameprimaryArray (n) of primary strings.   surface_ptsn     Number of array descriptors.   end_keywords", "NV/LIB/arr", "       Written by:     Spitale  	Adapted by:	Spitale, 5/2016          An array (n) of array descriptors.   STATUS:        Completed.    ");
+  libdata[libdataItem++] = new Array("arr/arr_create_descriptors.html#arr_create_descriptors", "arr_create_descriptors", 'routine in <a href="arr/arr_create_descriptors.html">arr_create_descriptors.pro</a>', "arr_create_descriptors.pro", "", "arr_create_descriptors", "	Init method for the ARRAY class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   ardStation descriptor(s) to initialize, instead of creating new 		ones.   abbrevusernametasksudataunameassoc_xdprimaryArray (n) of primary strings.   surface_ptsn     Number of array descriptors.   end_keywords", "NV/LIB/arr", "       Written by:     Spitale  	Adapted by:	Spitale, 5/2016          An array (n) of array descriptors.   STATUS:        Completed.    ");
   
   
 
 libdata[libdataItem++] = new Array("arr/arr_primary.html", "arr_primary.pro", '.pro file in <a href="arr/dir-overview.html">arr/ directory</a>', "arr_primary.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("arr/arr_primary.html#arr_primary", "arr_primary", 'routine in <a href="arr/arr_primary.html">arr_primary.pro</a>', "arr_primary.pro", "", "arr_primary", "	Returns the primary string for each given array descriptor.    ", "noeventard Array (nt) of ARRAY descriptors.   ", "NV/LIB/arr", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Primary string associated with each given array descriptor.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("arr/arr_primary.html#arr_primary", "arr_primary", 'routine in <a href="arr/arr_primary.html">arr_primary.pro</a>', "arr_primary.pro", "", "arr_primary", "	Returns the primary descriptor for each given array descriptor.    ", "noeventard Array (nt) of ARRAY descriptors.   ", "NV/LIB/arr", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Primary descriptors associated with each given array descriptor.    STATUS: 	Complete    ");
   
   
 
@@ -63,14 +91,14 @@ libdata[libdataItem++] = new Array("arr/arr_replicate.html", "arr_replicate.pro"
 libdata[libdataItem++] = new Array("arr/arr_set_primary.html", "arr_set_primary.pro", '.pro file in <a href="arr/dir-overview.html">arr/ directory</a>', "arr_set_primary.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("arr/arr_set_primary.html#arr_set_primary", "arr_set_primary", 'routine in <a href="arr/arr_set_primary.html">arr_set_primary.pro</a>', "arr_set_primary.pro", "", "arr_set_primary", "	Replaces the primary string in each given array descriptor.    ", "noeventardArray (nt) of ARRAY descriptors.   primaryArray (nt) of primary strings.   ", "NV/LIB/arr", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
+  libdata[libdataItem++] = new Array("arr/arr_set_primary.html#arr_set_primary", "arr_set_primary", 'routine in <a href="arr/arr_set_primary.html">arr_set_primary.pro</a>', "arr_set_primary.pro", "", "arr_set_primary", "	Replaces the primary string in each given array descriptor.    ", "noeventardArray (nt) of ARRAY descriptors.   primaryArray (nt) of primary descriptors.   ", "NV/LIB/arr", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
   
   
 
 libdata[libdataItem++] = new Array("arr/arr_set_surface_pts.html", "arr_set_surface_pts.pro", '.pro file in <a href="arr/dir-overview.html">arr/ directory</a>', "arr_set_surface_pts.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("arr/arr_set_surface_pts.html#arr_set_surface_pts", "arr_set_surface_pts", 'routine in <a href="arr/arr_set_surface_pts.html">arr_set_surface_pts.pro</a>', "arr_set_surface_pts.pro", "", "arr_set_surface_pts", "	Replaces the surface_pts vector in each given array descriptor.    ", "noeventardArray (nt) of ARRAY descriptors.   surface_ptsArray (nv,3,nt) of surface_pts vectors.   ", "NV/LIB/arr", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
+  libdata[libdataItem++] = new Array("arr/arr_set_surface_pts.html#arr_set_surface_pts", "arr_set_surface_pts", 'routine in <a href="arr/arr_set_surface_pts.html">arr_set_surface_pts.pro</a>', "arr_set_surface_pts.pro", "", "arr_set_surface_pts", "	Replaces the surface_pts vector in each given array descriptor.    ", "noeventard	Array (nt) of ARRAY descriptors.   surface_ptsArray (nv,3,nt) of surface_pts vectors.   ", "NV/LIB/arr", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
   
   
 
@@ -98,7 +126,16 @@ libdata[libdataItem++] = new Array("bod/bod_avel.html", "bod_avel.pro", '.pro fi
 libdata[libdataItem++] = new Array("bod/bod_body_to_inertial.html", "bod_body_to_inertial.pro", '.pro file in <a href="bod/dir-overview.html">bod/ directory</a>', "bod_body_to_inertial.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("bod/bod_body_to_inertial.html#bod_body_to_inertial", "bod_body_to_inertial", 'routine in <a href="bod/bod_body_to_inertial.html">bod_body_to_inertial.pro</a>', "bod_body_to_inertial.pro", "", "bod_body_to_inertial", "	Transforms the given column vectors from the body coordinate 	system to the inertial coordinate system.    ", "camvecsbdv", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998   	Array (nv,3,nt) of column vectors in the bx inertial frame.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("bod/bod_body_to_inertial.html#bod_body_to_inertial", "bod_body_to_inertial", 'routine in <a href="bod/bod_body_to_inertial.html">bod_body_to_inertial.pro</a>', "bod_body_to_inertial.pro", "", "bod_body_to_inertial", "	Transforms the given column vectors from the body coordinate 	system to the inertial coordinate system.    ", "_subbdv", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998   	Array (nv,3,nt) of column vectors in the bx inertial frame.    STATUS: 	Complete    ");
+  
+  libdata[libdataItem++] = new Array("bod/bod_body_to_inertial.html#bod_body_to_inertial", "bod_body_to_inertial", 'routine in <a href="bod/bod_body_to_inertial.html">bod_body_to_inertial.pro</a>', "bod_body_to_inertial.pro", "", "bod_body_to_inertial", "", "_subbdv", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("bod/bod_body_to_inertial_default.html", "bod_body_to_inertial_default.pro", '.pro file in <a href="bod/dir-overview.html">bod/ directory</a>', "bod_body_to_inertial_default.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("bod/bod_body_to_inertial_default.html#bod_body_to_inertial_default", "bod_body_to_inertial_default", 'routine in <a href="bod/bod_body_to_inertial_default.html">bod_body_to_inertial_default.pro</a>', "bod_body_to_inertial_default.pro", "", "bod_body_to_inertial_default", "	Transforms the given column vectors from the body coordinate 	system to the inertial coordinate system.    ", "_subbdvp", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998   	Array (nv,3,nt) of column vectors in the bx inertial frame.    STATUS: 	Complete    ");
   
   
 
@@ -107,12 +144,16 @@ libdata[libdataItem++] = new Array("bod/bod_body_to_inertial_pos.html", "bod_bod
   
   libdata[libdataItem++] = new Array("bod/bod_body_to_inertial_pos.html#bod_body_to_inertial_pos", "bod_body_to_inertial_pos", 'routine in <a href="bod/bod_body_to_inertial_pos.html">bod_body_to_inertial_pos.pro</a>', "bod_body_to_inertial_pos.pro", "", "bod_body_to_inertial_pos", "       Transforms the given column position vectors from the body        coordinate system to the inertial coordinate system.    ", "bdv", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998          Array (nv,3,nt) of column position vectors in the inertial        frame.    STATUS: 	Complete    ");
   
+  libdata[libdataItem++] = new Array("bod/bod_body_to_inertial_pos.html#__bod_body_to_inertial_pos", "__bod_body_to_inertial_pos", 'routine in <a href="bod/bod_body_to_inertial_pos.html">bod_body_to_inertial_pos.pro</a>', "bod_body_to_inertial_pos.pro", "", "__bod_body_to_inertial_pos", "", "bdv", "          -1", "");
+  
   
 
 libdata[libdataItem++] = new Array("bod/bod_body_to_inertial_vel.html", "bod_body_to_inertial_vel.pro", '.pro file in <a href="bod/dir-overview.html">bod/ directory</a>', "bod_body_to_inertial_vel.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("bod/bod_body_to_inertial_vel.html#bod_body_to_inertial_vel", "bod_body_to_inertial_vel", 'routine in <a href="bod/bod_body_to_inertial_vel.html">bod_body_to_inertial_vel.pro</a>', "bod_body_to_inertial_vel.pro", "", "bod_body_to_inertial_vel", "       Transforms the given column velocity vectors from the body        coordinate system to the inertial coordinate system.    ", "bdv", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998          Array (nv,3,nt) of column velocity vectors in the inertial        frame.    STATUS: 	Complete    ");
+  
+  libdata[libdataItem++] = new Array("bod/bod_body_to_inertial_vel.html#bod_body_to_inertial_vel", "bod_body_to_inertial_vel", 'routine in <a href="bod/bod_body_to_inertial_vel.html">bod_body_to_inertial_vel.pro</a>', "bod_body_to_inertial_vel.pro", "", "bod_body_to_inertial_vel", "", "bdv", "          -1", "");
   
   
 
@@ -133,7 +174,7 @@ libdata[libdataItem++] = new Array("bod/bod_body_to_radec_vel.html", "bod_body_t
 libdata[libdataItem++] = new Array("bod/bod_create_descriptors.html", "bod_create_descriptors.pro", '.pro file in <a href="bod/dir-overview.html">bod/ directory</a>', "bod_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("bod/bod_create_descriptors.html#bod_create_descriptors", "bod_create_descriptors", 'routine in <a href="bod/bod_create_descriptors.html">bod_create_descriptors.pro</a>', "bod_create_descriptors.pro", "", "bod_create_descriptors", "	Init method for the BODY class.    ", "crdbdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarraynNumber of descriptors to create.   end_keywords", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016  	Newly created or or freshly initialized body descriptors, depending 	on the presence of the bd keyword.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("bod/bod_create_descriptors.html#bod_create_descriptors", "bod_create_descriptors", 'routine in <a href="bod/bod_create_descriptors.html">bod_create_descriptors.pro</a>', "bod_create_descriptors.pro", "", "bod_create_descriptors", "	Init method for the BODY class.    ", "crdbdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarraynNumber of descriptors to create.   end_keywords", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016  	Newly created or or freshly initialized body descriptors, depending 	on the presence of the bd keyword.    STATUS: 	Complete    ");
   
   
 
@@ -158,6 +199,13 @@ libdata[libdataItem++] = new Array("bod/bod_get_radec_ranges.html", "bod_get_rad
   
   
 
+libdata[libdataItem++] = new Array("bod/bod_ib_data.html", "bod_ib_data.pro", '.pro file in <a href="bod/dir-overview.html">bod/ directory</a>', "bod_ib_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("bod/bod_ib_data.html#bod_ib_data", "bod_ib_data", 'routine in <a href="bod/bod_ib_data.html">bod_ib_data.pro</a>', "bod_ib_data.pro", "", "bod_ib_data", "	Returns the function data for a body descriptor.    ", "noeventbd", "NV/LIB/BOD", " 	Adapted by:	Spitale, 7/2016   	Function data associated with the given body descriptor.    STATUS: 	Complete    ");
+  
+  
+
 libdata[libdataItem++] = new Array("bod/bod_inertial.html", "bod_inertial.pro", '.pro file in <a href="bod/dir-overview.html">bod/ directory</a>', "bod_inertial.pro", "", "", "", "", "          -1", "");
   
   
@@ -168,7 +216,16 @@ libdata[libdataItem++] = new Array("bod/bod_inertial.html", "bod_inertial.pro", 
 libdata[libdataItem++] = new Array("bod/bod_inertial_to_body.html", "bod_inertial_to_body.pro", '.pro file in <a href="bod/dir-overview.html">bod/ directory</a>', "bod_inertial_to_body.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("bod/bod_inertial_to_body.html#bod_inertial_to_body", "bod_inertial_to_body", 'routine in <a href="bod/bod_inertial_to_body.html">bod_inertial_to_body.pro</a>', "bod_inertial_to_body.pro", "", "bod_inertial_to_body", "	Transforms the given column vectors from the inertial coordinate 	system to the body coordinate system.    ", "bdv", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Array (nv,3,nt) of column vectors in the bx body frame.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("bod/bod_inertial_to_body.html#bod_inertial_to_body", "bod_inertial_to_body", 'routine in <a href="bod/bod_inertial_to_body.html">bod_inertial_to_body.pro</a>', "bod_inertial_to_body.pro", "", "bod_inertial_to_body", "	Transforms the given column vectors from the inertial coordinate 	system to the body coordinate system.    ", "_subbdv", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Array (nv,3,nt) of column vectors in the bx body frame.    STATUS: 	Complete    ");
+  
+  libdata[libdataItem++] = new Array("bod/bod_inertial_to_body.html#bod_inertial_to_body", "bod_inertial_to_body", 'routine in <a href="bod/bod_inertial_to_body.html">bod_inertial_to_body.pro</a>', "bod_inertial_to_body.pro", "", "bod_inertial_to_body", "", "_subbdv", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("bod/bod_inertial_to_body_default.html", "bod_inertial_to_body_default.pro", '.pro file in <a href="bod/dir-overview.html">bod/ directory</a>', "bod_inertial_to_body_default.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("bod/bod_inertial_to_body_default.html#bod_inertial_to_body_default", "bod_inertial_to_body_default", 'routine in <a href="bod/bod_inertial_to_body_default.html">bod_inertial_to_body_default.pro</a>', "bod_inertial_to_body_default.pro", "", "bod_inertial_to_body_default", "	Transforms the given column vectors from the inertial coordinate 	system to the body coordinate system.    ", "_subbdv", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Array (nv,3,nt) of column vectors in the bx body frame.    STATUS: 	Complete    ");
   
   
 
@@ -177,12 +234,16 @@ libdata[libdataItem++] = new Array("bod/bod_inertial_to_body_pos.html", "bod_ine
   
   libdata[libdataItem++] = new Array("bod/bod_inertial_to_body_pos.html#bod_inertial_to_body_pos", "bod_inertial_to_body_pos", 'routine in <a href="bod/bod_inertial_to_body_pos.html">bod_inertial_to_body_pos.pro</a>', "bod_inertial_to_body_pos.pro", "", "bod_inertial_to_body_pos", "       Transforms the given column position vectors from the inertial        coordinate system to the body coordinate system.    ", "bdv", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016          Array (nv,3,nt) of column position vectors in the bx body        frame.    STATUS: 	Complete    ");
   
+  libdata[libdataItem++] = new Array("bod/bod_inertial_to_body_pos.html#__bod_inertial_to_body_pos", "__bod_inertial_to_body_pos", 'routine in <a href="bod/bod_inertial_to_body_pos.html">bod_inertial_to_body_pos.pro</a>', "bod_inertial_to_body_pos.pro", "", "__bod_inertial_to_body_pos", "", "bdv", "          -1", "");
+  
   
 
 libdata[libdataItem++] = new Array("bod/bod_inertial_to_body_vel.html", "bod_inertial_to_body_vel.pro", '.pro file in <a href="bod/dir-overview.html">bod/ directory</a>', "bod_inertial_to_body_vel.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("bod/bod_inertial_to_body_vel.html#bod_inertial_to_body_vel", "bod_inertial_to_body_vel", 'routine in <a href="bod/bod_inertial_to_body_vel.html">bod_inertial_to_body_vel.pro</a>', "bod_inertial_to_body_vel.pro", "", "bod_inertial_to_body_vel", "       Transforms the given column velocity vectors from the inertial        coordinate system to the body coordinate system.    ", "bdv", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016          Array (nv,3,nt) of column velocity vectors in the bx body        frame.    STATUS: 	Complete    ");
+  
+  libdata[libdataItem++] = new Array("bod/bod_inertial_to_body_vel.html#__bod_inertial_to_body_vel", "__bod_inertial_to_body_vel", 'routine in <a href="bod/bod_inertial_to_body_vel.html">bod_inertial_to_body_vel.pro</a>', "bod_inertial_to_body_vel.pro", "", "__bod_inertial_to_body_vel", "", "bdv", "          -1", "");
   
   
 
@@ -291,6 +352,13 @@ libdata[libdataItem++] = new Array("bod/bod_set_dlibdt.html", "bod_set_dlibdt.pr
   
   
 
+libdata[libdataItem++] = new Array("bod/bod_set_ib_data.html", "bod_set_ib_data.pro", '.pro file in <a href="bod/dir-overview.html">bod/ directory</a>', "bod_set_ib_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("bod/bod_set_ib_data.html#bod_set_ib_data", "bod_set_ib_data", 'routine in <a href="bod/bod_set_ib_data.html">bod_set_ib_data.pro</a>', "bod_set_ib_data.pro", "", "bod_set_ib_data", "	Replaces the function data for a body descriptor.    ", "noeventbd Body descriptor.   data New function data.   ", "NV/LIB/BOD", " 	Adapted by:	Spitale, 7/2016   ");
+  
+  
+
 libdata[libdataItem++] = new Array("bod/bod_set_lib.html", "bod_set_lib.pro", '.pro file in <a href="bod/dir-overview.html">bod/ directory</a>', "bod_set_lib.pro", "", "", "", "", "          -1", "");
   
   
@@ -371,7 +439,7 @@ libdata[libdataItem++] = new Array("tools/composite/body_to_image_pos.html", "bo
 libdata[libdataItem++] = new Array("tools/composite/body_to_surface.html", "body_to_surface.pro", '.pro file in <a href="tools/composite/dir-overview.html">tools/composite/ directory</a>', "body_to_surface.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("tools/composite/body_to_surface.html#body_to_surface", "body_to_surface", 'routine in <a href="tools/composite/body_to_surface.html">body_to_surface.pro</a>', "body_to_surface.pro", "", "body_to_surface", "       Transforms points in body coordinates to sirface coordinates.    ", "bx     Array of nt object descriptors (subclass of BODY).   p", "NV/LIB/TOOLS/COMPOSITE", "       Array (nv x 3 x nt) of surface coordinates.   STATUS:        Completed.    ");
+  libdata[libdataItem++] = new Array("tools/composite/body_to_surface.html#body_to_surface", "body_to_surface", 'routine in <a href="tools/composite/body_to_surface.html">body_to_surface.pro</a>', "body_to_surface.pro", "", "body_to_surface", "       Transforms points in body coordinates to surface coordinates.    ", "bx     Array of nt object descriptors (subclass of BODY).   p", "NV/LIB/TOOLS/COMPOSITE", "       Array (nv x 3 x nt) of surface coordinates.   STATUS:        Completed.    ");
   
   
 
@@ -385,7 +453,7 @@ libdata[libdataItem++] = new Array("cam/cam_body_to_focal.html", "cam_body_to_fo
 libdata[libdataItem++] = new Array("cam/cam_create_descriptors.html", "cam_create_descriptors.pro", '.pro file in <a href="cam/dir-overview.html">cam/ directory</a>', "cam_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("cam/cam_create_descriptors.html#cam_create_descriptors", "cam_create_descriptors", 'routine in <a href="cam/cam_create_descriptors.html">cam_create_descriptors.pro</a>', "cam_create_descriptors.pro", "", "cam_create_descriptors", "	Init method for the CAMERA class.    ", "crdbdcdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayfn_focal_to_imagefn_image_to_focalfn_data_pscaleoaxisexposuresizefn_psffiltersfn_body_to_imagenNumber of descriptors to create.   end_keywords", "NV/LIB/CAM", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized camera descriptors, depending 	on the presence of the cd keyword.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("cam/cam_create_descriptors.html#cam_create_descriptors", "cam_create_descriptors", 'routine in <a href="cam/cam_create_descriptors.html">cam_create_descriptors.pro</a>', "cam_create_descriptors.pro", "", "cam_create_descriptors", "	Init method for the CAMERA class.    ", "crdbdcdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayfn_focal_to_imagefn_image_to_focalfi_datascaleoaxisexposuresizefn_psffiltersnNumber of descriptors to create.   end_keywords", "NV/LIB/CAM", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized camera descriptors, depending 	on the presence of the cd keyword.    STATUS: 	Complete    ");
   
   
 
@@ -403,24 +471,17 @@ libdata[libdataItem++] = new Array("cam/cam_exposure.html", "cam_exposure.pro", 
   
   
 
+libdata[libdataItem++] = new Array("cam/cam_fi_data.html", "cam_fi_data.pro", '.pro file in <a href="cam/dir-overview.html">cam/ directory</a>', "cam_fi_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("cam/cam_fi_data.html#cam_fi_data", "cam_fi_data", 'routine in <a href="cam/cam_fi_data.html">cam_fi_data.pro</a>', "cam_fi_data.pro", "", "cam_fi_data", "	Returns the focal/image function data for a camera descriptor.    ", "noeventcd", "NV/LIB/CAM", " 	Adapted by:	Spitale, 7/2016; adapted from cam_fi_data_p   	Function data associated with the given camera descriptor.    STATUS: 	Complete    ");
+  
+  
+
 libdata[libdataItem++] = new Array("cam/cam_filters.html", "cam_filters.pro", '.pro file in <a href="cam/dir-overview.html">cam/ directory</a>', "cam_filters.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("cam/cam_filters.html#cam_filters", "cam_filters", 'routine in <a href="cam/cam_filters.html">cam_filters.pro</a>', "cam_filters.pro", "", "cam_filters", "	Returns the filter name(s) for a given camera descriptor.    ", "noeventcd Camera descriptor.   i", "NV/LIB/CAM", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Names of requested filters.    STATUS: 	Complete    ");
-  
-  
-
-libdata[libdataItem++] = new Array("cam/cam_fn_body_to_image.html", "cam_fn_body_to_image.pro", '.pro file in <a href="cam/dir-overview.html">cam/ directory</a>', "cam_fn_body_to_image.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("cam/cam_fn_body_to_image.html#cam_fn_body_to_image", "cam_fn_body_to_image", 'routine in <a href="cam/cam_fn_body_to_image.html">cam_fn_body_to_image.pro</a>', "cam_fn_body_to_image.pro", "", "cam_fn_body_to_image", "       Returns the name of the user-defined body --> image        transformation function for each given camera descriptor.    ", "noeventcd Array (nt) of CAMERA descriptors.   ", "NV/LIB/CAM", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016          Focal --> image transformation function associated with each        given camera descriptor.    STATUS: 	Complete    ");
-  
-  
-
-libdata[libdataItem++] = new Array("cam/cam_fn_data_p.html", "cam_fn_data_p.pro", '.pro file in <a href="cam/dir-overview.html">cam/ directory</a>', "cam_fn_data_p.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("cam/cam_fn_data_p.html#cam_fn_data_p", "cam_fn_data_p", 'routine in <a href="cam/cam_fn_data_p.html">cam_fn_data_p.pro</a>', "cam_fn_data_p.pro", "", "cam_fn_data_p", "	For each given camera descriptor, returns the pointer to the        generic data intended to be used by the user-defined focal        <--> image transformation functions.    ", "noeventcd Array (nt) of CAMERA descriptors.   ", "NV/LIB/CAM", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016          Pointer to user defined data associated with each given camera        descriptor.    STATUS: 	Complete    ");
   
   
 
@@ -606,17 +667,17 @@ libdata[libdataItem++] = new Array("cam/cam_set_exposure.html", "cam_set_exposur
   
   
 
+libdata[libdataItem++] = new Array("cam/cam_set_fi_data.html", "cam_set_fi_data.pro", '.pro file in <a href="cam/dir-overview.html">cam/ directory</a>', "cam_set_fi_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("cam/cam_set_fi_data.html#cam_set_fi_data", "cam_set_fi_data", 'routine in <a href="cam/cam_set_fi_data.html">cam_set_fi_data.pro</a>', "cam_set_fi_data.pro", "", "cam_set_fi_data", "	Replaces the focal/image function data for a camera descriptor.    ", "noeventcd Camera descriptor.   data New function data.   ", "NV/LIB/CAM", " 	Adapted by:	Spitale, 7/2016; adapted from cam_set_fi_data_p   ");
+  
+  
+
 libdata[libdataItem++] = new Array("cam/cam_set_filters.html", "cam_set_filters.pro", '.pro file in <a href="cam/dir-overview.html">cam/ directory</a>', "cam_set_filters.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("cam/cam_set_filters.html#cam_set_filters", "cam_set_filters", 'routine in <a href="cam/cam_set_filters.html">cam_set_filters.pro</a>', "cam_set_filters.pro", "", "cam_set_filters", "	Sets the filter name(s) for a given camera descriptor.    ", "noeventcd Camera descriptor.   filteri", "NV/LIB/CAM", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
-  
-  
-
-libdata[libdataItem++] = new Array("cam/cam_set_fn_data_p.html", "cam_set_fn_data_p.pro", '.pro file in <a href="cam/dir-overview.html">cam/ directory</a>', "cam_set_fn_data_p.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("cam/cam_set_fn_data_p.html#cam_set_fn_data_p", "cam_set_fn_data_p", 'routine in <a href="cam/cam_set_fn_data_p.html">cam_set_fn_data_p.pro</a>', "cam_set_fn_data_p.pro", "", "cam_set_fn_data_p", "       For each given camera descriptor, sets the pointer to the        generic data intended to be used by the user-defined focal        <--> image transformation functions.    ", "noeventcdArray (nt) of CAMERA descriptors.   fn_data_p", "NV/LIB/CAM", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
   
   
 
@@ -733,9 +794,6 @@ libdata[libdataItem++] = new Array("map/compile_map.html", "compile_map.pro", '.
 libdata[libdataItem++] = new Array("tools/orb/compile_orb.html", "compile_orb.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "compile_orb.pro", "", "", "", "", "          -1", "");
   
 
-libdata[libdataItem++] = new Array("tools/photometry/compile_photometry.html", "compile_photometry.pro", '.pro file in <a href="tools/photometry/dir-overview.html">tools/photometry/ directory</a>', "compile_photometry.pro", "", "", "", "", "          -1", "");
-  
-
 libdata[libdataItem++] = new Array("tools/pht/compile_pht.html", "compile_pht.pro", '.pro file in <a href="tools/pht/dir-overview.html">tools/pht/ directory</a>', "compile_pht.pro", "", "", "", "", "          -1", "");
   
 
@@ -752,9 +810,6 @@ libdata[libdataItem++] = new Array("stn/compile_stn.html", "compile_stn.pro", '.
   
 
 libdata[libdataItem++] = new Array("str/compile_str.html", "compile_str.pro", '.pro file in <a href="str/dir-overview.html">str/ directory</a>', "compile_str.pro", "", "", "", "", "          -1", "");
-  
-
-libdata[libdataItem++] = new Array("tools/compile_tools.html", "compile_tools.pro", '.pro file in <a href="tools/dir-overview.html">tools/ directory</a>', "compile_tools.pro", "", "", "", "", "          -1", "");
   
 
 libdata[libdataItem++] = new Array("tools/construct_mosaic.html", "construct_mosaic.pro", '.pro file in <a href="tools/dir-overview.html">tools/ directory</a>', "construct_mosaic.pro", "", "", "", "", "          -1", "");
@@ -804,6 +859,13 @@ libdata[libdataItem++] = new Array("cor/cor_add_task.html", "cor_add_task.pro", 
   
   
 
+libdata[libdataItem++] = new Array("cor/cor_assoc_xd.html", "cor_assoc_xd.pro", '.pro file in <a href="cor/dir-overview.html">cor/ directory</a>', "cor_assoc_xd.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("cor/cor_assoc_xd.html#cor_assoc_xd", "cor_assoc_xd", 'routine in <a href="cor/cor_assoc_xd.html">cor_assoc_xd.pro</a>', "cor_assoc_xd.pro", "", "cor_assoc_xd", "	Returns the associated descriptor for a CORE object.    ", "noeventIf set, no event is generated.   crdCORE object.   ", "NV/SYS/COR", " 	Written by:	Spitale, 11/2015   	The associated descriptor for the POINT object.    STATUS: 	Complete    SEE ALSO: 	cor_set_assoc_xd     ");
+  
+  
+
 libdata[libdataItem++] = new Array("cor/cor_class.html", "cor_class.pro", '.pro file in <a href="cor/dir-overview.html">cor/ directory</a>', "cor_class.pro", "", "", "", "", "          -1", "");
   
   
@@ -814,7 +876,7 @@ libdata[libdataItem++] = new Array("cor/cor_class.html", "cor_class.pro", '.pro 
 libdata[libdataItem++] = new Array("cor/cor_create_descriptors.html", "cor_create_descriptors.pro", '.pro file in <a href="cor/dir-overview.html">cor/ directory</a>', "cor_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("cor/cor_create_descriptors.html#cor_create_descriptors", "cor_create_descriptors", 'routine in <a href="cor/cor_create_descriptors.html">cor_create_descriptors.pro</a>', "cor_create_descriptors.pro", "", "cor_create_descriptors", "	Init method for the CORE class.    ", "crdCore descriptor(s) to initialize, instead of creating a new one.   abbrevusernametasksudataunamen Number of descriptors to create.   end_keywords", "NV/LIB/COR", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized core descriptors depending 	on the presence of the crd keyword.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("cor/cor_create_descriptors.html#cor_create_descriptors", "cor_create_descriptors", 'routine in <a href="cor/cor_create_descriptors.html">cor_create_descriptors.pro</a>', "cor_create_descriptors.pro", "", "cor_create_descriptors", "	Init method for the CORE class.    ", "crdCore descriptor(s) to initialize, instead of creating a new one.   abbrevusernametasksudataunameassoc_xdn Number of descriptors to create.   end_keywords", "NV/LIB/COR", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized core descriptors depending 	on the presence of the crd keyword.    STATUS: 	Complete    ");
   
   
 
@@ -871,6 +933,13 @@ libdata[libdataItem++] = new Array("cor/cor_select.html", "cor_select.pro", '.pr
   
   
   libdata[libdataItem++] = new Array("cor/cor_select.html#cor_select", "cor_select", 'routine in <a href="cor/cor_select.html">cor_select.pro</a>', "cor_select.pro", "", "cor_select", "	Selects descriptors based on given criteria.    ", "indicesrmnoeventnameclasscrx Array of descriptors of any subclass of CORE.   key Array of key to select.   ", "NV/SYS/COR", " 	Written by:	Spitale, 1/1998  	Rewritten by:	Spitale, 4/2016   	All descriptors in crx whose parameters match the given key. 	0 if no matches found.    STATUS: 	Complete    ");
+  
+  
+
+libdata[libdataItem++] = new Array("cor/cor_set_assoc_xd.html", "cor_set_assoc_xd.pro", '.pro file in <a href="cor/dir-overview.html">cor/ directory</a>', "cor_set_assoc_xd.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("cor/cor_set_assoc_xd.html#cor_set_assoc_xd", "cor_set_assoc_xd", 'routine in <a href="cor/cor_set_assoc_xd.html">cor_set_assoc_xd.pro</a>', "cor_set_assoc_xd.pro", "", "cor_set_assoc_xd", "	Replaces the assoc_xd field in a CORE object.    ", "noeventIf set, no event is generated.   crd	CORE object.   assoc_xdNew assoc_xd.   ", "NV/SYS/COR", " 	Written by:	Spitale		11/2015   ");
   
   
 
@@ -965,6 +1034,13 @@ libdata[libdataItem++] = new Array("dat/dat_add_transient_keyvals.html", "dat_ad
   
   
 
+libdata[libdataItem++] = new Array("dat/dat_cache.html", "dat_cache.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_cache.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("dat/dat_cache.html#dat_cache", "dat_cache", 'routine in <a href="dat/dat_cache.html">dat_cache.pro</a>', "dat_cache.pro", "", "dat_cache", "	Returns a long integer indicating the maximum size of a data array. 	This value may be adjusted using the environment variable 'DAT_CACHE'. 	-1 is returned if it cannot be determined.    ", "", "NV/OBJ/DAT", " 	Written by:	Spitale, 8/2016   	Current cache value.    STATUS: 	Complete    ");
+  
+  
+
 libdata[libdataItem++] = new Array("dat/dat_compress.html", "dat_compress.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_compress.pro", "", "", "", "", "          -1", "");
   
   
@@ -975,21 +1051,21 @@ libdata[libdataItem++] = new Array("dat/dat_compress.html", "dat_compress.pro", 
 libdata[libdataItem++] = new Array("dat/dat_compress_data_mask.html", "dat_compress_data_mask.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_compress_data_mask.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("dat/dat_compress_data_mask.html#dat_compress_data_mask", "dat_compress_data_mask", 'routine in <a href="dat/dat_compress_data_mask.html">dat_compress_data_mask.pro</a>', "dat_compress_data_mask.pro", "", "dat_compress_data_mask", "", "_dddata", "          -1", "");
+  libdata[libdataItem++] = new Array("dat/dat_compress_data_mask.html#dat_compress_data_mask", "dat_compress_data_mask", 'routine in <a href="dat/dat_compress_data_mask.html">dat_compress_data_mask.pro</a>', "dat_compress_data_mask.pro", "", "dat_compress_data_mask", "", "_dd", "          -1", "");
   
   
 
 libdata[libdataItem++] = new Array("dat/dat_create_descriptors.html", "dat_create_descriptors.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("dat/dat_create_descriptors.html#dat_create_descriptors", "dat_create_descriptors", 'routine in <a href="dat/dat_create_descriptors.html">dat_create_descriptors.pro</a>', "dat_create_descriptors.pro", "", "dat_create_descriptors", "	Creates and initializes a data descriptor.    ", "crdddsilent	If set, messages are suppressed.    abbrevusernametasksudataunamefilenameName of data file.   dimArray giving the dimensions of the data array.   typeInteger giving the type code of the data array.   dataData array.   nhistNumber of past version of the data array to archive. 		If not given, the environment variable NV_NHIST is 		used.  If that is not set, then nhist defaults to 1.   headerHeader array.   filetypeFiletype identifier string.  If not given 			an attempt is made to detect it.   input_fnName of function to read data file.   output_fnName of function to write data file.   keyword_fnName of function to read/write header keywords.   instrumentInstrument string.  If not given an 			attempt is made to detect it.   input_translatorsString array giving the names of the 				input translators.   output_translatorsString array giving the names of the 				output translators.     input_transformsString array giving the names of the 				input transforms.   output_transformsString array giving the names of the 				output transforms.   maintainData maintenance mode.   compressCompression suffix.   tab_translatorsn Number of descriptors to create.   end_keywords", "NV/SYS", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created and initialized data descriptor.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("dat/dat_create_descriptors.html#dat_create_descriptors", "dat_create_descriptors", 'routine in <a href="dat/dat_create_descriptors.html">dat_create_descriptors.pro</a>', "dat_create_descriptors.pro", "", "dat_create_descriptors", "	Creates and initializes a data descriptor.    ", "crdddsilent	If set, messages are suppressed.    abbrevusernametasksudataunameassoc_xdfilenameName of data file.   minmaxdimArray giving the dimensions of the data array.   cachetypeInteger giving the type code of the data array.   gffdataData array.   abscissanhistNumber of past version of the data array to archive. 		If not given, the environment variable NV_NHIST is 		used.  If that is not set, then nhist defaults to 1.   headerHeader array.   filetypeFiletype identifier string.  If not given 			an attempt is made to detect it.   input_fnName of function to read data file.   output_fnName of function to write data file.   keyword_fnName of function to read/write header keywords.   instrumentInstrument string.  If not given an 			attempt is made to detect it.   input_translatorsString array giving the names of the 				input translators.   output_translatorsString array giving the names of the 				output translators.     input_transformsString array giving the names of the 				input transforms.   output_transformsString array giving the names of the 				output transforms.   maintainData maintenance mode.   compressCompression suffix.   tab_translatorsn Number of descriptors to create.   end_keywords", "NV/SYS", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created and initialized data descriptor.    STATUS: 	Complete    ");
   
   
 
 libdata[libdataItem++] = new Array("dat/dat_data.html", "dat_data.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_data.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("dat/dat_data.html#dat_data", "dat_data", 'routine in <a href="dat/dat_data.html">dat_data.pro</a>', "dat_data.pro", "", "dat_data", "	Returns the data array associated with a data descriptor.    ", "samples Samping indices.  If set, only these data elements are 		  returned.  May be 1D or the same number of dimensions as 		  the data array.   nd      If set, the samples input is taken to be an ND coordinate 	          rather than a 1D subscript.  dat_data can normally tell 	          the difference automatically, but there is an ambiguity 	          if a single ND point is requested.  In that case, dat_data 	          interprets that as an array of 1D subscripts, unless /nd 	          is set.   true    If set, the actual data array is returned, even if there is 	          a sampling function.   noeventddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 2/1998  	Adapted by:	Spitale, 5/2016   	The data array associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_data    ");
+  libdata[libdataItem++] = new Array("dat/dat_data.html#dat_data", "dat_data", 'routine in <a href="dat/dat_data.html">dat_data.pro</a>', "dat_data.pro", "", "dat_data", "	Returns the data array associated with a data descriptor.    ", "samples Sampling indices.  If set, only these data elements are 		  returned.  May be 1D or the same number of dimensions as 		  the data array.   offsetnd      If set, the samples input is taken to be an ND coordinate 	          rather than a 1D subscript.  dat_data can normally tell 	          the difference automatically, but there is an ambiguity 	          if a single ND point is requested.  In that case, dat_data 	          interprets that as an array of 1D subscripts, unless /nd 	          is set.   true    If set, the actual data array is returned, even if there is 	          a sampling function.   noeventabscissaIf set, the abscissa array is returned instead of the data 		  array.   ddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 2/1998  	Adapted by:	Spitale, 5/2016   	The data array associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_data    ");
   
   
 
@@ -1014,17 +1090,17 @@ libdata[libdataItem++] = new Array("dat/dat_dim.html", "dat_dim.pro", '.pro file
   
   
 
+libdata[libdataItem++] = new Array("dat/dat_dim_data.html", "dat_dim_data.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_dim_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("dat/dat_dim_data.html#dat_dim_data", "dat_dim_data", 'routine in <a href="dat/dat_dim_data.html">dat_dim_data.pro</a>', "dat_dim_data.pro", "", "dat_dim_data", "	Returns the dimension function associated with a data descriptor.    ", "noeventddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	The dim_data associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_dim_data    ");
+  
+  
+
 libdata[libdataItem++] = new Array("dat/dat_dim_fn.html", "dat_dim_fn.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_dim_fn.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("dat/dat_dim_fn.html#dat_dim_fn", "dat_dim_fn", 'routine in <a href="dat/dat_dim_fn.html">dat_dim_fn.pro</a>', "dat_dim_fn.pro", "", "dat_dim_fn", "	Returns the dimension function associated with a data descriptor.    ", "noeventddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	The dim_fn associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_dim_fn    ");
-  
-  
-
-libdata[libdataItem++] = new Array("dat/dat_dim_fn_data.html", "dat_dim_fn_data.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_dim_fn_data.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("dat/dat_dim_fn_data.html#dat_dim_fn_data", "dat_dim_fn_data", 'routine in <a href="dat/dat_dim_fn_data.html">dat_dim_fn_data.pro</a>', "dat_dim_fn_data.pro", "", "dat_dim_fn_data", "	Returns the dimension function associated with a data descriptor.    ", "noeventddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	The dim_fn_data associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_dim_fn_data    ");
   
   
 
@@ -1038,7 +1114,7 @@ libdata[libdataItem++] = new Array("dat/dat_filetype.html", "dat_filetype.pro", 
 libdata[libdataItem++] = new Array("dat/dat_get_value.html", "dat_get_value.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_get_value.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("dat/dat_get_value.html#dat_get_value", "dat_get_value", 'routine in <a href="dat/dat_get_value.html">dat_get_value.pro</a>', "dat_get_value.pro", "", "dat_get_value", "	Calls input translators, supplying the given keyword, and builds 	a list of  returned values.    ", "status	0 if at least one translator call was successful, 			-1 otherwise.    trs	Transient argument string.   tr_disableIf set, dat_get_value returns without performing 			any action.   tr_overrideComma-delimited list of translators to use instead 			of those stored in dd.   tr_firstIf set, dat_get_value returns after the first 			successful translator.   key1key2key3key4key5key6key7key8dd	Data descriptor.   keywordKeyword to pass to translators, describing the 			requested quantity.   end_keywords", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Array of values returned from all successful translator calls. 	Values are returned in the same order that the corresponding 	translators were called.  The dimensions are determined by the 	output of the first translator call.  Dimensions are (dim,n_values), 	where n_objects is the total number of returned values (there may 	be more than one per translator), and dim is the dimensions of 	each value.  If dim == 1, the dimensions of the dat_get_value result 	are (n_values).    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("dat/dat_get_value.html#dat_get_value", "dat_get_value", 'routine in <a href="dat/dat_get_value.html">dat_get_value.pro</a>', "dat_get_value.pro", "", "dat_get_value", "	Calls input translators, supplying the given keyword, and builds 	a list of returned descriptors.    ", "status	0 if at least one translator call was successful, 			-1 otherwise.    trs	Transient argument string.   tr_disableIf set, dat_get_value returns without performing 			any action.   tr_overrideComma-delimited list of translators to use instead 			of those stored in dd.   tr_firstIf set, dat_get_value returns after the first 			successful translator.   tr_nosortBy default, output descriptors are sorted to remove 			those with duplicate names, retaining only the first 			descriptor of a given name for each input data 			descriptor.  /tr_nosort disables this action.   key1key2key3key4key5key6key7key8dd	Data descriptors.  Must all have the same instrument 			string.   keywordKeyword to pass to translators, describing the 			requested quantity.   end_keywords", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Array of descriptors returned from all successful translator calls. 	Descriptors are returned in the same order that the corresponding 	translators were called.  Each translator may produce multiple 	descriptors.    STATUS: 	Complete    ");
   
   
 
@@ -1066,7 +1142,7 @@ libdata[libdataItem++] = new Array("dat/dat_instrument.html", "dat_instrument.pr
 libdata[libdataItem++] = new Array("dat/dat_load_data.html", "dat_load_data.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_load_data.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("dat/dat_load_data.html#dat_load_data", "dat_load_data", 'routine in <a href="dat/dat_load_data.html">dat_load_data.pro</a>', "dat_load_data.pro", "", "dat_load_data", "	Loads the data array for a given data descriptor.  Adds to 	NV state maintained list if maintain == 1.    ", "sampleddData descriptor to test.   ", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Loaded data array.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("dat/dat_load_data.html#dat_load_data", "dat_load_data", 'routine in <a href="dat/dat_load_data.html">dat_load_data.pro</a>', "dat_load_data.pro", "", "dat_load_data", "	Loads the data array for a given data descriptor.  Adds to 	NV state maintained list if maintain == 1.    ", "sampledataddData descriptor to test.   ", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Loaded data array.    STATUS: 	Complete    ");
   
   
 
@@ -1157,21 +1233,28 @@ libdata[libdataItem++] = new Array("dat/dat_parse_transient_keyvals.html", "dat_
 libdata[libdataItem++] = new Array("dat/dat_put_value.html", "dat_put_value.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_put_value.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("dat/dat_put_value.html#dat_put_value", "dat_put_value", 'routine in <a href="dat/dat_put_value.html">dat_put_value.pro</a>', "dat_put_value.pro", "", "dat_put_value", "	Calls output translators, supplying the given keyword and value.    ", "trs	Transient argument string.   status	0 if at least one translator call was successful, 			-1 otherwise.    tr_disableIf set, dat_get_value returns without performing 			any action.   tr_overrideComma-delimited list of translators to use instead 			of those stored in dd.   tr_firstIf set, dat_get_value returns after the first 			successful translator.   key1key2key3key4key5key6key7key8dd	Data descriptor.   keywordKeyword to pass to translators, describing the 			requested quantity.   value	Value to write through the translators.   end_keywords", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
+  libdata[libdataItem++] = new Array("dat/dat_put_value.html#dat_put_value", "dat_put_value", 'routine in <a href="dat/dat_put_value.html">dat_put_value.pro</a>', "dat_put_value.pro", "", "dat_put_value", "	Calls output translators, supplying the given keyword and value.    ", "trs	Transient argument string.   status	0 if at least one translator call was successful, 			-1 otherwise.    tr_disableIf set, dat_get_value returns without performing 			any action.   tr_overrideComma-delimited list of translators to use instead 			of those stored in dd.   tr_firstIf set, dat_get_value returns after the first 			successful translator.   tr_nosortkey1key2key3key4key5key6key7key8dd	Data descriptor.   keywordKeyword to pass to translators, describing the 			requested quantity.   value	Value to write through the translators.   end_keywords", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
   
   
 
 libdata[libdataItem++] = new Array("dat/dat_read.html", "dat_read.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_read.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("dat/dat_read.html#dat_read", "dat_read", 'routine in <a href="dat/dat_read.html">dat_read.pro</a>', "dat_read.pro", "", "dat_read", "	Reads a data file of arbitrary format and produces a data descriptor.    Environment variables:   	NV_TRANSLATORS:		Name(s) of the translators table(s) to use unless 				overridden by the tab_translators keyword. 				Multiple table names are delimited with ':'.  	NV_FTP_DETECT:		Name(s) of the filetype detectors table(s). 				Multiple table names are delimited with ':'.  	NV_IO:			Name(s) of the I/O table(s). 				Multiple table names are delimited with ':'.  	NV_INS_DETECT:		Name(s) of the instrument detectors table(s). 				Multiple table names are delimited with ':'.    	Under unix, the IDL findfile routine does not expand the ~ symbol, 	but openr does.  In order to salvage some functionality, dat_read 	allows filespecs to pass even if they don't expand to anything using 	findfile.  In this way, a filespec contianing ~ can be properly 	expanded, but only if it expands to one filename.  If it expands 	to multiple filenames, then openr will choke on it.    	dat_read expands all file specifications and then attempts to detect 	the filetype for each resulting filename using the filetype detectors 	table.  If a filetype is detected, dat_read looks up the I/O functions 	and calls the input function to read the file.  Finally, it calls 	nv_init_descriptor to obtain a data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_write    ", "filetypeOverrides automatic filetype detection.   input_fnOverrides input function lookup.   output_fnOverrides output function lookup.   keyword_fninstrumentUse this instrument name instead of attempting to 			detect it.   input_translatorsoutput_translatorsinput_transformsoutput_transformstab_translatorsName of translators table to use instead of 				that given by the environment variable 				NV_TRANSLATORS.  If no path is given, then the 				file is assumed to reside in the same directory 				as the translator named by the NV_TRANSLATORS 				environment variable.   maintaincompresssilent	If set, dat_read suppresses superfluous printed output 			and passes the flag to the input function.   sample	Vector giving the sampling indices in the input data 			file.  This parameter is passed through to the input 			function, which may choose to ignore it.   nodatanamenhistextensionsIf given, these extensions are attempted for each file. 			If a file with the extension is not found, then the next 			extension is tried until no extensions are left to try. 			If no extensions work, then the raw filename is attemtped.    filespecArray of strings giving file specifications for 			file to read.   dataheader", "NV/SYS", " 	Written by:	Spitale, 2/1998   	Array of data descriptors - one for each file resulting from the 	expansion of the given file specifications.    ");
+  libdata[libdataItem++] = new Array("dat/dat_read.html#dat_read", "dat_read", 'routine in <a href="dat/dat_read.html">dat_read.pro</a>', "dat_read.pro", "", "dat_read", "	Reads a data file of arbitrary format and produces a data descriptor.    Environment variables:   	NV_TRANSLATORS:		Name(s) of the translators table(s) to use unless 				overridden by the tab_translators keyword. 				Multiple table names are delimited with ':'.  	NV_FTP_DETECT:		Name(s) of the filetype detectors table(s). 				Multiple table names are delimited with ':'.  	NV_IO:			Name(s) of the I/O table(s). 				Multiple table names are delimited with ':'.  	NV_INS_DETECT:		Name(s) of the instrument detectors table(s). 				Multiple table names are delimited with ':'.    	dat_read expands all file specifications and then attempts to detect 	the filetype for each resulting filename using the filetype detectors 	table.  If a filetype is detected, dat_read looks up the I/O functions 	and calls the input function to read the file.  Finally, it calls 	nv_init_descriptor to obtain a data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_write    ", "filetypeOverrides automatic filetype detection.   input_fnOverrides input function lookup.   output_fnOverrides output function lookup.   keyword_fninstrumentUse this instrument name instead of attempting to 			detect it.   input_translatorsoutput_translatorsinput_transformsoutput_transformstab_translatorsName of translators table to use instead of 				that given by the environment variable 				NV_TRANSLATORS.  If no path is given, then the 				file is assumed to reside in the same directory 				as the translator named by the NV_TRANSLATORS 				environment variable.   maintaincompresssilent	If set, dat_read suppresses superfluous printed output 			and passes the flag to the input function.   sample	Vector giving the sampling indices in the input data 			file.  This parameter is passed through to the input 			function, which may choose to ignore it.   nodatanamenhistextensionsIf given, these extensions are attempted for each file. 			If a file with the extension is not found, then the next 			extension is tried until no extensions are left to try. 			If no extensions work, then the raw filename is attemtped.    filespecArray of strings giving file specifications for 			file to read.   dataheader", "NV/SYS", " 	Written by:	Spitale, 2/1998   	Array of data descriptors - one for each file resulting from the 	expansion of the given file specifications.    ");
   
   
 
 libdata[libdataItem++] = new Array("dat/dat_read_config.html", "dat_read_config.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_read_config.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("dat/dat_read_config.html#dat_read_config", "dat_read_config", 'routine in <a href="dat/dat_read_config.html">dat_read_config.pro</a>', "dat_read_config.pro", "", "dat_read_config", "	Reads an NV configuration table.    ", "continueenvName of an environment variable giving the names of the 		configuration files to read, delimited by ':'.   table_pfilenames_p", "NV/SYS", " 	Written by:	Spitale   	table_p:	Pointer to the configuration table contructed by 			concatenating the contents of each file.  	filenames_p:	List of configuration filenames that were read.    ");
+  libdata[libdataItem++] = new Array("dat/dat_read_config.html#dat_read_config", "dat_read_config", 'routine in <a href="dat/dat_read_config.html">dat_read_config.pro</a>', "dat_read_config.pro", "", "dat_read_config", "	Reads an NV configuration table.    ", "continuestatusenvName of an environment variable giving the names of the 		configuration files to read, delimited by ':'.   table_pfilenames_p", "NV/SYS", " 	Written by:	Spitale   	table_p:	Pointer to the configuration table contructed by 			concatenating the contents of each file.  	filenames_p:	List of configuration filenames that were read.    ");
+  
+  
+
+libdata[libdataItem++] = new Array("dat/dat_redo.html", "dat_redo.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_redo.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("dat/dat_redo.html#dat_redo", "dat_redo", 'routine in <a href="dat/dat_redo.html">dat_redo.pro</a>', "dat_redo.pro", "", "dat_redo", "	Decrements the data archive index in the data descriptor.    ", "noeventddData descriptor.   ", "NV/OBJ/DAT", " 	Written by:	Spitale  	Adapted by:	Spitale, 7/2016   ");
   
   
 
@@ -1182,17 +1265,17 @@ libdata[libdataItem++] = new Array("dat/dat_replicate.html", "dat_replicate.pro"
   
   
 
+libdata[libdataItem++] = new Array("dat/dat_sampling_data.html", "dat_sampling_data.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_sampling_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("dat/dat_sampling_data.html#dat_sampling_data", "dat_sampling_data", 'routine in <a href="dat/dat_sampling_data.html">dat_sampling_data.pro</a>', "dat_sampling_data.pro", "", "dat_sampling_data", "	Returns the sampling function associated with a data descriptor.    ", "noeventddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	The sampling_data associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_sampling_data    ");
+  
+  
+
 libdata[libdataItem++] = new Array("dat/dat_sampling_fn.html", "dat_sampling_fn.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_sampling_fn.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("dat/dat_sampling_fn.html#dat_sampling_fn", "dat_sampling_fn", 'routine in <a href="dat/dat_sampling_fn.html">dat_sampling_fn.pro</a>', "dat_sampling_fn.pro", "", "dat_sampling_fn", "	Returns the sampling function associated with a data descriptor.    ", "noeventddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	The sampling_fn associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_sampling_fn    ");
-  
-  
-
-libdata[libdataItem++] = new Array("dat/dat_sampling_fn_data.html", "dat_sampling_fn_data.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_sampling_fn_data.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("dat/dat_sampling_fn_data.html#dat_sampling_fn_data", "dat_sampling_fn_data", 'routine in <a href="dat/dat_sampling_fn_data.html">dat_sampling_fn_data.pro</a>', "dat_sampling_fn_data.pro", "", "dat_sampling_fn_data", "	Returns the sampling function associated with a data descriptor.    ", "noeventddData descriptor.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	The sampling_fn_data associated with the data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_set_sampling_fn_data    ");
   
   
 
@@ -1206,7 +1289,14 @@ libdata[libdataItem++] = new Array("dat/dat_set_compress.html", "dat_set_compres
 libdata[libdataItem++] = new Array("dat/dat_set_data.html", "dat_set_data.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_set_data.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("dat/dat_set_data.html#dat_set_data", "dat_set_data", 'routine in <a href="dat/dat_set_data.html">dat_set_data.pro</a>', "dat_set_data.pro", "", "dat_set_data", "	Replaces the data array associated with a data descriptor.    ", "silentIf set, messages are suppressed.   updateUpdate mode flag.  If not given, it will be taken from dd.   noeventddData descriptor.   _dataNew data array.   ", "NV/SYS", " 	Written by:	Spitale, 2/1998  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
+  libdata[libdataItem++] = new Array("dat/dat_set_data.html#dat_set_data", "dat_set_data", 'routine in <a href="dat/dat_set_data.html">dat_set_data.pro</a>', "dat_set_data.pro", "", "dat_set_data", "	Replaces the data array associated with a data descriptor.    ", "silentIf set, messages are suppressed.   updateUpdate mode flag.  If not given, it will be taken from dd.   noeventabscissaIf set, the given array is taken as the abscissa.   sampleddData descriptor.   _dataNew data array.   ", "NV/SYS", " 	Written by:	Spitale, 2/1998  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
+  
+  
+
+libdata[libdataItem++] = new Array("dat/dat_set_dim_data.html", "dat_set_dim_data.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_set_dim_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("dat/dat_set_dim_data.html#dat_set_dim_data", "dat_set_dim_data", 'routine in <a href="dat/dat_set_dim_data.html">dat_set_dim_data.pro</a>', "dat_set_dim_data.pro", "", "dat_set_dim_data", "	Replaces the dimension function data associated with a data descriptor.    ", "noeventdd		Data descriptor.   data", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
   
   
 
@@ -1214,13 +1304,6 @@ libdata[libdataItem++] = new Array("dat/dat_set_dim_fn.html", "dat_set_dim_fn.pr
   
   
   libdata[libdataItem++] = new Array("dat/dat_set_dim_fn.html#dat_set_dim_fn", "dat_set_dim_fn", 'routine in <a href="dat/dat_set_dim_fn.html">dat_set_dim_fn.pro</a>', "dat_set_dim_fn.pro", "", "dat_set_dim_fn", "	Replaces the dimension function associated with a data descriptor.    ", "noeventdd	Data descriptor.   dim_fnNew sampling function.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
-  
-  
-
-libdata[libdataItem++] = new Array("dat/dat_set_dim_fn_data.html", "dat_set_dim_fn_data.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_set_dim_fn_data.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("dat/dat_set_dim_fn_data.html#dat_set_dim_fn_data", "dat_set_dim_fn_data", 'routine in <a href="dat/dat_set_dim_fn_data.html">dat_set_dim_fn_data.pro</a>', "dat_set_dim_fn_data.pro", "", "dat_set_dim_fn_data", "	Replaces the dimension function data associated with a data descriptor.    ", "noeventdd		Data descriptor.   dim_fn_dataNew sampling function data.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
   
   
 
@@ -1266,17 +1349,17 @@ libdata[libdataItem++] = new Array("dat/dat_set_nhist.html", "dat_set_nhist.pro"
   
   
 
+libdata[libdataItem++] = new Array("dat/dat_set_sampling_data.html", "dat_set_sampling_data.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_set_sampling_data.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("dat/dat_set_sampling_data.html#dat_set_sampling_data", "dat_set_sampling_data", 'routine in <a href="dat/dat_set_sampling_data.html">dat_set_sampling_data.pro</a>', "dat_set_sampling_data.pro", "", "dat_set_sampling_data", "	Replaces the sampling function data associated with a data descriptor.    ", "noeventdd		Data descriptor.   data", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
+  
+  
+
 libdata[libdataItem++] = new Array("dat/dat_set_sampling_fn.html", "dat_set_sampling_fn.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_set_sampling_fn.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("dat/dat_set_sampling_fn.html#dat_set_sampling_fn", "dat_set_sampling_fn", 'routine in <a href="dat/dat_set_sampling_fn.html">dat_set_sampling_fn.pro</a>', "dat_set_sampling_fn.pro", "", "dat_set_sampling_fn", "	Replaces the sampling function associated with a data descriptor.    ", "noeventdd	Data descriptor.   sampling_fnNew sampling function.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
-  
-  
-
-libdata[libdataItem++] = new Array("dat/dat_set_sampling_fn_data.html", "dat_set_sampling_fn_data.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_set_sampling_fn_data.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("dat/dat_set_sampling_fn_data.html#dat_set_sampling_fn_data", "dat_set_sampling_fn_data", 'routine in <a href="dat/dat_set_sampling_fn_data.html">dat_set_sampling_fn_data.pro</a>', "dat_set_sampling_fn_data.pro", "", "dat_set_sampling_fn_data", "	Replaces the sampling function data associated with a data descriptor.    ", "noeventdd		Data descriptor.   sampling_fn_dataNew sampling function data.   ", "NV/SYS", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	dd:	Modified data descriptor.    ");
   
   
 
@@ -1308,6 +1391,20 @@ libdata[libdataItem++] = new Array("dat/dat_test_dd.html", "dat_test_dd.pro", '.
   
   
 
+libdata[libdataItem++] = new Array("dat/dat_transform_input.html", "dat_transform_input.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_transform_input.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("dat/dat_transform_input.html#dat_transform_input", "dat_transform_input", 'routine in <a href="dat/dat_transform_input.html">dat_transform_input.pro</a>', "dat_transform_input.pro", "", "dat_transform_input", "", "silent_dddataheader", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("dat/dat_transform_output.html", "dat_transform_output.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_transform_output.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("dat/dat_transform_output.html#dat_transform_output", "dat_transform_output", 'routine in <a href="dat/dat_transform_output.html">dat_transform_output.pro</a>', "dat_transform_output.pro", "", "dat_transform_output", "", "silent_dddataheader", "          -1", "");
+  
+  
+
 libdata[libdataItem++] = new Array("dat/dat_type.html", "dat_type.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_type.pro", "", "", "", "", "          -1", "");
   
   
@@ -1318,7 +1415,7 @@ libdata[libdataItem++] = new Array("dat/dat_type.html", "dat_type.pro", '.pro fi
 libdata[libdataItem++] = new Array("dat/dat_uncompress_data_mask.html", "dat_uncompress_data_mask.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_uncompress_data_mask.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("dat/dat_uncompress_data_mask.html#dat_uncompress_data_mask", "dat_uncompress_data_mask", 'routine in <a href="dat/dat_uncompress_data_mask.html">dat_uncompress_data_mask.pro</a>', "dat_uncompress_data_mask.pro", "", "dat_uncompress_data_mask", "", "_ddcdata", "          -1", "");
+  libdata[libdataItem++] = new Array("dat/dat_uncompress_data_mask.html#dat_uncompress_data_mask", "dat_uncompress_data_mask", 'routine in <a href="dat/dat_uncompress_data_mask.html">dat_uncompress_data_mask.pro</a>', "dat_uncompress_data_mask.pro", "", "dat_uncompress_data_mask", "", "_dd", "          -1", "");
   
   
 
@@ -1353,7 +1450,7 @@ libdata[libdataItem++] = new Array("dat/dat_valid_descriptor.html", "dat_valid_d
 libdata[libdataItem++] = new Array("dat/dat_write.html", "dat_write.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "dat_write.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("dat/dat_write.html#dat_write", "dat_write", 'routine in <a href="dat/dat_write.html">dat_write.pro</a>', "dat_write.pro", "", "dat_write", "	Writes a data file of arbitrary format.    	Under unix, the IDL findfile routine does not expand the ~ symbol, 	but openr does.  In order to salvage some functionality, dat_read 	allows filespecs to pass even if they don't expand to anything using 	findfile.  In this way, a filespec contianing ~ can be properly 	expanded, but only if it expands to one filename.  If it expands 	to multiple filenames, then openr will choke on it.    	dat_write expands all file specifications and attempts to write a 	file corresponding to each given data descriptor.  An error results 	if the filespec expands to a different number of files than the number 	of given data descriptors.    STATUS: 	Complete    SEE ALSO: 	dat_read    ", "nodatafiletypeOverrides data descriptor filetype (and thus the 			output function).   output_fnOverrides data descriptor output function.   verboseIf set, message are enabled.    filespecArray of strings giving file specifications for 			file to write.   dd	Array of data descriptors.   ", "NV/SYS", " 	Written by:	Spitale, 7/1998  	Adapted by:	Spitale, 5/2016   ");
+  libdata[libdataItem++] = new Array("dat/dat_write.html#dat_write", "dat_write", 'routine in <a href="dat/dat_write.html">dat_write.pro</a>', "dat_write.pro", "", "dat_write", "	Writes a data file of arbitrary format.    	dat_write expands all file specifications and attempts to write a 	file corresponding to each given data descriptor.  An error results 	if the filespec expands to a different number of files than the number 	of given data descriptors.    STATUS: 	Complete    SEE ALSO: 	dat_read    ", "nodatafiletypeOverrides data descriptor filetype (and thus the 			output function).   output_fnOverrides data descriptor output function.   verboseIf set, message are enabled.    filespecArray of strings giving file specifications for 			file to write.   dd	Array of data descriptors.   ", "NV/SYS", " 	Written by:	Spitale, 7/1998  	Adapted by:	Spitale, 5/2016   ");
   
   
 
@@ -1428,9 +1525,6 @@ libdata[libdataItem++] = new Array("map/doc_map.html", "doc_map.pro", '.pro file
 libdata[libdataItem++] = new Array("tools/orb/doc_orb.html", "doc_orb.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "doc_orb.pro", "", "", "", "", "          -1", "");
   
 
-libdata[libdataItem++] = new Array("tools/photometry/doc_photometry.html", "doc_photometry.pro", '.pro file in <a href="tools/photometry/dir-overview.html">tools/photometry/ directory</a>', "doc_photometry.pro", "", "", "", "", "          -1", "");
-  
-
 libdata[libdataItem++] = new Array("tools/pht/doc_pht.html", "doc_pht.pro", '.pro file in <a href="tools/pht/dir-overview.html">tools/pht/ directory</a>', "doc_pht.pro", "", "", "", "", "          -1", "");
   
 
@@ -1447,9 +1541,6 @@ libdata[libdataItem++] = new Array("stn/doc_stn.html", "doc_stn.pro", '.pro file
   
 
 libdata[libdataItem++] = new Array("str/doc_str.html", "doc_str.pro", '.pro file in <a href="str/dir-overview.html">str/ directory</a>', "doc_str.pro", "", "", "", "", "          -1", "");
-  
-
-libdata[libdataItem++] = new Array("tools/doc_tools.html", "doc_tools.pro", '.pro file in <a href="tools/dir-overview.html">tools/ directory</a>', "doc_tools.pro", "", "", "", "", "          -1", "");
   
 
 libdata[libdataItem++] = new Array("dsk/dsk_apply_scale.html", "dsk_apply_scale.pro", '.pro file in <a href="dsk/dir-overview.html">dsk/ directory</a>', "dsk_apply_scale.pro", "", "", "", "", "          -1", "");
@@ -1483,7 +1574,7 @@ libdata[libdataItem++] = new Array("tools/dsk_cat_by_name.html", "dsk_cat_by_nam
 libdata[libdataItem++] = new Array("dsk/dsk_create_descriptors.html", "dsk_create_descriptors.pro", '.pro file in <a href="dsk/dir-overview.html">dsk/ directory</a>', "dsk_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("dsk/dsk_create_descriptors.html#dsk_create_descriptors", "dsk_create_descriptors", 'routine in <a href="dsk/dsk_create_descriptors.html">dsk_create_descriptors.pro</a>', "dsk_create_descriptors.pro", "", "dsk_create_descriptors", "	Init method for the DISK class.    ", "crdbdslddkdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedosmaeccdapscalenm_memtapmdtapmdtlibamlibmdlibmdtnl_liltaanldtaanldtliballibldlibldtnNumber of descriptors to create.   end_keywords", "NV/LIB/DSK", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized disk descriptors, depending 	on the presence of the dkd keyword.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("dsk/dsk_create_descriptors.html#dsk_create_descriptors", "dsk_create_descriptors", 'routine in <a href="dsk/dsk_create_descriptors.html">dsk_create_descriptors.pro</a>', "dsk_create_descriptors.pro", "", "dsk_create_descriptors", "	Init method for the DISK class.    ", "crdbdslddkdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedosmaeccdapscalenm_memtapmdtapmdtlibamlibmdlibmdtnl_liltaanldtaanldtliballibldlibldtnNumber of descriptors to create.   end_keywords", "NV/LIB/DSK", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized disk descriptors, depending 	on the presence of the dkd keyword.    STATUS: 	Complete    ");
   
   
 
@@ -1611,14 +1702,7 @@ libdata[libdataItem++] = new Array("dsk/dsk_get_edge_elevation.html", "dsk_get_e
 libdata[libdataItem++] = new Array("dsk/dsk_get_edge_radius.html", "dsk_get_edge_radius.pro", '.pro file in <a href="dsk/dir-overview.html">dsk/ directory</a>', "dsk_get_edge_radius.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("dsk/dsk_get_edge_radius.html#dsk_get_edge_radius", "dsk_get_edge_radius", 'routine in <a href="dsk/dsk_get_edge_radius.html">dsk_get_edge_radius.pro</a>', "dsk_get_edge_radius.pro", "", "dsk_get_edge_radius", "	Computes radii along the edge of a disk.    ", "innerIf set, the inner edge is used.   outerIf set, the outer edge is used.   timeone_to_onenoeventdkd Array (nt) of any subclass of DISK.   ta Array (nta) of true anomalies at which to compute radii.   ", "NV/LIB/DSK", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Array (nt x nta) of radii computed at each true anomaly on each 	disk.    STATUS: 	Complete    ");
-  
-  
-
-libdata[libdataItem++] = new Array("dsk/dsk_get_grid_points.html", "dsk_get_grid_points.pro", '.pro file in <a href="dsk/dir-overview.html">dsk/ directory</a>', "dsk_get_grid_points.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("dsk/dsk_get_grid_points.html#dsk_get_grid_points", "dsk_get_grid_points", 'routine in <a href="dsk/dsk_get_grid_points.html">dsk_get_grid_points.pro</a>', "dsk_get_grid_points.pro", "", "dsk_get_grid_points", "", "radtascan_radmintamaxtaminradmaxraddkdnlpointsnrpoints", "          -1", "");
+  libdata[libdataItem++] = new Array("dsk/dsk_get_edge_radius.html#dsk_get_edge_radius", "dsk_get_edge_radius", 'routine in <a href="dsk/dsk_get_edge_radius.html">dsk_get_edge_radius.pro</a>', "dsk_get_edge_radius.pro", "", "dsk_get_edge_radius", "	Computes radii along the edge of a disk.    ", "innerIf set, the inner edge is used.   outerIf set, the outer edge is used.   timenoeventdkd Array (nt) of any subclass of DISK.   ta Array (nv x nt) of true anomalies at which to compute radii.   ", "NV/LIB/DSK", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Array (nv x nt) of radii computed at each true anomaly on each 	disk.    STATUS: 	Complete    ");
   
   
 
@@ -1709,7 +1793,7 @@ libdata[libdataItem++] = new Array("tools/dsk_get_perp.html", "dsk_get_perp.pro"
 libdata[libdataItem++] = new Array("dsk/dsk_get_radius.html", "dsk_get_radius.pro", '.pro file in <a href="dsk/dir-overview.html">dsk/ directory</a>', "dsk_get_radius.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("dsk/dsk_get_radius.html#dsk_get_radius", "dsk_get_radius", 'routine in <a href="dsk/dsk_get_radius.html">dsk_get_radius.pro</a>', "dsk_get_radius.pro", "", "dsk_get_radius", "	Computes radii along the iner and outer edges of a disk.    ", "dkd Array (nt) of any subclass of DISK.   ta Array (nta) of true anomalies at which to compute radii.   ", "NV/LIB/DSK", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Array (nta x 2 x nt) of radii computed at each true anomaly on each 	disk.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("dsk/dsk_get_radius.html#dsk_get_radius", "dsk_get_radius", 'routine in <a href="dsk/dsk_get_radius.html">dsk_get_radius.pro</a>', "dsk_get_radius.pro", "", "dsk_get_radius", "	Computes radii along the inner and outer edges of a disk.    ", "one_to_onedkd Array (nt) of any subclass of DISK.   ta Array (nv x nt) of true anomalies at which to compute radii.   ", "NV/LIB/DSK", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Array (nv x 2 x nt) of radii computed at each true anomaly on each 	disk.    STATUS: 	Complete    ");
   
   
 
@@ -1920,6 +2004,13 @@ libdata[libdataItem++] = new Array("dsk/dsk_set_dlibmdt.html", "dsk_set_dlibmdt.
   
   
 
+libdata[libdataItem++] = new Array("dsk/dsk_set_dlpmdt.html", "dsk_set_dlpmdt.pro", '.pro file in <a href="dsk/dir-overview.html">dsk/ directory</a>', "dsk_set_dlpmdt.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("dsk/dsk_set_dlpmdt.html#dsk_set_dlpmdt", "dsk_set_dlpmdt", 'routine in <a href="dsk/dsk_set_dlpmdt.html">dsk_set_dlpmdt.pro</a>', "dsk_set_dlpmdt.pro", "", "dsk_set_dlpmdt", "", "bxdlpmdt", "          -1", "");
+  
+  
+
 libdata[libdataItem++] = new Array("dsk/dsk_set_dtaanldt.html", "dsk_set_dtaanldt.pro", '.pro file in <a href="dsk/dir-overview.html">dsk/ directory</a>', "dsk_set_dtaanldt.pro", "", "", "", "", "          -1", "");
   
   
@@ -2032,6 +2123,13 @@ libdata[libdataItem++] = new Array("dsk/dsk_set_libm.html", "dsk_set_libm.pro", 
   
   
 
+libdata[libdataItem++] = new Array("dsk/dsk_set_lpm.html", "dsk_set_lpm.pro", '.pro file in <a href="dsk/dir-overview.html">dsk/ directory</a>', "dsk_set_lpm.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("dsk/dsk_set_lpm.html#dsk_set_lpm", "dsk_set_lpm", 'routine in <a href="dsk/dsk_set_lpm.html">dsk_set_lpm.pro</a>', "dsk_set_lpm.pro", "", "dsk_set_lpm", "", "bxlpm", "          -1", "");
+  
+  
+
 libdata[libdataItem++] = new Array("dsk/dsk_set_m.html", "dsk_set_m.pro", '.pro file in <a href="dsk/dir-overview.html">dsk/ directory</a>', "dsk_set_m.pro", "", "", "", "", "          -1", "");
   
   
@@ -2088,6 +2186,13 @@ libdata[libdataItem++] = new Array("dsk/dsk_set_taanl.html", "dsk_set_taanl.pro"
   
   
 
+libdata[libdataItem++] = new Array("dsk/dsk_set_tanl.html", "dsk_set_tanl.pro", '.pro file in <a href="dsk/dir-overview.html">dsk/ directory</a>', "dsk_set_tanl.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("dsk/dsk_set_tanl.html#dsk_set_tanl", "dsk_set_tanl", 'routine in <a href="dsk/dsk_set_tanl.html">dsk_set_tanl.pro</a>', "dsk_set_tanl.pro", "", "dsk_set_tanl", "", "bxtanl", "          -1", "");
+  
+  
+
 libdata[libdataItem++] = new Array("dsk/dsk_set_tapm.html", "dsk_set_tapm.pro", '.pro file in <a href="dsk/dir-overview.html">dsk/ directory</a>', "dsk_set_tapm.pro", "", "", "", "", "          -1", "");
   
   
@@ -2098,7 +2203,7 @@ libdata[libdataItem++] = new Array("dsk/dsk_set_tapm.html", "dsk_set_tapm.pro", 
 libdata[libdataItem++] = new Array("dsk/dsk_shape_radial.html", "dsk_shape_radial.pro", '.pro file in <a href="dsk/dir-overview.html">dsk/ directory</a>', "dsk_shape_radial.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("dsk/dsk_shape_radial.html#dsk_shape_radial", "dsk_shape_radial", 'routine in <a href="dsk/dsk_shape_radial.html">dsk_shape_radial.pro</a>', "dsk_shape_radial.pro", "", "dsk_shape_radial", "	Computes radii along the edge of a disk using disk elements.    ", "dkdmmIf set, only the radius component for this wavenumber 		is returned.   miiIf set, only the radius component with this index 		is returned.   a Array (nt) of semimajor axis values.   e Array (nt) of eccentricity values.   dap Array (nt) of apsidal shift values.   ta Array (nta) of true anomalies at which to compute radii.   m Array (nt) of radial wavenumbers.   em Array (nt) of eccentricities for each m.   tapm Array (nt) of true anomalies of periapse for each m.    ", "NV/LIB/DSK", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Array (nt x nta) of radii computed at each true anomaly on each 	disk.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("dsk/dsk_shape_radial.html#dsk_shape_radial", "dsk_shape_radial", 'routine in <a href="dsk/dsk_shape_radial.html">dsk_shape_radial.pro</a>', "dsk_shape_radial.pro", "", "dsk_shape_radial", "	Computes radii along the edge of a disk using disk elements.    ", "mmIf set, only the radius component for this wavenumber 		is returned.   miiIf set, only the radius component with this index 		is returned.   _a Array (nt) of semimajor axis values.   _e Array (nt) of eccentricity values.   _dap Array (nt) of apsidal shift values.   ta Array (nv x nt) of true anomalies at which to compute radii.   _m Array (nt x nm) of radial wavenumbers.   _em Array (nt x nm) of eccentricities for each m.   _tapm Array (nt x nm) of true anomalies of periapse for each m.    ", "NV/LIB/DSK", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   	Array (nv x nt) of radii computed at each true anomaly on each 	disk.    STATUS: 	Complete    ");
   
   
 
@@ -2193,13 +2298,6 @@ libdata[libdataItem++] = new Array("tools/icv/edge_model_psf_ring.html", "edge_m
   
   
 
-libdata[libdataItem++] = new Array("tools/photometry/emission_angle.html", "emission_angle.pro", '.pro file in <a href="tools/photometry/dir-overview.html">tools/photometry/ directory</a>', "emission_angle.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("tools/photometry/emission_angle.html#emission_angle", "emission_angle", 'routine in <a href="tools/photometry/emission_angle.html">emission_angle.pro</a>', "emission_angle.pro", "", "emission_angle", "", "surface_coordcamera_coordvertical", "          -1", "");
-  
-  
-
 libdata[libdataItem++] = new Array("tools/epoch_radec.html", "epoch_radec.pro", '.pro file in <a href="tools/dir-overview.html">tools/ directory</a>', "epoch_radec.pro", "", "", "", "", "          -1", "");
   
   
@@ -2217,7 +2315,7 @@ libdata[libdataItem++] = new Array("tools/fill_ring.html", "fill_ring.pro", '.pr
 libdata[libdataItem++] = new Array("tools/footprint.html", "footprint.pro", '.pro file in <a href="tools/dir-overview.html">tools/ directory</a>', "footprint.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("tools/footprint.html#footprint", "footprint", 'routine in <a href="tools/footprint.html">footprint.pro</a>', "footprint.pro", "", "footprint", "	Computes the footprint of a camera on a given body.    ", "slop	Number of pixels by which to expand the image in each 			direction.   cornersArray(2,2) giving corers of image region to consider.   image_ptsFootprint points in the image frame.   body_ptsFootprint points in the body frame.   valid 	Indices of valid output points.   sample	Sampling rate; default is 1 pixel.    cd	Camera descripor.   bx	Body descriptor; globe or disk.   ", "NV/LIB/TOOLS", "       Written by:     Spitale		5/2014   	Array nv,3,nt of surface points.    ");
+  libdata[libdataItem++] = new Array("tools/footprint.html#footprint", "footprint", 'routine in <a href="tools/footprint.html">footprint.pro</a>', "footprint.pro", "", "footprint", "	Computes the footprint of a camera on a given body.    ", "slop	Number of pixels by which to expand the image in each 			direction.   cornersArray(2,2) giving corers of image region to consider.   hit_indicesArray (nhit) of bx indices.   image_ptsFootprint points in the image frame.   body_p	Array (nhit) of pointers to body footprint points for 			each body hit.   sample	Sampling rate; default is 1 pixel.    cd	Camera descripor.  Only one allowed.   bx	Body descriptors.   ", "NV/LIB/TOOLS", "       Written by:     Spitale		5/2014   	Array (nhit) of pointers to inertial footprint points for each body hit. 	Zero is returned if no bodies are hit.    ");
   
   
 
@@ -2389,19 +2487,10 @@ libdata[libdataItem++] = new Array("glb/glb_body_to_local.html", "glb_body_to_lo
   
   
 
-libdata[libdataItem++] = new Array("glb/glb_body_to_surface.html", "glb_body_to_surface.pro", '.pro file in <a href="glb/dir-overview.html">glb/ directory</a>', "glb_body_to_surface.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("glb/glb_body_to_surface.html#glb_body_to_surface", "glb_body_to_surface", 'routine in <a href="glb/glb_body_to_surface.html">glb_body_to_surface.pro</a>', "glb_body_to_surface.pro", "", "glb_body_to_surface", "", "gbdv", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("glb/glb_body_to_surface.html#_glb_body_to_surface", "_glb_body_to_surface", 'routine in <a href="glb/glb_body_to_surface.html">glb_body_to_surface.pro</a>', "glb_body_to_surface.pro", "", "_glb_body_to_surface", "", "gbdv", "          -1", "");
-  
-  
-
 libdata[libdataItem++] = new Array("glb/glb_create_descriptors.html", "glb_create_descriptors.pro", '.pro file in <a href="glb/dir-overview.html">glb/ directory</a>', "glb_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("glb/glb_create_descriptors.html#glb_create_descriptors", "glb_create_descriptors", 'routine in <a href="glb/glb_create_descriptors.html">glb_create_descriptors.pro</a>', "glb_create_descriptors.pro", "", "glb_create_descriptors", "	Init method for the GLOBE class.    ", "crdbdsldgbdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJnNumber of descriptors to create.   end_keywords", "NV/LIB/GLB", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized globe descriptors, depending 	on the presence of the bd keyword.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("glb/glb_create_descriptors.html#glb_create_descriptors", "glb_create_descriptors", 'routine in <a href="glb/glb_create_descriptors.html">glb_create_descriptors.pro</a>', "glb_create_descriptors.pro", "", "glb_create_descriptors", "	Init method for the GLOBE class.    ", "crdbdsldgbdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJnNumber of descriptors to create.   end_keywords", "NV/LIB/GLB", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized globe descriptors, depending 	on the presence of the bd keyword.    STATUS: 	Complete    ");
   
   
 
@@ -2478,15 +2567,6 @@ libdata[libdataItem++] = new Array("glb/glb_graphic_to_globe.html", "glb_graphic
   
   
   libdata[libdataItem++] = new Array("glb/glb_graphic_to_globe.html#glb_graphic_to_globe", "glb_graphic_to_globe", 'routine in <a href="glb/glb_graphic_to_globe.html">glb_graphic_to_globe.pro</a>', "glb_graphic_to_globe.pro", "", "glb_graphic_to_globe", "       Converts the given vectors from the graphic coordinate        system to the globe coordinate system.    ", "noeventgbd        Array (nt) of any subclass of GLOBE descriptors.   v", "NV/LIB/GLB", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016          Array (nv,3,nt) of column vectors in the globe system.    STATUS: 	 Not complete    ");
-  
-  
-
-libdata[libdataItem++] = new Array("glb/glb_graphic_to_surface.html", "glb_graphic_to_surface.pro", '.pro file in <a href="glb/dir-overview.html">glb/ directory</a>', "glb_graphic_to_surface.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("glb/glb_graphic_to_surface.html#glb_graphic_to_surface", "glb_graphic_to_surface", 'routine in <a href="glb/glb_graphic_to_surface.html">glb_graphic_to_surface.pro</a>', "glb_graphic_to_surface.pro", "", "glb_graphic_to_surface", "", "gbdv", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("glb/glb_graphic_to_surface.html#_glb_graphic_to_surface", "_glb_graphic_to_surface", 'routine in <a href="glb/glb_graphic_to_surface.html">glb_graphic_to_surface.pro</a>', "glb_graphic_to_surface.pro", "", "_glb_graphic_to_surface", "", "noeventgbdv", "          -1", "");
   
   
 
@@ -2682,25 +2762,7 @@ libdata[libdataItem++] = new Array("glb/glb_sub_point.html", "glb_sub_point.pro"
 libdata[libdataItem++] = new Array("glb/glb_sub_point_graphic.html", "glb_sub_point_graphic.pro", '.pro file in <a href="glb/dir-overview.html">glb/ directory</a>', "glb_sub_point_graphic.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("glb/glb_sub_point_graphic.html#glb_sub_point_graphic", "glb_sub_point_graphic", 'routine in <a href="glb/glb_sub_point_graphic.html">glb_sub_point_graphic.pro</a>', "glb_sub_point_graphic.pro", "", "glb_sub_point_graphic", "	Computes the planetographic sub-point in body coordinates.    ", "noeventgbdArray (nt) of any subclass of GLOBE descriptors.   v", "NV/LIB/GLB", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Array (nv,3,nt) points in the BODY frame that lie on the surface 	of each globe, directly 'beneath' r, i.e., such that each 	planetographic surface normal points at each r.    STATUS: 	Complete    ");
-  
-  
-
-libdata[libdataItem++] = new Array("glb/glb_surface_to_body.html", "glb_surface_to_body.pro", '.pro file in <a href="glb/dir-overview.html">glb/ directory</a>', "glb_surface_to_body.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("glb/glb_surface_to_body.html#glb_surface_to_body", "glb_surface_to_body", 'routine in <a href="glb/glb_surface_to_body.html">glb_surface_to_body.pro</a>', "glb_surface_to_body.pro", "", "glb_surface_to_body", "", "gbdv", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("glb/glb_surface_to_body.html#_glb_surface_to_body", "_glb_surface_to_body", 'routine in <a href="glb/glb_surface_to_body.html">glb_surface_to_body.pro</a>', "glb_surface_to_body.pro", "", "_glb_surface_to_body", "", "gbdv", "          -1", "");
-  
-  
-
-libdata[libdataItem++] = new Array("glb/glb_surface_to_graphic.html", "glb_surface_to_graphic.pro", '.pro file in <a href="glb/dir-overview.html">glb/ directory</a>', "glb_surface_to_graphic.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("glb/glb_surface_to_graphic.html#glb_surface_to_graphic", "glb_surface_to_graphic", 'routine in <a href="glb/glb_surface_to_graphic.html">glb_surface_to_graphic.pro</a>', "glb_surface_to_graphic.pro", "", "glb_surface_to_graphic", "", "gbdv", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("glb/glb_surface_to_graphic.html#_glb_surface_to_graphic", "_glb_surface_to_graphic", 'routine in <a href="glb/glb_surface_to_graphic.html">glb_surface_to_graphic.pro</a>', "glb_surface_to_graphic.pro", "", "_glb_surface_to_graphic", "", "gbdv", "          -1", "");
+  libdata[libdataItem++] = new Array("glb/glb_sub_point_graphic.html#glb_sub_point_graphic", "glb_sub_point_graphic", 'routine in <a href="glb/glb_sub_point_graphic.html">glb_sub_point_graphic.pro</a>', "glb_sub_point_graphic.pro", "", "glb_sub_point_graphic", "	Computes the planetographic sub-point in body coordinates.    ", "noeventepsilonConvergence criterion for angular deviation from normal. 			Default is 1d-8.   niter	Maximum number of iterations.  Default is 5000.   gbdArray (nt) of any subclass of GLOBE descriptors.   v", "NV/LIB/GLB", " 	Written by:		Spitale, 1/1998  	Adapted by:		Spitale, 5/2016 	Added iteration count:	Moretto, 8/2016   	Array (nv,3,nt) points in the BODY frame that lie on the surface 	of each globe, directly 'beneath' r, i.e., such that each 	planetographic surface normal points at each r.    STATUS: 	Complete    ");
   
   
 
@@ -2972,13 +3034,6 @@ libdata[libdataItem++] = new Array("tools/composite/image_to_orbit.html", "image
   
   
 
-libdata[libdataItem++] = new Array("tools/composite/old/image_to_ra_dec.html", "image_to_ra_dec.pro", '.pro file in <a href="tools/composite/old/dir-overview.html">tools/composite/old/ directory</a>', "image_to_ra_dec.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("tools/composite/old/image_to_ra_dec.html#image_to_ra_dec", "image_to_ra_dec", 'routine in <a href="tools/composite/old/image_to_ra_dec.html">image_to_ra_dec.pro</a>', "image_to_ra_dec.pro", "", "image_to_ra_dec", "       Translates a point in image coordinates to polar inertial        coordinates (right ascension and declination) with origin at        the camera (spacecraft).    ", "cd      Camera or map descriptor   p      An array of image points   ", "NV/LIB/TOOLS", "       An array of surface positions.   STATUS:        Completed.    ");
-  
-  
-
 libdata[libdataItem++] = new Array("tools/composite/image_to_radec.html", "image_to_radec.pro", '.pro file in <a href="tools/composite/dir-overview.html">tools/composite/ directory</a>', "image_to_radec.pro", "", "", "", "", "          -1", "");
   
   
@@ -3004,13 +3059,6 @@ libdata[libdataItem++] = new Array("tools/in_image.html", "in_image.pro", '.pro 
   
   
   libdata[libdataItem++] = new Array("tools/in_image.html#in_image", "in_image", 'routine in <a href="tools/in_image.html">in_image.pro</a>', "in_image.pro", "", "in_image", "	Determines which input points lie within an image described by the 	given camera descriptor.    ", "xminxmaxyminymaxslopcornerscdCamera descriptor.   _image_pts", "NV/LIB/TOOLS", "       Written by:     Spitale          Subscripts of points that lie in the image.  -1 if there are none.     ");
-  
-  
-
-libdata[libdataItem++] = new Array("tools/photometry/incidence_angle.html", "incidence_angle.pro", '.pro file in <a href="tools/photometry/dir-overview.html">tools/photometry/ directory</a>', "incidence_angle.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("tools/photometry/incidence_angle.html#incidence_angle", "incidence_angle", 'routine in <a href="tools/photometry/incidence_angle.html">incidence_angle.pro</a>', "incidence_angle.pro", "", "incidence_angle", "", "surface_coordsun_coordvertical", "          -1", "");
   
   
 
@@ -3077,17 +3125,10 @@ libdata[libdataItem++] = new Array("dat/keyval_struct__define.html", "keyval_str
   
   
 
-libdata[libdataItem++] = new Array("tools/photometry/local_vertical.html", "local_vertical.pro", '.pro file in <a href="tools/photometry/dir-overview.html">tools/photometry/ directory</a>', "local_vertical.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("tools/photometry/local_vertical.html#local_vertical", "local_vertical", 'routine in <a href="tools/photometry/local_vertical.html">local_vertical.pro</a>', "local_vertical.pro", "", "local_vertical", "", "gbdcoords", "          -1", "");
-  
-  
-
 libdata[libdataItem++] = new Array("tools/ltcorr.html", "ltcorr.pro", '.pro file in <a href="tools/dir-overview.html">tools/ directory</a>', "ltcorr.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("tools/ltcorr.html#ltcorr", "ltcorr", 'routine in <a href="tools/ltcorr.html">ltcorr.pro</a>', "ltcorr.pro", "", "ltcorr", "	Performs a light-travel-time correction.    ", "cepsiloniterateobs_bxArray(nt) of any subclass of BODY describing the targets.   targ_bx", "NV/LIB/TOOLS", "       Written by:     Spitale   ");
+  libdata[libdataItem++] = new Array("tools/ltcorr.html#ltcorr", "ltcorr", 'routine in <a href="tools/ltcorr.html">ltcorr.pro</a>', "ltcorr.pro", "", "ltcorr", "	Performs a light-travel-time correction.    ", "cepsiloniterateobs_bx Any subclass of BODY describing the observer.   targ_bx", "NV/LIB/TOOLS", "       Written by:     Spitale   	New target descriptors.    ");
   
   
 
@@ -3115,14 +3156,14 @@ libdata[libdataItem++] = new Array("map/map_condense.html", "map_condense.pro", 
 libdata[libdataItem++] = new Array("map/map_create_descriptors.html", "map_create_descriptors.pro", '.pro file in <a href="map/dir-overview.html">map/ directory</a>', "map_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("map/map_create_descriptors.html#map_create_descriptors", "map_create_descriptors", 'routine in <a href="map/map_create_descriptors.html">map_create_descriptors.pro</a>', "map_create_descriptors.pro", "", "map_create_descriptors", "	Init method for the MAP class.    ", "crdmdabbrevusernametasksudataunametypefn_map_to_imagefn_image_to_mapfn_data_psizeorigincenterscaleunitsgraphicrotateradiinNumber of descriptors to create.   end_keywords", "NV/LIB/DSK", " 	Written by:	Spitale, 1/1998   	Newly created or or freshly initialized disk descriptors, depending 	on the presence of the dkd keyword.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("map/map_create_descriptors.html#map_create_descriptors", "map_create_descriptors", 'routine in <a href="map/map_create_descriptors.html">map_create_descriptors.pro</a>', "map_create_descriptors.pro", "", "map_create_descriptors", "	Init method for the MAP class.    ", "crdmdabbrevusernametasksudataunameassoc_xdtypefn_datasizeorigincenterrangescaleunitsgraphicrotateradiipolenNumber of descriptors to create.   end_keywords", "NV/LIB/DSK", " 	Written by:	Spitale, 1/1998   	Newly created or or freshly initialized disk descriptors, depending 	on the presence of the dkd keyword.    STATUS: 	Complete    ");
   
   
 
-libdata[libdataItem++] = new Array("map/map_fn_data_p.html", "map_fn_data_p.pro", '.pro file in <a href="map/dir-overview.html">map/ directory</a>', "map_fn_data_p.pro", "", "", "", "", "          -1", "");
+libdata[libdataItem++] = new Array("map/map_fn_data.html", "map_fn_data.pro", '.pro file in <a href="map/dir-overview.html">map/ directory</a>', "map_fn_data.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("map/map_fn_data_p.html#map_fn_data_p", "map_fn_data_p", 'routine in <a href="map/map_fn_data_p.html">map_fn_data_p.pro</a>', "map_fn_data_p.pro", "", "map_fn_data_p", "	Returns the function data pointer for each given map descriptor.    ", "noeventmd", "NV/LIB/MAP", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Function data pointer associated with each given map descriptor.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("map/map_fn_data.html#map_fn_data", "map_fn_data", 'routine in <a href="map/map_fn_data.html">map_fn_data.pro</a>', "map_fn_data.pro", "", "map_fn_data", "	Returns the function data for a map descriptor.    ", "noeventmd", "NV/LIB/MAP", " 	Adapted by:	Spitale, 7/2016; adapted from map_fn_data_p   	Function data associated with the given map descriptor.    STATUS: 	Complete    ");
   
   
 
@@ -3396,6 +3437,13 @@ libdata[libdataItem++] = new Array("map/map_origin.html", "map_origin.pro", '.pr
   
   
 
+libdata[libdataItem++] = new Array("map/map_pole.html", "map_pole.pro", '.pro file in <a href="map/dir-overview.html">map/ directory</a>', "map_pole.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("map/map_pole.html#map_pole", "map_pole", 'routine in <a href="map/map_pole.html">map_pole.pro</a>', "map_pole.pro", "", "map_pole", "	Returns the pole for each given map descriptor.    ", "noeventmd", "NV/LIB/MAP", " 	Written by:	Spitale, 8/2016   	Array (nt) of ominas_map_pole structs associated with each given map 	descriptor.    STATUS: 	Complete    ");
+  
+  
+
 libdata[libdataItem++] = new Array("map/map_radii.html", "map_radii.pro", '.pro file in <a href="map/dir-overview.html">map/ directory</a>', "map_radii.pro", "", "", "", "", "          -1", "");
   
   
@@ -3409,6 +3457,13 @@ libdata[libdataItem++] = new Array("map/map_radii_to_ecc.html", "map_radii_to_ec
   libdata[libdataItem++] = new Array("map/map_radii_to_ecc.html#map_radii_to_ecc", "map_radii_to_ecc", 'routine in <a href="map/map_radii_to_ecc.html">map_radii_to_ecc.pro</a>', "map_radii_to_ecc.pro", "", "map_radii_to_ecc", "", "radradii", "          -1", "");
   
   libdata[libdataItem++] = new Array("map/map_radii_to_ecc.html#___map_radii_to_ecc", "___map_radii_to_ecc", 'routine in <a href="map/map_radii_to_ecc.html">map_radii_to_ecc.pro</a>', "map_radii_to_ecc.pro", "", "___map_radii_to_ecc", "", "radii", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("map/map_range.html", "map_range.pro", '.pro file in <a href="map/dir-overview.html">map/ directory</a>', "map_range.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("map/map_range.html#map_range", "map_range", 'routine in <a href="map/map_range.html">map_range.pro</a>', "map_range.pro", "", "map_range", "	Returns the range for each given map descriptor.    ", "noeventmd", "NV/LIB/MAP", " 	Written by:	Spitale, 7/2016   	Array (2,2,nt) of ranges associated with each given map descriptor.    STATUS: 	Complete    ");
   
   
 
@@ -3447,10 +3502,10 @@ libdata[libdataItem++] = new Array("map/map_set_center.html", "map_set_center.pr
   
   
 
-libdata[libdataItem++] = new Array("map/map_set_fn_data_p.html", "map_set_fn_data_p.pro", '.pro file in <a href="map/dir-overview.html">map/ directory</a>', "map_set_fn_data_p.pro", "", "", "", "", "          -1", "");
+libdata[libdataItem++] = new Array("map/map_set_fn_data.html", "map_set_fn_data.pro", '.pro file in <a href="map/dir-overview.html">map/ directory</a>', "map_set_fn_data.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("map/map_set_fn_data_p.html#map_set_fn_data_p", "map_set_fn_data_p", 'routine in <a href="map/map_set_fn_data_p.html">map_set_fn_data_p.pro</a>', "map_set_fn_data_p.pro", "", "map_set_fn_data_p", "	Replaces the function data pointer for each given map descriptor.    ", "noeventmd Array (nt) of map descriptors.   p", "NV/LIB/MAP", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
+  libdata[libdataItem++] = new Array("map/map_set_fn_data.html#map_set_fn_data", "map_set_fn_data", 'routine in <a href="map/map_set_fn_data.html">map_set_fn_data.pro</a>', "map_set_fn_data.pro", "", "map_set_fn_data", "	Replaces the function data for a map descriptor.    ", "noeventmd Map descriptor.   data New function data.   ", "NV/LIB/MAP", " 	Adapted by:	Spitale, 7/2016; adapted from map_set_fn_data_p   ");
   
   
 
@@ -3482,10 +3537,24 @@ libdata[libdataItem++] = new Array("map/map_set_origin.html", "map_set_origin.pr
   
   
 
+libdata[libdataItem++] = new Array("map/map_set_pole.html", "map_set_pole.pro", '.pro file in <a href="map/dir-overview.html">map/ directory</a>', "map_set_pole.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("map/map_set_pole.html#map_set_pole", "map_set_pole", 'routine in <a href="map/map_set_pole.html">map_set_pole.pro</a>', "map_set_pole.pro", "", "map_set_pole", "	Replaces the pole for each given map descriptor.    ", "noeventmd Array (nt) of map descriptors.   pole Array (nt) of new ominas_map_pole structs.   ", "NV/LIB/MAP", " 	Written by:	Spitale, 8/2016   ");
+  
+  
+
 libdata[libdataItem++] = new Array("map/map_set_radii.html", "map_set_radii.pro", '.pro file in <a href="map/dir-overview.html">map/ directory</a>', "map_set_radii.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("map/map_set_radii.html#map_set_radii", "map_set_radii", 'routine in <a href="map/map_set_radii.html">map_set_radii.pro</a>', "map_set_radii.pro", "", "map_set_radii", "	Replaces the reference radii for each given map descriptor.    ", "noeventmd Array (nt) of map descriptors.   radii Array (3,nt) of new reference radii.   ", "NV/LIB/MAP", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
+  
+  
+
+libdata[libdataItem++] = new Array("map/map_set_range.html", "map_set_range.pro", '.pro file in <a href="map/dir-overview.html">map/ directory</a>', "map_set_range.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("map/map_set_range.html#map_set_range", "map_set_range", 'routine in <a href="map/map_set_range.html">map_set_range.pro</a>', "map_set_range.pro", "", "map_set_range", "	Replaces the range for each given map descriptor.    ", "noeventmd Array (nt) of map descriptors.   range Array (2,2,nt) of new map ranges.   ", "NV/LIB/MAP", " 	Written by:	Spitale, 7/2016   ");
   
   
 
@@ -3706,7 +3775,7 @@ libdata[libdataItem++] = new Array("tools/move_points.html", "move_points.pro", 
 libdata[libdataItem++] = new Array("arr/ominas_array__define.html", "ominas_array__define.pro", '.pro file in <a href="arr/dir-overview.html">arr/ directory</a>', "ominas_array__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("arr/ominas_array__define.html#ominas_array::init", "ominas_array::init", 'routine in <a href="arr/ominas_array__define.html">ominas_array__define.pro</a>', "ominas_array__define.pro", "", "ominas_array::init", "", "crdardabbrevusernametasksudataunameprimarysurface_ptsiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("arr/ominas_array__define.html#ominas_array::init", "ominas_array::init", 'routine in <a href="arr/ominas_array__define.html">ominas_array__define.pro</a>', "ominas_array__define.pro", "", "ominas_array::init", "", "crdardabbrevusernametasksudataunameassoc_xdprimarysurface_ptsiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("arr/ominas_array__define.html#ominas_array__define", "ominas_array__define", 'routine in <a href="arr/ominas_array__define.html">ominas_array__define.pro</a>', "ominas_array__define.pro", "", "ominas_array__define", "	Class structure for the ARRAY class.    ", "", "NV/LIB/arr", " 	Written by:	Spitale, 10/2012  	Adapted by:	Spitale, 5/2016  ");
   
@@ -3715,7 +3784,7 @@ libdata[libdataItem++] = new Array("arr/ominas_array__define.html", "ominas_arra
 libdata[libdataItem++] = new Array("bod/ominas_body__define.html", "ominas_body__define.pro", '.pro file in <a href="bod/dir-overview.html">bod/ directory</a>', "ominas_body__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("bod/ominas_body__define.html#ominas_body::init", "ominas_body::init", 'routine in <a href="bod/ominas_body__define.html">ominas_body__define.pro</a>', "ominas_body__define.pro", "", "ominas_body::init", "", "crdbdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("bod/ominas_body__define.html#ominas_body::init", "ominas_body::init", 'routine in <a href="bod/ominas_body__define.html">ominas_body__define.pro</a>', "ominas_body__define.pro", "", "ominas_body::init", "", "crdbdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("bod/ominas_body__define.html#ominas_body__define", "ominas_body__define", 'routine in <a href="bod/ominas_body__define.html">ominas_body__define.pro</a>', "ominas_body__define.pro", "", "ominas_body__define", "	Class structure for the BODY class.    ", "", "NV/LIB/BOD", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -3724,7 +3793,7 @@ libdata[libdataItem++] = new Array("bod/ominas_body__define.html", "ominas_body_
 libdata[libdataItem++] = new Array("cam/ominas_camera__define.html", "ominas_camera__define.pro", '.pro file in <a href="cam/dir-overview.html">cam/ directory</a>', "ominas_camera__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("cam/ominas_camera__define.html#ominas_camera::init", "ominas_camera::init", 'routine in <a href="cam/ominas_camera__define.html">ominas_camera__define.pro</a>', "ominas_camera__define.pro", "", "ominas_camera::init", "", "crdbdcdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayfn_focal_to_imagefn_image_to_focalfn_data_pscaleoaxisexposuresizefn_psffiltersfn_body_to_imageiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("cam/ominas_camera__define.html#ominas_camera::init", "ominas_camera::init", 'routine in <a href="cam/ominas_camera__define.html">ominas_camera__define.pro</a>', "ominas_camera__define.pro", "", "ominas_camera::init", "", "crdbdcdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayfn_focal_to_imagefn_image_to_focalfi_datascaleoaxisexposuresizefn_psffiltersiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("cam/ominas_camera__define.html#ominas_camera__define", "ominas_camera__define", 'routine in <a href="cam/ominas_camera__define.html">ominas_camera__define.pro</a>', "ominas_camera__define.pro", "", "ominas_camera__define", "	Class structure fo the CAMERA class.    ", "", "NV/LIB/CAM", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -3737,7 +3806,7 @@ libdata[libdataItem++] = new Array("cor/ominas_core__define.html", "ominas_core_
   
   libdata[libdataItem++] = new Array("cor/ominas_core__define.html#ominas_core::dereference", "ominas_core::dereference", 'routine in <a href="cor/ominas_core__define.html">ominas_core__define.pro</a>', "ominas_core__define.pro", "", "ominas_core::dereference", "", "struct", "          -1", "");
   
-  libdata[libdataItem++] = new Array("cor/ominas_core__define.html#ominas_core::init", "ominas_core::init", 'routine in <a href="cor/ominas_core__define.html">ominas_core__define.pro</a>', "ominas_core__define.pro", "", "ominas_core::init", "", "crdabbrevusernametasksudataunameiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("cor/ominas_core__define.html#ominas_core::init", "ominas_core::init", 'routine in <a href="cor/ominas_core__define.html">ominas_core__define.pro</a>', "ominas_core__define.pro", "", "ominas_core::init", "", "crdabbrevusernametasksudataunameassoc_xdiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("cor/ominas_core__define.html#ominas_core__define", "ominas_core__define", 'routine in <a href="cor/ominas_core__define.html">ominas_core__define.pro</a>', "ominas_core__define.pro", "", "ominas_core__define", "	Class structure for the CORE class.    ", "", "NV/SYS/COR", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -3746,7 +3815,7 @@ libdata[libdataItem++] = new Array("cor/ominas_core__define.html", "ominas_core_
 libdata[libdataItem++] = new Array("dat/ominas_data__define.html", "ominas_data__define.pro", '.pro file in <a href="dat/dir-overview.html">dat/ directory</a>', "ominas_data__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("dat/ominas_data__define.html#ominas_data::init", "ominas_data::init", 'routine in <a href="dat/ominas_data__define.html">ominas_data__define.pro</a>', "ominas_data__define.pro", "", "ominas_data::init", "", "crdddabbrevusernametasksudataunamefilenamedimtypedatanhistheaderfiletypeinput_fnoutput_fnkeyword_fninstrumentinput_translatorsoutput_translatorsinput_transformsoutput_transformsmaintaincompresstab_translatorsiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("dat/ominas_data__define.html#ominas_data::init", "ominas_data::init", 'routine in <a href="dat/ominas_data__define.html">ominas_data__define.pro</a>', "ominas_data__define.pro", "", "ominas_data::init", "", "crdddabbrevusernametasksudataunameassoc_xdfilenameminmaxdimcachetypegffdataabscissanhistheaderfiletypeinput_fnoutput_fnkeyword_fninstrumentinput_translatorsoutput_translatorsinput_transformsoutput_transformsmaintaincompresstab_translatorsiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("dat/ominas_data__define.html#ominas_data__define", "ominas_data__define", 'routine in <a href="dat/ominas_data__define.html">ominas_data__define.pro</a>', "ominas_data__define.pro", "", "ominas_data__define", "	Structure defining the data descriptor.    ", "", "NV/SYS", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -3755,7 +3824,7 @@ libdata[libdataItem++] = new Array("dat/ominas_data__define.html", "ominas_data_
 libdata[libdataItem++] = new Array("dsk/ominas_disk__define.html", "ominas_disk__define.pro", '.pro file in <a href="dsk/dir-overview.html">dsk/ directory</a>', "ominas_disk__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("dsk/ominas_disk__define.html#ominas_disk::init", "ominas_disk::init", 'routine in <a href="dsk/ominas_disk__define.html">ominas_disk__define.pro</a>', "ominas_disk__define.pro", "", "ominas_disk::init", "", "crdbdslddkdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedosmaeccdapscalenm_memtapmdtapmdtlibamlibmdlibmdtnl_liltaanldtaanldtliballibldlibldtiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("dsk/ominas_disk__define.html#ominas_disk::init", "ominas_disk::init", 'routine in <a href="dsk/ominas_disk__define.html">ominas_disk__define.pro</a>', "ominas_disk__define.pro", "", "ominas_disk::init", "", "crdbdslddkdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedosmaeccdapscalenm_memtapmdtapmdtlibamlibmdlibmdtnl_liltaanldtaanldtliballibldlibldtiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("dsk/ominas_disk__define.html#ominas_disk__define", "ominas_disk__define", 'routine in <a href="dsk/ominas_disk__define.html">ominas_disk__define.pro</a>', "ominas_disk__define.pro", "", "ominas_disk__define", "	Class structure for the DISK class.    ", "", "NV/LIB/DSK", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -3764,7 +3833,7 @@ libdata[libdataItem++] = new Array("dsk/ominas_disk__define.html", "ominas_disk_
 libdata[libdataItem++] = new Array("glb/ominas_globe__define.html", "ominas_globe__define.pro", '.pro file in <a href="glb/dir-overview.html">glb/ directory</a>', "ominas_globe__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("glb/ominas_globe__define.html#ominas_globe::init", "ominas_globe::init", 'routine in <a href="glb/ominas_globe__define.html">ominas_globe__define.pro</a>', "ominas_globe__define.pro", "", "ominas_globe::init", "", "crdbdsldgbdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("glb/ominas_globe__define.html#ominas_globe::init", "ominas_globe::init", 'routine in <a href="glb/ominas_globe__define.html">ominas_globe__define.pro</a>', "ominas_globe__define.pro", "", "ominas_globe::init", "", "crdbdsldgbdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("glb/ominas_globe__define.html#ominas_globe__define", "ominas_globe__define", 'routine in <a href="glb/ominas_globe__define.html">ominas_globe__define.pro</a>', "ominas_globe__define.pro", "", "ominas_globe__define", "	Class structure fo the GLOBE class.    ", "", "NV/LIB/CAM", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -3773,7 +3842,7 @@ libdata[libdataItem++] = new Array("glb/ominas_globe__define.html", "ominas_glob
 libdata[libdataItem++] = new Array("map/ominas_map__define.html", "ominas_map__define.pro", '.pro file in <a href="map/dir-overview.html">map/ directory</a>', "ominas_map__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("map/ominas_map__define.html#ominas_map::init", "ominas_map::init", 'routine in <a href="map/ominas_map__define.html">ominas_map__define.pro</a>', "ominas_map__define.pro", "", "ominas_map::init", "", "crdmdabbrevusernametasksudataunametypefn_map_to_imagefn_image_to_mapfn_data_psizeorigincenterscaleunitsgraphicrotateradiiiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("map/ominas_map__define.html#ominas_map::init", "ominas_map::init", 'routine in <a href="map/ominas_map__define.html">ominas_map__define.pro</a>', "ominas_map__define.pro", "", "ominas_map::init", "", "crdmdabbrevusernametasksudataunameassoc_xdtypefn_datasizeorigincenterrangescaleunitsgraphicrotateradiipoleiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("map/ominas_map__define.html#ominas_map__define", "ominas_map__define", 'routine in <a href="map/ominas_map__define.html">ominas_map__define.pro</a>', "ominas_map__define.pro", "", "ominas_map__define", "	Class structure fo the MAP class.    ", "", "NV/LIB/CAM", " 	Written by:	Spitale, 1/1998   ");
   
@@ -3782,7 +3851,7 @@ libdata[libdataItem++] = new Array("map/ominas_map__define.html", "ominas_map__d
 libdata[libdataItem++] = new Array("plt/ominas_planet__define.html", "ominas_planet__define.pro", '.pro file in <a href="plt/dir-overview.html">plt/ directory</a>', "ominas_planet__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("plt/ominas_planet__define.html#ominas_planet::init", "ominas_planet::init", 'routine in <a href="plt/ominas_planet__define.html">ominas_planet__define.pro</a>', "ominas_planet__define.pro", "", "ominas_planet::init", "", "crdbdsldgbdpdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("plt/ominas_planet__define.html#ominas_planet::init", "ominas_planet::init", 'routine in <a href="plt/ominas_planet__define.html">ominas_planet__define.pro</a>', "ominas_planet__define.pro", "", "ominas_planet::init", "", "crdbdsldgbdpdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("plt/ominas_planet__define.html#ominas_planet__define", "ominas_planet__define", 'routine in <a href="plt/ominas_planet__define.html">ominas_planet__define.pro</a>', "ominas_planet__define.pro", "", "ominas_planet__define", "	Class structure for the PLANET class.    ", "", "NV/LIB/PLT", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -3791,16 +3860,16 @@ libdata[libdataItem++] = new Array("plt/ominas_planet__define.html", "ominas_pla
 libdata[libdataItem++] = new Array("pnt/ominas_point__define.html", "ominas_point__define.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "ominas_point__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/ominas_point__define.html#ominas_point::init", "ominas_point::init", 'routine in <a href="pnt/ominas_point__define.html">ominas_point__define.pro</a>', "ominas_point__define.pro", "", "ominas_point::init", "", "crdptdabbrevusernametasksudataunamedescinputpointsvectorsflagstagsdataassoc_xdiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("pnt/ominas_point__define.html#ominas_point::init", "ominas_point::init", 'routine in <a href="pnt/ominas_point__define.html">ominas_point__define.pro</a>', "ominas_point__define.pro", "", "ominas_point::init", "", "crdptdabbrevusernametasksudataunameassoc_xddescinputpointsvectorsflagstagsdataiiend_keywords", "          -1", "");
   
-  libdata[libdataItem++] = new Array("pnt/ominas_point__define.html#ominas_point__define", "ominas_point__define", 'routine in <a href="pnt/ominas_point__define.html">ominas_point__define.pro</a>', "ominas_point__define.pro", "", "ominas_point__define", "	Structure for managing points.    ", "", "NV/SYS/PS", "  Spitale, 11/2015; 	Adapted from pg_POINT__define   ");
+  libdata[libdataItem++] = new Array("pnt/ominas_point__define.html#ominas_point__define", "ominas_point__define", 'routine in <a href="pnt/ominas_point__define.html">ominas_point__define.pro</a>', "ominas_point__define.pro", "", "ominas_point__define", "	Structure for managing points.    ", "", "NV/OBJ/PNT", "  Spitale, 11/2015; 	Adapted from pg_points_struct__define   ");
   
   
 
 libdata[libdataItem++] = new Array("rng/ominas_ring__define.html", "ominas_ring__define.pro", '.pro file in <a href="rng/dir-overview.html">rng/ directory</a>', "ominas_ring__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("rng/ominas_ring__define.html#ominas_ring::init", "ominas_ring::init", 'routine in <a href="rng/ominas_ring__define.html">ominas_ring__define.pro</a>', "ominas_ring__define.pro", "", "ominas_ring::init", "", "crdbdslddkdrdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedosmaeccdapscalenm_memtapmdtapmdtlibamlibmdlibmdtnl_liltaanldtaanldtliballibldlibldtprimarydesciiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("rng/ominas_ring__define.html#ominas_ring::init", "ominas_ring::init", 'routine in <a href="rng/ominas_ring__define.html">ominas_ring__define.pro</a>', "ominas_ring__define.pro", "", "ominas_ring::init", "", "crdbdslddkdrdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedosmaeccdapscalenm_memtapmdtapmdtlibamlibmdlibmdtnl_liltaanldtaanldtliballibldlibldtprimarydesciiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("rng/ominas_ring__define.html#ominas_ring__define", "ominas_ring__define", 'routine in <a href="rng/ominas_ring__define.html">ominas_ring__define.pro</a>', "ominas_ring__define.pro", "", "ominas_ring__define", "	Class structure for the RING class.    ", "", "NV/LIB/RNG", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -3809,7 +3878,7 @@ libdata[libdataItem++] = new Array("rng/ominas_ring__define.html", "ominas_ring_
 libdata[libdataItem++] = new Array("sld/ominas_solid__define.html", "ominas_solid__define.pro", '.pro file in <a href="sld/dir-overview.html">sld/ directory</a>', "ominas_solid__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("sld/ominas_solid__define.html#ominas_solid::init", "ominas_solid::init", 'routine in <a href="sld/ominas_solid__define.html">ominas_solid__define.pro</a>', "ominas_solid__define.pro", "", "ominas_solid::init", "", "crdbdsldabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedoiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("sld/ominas_solid__define.html#ominas_solid::init", "ominas_solid::init", 'routine in <a href="sld/ominas_solid__define.html">ominas_solid__define.pro</a>', "ominas_solid__define.pro", "", "ominas_solid::init", "", "crdbdsldabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedoiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("sld/ominas_solid__define.html#ominas_solid__define", "ominas_solid__define", 'routine in <a href="sld/ominas_solid__define.html">ominas_solid__define.pro</a>', "ominas_solid__define.pro", "", "ominas_solid__define", "	Class structure fo the SOLID class.    ", "", "NV/LIB/SLD", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   ");
   
@@ -3818,7 +3887,7 @@ libdata[libdataItem++] = new Array("sld/ominas_solid__define.html", "ominas_soli
 libdata[libdataItem++] = new Array("str/ominas_star__define.html", "ominas_star__define.pro", '.pro file in <a href="str/dir-overview.html">str/ directory</a>', "ominas_star__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("str/ominas_star__define.html#ominas_star::init", "ominas_star::init", 'routine in <a href="str/ominas_star__define.html">ominas_star__define.pro</a>', "ominas_star__define.pro", "", "ominas_star::init", "", "crdbdsldgbdsdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJlumspiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("str/ominas_star__define.html#ominas_star::init", "ominas_star::init", 'routine in <a href="str/ominas_star__define.html">ominas_star__define.pro</a>', "ominas_star__define.pro", "", "ominas_star::init", "", "crdbdsldgbdsdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJlumspiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("str/ominas_star__define.html#ominas_star__define", "ominas_star__define", 'routine in <a href="str/ominas_star__define.html">ominas_star__define.pro</a>', "ominas_star__define.pro", "", "ominas_star__define", "	Class structure for the STAR class.    ", "", "NV/LIB/STR", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -3827,7 +3896,7 @@ libdata[libdataItem++] = new Array("str/ominas_star__define.html", "ominas_star_
 libdata[libdataItem++] = new Array("stn/ominas_station__define.html", "ominas_station__define.pro", '.pro file in <a href="stn/dir-overview.html">stn/ directory</a>', "ominas_station__define.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("stn/ominas_station__define.html#ominas_station::init", "ominas_station::init", 'routine in <a href="stn/ominas_station__define.html">ominas_station__define.pro</a>', "ominas_station__define.pro", "", "ominas_station::init", "", "crdbdstdabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayiiend_keywords", "          -1", "");
+  libdata[libdataItem++] = new Array("stn/ominas_station__define.html#ominas_station::init", "ominas_station::init", 'routine in <a href="stn/ominas_station__define.html">ominas_station__define.pro</a>', "ominas_station__define.pro", "", "ominas_station::init", "", "crdbdstdabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayprimarysurface_ptiiend_keywords", "          -1", "");
   
   libdata[libdataItem++] = new Array("stn/ominas_station__define.html#ominas_station__define", "ominas_station__define", 'routine in <a href="stn/ominas_station__define.html">ominas_station__define.pro</a>', "ominas_station__define.pro", "", "ominas_station__define", "	Class structure for the STATION class.    ", "", "NV/LIB/STN", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
@@ -3840,10 +3909,24 @@ libdata[libdataItem++] = new Array("tools/orb/orb_anom_to_arg.html", "orb_anom_t
   
   
 
+libdata[libdataItem++] = new Array("tools/orb/orb_anom_to_arg_rate.html", "orb_anom_to_arg_rate.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "orb_anom_to_arg_rate.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("tools/orb/orb_anom_to_arg_rate.html#orb_anom_to_arg_rate", "orb_anom_to_arg_rate", 'routine in <a href="tools/orb/orb_anom_to_arg_rate.html">orb_anom_to_arg_rate.pro</a>', "orb_anom_to_arg_rate.pro", "", "orb_anom_to_arg_rate", "", "dapdtxddanomdtframe_bd", "          -1", "");
+  
+  
+
 libdata[libdataItem++] = new Array("tools/orb/orb_anom_to_lon.html", "orb_anom_to_lon.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "orb_anom_to_lon.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("tools/orb/orb_anom_to_lon.html#orb_anom_to_lon", "orb_anom_to_lon", 'routine in <a href="tools/orb/orb_anom_to_lon.html">orb_anom_to_lon.pro</a>', "orb_anom_to_lon.pro", "", "orb_anom_to_lon", "", "apxdanomframe_bd", "          -1", "");
+  libdata[libdataItem++] = new Array("tools/orb/orb_anom_to_lon.html#orb_anom_to_lon", "orb_anom_to_lon", 'routine in <a href="tools/orb/orb_anom_to_lon.html">orb_anom_to_lon.pro</a>', "orb_anom_to_lon.pro", "", "orb_anom_to_lon", "", "aplanxdanomframe_bd", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("tools/orb/orb_anom_to_lon_rate.html", "orb_anom_to_lon_rate.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "orb_anom_to_lon_rate.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("tools/orb/orb_anom_to_lon_rate.html#orb_anom_to_lon_rate", "orb_anom_to_lon_rate", 'routine in <a href="tools/orb/orb_anom_to_lon_rate.html">orb_anom_to_lon_rate.pro</a>', "orb_anom_to_lon_rate.pro", "", "orb_anom_to_lon_rate", "", "dapdtdlandtxddanomdtframe_bd", "          -1", "");
   
   
 
@@ -3854,10 +3937,24 @@ libdata[libdataItem++] = new Array("tools/orb/orb_arg_to_anom.html", "orb_arg_to
   
   
 
+libdata[libdataItem++] = new Array("tools/orb/orb_arg_to_anom_rate.html", "orb_arg_to_anom_rate.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "orb_arg_to_anom_rate.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("tools/orb/orb_arg_to_anom_rate.html#orb_arg_to_anom_rate", "orb_arg_to_anom_rate", 'routine in <a href="tools/orb/orb_arg_to_anom_rate.html">orb_arg_to_anom_rate.pro</a>', "orb_arg_to_anom_rate.pro", "", "orb_arg_to_anom_rate", "", "dapdtxddargdtframe_bd", "          -1", "");
+  
+  
+
 libdata[libdataItem++] = new Array("tools/orb/orb_arg_to_lon.html", "orb_arg_to_lon.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "orb_arg_to_lon.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("tools/orb/orb_arg_to_lon.html#orb_arg_to_lon", "orb_arg_to_lon", 'routine in <a href="tools/orb/orb_arg_to_lon.html">orb_arg_to_lon.pro</a>', "orb_arg_to_lon.pro", "", "orb_arg_to_lon", "", "xdargframe_bd", "          -1", "");
+  libdata[libdataItem++] = new Array("tools/orb/orb_arg_to_lon.html#orb_arg_to_lon", "orb_arg_to_lon", 'routine in <a href="tools/orb/orb_arg_to_lon.html">orb_arg_to_lon.pro</a>', "orb_arg_to_lon.pro", "", "orb_arg_to_lon", "", "lanxdargframe_bd", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("tools/orb/orb_arg_to_lon_rate.html", "orb_arg_to_lon_rate.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "orb_arg_to_lon_rate.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("tools/orb/orb_arg_to_lon_rate.html#orb_arg_to_lon_rate", "orb_arg_to_lon_rate", 'routine in <a href="tools/orb/orb_arg_to_lon_rate.html">orb_arg_to_lon_rate.pro</a>', "orb_arg_to_lon_rate.pro", "", "orb_arg_to_lon_rate", "", "dlandtxddargdtframe_bd", "          -1", "");
   
   
 
@@ -4032,6 +4129,13 @@ libdata[libdataItem++] = new Array("tools/orb/orb_get_dlibdt_lan.html", "orb_get
   
   
 
+libdata[libdataItem++] = new Array("tools/orb/orb_get_dlpmdt.html", "orb_get_dlpmdt.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "orb_get_dlpmdt.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("tools/orb/orb_get_dlpmdt.html#orb_get_dlpmdt", "orb_get_dlpmdt", 'routine in <a href="tools/orb/orb_get_dlpmdt.html">orb_get_dlpmdt.pro</a>', "orb_get_dlpmdt.pro", "", "orb_get_dlpmdt", "", "rdpd0", "          -1", "");
+  
+  
+
 libdata[libdataItem++] = new Array("tools/orb/orb_get_dmadt.html", "orb_get_dmadt.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "orb_get_dmadt.pro", "", "", "", "", "          -1", "");
   
   
@@ -4095,6 +4199,13 @@ libdata[libdataItem++] = new Array("tools/orb/orb_get_liba_lan.html", "orb_get_l
   
   
 
+libdata[libdataItem++] = new Array("tools/orb/orb_get_lpm.html", "orb_get_lpm.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "orb_get_lpm.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("tools/orb/orb_get_lpm.html#orb_get_lpm", "orb_get_lpm", 'routine in <a href="tools/orb/orb_get_lpm.html">orb_get_lpm.pro</a>', "orb_get_lpm.pro", "", "orb_get_lpm", "", "rdpd0", "          -1", "");
+  
+  
+
 libdata[libdataItem++] = new Array("tools/orb/orb_get_ma.html", "orb_get_ma.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "orb_get_ma.pro", "", "", "", "", "          -1", "");
   
   
@@ -4126,14 +4237,28 @@ libdata[libdataItem++] = new Array("tools/orb/orb_init_descriptors.html", "orb_i
 libdata[libdataItem++] = new Array("tools/orb/orb_lon_to_anom.html", "orb_lon_to_anom.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "orb_lon_to_anom.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("tools/orb/orb_lon_to_anom.html#orb_lon_to_anom", "orb_lon_to_anom", 'routine in <a href="tools/orb/orb_lon_to_anom.html">orb_lon_to_anom.pro</a>', "orb_lon_to_anom.pro", "", "orb_lon_to_anom", "", "apxdlonframe_bd", "          -1", "");
+  libdata[libdataItem++] = new Array("tools/orb/orb_lon_to_anom.html#orb_lon_to_anom", "orb_lon_to_anom", 'routine in <a href="tools/orb/orb_lon_to_anom.html">orb_lon_to_anom.pro</a>', "orb_lon_to_anom.pro", "", "orb_lon_to_anom", "", "aplanxdlonframe_bd", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("tools/orb/orb_lon_to_anom_rate.html", "orb_lon_to_anom_rate.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "orb_lon_to_anom_rate.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("tools/orb/orb_lon_to_anom_rate.html#orb_lon_to_anom_rate", "orb_lon_to_anom_rate", 'routine in <a href="tools/orb/orb_lon_to_anom_rate.html">orb_lon_to_anom_rate.pro</a>', "orb_lon_to_anom_rate.pro", "", "orb_lon_to_anom_rate", "", "dapdtdlandtxddlondtframe_bd", "          -1", "");
   
   
 
 libdata[libdataItem++] = new Array("tools/orb/orb_lon_to_arg.html", "orb_lon_to_arg.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "orb_lon_to_arg.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("tools/orb/orb_lon_to_arg.html#orb_lon_to_arg", "orb_lon_to_arg", 'routine in <a href="tools/orb/orb_lon_to_arg.html">orb_lon_to_arg.pro</a>', "orb_lon_to_arg.pro", "", "orb_lon_to_arg", "", "xdlonframe_bd", "          -1", "");
+  libdata[libdataItem++] = new Array("tools/orb/orb_lon_to_arg.html#orb_lon_to_arg", "orb_lon_to_arg", 'routine in <a href="tools/orb/orb_lon_to_arg.html">orb_lon_to_arg.pro</a>', "orb_lon_to_arg.pro", "", "orb_lon_to_arg", "", "lanxdlonframe_bd", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("tools/orb/orb_lon_to_arg_rate.html", "orb_lon_to_arg_rate.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "orb_lon_to_arg_rate.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("tools/orb/orb_lon_to_arg_rate.html#orb_lon_to_arg_rate", "orb_lon_to_arg_rate", 'routine in <a href="tools/orb/orb_lon_to_arg_rate.html">orb_lon_to_arg_rate.pro</a>', "orb_lon_to_arg_rate.pro", "", "orb_lon_to_arg_rate", "", "dlandtxddlondtframe_bd", "          -1", "");
   
   
 
@@ -4209,6 +4334,13 @@ libdata[libdataItem++] = new Array("tools/orb/orb_set_dlibdt_lan.html", "orb_set
   
   
 
+libdata[libdataItem++] = new Array("tools/orb/orb_set_dlpmdt.html", "orb_set_dlpmdt.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "orb_set_dlpmdt.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("tools/orb/orb_set_dlpmdt.html#orb_set_dlpmdt", "orb_set_dlpmdt", 'routine in <a href="tools/orb/orb_set_dlpmdt.html">orb_set_dlpmdt.pro</a>', "orb_set_dlpmdt.pro", "", "orb_set_dlpmdt", "", "rddlpmdtpd0", "          -1", "");
+  
+  
+
 libdata[libdataItem++] = new Array("tools/orb/orb_set_dmadt.html", "orb_set_dmadt.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "orb_set_dmadt.pro", "", "", "", "", "          -1", "");
   
   
@@ -4265,6 +4397,13 @@ libdata[libdataItem++] = new Array("tools/orb/orb_set_liba_lan.html", "orb_set_l
   
   
 
+libdata[libdataItem++] = new Array("tools/orb/orb_set_lpm.html", "orb_set_lpm.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "orb_set_lpm.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("tools/orb/orb_set_lpm.html#orb_set_lpm", "orb_set_lpm", 'routine in <a href="tools/orb/orb_set_lpm.html">orb_set_lpm.pro</a>', "orb_set_lpm.pro", "", "orb_set_lpm", "", "rdlpmpd0", "          -1", "");
+  
+  
+
 libdata[libdataItem++] = new Array("tools/orb/orb_set_ma.html", "orb_set_ma.pro", '.pro file in <a href="tools/orb/dir-overview.html">tools/orb/ directory</a>', "orb_set_ma.pro", "", "", "", "", "          -1", "");
   
   
@@ -4313,24 +4452,10 @@ libdata[libdataItem++] = new Array("tools/orb/orb_to_cartesian.html", "orb_to_ca
   
   
 
-libdata[libdataItem++] = new Array("tools/photometry/phase_angle.html", "phase_angle.pro", '.pro file in <a href="tools/photometry/dir-overview.html">tools/photometry/ directory</a>', "phase_angle.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("tools/photometry/phase_angle.html#phase_angle", "phase_angle", 'routine in <a href="tools/photometry/phase_angle.html">phase_angle.pro</a>', "phase_angle.pro", "", "phase_angle", "", "surface_coordcamera_coordsun_coord", "          -1", "");
-  
-  
-
 libdata[libdataItem++] = new Array("tools/phase_correction.html", "phase_correction.pro", '.pro file in <a href="tools/dir-overview.html">tools/ directory</a>', "phase_correction.pro", "", "", "", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("tools/phase_correction.html#phase_correction", "phase_correction", 'routine in <a href="tools/phase_correction.html">phase_correction.pro</a>', "phase_correction.pro", "", "phase_correction", "	Assuming body gbx is a sphere, this routine computes the correction 	in pixels needed to obtain its true image center given a measurement 	of its center of light.    ", "cdAny subclass of DISK.   gbxAny subclass of GLOBE.   sundSTAR descriptor representing the sun.   ", "NV/LIB/TOOLS", "       Written by:     Spitale   	Array (2) giving the phase correction offset.    ");
-  
-  
-
-libdata[libdataItem++] = new Array("tools/photometry/photometric_angles.html", "photometric_angles.pro", '.pro file in <a href="tools/photometry/dir-overview.html">tools/photometry/ directory</a>', "photometric_angles.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("tools/photometry/photometric_angles.html#photometric_angles", "photometric_angles", 'routine in <a href="tools/photometry/photometric_angles.html">photometric_angles.pro</a>', "photometric_angles.pro", "", "photometric_angles", "", "gbxdkxcdsundcoords", "          -1", "");
   
   
 
@@ -4428,7 +4553,7 @@ libdata[libdataItem++] = new Array("tools/plot_inertial.html", "plot_inertial.pr
 libdata[libdataItem++] = new Array("plt/plt_create_descriptors.html", "plt_create_descriptors.pro", '.pro file in <a href="plt/dir-overview.html">plt/ directory</a>', "plt_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("plt/plt_create_descriptors.html#plt_create_descriptors", "plt_create_descriptors", 'routine in <a href="plt/plt_create_descriptors.html">plt_create_descriptors.pro</a>', "plt_create_descriptors.pro", "", "plt_create_descriptors", "	Init method for the PLANET class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   bdBody descriptor(s) to pass to bod_create_descriptors.   sldSolid descriptor(s) to pass to sld_create_descriptors.   gbdGlobe descriptor(s) to pass to glb_create_descriptors.   pdPlanet descriptor(s) to initialize, instead of creating new ones.   abbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJn     Number of planet descriptors.   end_keywords", "NV/LIB/PLT", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016          An array (n) of planet descriptors.   STATUS:        Completed.    ");
+  libdata[libdataItem++] = new Array("plt/plt_create_descriptors.html#plt_create_descriptors", "plt_create_descriptors", 'routine in <a href="plt/plt_create_descriptors.html">plt_create_descriptors.pro</a>', "plt_create_descriptors.pro", "", "plt_create_descriptors", "	Init method for the PLANET class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   bdBody descriptor(s) to pass to bod_create_descriptors.   sldSolid descriptor(s) to pass to sld_create_descriptors.   gbdGlobe descriptor(s) to pass to glb_create_descriptors.   pdPlanet descriptor(s) to initialize, instead of creating new ones.   abbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJn     Number of planet descriptors.   end_keywords", "NV/LIB/PLT", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016          An array (n) of planet descriptors.   STATUS:        Completed.    ");
   
   
 
@@ -4446,73 +4571,70 @@ libdata[libdataItem++] = new Array("plt/plt_replicate.html", "plt_replicate.pro"
   
   
 
-libdata[libdataItem++] = new Array("pnt/pnt_assoc_xd.html", "pnt_assoc_xd.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_assoc_xd.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("pnt/pnt_assoc_xd.html#pnt_assoc_xd", "pnt_assoc_xd", 'routine in <a href="pnt/pnt_assoc_xd.html">pnt_assoc_xd.pro</a>', "pnt_assoc_xd.pro", "", "pnt_assoc_xd", "	Returns the associated descriptor for a POINT object.    ", "noeventIf set, no event is generated.   ptdPoints object.   ", "NV/SYS/PS", " 	Written by:	Spitale, 11/2015   	The associated descriptor for the POINT object.    STATUS: 	Complete    SEE ALSO: 	pnt_set_assoc_xd     ");
-  
-  
-
 libdata[libdataItem++] = new Array("pnt/pnt_compress.html", "pnt_compress.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_compress.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_compress.html#pnt_compress", "pnt_compress", 'routine in <a href="pnt/pnt_compress.html">pnt_compress.pro</a>', "pnt_compress.pro", "", "pnt_compress", "	Compresses many POINT objects into one.  Arrays are concatenated 	in the nv/np directions unless /nt is specified.  Point-by-point data 	arrays must be identical.    ", "nt	If given, arrays are concatenated in the nt dimension. 			this requires that all input arrays have the same number 			of points (nv/np), and only one element in the nt 			direction.   pptd	If given, this points object is used to store the 			result, rather than allocating a new one.   ptd0", "NV/SYS/PS", "  Spitale, 11/2015; 	Adapted from pgs_compress   	POINT object containing the concatenated data.     ");
+  libdata[libdataItem++] = new Array("pnt/pnt_compress.html#pnt_compress", "pnt_compress", 'routine in <a href="pnt/pnt_compress.html">pnt_compress.pro</a>', "pnt_compress.pro", "", "pnt_compress", "	Compresses many POINT objects into one.  Arrays are concatenated 	in the nv/np directions unless /nt is specified.  Point-by-point data 	arrays must be identical.    ", "nt	If given, arrays are concatenated in the nt dimension. 			this requires that all input arrays have the same number 			of points (nv/np), and only one element in the nt 			direction.   pptd	If given, this points object is used to store the 			result, rather than allocating a new one.   ptd0", "NV/OBJ/PNT", "  Spitale, 11/2015; 	Adapted from pgs_compress   	POINT object containing the concatenated data.     ");
   
   
 
-libdata[libdataItem++] = new Array("pnt/pnt_condition.html", "pnt_condition.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_condition.pro", "", "", "", "", "          -1", "");
+libdata[libdataItem++] = new Array("pnt/pnt_condition.html", "pnt_condition.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_condition.pro", "", "", "	Returns predefined condition structures for various common situations.    ", "", "          -1", "  	Spitale, 11/2015   ");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_condition.html#pnt_condition", "pnt_condition", 'routine in <a href="pnt/pnt_condition.html">pnt_condition.pro</a>', "pnt_condition.pro", "", "pnt_condition", "	Returns predefined condition structures for various common situations.    ", "conditionIf a condition structure is given as in input, it 			is returned.     *** The following keywords are defined in pnt_condition_keywords.include ***   visibleReturns a condition structure corresponding to 			points whose visible flag is not set.   invisibleReturns a condition structure corresponding to 			points whose visible flag is set.   select	Returns a condition structure corresponding to 			points whose select flag is set.   end_keywords", "NV/SYS/PS", "  	Spitale, 11/2015   	Condition structure corresponding to the given keyword.    STATUS: 	Complete    SEE ALSO: pnt_points, pnt_vectors, pnt_data    ");
+  libdata[libdataItem++] = new Array("pnt/pnt_condition.html#pnt_condition_set", "pnt_condition_set", 'routine in <a href="pnt/pnt_condition.html">pnt_condition.pro</a>', "pnt_condition.pro", "", "pnt_condition_set", "", "statemaskflag", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("pnt/pnt_condition.html#pnt_condition_unset", "pnt_condition_unset", 'routine in <a href="pnt/pnt_condition.html">pnt_condition.pro</a>', "pnt_condition.pro", "", "pnt_condition_unset", "", "statemaskflag", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("pnt/pnt_condition.html#pnt_condition", "pnt_condition", 'routine in <a href="pnt/pnt_condition.html">pnt_condition.pro</a>', "pnt_condition.pro", "", "pnt_condition", "", "conditionvisibleinvisibleselectedunselectedend_keywords", "          -1", "");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_create_descriptors.html", "pnt_create_descriptors.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_create_descriptors.html#pnt_create_descriptors", "pnt_create_descriptors", 'routine in <a href="pnt/pnt_create_descriptors.html">pnt_create_descriptors.pro</a>', "pnt_create_descriptors.pro", "", "pnt_create_descriptors", "	Creates and initializes a POINT object.    ", "crdptdabbrevusernametasksudataunamedescinputpointsvectorsflagstagsdataassoc_xdnend_keywords", "NV/SYS/PS", " 	Written by:	Spitale, 11/2015   	Newly created and initialized POINT object.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("pnt/pnt_create_descriptors.html#pnt_create_descriptors", "pnt_create_descriptors", 'routine in <a href="pnt/pnt_create_descriptors.html">pnt_create_descriptors.pro</a>', "pnt_create_descriptors.pro", "", "pnt_create_descriptors", "	Creates and initializes a POINT object.    ", "crdptdabbrevusernametasksudataunameassoc_xddescinputpointsvectorsflagstagsdatanend_keywords", "NV/OBJ/PNT", " 	Written by:	Spitale, 11/2015   	Newly created and initialized POINT object.    STATUS: 	Complete    ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_cull.html", "pnt_cull.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_cull.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_cull.html#pnt_cull", "pnt_cull", 'routine in <a href="pnt/pnt_cull.html">pnt_cull.pro</a>', "pnt_cull.pro", "", "pnt_cull", "	Cleans out an array of POINT object by removing invisible points 	and/or empty POINT object.    ", "visibleIf set, invisible points are removed.   nofree	If set, invalid POINT object are not freed.   ptdArray of POINT objects.   ", "NV/SYS/PS", "  Spitale, 11/2015; 	Adapted from pgs_cull   	Array POINT object, or 0 if all were empty.     ");
+  libdata[libdataItem++] = new Array("pnt/pnt_cull.html#pnt_cull", "pnt_cull", 'routine in <a href="pnt/pnt_cull.html">pnt_cull.pro</a>', "pnt_cull.pro", "", "pnt_cull", "	Cleans out an array of POINT object by removing invisible points 	and/or empty POINT objects.    ", "visibleIf set, invisible points are removed.   nofree	If set, invalid POINT object are not freed.   ptdArray of POINT objects.   ", "NV/OBJ/PNT", "  Spitale, 11/2015; 	Adapted from pgs_cull   	Array POINT object, or 0 if all were empty.     ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_data.html", "pnt_data.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_data.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_data.html#pnt_data", "pnt_data", 'routine in <a href="pnt/pnt_data.html">pnt_data.pro</a>', "pnt_data.pro", "", "pnt_data", "	Returns the point-by-point data associated with a POINT object.    ", "tagsIf given, data arrays are returned only for these tags, 		and are arranged in this order.   sample	Sampling interval in the nv direction.  Default is 1.  	<condition>:	All of the predefined conditions (e.g. /visible) are 			accepted; see pnt_condition_keywords.include.   cat	If set, arrays from mulitple input objets are 			concatenated.   conditionStructure specifing a mask and a condition with which to 			match flag values.  The structure must contain the fields 			MASK and STATE.  MASK is a bitmask to test against 			the flags field of the POINT object, and STATE 			is either PS_TRUE and PS_FALSE.  Note that in this case, 			the values will be returned as a list, with no separation 			into nv and nt dimensions.   noeventIf set, no event is generated.   visibleinvisibleselectptd0end_keywords", "NV/SYS/PS", " 	Written by:	Spitale, 11/2015   	The point-by-point data associated with the POINT object.    STATUS: 	Complete    SEE ALSO: 	pnt_set_data     ");
+  libdata[libdataItem++] = new Array("pnt/pnt_data.html#pnt_data", "pnt_data", 'routine in <a href="pnt/pnt_data.html">pnt_data.pro</a>', "pnt_data.pro", "", "pnt_data", "	Returns the point-by-point data associated with a POINT object.    ", "tagsIf given, data arrays are returned only for these tags, 		and are arranged in this order.   sample	Sampling interval in the nv direction.  Default is 1.  	<condition>:	All of the predefined conditions (e.g. /visible) are 			accepted; see pnt_condition_keywords.include.   cat	If set, arrays from mulitple input objets are 			concatenated.   conditionStructure specifing a mask and a condition with which to 			match flag values.  The structure must contain the fields 			MASK and STATE.  MASK is a bitmask to test against 			the flags field of the POINT object, and STATE 			is either PS_TRUE and PS_FALSE.  Note that in this case, 			the values will be returned as a list, with no separation 			into nv and nt dimensions.   noeventIf set, no event is generated.   visibleinvisibleselectedunselectedptd0end_keywords", "NV/OBJ/PNT", " 	Written by:	Spitale, 11/2015   	The point-by-point data associated with the POINT object.    STATUS: 	Complete    SEE ALSO: 	pnt_set_data     ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_desc.html", "pnt_desc.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_desc.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_desc.html#pnt_desc", "pnt_desc", 'routine in <a href="pnt/pnt_desc.html">pnt_desc.pro</a>', "pnt_desc.pro", "", "pnt_desc", "	Returns the description associated with a POINT object.    ", "noeventIf set, no event is generated.   ptdPOINT object.   ", "NV/SYS/PS", " 	Written by:	Spitale, 11/2015   	The description associated with the POINT object.    STATUS: 	Complete    SEE ALSO: 	pnt_set_desc     ");
+  libdata[libdataItem++] = new Array("pnt/pnt_desc.html#pnt_desc", "pnt_desc", 'routine in <a href="pnt/pnt_desc.html">pnt_desc.pro</a>', "pnt_desc.pro", "", "pnt_desc", "	Returns the description associated with a POINT object.    ", "noeventIf set, no event is generated.   ptdPOINT object.   ", "NV/OBJ/PNT", " 	Written by:	Spitale, 11/2015   	The description associated with the POINT object.    STATUS: 	Complete    SEE ALSO: 	pnt_set_desc     ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_explode.html", "pnt_explode.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_explode.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_explode.html#pnt_explode", "pnt_explode", 'routine in <a href="pnt/pnt_explode.html">pnt_explode.pro</a>', "pnt_explode.pro", "", "pnt_explode", "	Explodes a POINT object into single-point objects.    ", "ptd	POINT object.   ", "NV/SYS/PS", " 	Adapted from pgs_explode:	Spitale, 11/2015   	Array (nv x nt) of POINT object, each containing a single point.    STATUS: 	Complete      ");
+  libdata[libdataItem++] = new Array("pnt/pnt_explode.html#pnt_explode", "pnt_explode", 'routine in <a href="pnt/pnt_explode.html">pnt_explode.pro</a>', "pnt_explode.pro", "", "pnt_explode", "	Explodes a POINT object into single-point objects.    ", "nIf given, new objects will have nv = n instead of nv = 1. 		nv must be divisible by n.   ptd	POINT object.   ", "NV/OBJ/PNT", " 	Adapted from pgs_explode:	Spitale, 11/2015   	Array (nv/n x nt) of POINT objects, each containing a n points.    STATUS: 	Complete      ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_flags.html", "pnt_flags.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_flags.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_flags.html#pnt_flags", "pnt_flags", 'routine in <a href="pnt/pnt_flags.html">pnt_flags.pro</a>', "pnt_flags.pro", "", "pnt_flags", "	Returns the flags associated with a POINT object.    ", "sample	Sampling interval in the nv direction.  Default is 1.  	<condition>:	All of the predefined conditions (e.g. /visible) are 			accepted; see pnt_condition_keywords.include.   cat	If set, arrays from mulitple input objets are 			concatenated.   conditionStructure specifing a mask and a condition with which to 			match flag values.  The structure must contain the fields 			MASK and STATE.  MASK is a bitmask to test against 			the flags field of the POINT object, and STATE 			is either PS_TRUE and PS_FALSE.  Note that in this case, 			the values will be returned as a list, with no separation 			into nv and nt dimensions.   noeventIf set, no event is generated.   visibleinvisibleselectptd0end_keywords", "NV/SYS/PS", " 	Written by:	Spitale, 11/2015   	The flags associated with the POINT object.    STATUS: 	Complete    SEE ALSO: 	pnt_set_flags     ");
+  libdata[libdataItem++] = new Array("pnt/pnt_flags.html#pnt_flags", "pnt_flags", 'routine in <a href="pnt/pnt_flags.html">pnt_flags.pro</a>', "pnt_flags.pro", "", "pnt_flags", "	Returns the flags associated with a POINT object.    ", "sample	Sampling interval in the nv direction.  Default is 1.  	<condition>:	All of the predefined conditions (e.g. /visible) are 			accepted; see pnt_condition_keywords.include.   cat	If set, arrays from mulitple input objets are 			concatenated.   conditionStructure specifing a mask and a condition with which to 			match flag values.  The structure must contain the fields 			MASK and STATE.  MASK is a bitmask to test against 			the flags field of the POINT object, and STATE 			is either PS_TRUE and PS_FALSE.  Note that in this case, 			the values will be returned as a list, with no separation 			into nv and nt dimensions.   noeventIf set, no event is generated.   visibleinvisibleselectedunselectedptd0end_keywords", "NV/OBJ/PNT", " 	Written by:	Spitale, 11/2015   	The flags associated with the POINT object.    STATUS: 	Complete    SEE ALSO: 	pnt_set_flags     ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_get.html", "pnt_get.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_get.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_get.html#pnt_get", "pnt_get", 'routine in <a href="pnt/pnt_get.html">pnt_get.pro</a>', "pnt_get.pro", "", "pnt_get", "	Returns the fields associated with a POINT object.  This is a 	convenient way of getting multiple fields in one call, and only a 	single event is generated.    ", "cat	If set, arrays from mulitple input objets are 			concatenated.  	<condition>:	All of the predefined conditions (e.g. /visible) are 			accepted; see pnt_condition_keywords.include.   conditionStructure specifing a mask and a condition with which to 			match flag values.  The structure must contain the fields 			MASK and STATE.  MASK is a bitmask to test against 			the flags field of the POINT object, and STATE 			is either PS_TRUE and PS_FALSE.  Note that in this case, 			the values will be returned as a list, with no separation 			into nv and nt dimensions.   nvntpointsvectorsflagsnamedescinputdatatagsudataunameassoc_xdnoeventIf set, no event is generated.   visibleinvisibleselectptdPOINT object.   end_keywords", "NV/SYS/PS", " 	Written by:	Spitale, 12/2015   ");
+  libdata[libdataItem++] = new Array("pnt/pnt_get.html#pnt_get", "pnt_get", 'routine in <a href="pnt/pnt_get.html">pnt_get.pro</a>', "pnt_get.pro", "", "pnt_get", "	Returns the fields associated with a POINT object.  This is a 	convenient way of getting multiple fields in one call, and only a 	single event is generated.    ", "cat	If set, arrays from mulitple input objets are 			concatenated.  	<condition>:	All of the predefined conditions (e.g. /visible) are 			accepted; see pnt_condition_keywords.include.   conditionStructure specifing a mask and a condition with which to 			match flag values.  The structure must contain the fields 			MASK and STATE.  MASK is a bitmask to test against 			the flags field of the POINT object, and STATE 			is either PS_TRUE and PS_FALSE.  Note that in this case, 			the values will be returned as a list, with no separation 			into nv and nt dimensions.   nvntpointsvectorsflagsnamedescinputdatatagsudataunameassoc_xdnoeventIf set, no event is generated.   visibleinvisibleselectedunselectedptdPOINT object.   end_keywords", "NV/OBJ/PNT", " 	Written by:	Spitale, 12/2015   ");
   
   
 
@@ -4522,42 +4644,35 @@ libdata[libdataItem++] = new Array("pnt/pnt_include.html", "pnt_include.pro", '.
 libdata[libdataItem++] = new Array("pnt/pnt_input.html", "pnt_input.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_input.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_input.html#pnt_input", "pnt_input", 'routine in <a href="pnt/pnt_input.html">pnt_input.pro</a>', "pnt_input.pro", "", "pnt_input", "	Returns the input description associated with a POINT object.    ", "noeventIf set, no event is generated.   ptdPOINT object.   ", "NV/SYS/PS", " 	Written by:	Spitale, 11/2015   	The input description associated with the POINT object.    STATUS: 	Complete    SEE ALSO: 	pnt_set_input     ");
+  libdata[libdataItem++] = new Array("pnt/pnt_input.html#pnt_input", "pnt_input", 'routine in <a href="pnt/pnt_input.html">pnt_input.pro</a>', "pnt_input.pro", "", "pnt_input", "	Returns the input description associated with a POINT object.    ", "noeventIf set, no event is generated.   ptdPOINT object.   ", "NV/OBJ/PNT", " 	Written by:	Spitale, 11/2015   	The input description associated with the POINT object.    STATUS: 	Complete    SEE ALSO: 	pnt_set_input     ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_nt.html", "pnt_nt.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_nt.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_nt.html#pnt_nt", "pnt_nt", 'routine in <a href="pnt/pnt_nt.html">pnt_nt.pro</a>', "pnt_nt.pro", "", "pnt_nt", "	Returns the nt dimension of a POINT object.    ", "conditionnoeventIf set, no event is generated.   visibleinvisibleselectptdPOINT object.   end_keywords", "nt/SYS/PS", " 	Written by:	Spitale, 11/2015   	The nt dimensions of the POINT object.    STATUS: 	Complete     ");
+  libdata[libdataItem++] = new Array("pnt/pnt_nt.html#pnt_nt", "pnt_nt", 'routine in <a href="pnt/pnt_nt.html">pnt_nt.pro</a>', "pnt_nt.pro", "", "pnt_nt", "	Returns the nt dimension of a POINT object.    ", "conditionnoeventIf set, no event is generated.   visibleinvisibleselectedunselectedptdPOINT object.   end_keywords", "nt/SYS/PS", " 	Written by:	Spitale, 11/2015   	The nt dimensions of the POINT object.    STATUS: 	Complete     ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_nv.html", "pnt_nv.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_nv.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_nv.html#pnt_nv", "pnt_nv", 'routine in <a href="pnt/pnt_nv.html">pnt_nv.pro</a>', "pnt_nv.pro", "", "pnt_nv", "	Returns the nv dimension of a POINT object.    ", "conditionnoeventIf set, no event is generated.   visibleinvisibleselectptdPOINT object.   end_keywords", "NV/SYS/PS", " 	Written by:	Spitale, 11/2015   	The nv dimensions of the POINT object.    STATUS: 	Complete     ");
+  libdata[libdataItem++] = new Array("pnt/pnt_nv.html#pnt_nv", "pnt_nv", 'routine in <a href="pnt/pnt_nv.html">pnt_nv.pro</a>', "pnt_nv.pro", "", "pnt_nv", "	Returns the nv dimension of a POINT object.    ", "conditionnoeventIf set, no event is generated.   visibleinvisibleselectedunselectedptdPOINT object.   end_keywords", "NV/OBJ/PNT", " 	Written by:	Spitale, 11/2015   	The nv dimensions of the POINT object.    STATUS: 	Complete     ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_offset.html", "pnt_offset.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_offset.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_offset.html#pnt_offset", "pnt_offset", 'routine in <a href="pnt/pnt_offset.html">pnt_offset.pro</a>', "pnt_offset.pro", "", "pnt_offset", "	Offsets points in a POINT object.    ", "noeventptd	POINT object.   offset	Offset to apply.   ", "NV/SYS/PS", "  Spitale, 11/2015; 	Adapted from pgs_offset   ");
+  libdata[libdataItem++] = new Array("pnt/pnt_offset.html#pnt_offset", "pnt_offset", 'routine in <a href="pnt/pnt_offset.html">pnt_offset.pro</a>', "pnt_offset.pro", "", "pnt_offset", "	Offsets points in a POINT object.    ", "noeventptd	POINT object.   offset	Offset to apply.   ", "NV/OBJ/PNT", "  Spitale, 11/2015; 	Adapted from pgs_offset   ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_points.html", "pnt_points.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_points.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_points.html#pnt_points", "pnt_points", 'routine in <a href="pnt/pnt_points.html">pnt_points.pro</a>', "pnt_points.pro", "", "pnt_points", "	Returns the points associated with a POINT object.    ", "sample	Sampling interval in the nv direction.  Default is 1.  	<condition>:	All of the predefined conditions (e.g. /visible) are 			accepted; see pnt_condition_keywords.include.   cat	If set, arrays from mulitple input objets are 			concatenated.   conditionStructure specifing a mask and a condition with which to 			match flag values.  The structure must contain the fields 			MASK and STATE.  MASK is a bitmask to test against 			the flags field of the POINT object, and STATE 			is either PS_TRUE and PS_FALSE.  Note that in this case, 			the values will be returned as a list, with no separation 			into nv and nt dimensions.   noeventIf set, no event is generated.   visibleinvisibleselectptd0end_keywords", "NV/SYS/PS", " 	Written by:	Spitale, 11/2015   	The points associated with the POINT object, or zero.    STATUS: 	Complete    SEE ALSO: 	pnt_set_points     ");
-  
-  
-
-libdata[libdataItem++] = new Array("pnt/pnt_poly_rectify.html", "pnt_poly_rectify.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_poly_rectify.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("pnt/pnt_poly_rectify.html#pnt_poly_rectify", "pnt_poly_rectify", 'routine in <a href="pnt/pnt_poly_rectify.html">pnt_poly_rectify.pro</a>', "pnt_poly_rectify.pro", "", "pnt_poly_rectify", "	Rearrangs polygon vertices to mke them contiguous.    ", "ptdArray of POINT object.   ", "NV/SYS/PS", "  Spitale, 12/2015; 	Adapted from pgs_poly_rectify   	Array of POINT object, or 0 if all were empty.     ");
+  libdata[libdataItem++] = new Array("pnt/pnt_points.html#pnt_points", "pnt_points", 'routine in <a href="pnt/pnt_points.html">pnt_points.pro</a>', "pnt_points.pro", "", "pnt_points", "	Returns the points associated with a POINT object.    ", "segmentsSubscripts in the output array denoting segments in the 			(assumed) contiuous curve due to the point selection 			conditions.    sample	Sampling interval in the nv direction.  Default is 1.  	<condition>:	All of the predefined conditions (e.g. /visible) are 			accepted; see pnt_condition_keywords.include.   cat	If set, arrays from mulitple input objets are 			concatenated.   conditionStructure specifing a mask and a condition with which to 			match flag values.  The structure must contain the fields 			MASK and STATE.  MASK is a bitmask to test against 			the flags field of the POINT object, and STATE 			is either PS_TRUE and PS_FALSE.  Note that in this case, 			the values will be returned as a list, with no separation 			into nv and nt dimensions.   noeventIf set, no event is generated.   visibleinvisibleselectedunselectedptd0end_keywords", "NV/OBJ/PNT", " 	Written by:	Spitale, 11/2015   	The points associated with the POINT object, or zero.    STATUS: 	Complete    SEE ALSO: 	pnt_set_points     ");
   
   
 
@@ -4577,126 +4692,119 @@ libdata[libdataItem++] = new Array("pnt/pnt_read.html", "pnt_read.pro", '.pro fi
 libdata[libdataItem++] = new Array("pnt/pnt_scale.html", "pnt_scale.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_scale.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_scale.html#pnt_scale", "pnt_scale", 'routine in <a href="pnt/pnt_scale.html">pnt_scale.pro</a>', "pnt_scale.pro", "", "pnt_scale", "	Scales points in a POINT object.    ", "noeventptd	POINT object.   scale	Scale to apply.   ", "NV/SYS/PS", "  Spitale, 11/2015; 	Adapted from pgs_scale   ");
+  libdata[libdataItem++] = new Array("pnt/pnt_scale.html#pnt_scale", "pnt_scale", 'routine in <a href="pnt/pnt_scale.html">pnt_scale.pro</a>', "pnt_scale.pro", "", "pnt_scale", "	Scales points in a POINT object.    ", "noeventptd	POINT object.   scale	Scale to apply.   ", "NV/OBJ/PNT", "  Spitale, 11/2015; 	Adapted from pgs_scale   ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_set.html", "pnt_set.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_set.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_set.html#pnt_set", "pnt_set", 'routine in <a href="pnt/pnt_set.html">pnt_set.pro</a>', "pnt_set.pro", "", "pnt_set", "	Replaces fields in a POINT object.  This is a convenient way of 	setting multiple fields in one call, and only a single event is 	generated.    ", "pointsvectorsflagsnamedescinputdatatagsudataunameassoc_xdnoeventIf set, no event is generated.   ptd	POINT object.   ", "NV/SYS", " 	Written by:	Spitale		12/2015   ");
-  
-  
-
-libdata[libdataItem++] = new Array("pnt/pnt_set_assoc_xd.html", "pnt_set_assoc_xd.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_set_assoc_xd.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("pnt/pnt_set_assoc_xd.html#pnt_set_assoc_xd", "pnt_set_assoc_xd", 'routine in <a href="pnt/pnt_set_assoc_xd.html">pnt_set_assoc_xd.pro</a>', "pnt_set_assoc_xd.pro", "", "pnt_set_assoc_xd", "	Replaces the assoc_xd field in a POINT object.    ", "noeventIf set, no event is generated.   ps	POINT object.   assoc_xdNew assoc_xd.   ", "NV/SYS", " 	Written by:	Spitale		11/2015   ");
+  libdata[libdataItem++] = new Array("pnt/pnt_set.html#pnt_set", "pnt_set", 'routine in <a href="pnt/pnt_set.html">pnt_set.pro</a>', "pnt_set.pro", "", "pnt_set", "	Replaces fields in a POINT object.  This is a convenient way of 	setting multiple fields in one call, and only a single event is 	generated.    ", "pointsvectorsflagsnamedescinputdatatagsudataunameassoc_xdnoeventIf set, no event is generated.   ptd	POINT object.   ", "NV/OBJ/PNT", " 	Written by:	Spitale		12/2015   ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_set_data.html", "pnt_set_data.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_set_data.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_set_data.html#pnt_set_data", "pnt_set_data", 'routine in <a href="pnt/pnt_set_data.html">pnt_set_data.pro</a>', "pnt_set_data.pro", "", "pnt_set_data", "	Replaces the point-by-point data in a POINT object.    ", "tagsIf given, data arrays are replaced only for these tags, and in 		this order.   noeventIf set, no event is generated.   ptd	POINT object.   new_data", "NV/SYS", " 	Written by:	Spitale		11/2015   ");
+  libdata[libdataItem++] = new Array("pnt/pnt_set_data.html#pnt_set_data", "pnt_set_data", 'routine in <a href="pnt/pnt_set_data.html">pnt_set_data.pro</a>', "pnt_set_data.pro", "", "pnt_set_data", "	Replaces the point-by-point data in a POINT object.    ", "tagsIf given, data arrays are replaced only for these tags, and in 		this order.   noeventIf set, no event is generated.   ptd	POINT object.   new_data", "NV/OBJ/PNT", " 	Written by:	Spitale		11/2015   ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_set_desc.html", "pnt_set_desc.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_set_desc.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_set_desc.html#pnt_set_desc", "pnt_set_desc", 'routine in <a href="pnt/pnt_set_desc.html">pnt_set_desc.pro</a>', "pnt_set_desc.pro", "", "pnt_set_desc", "	Replaces the description field in a POINT object.    ", "noeventIf set, no event is generated.   ptd	POINT object.   desc	New description.   ", "NV/SYS", " 	Written by:	Spitale		11/2015   ");
+  libdata[libdataItem++] = new Array("pnt/pnt_set_desc.html#pnt_set_desc", "pnt_set_desc", 'routine in <a href="pnt/pnt_set_desc.html">pnt_set_desc.pro</a>', "pnt_set_desc.pro", "", "pnt_set_desc", "	Replaces the description field in a POINT object.    ", "noeventIf set, no event is generated.   ptd	POINT object.   desc	New description.   ", "NV/OBJ/PNT", " 	Written by:	Spitale		11/2015   ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_set_flags.html", "pnt_set_flags.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_set_flags.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_set_flags.html#pnt_set_flags", "pnt_set_flags", 'routine in <a href="pnt/pnt_set_flags.html">pnt_set_flags.pro</a>', "pnt_set_flags.pro", "", "pnt_set_flags", "	Replaces the flags in a POINT object.    ", "noeventIf set, no event is generated.   ptd	POINT object.   flags	New flags array.   ", "NV/SYS", " 	Written by:	Spitale		11/2015   ");
+  libdata[libdataItem++] = new Array("pnt/pnt_set_flags.html#pnt_set_flags", "pnt_set_flags", 'routine in <a href="pnt/pnt_set_flags.html">pnt_set_flags.pro</a>', "pnt_set_flags.pro", "", "pnt_set_flags", "	Replaces the flags in a POINT object.    ", "noeventIf set, no event is generated.   ptd	POINT object.   flags	New flags array.   ", "NV/OBJ/PNT", " 	Written by:	Spitale		11/2015   ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_set_input.html", "pnt_set_input.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_set_input.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_set_input.html#pnt_set_input", "pnt_set_input", 'routine in <a href="pnt/pnt_set_input.html">pnt_set_input.pro</a>', "pnt_set_input.pro", "", "pnt_set_input", "	Replaces the input description field in a POINT object.    ", "noeventIf set, no event is generated.   ptd	POINT object.   input", "NV/SYS", " 	Written by:	Spitale		11/2015   ");
+  libdata[libdataItem++] = new Array("pnt/pnt_set_input.html#pnt_set_input", "pnt_set_input", 'routine in <a href="pnt/pnt_set_input.html">pnt_set_input.pro</a>', "pnt_set_input.pro", "", "pnt_set_input", "	Replaces the input description field in a POINT object.    ", "noeventIf set, no event is generated.   ptd	POINT object.   input", "NV/OBJ/PNT", " 	Written by:	Spitale		11/2015   ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_set_points.html", "pnt_set_points.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_set_points.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_set_points.html#pnt_set_points", "pnt_set_points", 'routine in <a href="pnt/pnt_set_points.html">pnt_set_points.pro</a>', "pnt_set_points.pro", "", "pnt_set_points", "	Replaces the points in a POINT object.    ", "noeventIf set, no event is generated.   ptd	POINT object.   points	New points array.   ", "NV/SYS", " 	Written by:	Spitale		11/2015   ");
+  libdata[libdataItem++] = new Array("pnt/pnt_set_points.html#pnt_set_points", "pnt_set_points", 'routine in <a href="pnt/pnt_set_points.html">pnt_set_points.pro</a>', "pnt_set_points.pro", "", "pnt_set_points", "	Replaces the points in a POINT object.    ", "noeventIf set, no event is generated.   ptd	POINT object.   points	New points array.   ", "NV/OBJ/PNT", " 	Written by:	Spitale		11/2015   ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_set_tags.html", "pnt_set_tags.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_set_tags.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_set_tags.html#pnt_set_tags", "pnt_set_tags", 'routine in <a href="pnt/pnt_set_tags.html">pnt_set_tags.pro</a>', "pnt_set_tags.pro", "", "pnt_set_tags", "	Replaces the tags in a POINT object.    ", "noeventIf set, no event is generated.   ptd	POINT object.   tags	New tags array.   ", "NV/SYS", " 	Written by:	Spitale		11/2015   ");
+  libdata[libdataItem++] = new Array("pnt/pnt_set_tags.html#pnt_set_tags", "pnt_set_tags", 'routine in <a href="pnt/pnt_set_tags.html">pnt_set_tags.pro</a>', "pnt_set_tags.pro", "", "pnt_set_tags", "	Replaces the tags in a POINT object.    ", "noeventIf set, no event is generated.   ptd	POINT object.   tags	New tags array.   ", "NV/OBJ/PNT", " 	Written by:	Spitale		11/2015   ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_set_vectors.html", "pnt_set_vectors.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_set_vectors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_set_vectors.html#pnt_set_vectors", "pnt_set_vectors", 'routine in <a href="pnt/pnt_set_vectors.html">pnt_set_vectors.pro</a>', "pnt_set_vectors.pro", "", "pnt_set_vectors", "	Replaces the vectors in a POINT object.    ", "noeventIf set, no event is generated.   ptd	POINT object.   vectorsNew vectors array.   ", "NV/SYS", " 	Written by:	Spitale		11/2015   ");
+  libdata[libdataItem++] = new Array("pnt/pnt_set_vectors.html#pnt_set_vectors", "pnt_set_vectors", 'routine in <a href="pnt/pnt_set_vectors.html">pnt_set_vectors.pro</a>', "pnt_set_vectors.pro", "", "pnt_set_vectors", "	Replaces the vectors in a POINT object.    ", "noeventIf set, no event is generated.   ptd	POINT object.   vectorsNew vectors array.   ", "NV/OBJ/PNT", " 	Written by:	Spitale		11/2015   ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_tags.html", "pnt_tags.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_tags.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_tags.html#pnt_tags", "pnt_tags", 'routine in <a href="pnt/pnt_tags.html">pnt_tags.pro</a>', "pnt_tags.pro", "", "pnt_tags", "	Returns the tags associated with a POINT object.    ", "noeventIf set, no event is generated.   ptdPOINT object.   ", "NV/SYS/PS", " 	Written by:	Spitale, 11/2015   	The tags associated with the POINT object.    STATUS: 	Complete    SEE ALSO: 	pnt_set_tags     ");
+  libdata[libdataItem++] = new Array("pnt/pnt_tags.html#pnt_tags", "pnt_tags", 'routine in <a href="pnt/pnt_tags.html">pnt_tags.pro</a>', "pnt_tags.pro", "", "pnt_tags", "	Returns the tags associated with a POINT object.    ", "noeventIf set, no event is generated.   ptdPOINT object.   ", "NV/OBJ/PNT", " 	Written by:	Spitale, 11/2015   	The tags associated with the POINT object.    STATUS: 	Complete    SEE ALSO: 	pnt_set_tags     ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_template.html", "pnt_template.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_template.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_template.html#pnt_template", "pnt_template", 'routine in <a href="pnt/pnt_template.html">pnt_template.pro</a>', "pnt_template.pro", "", "pnt_template", "	Creates a new POINT using an existing one as a template.    ", "ptd0	POINT object.   ", "NV/SYS/PS", " 	Written:	Spitale, 11/2015   	New POINT with array fields left blank.    STATUS: 	Complete      ");
+  libdata[libdataItem++] = new Array("pnt/pnt_template.html#pnt_template", "pnt_template", 'routine in <a href="pnt/pnt_template.html">pnt_template.pro</a>', "pnt_template.pro", "", "pnt_template", "	Creates a new POINT using an existing one as a template.    ", "ptd0	POINT object.   ", "NV/OBJ/PNT", " 	Written:	Spitale, 11/2015   	New POINT with array fields left blank.    STATUS: 	Complete      ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_test.html", "pnt_test.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_test.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_test.html#pnt_test", "pnt_test", 'routine in <a href="pnt/pnt_test.html">pnt_test.pro</a>', "pnt_test.pro", "", "pnt_test", "	Assesses the validity of a single POINT object.  This function 	differs from pnt_valid in that it simply returns true or false, rather 	than a list of validity flags.    ", "genericIf set, a generic input is test to determine whether 			it is a POINT object.  Its validity is not tested.   noeventptdArray of POINT objects.   ", "NV/SYS/PS", "  Spitale, 12/2015; 	Adapted from pgs_test   	1 if the given POINT object is valid and contains points, 0 otherwise.    STATUS: 	Complete    SEE ALSO: 	pnt_test    ");
+  libdata[libdataItem++] = new Array("pnt/pnt_test.html#pnt_test", "pnt_test", 'routine in <a href="pnt/pnt_test.html">pnt_test.pro</a>', "pnt_test.pro", "", "pnt_test", "	Assesses the validity of a single POINT object.  This function 	differs from pnt_valid in that it simply returns true or false, rather 	than a list of validity flags.    ", "genericIf set, a generic input is test to determine whether 			it is a POINT object.  Its validity is not tested.   noeventptdArray of POINT objects.   ", "NV/OBJ/PNT", "  Spitale, 12/2015; 	Adapted from pgs_test   	1 if the given POINT object is valid and contains points, 0 otherwise.    STATUS: 	Complete    SEE ALSO: 	pnt_test    ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_threshold.html", "pnt_threshold.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_threshold.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_threshold.html#pnt_threshold", "pnt_threshold", 'routine in <a href="pnt/pnt_threshold.html">pnt_threshold.pro</a>', "pnt_threshold.pro", "", "pnt_threshold", "	Flags points whose given indicator falls below or above a given 	threshold.    ", "aboveIf set, values above the theshold are allowed.   belowIf set, values below the theshold are allowed.   ptd	POINT object.   indicatorsValues to be tested against the threshold.  One for 			each point in ptd.   thresholdThreshold value.   ", "NV/SYS/PS", "  Spitale, 11/2015; 	Adapted from pgs_threshold   ");
+  libdata[libdataItem++] = new Array("pnt/pnt_threshold.html#pnt_threshold", "pnt_threshold", 'routine in <a href="pnt/pnt_threshold.html">pnt_threshold.pro</a>', "pnt_threshold.pro", "", "pnt_threshold", "	Flags points whose given indicator falls below or above a given 	threshold.    ", "aboveIf set, values above the theshold are allowed.   belowIf set, values below the theshold are allowed.   ptd	POINT object.   indicatorsValues to be tested against the threshold.  One for 			each point in ptd.   thresholdThreshold value.   ", "NV/OBJ/PNT", "  Spitale, 11/2015; 	Adapted from pgs_threshold   ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_uncompress.html", "pnt_uncompress.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_uncompress.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_uncompress.html#pnt_uncompress", "pnt_uncompress", 'routine in <a href="pnt/pnt_uncompress.html">pnt_uncompress.pro</a>', "pnt_uncompress.pro", "", "pnt_uncompress", "	Explodes a compressed POINT object back into an array of POINT objects 	using the original POINT objects as a template.  The 	compressed POINT object is freed.    ", "nn	If given, it is assumed that there are nn elements 			in the compressed array for each element in the 			original input arrays.   pptdCompressed POINT object.   ptd0", "NV/SYS/PS", "  Spitale, 11/2015; 	Adapted from pgs_uncompress   	Array of POINT objects containing the uncompressed data.     ");
+  libdata[libdataItem++] = new Array("pnt/pnt_uncompress.html#pnt_uncompress", "pnt_uncompress", 'routine in <a href="pnt/pnt_uncompress.html">pnt_uncompress.pro</a>', "pnt_uncompress.pro", "", "pnt_uncompress", "	Explodes a compressed POINT object back into an array of POINT objects 	using the original POINT objects as a template.  The 	compressed POINT object is freed.    ", "nn	If given, it is assumed that there are nn elements 			in the compressed array for each element in the 			original input arrays.   pptdCompressed POINT object.   ptd0", "NV/OBJ/PNT", "  Spitale, 11/2015; 	Adapted from pgs_uncompress   	Array of POINT objects containing the uncompressed data.     ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_valid.html", "pnt_valid.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_valid.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_valid.html#pnt_valid", "pnt_valid", 'routine in <a href="pnt/pnt_valid.html">pnt_valid.pro</a>', "pnt_valid.pro", "", "pnt_valid", "	Assesses the validity of POINT objects.    ", "noeventptd0", "NV/SYS/PS", "  Spitale, 11/2015; 	Adapted from pgs_valid   	Array of flags, one for each input PS.  1 indicates that the PS 	contains points.    STATUS: 	Complete    SEE ALSO: 	pnt_test    ");
+  libdata[libdataItem++] = new Array("pnt/pnt_valid.html#pnt_valid", "pnt_valid", 'routine in <a href="pnt/pnt_valid.html">pnt_valid.pro</a>', "pnt_valid.pro", "", "pnt_valid", "	Assesses the validity of POINT objects.    ", "noeventptd0", "NV/OBJ/PNT", "  Spitale, 11/2015; 	Adapted from pgs_valid   	Array of flags, one for each input PS.  1 indicates that the PS 	contains points.    STATUS: 	Complete    SEE ALSO: 	pnt_test    ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_vectors.html", "pnt_vectors.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_vectors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_vectors.html#pnt_vectors", "pnt_vectors", 'routine in <a href="pnt/pnt_vectors.html">pnt_vectors.pro</a>', "pnt_vectors.pro", "", "pnt_vectors", "	Returns the vectors associated with a POINT object.    ", "sample	Sampling interval in the nv direction.  Default is 1.  	<condition>:	All of the predefined conditions (e.g. /visible) are 			accepted; see pnt_condition_keywords.include.   cat	If set, arrays from mulitple input objets are 			concatenated.   conditionStructure specifing a mask and a condition with which to 			match flag values.  The structure must contain the fields 			MASK and STATE.  MASK is a bitmask to test against 			the flags field of the POINT objects, and STATE 			is either PS_TRUE and PS_FALSE.  Note that in this case, 			the values will be returned as a list, with no separation 			into nv and nt dimensions.   noeventIf set, no event is generated.   visibleinvisibleselectptd0end_keywords", "NV/SYS/PS", " 	Written by:	Spitale, 11/2015   	The vectors associated with the POINT object.    STATUS: 	Complete    SEE ALSO: 	pnt_set_vectors     ");
+  libdata[libdataItem++] = new Array("pnt/pnt_vectors.html#pnt_vectors", "pnt_vectors", 'routine in <a href="pnt/pnt_vectors.html">pnt_vectors.pro</a>', "pnt_vectors.pro", "", "pnt_vectors", "	Returns the vectors associated with a POINT object.    ", "sample	Sampling interval in the nv direction.  Default is 1.  	<condition>:	All of the predefined conditions (e.g. /visible) are 			accepted; see pnt_condition_keywords.include.   cat	If set, arrays from mulitple input objets are 			concatenated.   conditionStructure specifing a mask and a condition with which to 			match flag values.  The structure must contain the fields 			MASK and STATE.  MASK is a bitmask to test against 			the flags field of the POINT objects, and STATE 			is either PS_TRUE and PS_FALSE.  Note that in this case, 			the values will be returned as a list, with no separation 			into nv and nt dimensions.   noeventIf set, no event is generated.   visibleinvisibleselectedunselectedptd0end_keywords", "NV/OBJ/PNT", " 	Written by:	Spitale, 11/2015   	The vectors associated with the POINT object.    STATUS: 	Complete    SEE ALSO: 	pnt_set_vectors     ");
   
   
 
 libdata[libdataItem++] = new Array("pnt/pnt_write.html", "pnt_write.pro", '.pro file in <a href="pnt/dir-overview.html">pnt/ directory</a>', "pnt_write.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("pnt/pnt_write.html#pnt_write", "pnt_write", 'routine in <a href="pnt/pnt_write.html">pnt_write.pro</a>', "pnt_write.pro", "", "pnt_write", " 	Writes a POINT object to a file.    ", "binIf set, a binary POINT object file is written;  		not currently implemented.   noeventfilenameName of the file to write.   ptd	POINT object to write.   ", "NV/PNT", "  Spitale, 11/2015; 	Adapted from pgs_write_ps   ");
+  libdata[libdataItem++] = new Array("pnt/pnt_write.html#pnt_write", "pnt_write", 'routine in <a href="pnt/pnt_write.html">pnt_write.pro</a>', "pnt_write.pro", "", "pnt_write", " 	Writes a POINT object to a file.    ", "binIf set, a binary POINT object file is written;  		not currently implemented.   noeventfilenameName of the file to write.   ptd	POINT object to write.   ", "NV/OBJ/PNT", "  Spitale, 11/2015; 	Adapted from pgs_write_ps   ");
   
   
 
@@ -4827,7 +4935,7 @@ libdata[libdataItem++] = new Array("tools/ringplane_radial_bounds.html", "ringpl
 libdata[libdataItem++] = new Array("rng/rng_create_descriptors.html", "rng_create_descriptors.pro", '.pro file in <a href="rng/dir-overview.html">rng/ directory</a>', "rng_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("rng/rng_create_descriptors.html#rng_create_descriptors", "rng_create_descriptors", 'routine in <a href="rng/rng_create_descriptors.html">rng_create_descriptors.pro</a>', "rng_create_descriptors.pro", "", "rng_create_descriptors", "	Init method for the RING class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   bdBody descriptor(s) to pass to bod_create_descriptors.   sldSolid descriptor(s) to pass to sld_create_descriptors.   dkdDisk descriptor(s) to pass to dsk_create_descriptors.   rdRing descriptor(s) to initialize, instead of creating new 		ones.   abbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedosmaeccdapscalenm_memtapmdtapmdtlibamlibmdlibmdtnl_liltaanldtaanldtliballibldlibldtprimaryArray (n) of primary strings.   descArray (n) of description strings.   n     Number of ring descriptors.   end_keywords", "NV/LIB/RNG", "       Written by:     Spitale  	Adapted by:	Spitale, 5/2016          An array (n) of ring descriptors.   STATUS:        Completed.    ");
+  libdata[libdataItem++] = new Array("rng/rng_create_descriptors.html#rng_create_descriptors", "rng_create_descriptors", 'routine in <a href="rng/rng_create_descriptors.html">rng_create_descriptors.pro</a>', "rng_create_descriptors.pro", "", "rng_create_descriptors", "	Init method for the RING class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   bdBody descriptor(s) to pass to bod_create_descriptors.   sldSolid descriptor(s) to pass to sld_create_descriptors.   dkdDisk descriptor(s) to pass to dsk_create_descriptors.   rdRing descriptor(s) to initialize, instead of creating new 		ones.   abbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedosmaeccdapscalenm_memtapmdtapmdtlibamlibmdlibmdtnl_liltaanldtaanldtliballibldlibldtprimaryArray (n) of primary descriptors.   descArray (n) of description strings.   n     Number of ring descriptors.   end_keywords", "NV/LIB/RNG", "       Written by:     Spitale  	Adapted by:	Spitale, 5/2016          An array (n) of ring descriptors.   STATUS:        Completed.    ");
   
   
 
@@ -4869,7 +4977,7 @@ libdata[libdataItem++] = new Array("rng/rng_set_desc.html", "rng_set_desc.pro", 
 libdata[libdataItem++] = new Array("rng/rng_set_primary.html", "rng_set_primary.pro", '.pro file in <a href="rng/dir-overview.html">rng/ directory</a>', "rng_set_primary.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("rng/rng_set_primary.html#rng_set_primary", "rng_set_primary", 'routine in <a href="rng/rng_set_primary.html">rng_set_primary.pro</a>', "rng_set_primary.pro", "", "rng_set_primary", "	Replaces the primary string in each given ring descriptor.    ", "noeventrdArray (nt) of STATION descriptor.   primaryArray (nt) of primary strings.   ", "NV/LIB/RNG", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
+  libdata[libdataItem++] = new Array("rng/rng_set_primary.html#rng_set_primary", "rng_set_primary", 'routine in <a href="rng/rng_set_primary.html">rng_set_primary.pro</a>', "rng_set_primary.pro", "", "rng_set_primary", "	Replaces the primary string in each given ring descriptor.    ", "noeventrdArray (nt) of STATION descriptor.   xd", "NV/LIB/RNG", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
   
   
 
@@ -4897,7 +5005,7 @@ libdata[libdataItem++] = new Array("sld/sld_albedo.html", "sld_albedo.pro", '.pr
 libdata[libdataItem++] = new Array("sld/sld_create_descriptors.html", "sld_create_descriptors.pro", '.pro file in <a href="sld/dir-overview.html">sld/ directory</a>', "sld_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("sld/sld_create_descriptors.html#sld_create_descriptors", "sld_create_descriptors", 'routine in <a href="sld/sld_create_descriptors.html">sld_create_descriptors.pro</a>', "sld_create_descriptors.pro", "", "sld_create_descriptors", "	Init method for the SOLID class.    ", "crdbdsldabbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedonNumber of descriptors to create.   end_keywords", "NV/LIB/SLD", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized solid descriptors, depending 	on the presence of the bd keyword.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("sld/sld_create_descriptors.html#sld_create_descriptors", "sld_create_descriptors", 'routine in <a href="sld/sld_create_descriptors.html">sld_create_descriptors.pro</a>', "sld_create_descriptors.pro", "", "sld_create_descriptors", "	Init method for the SOLID class.    ", "crdbdsldabbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedonNumber of descriptors to create.   end_keywords", "NV/LIB/SLD", " 	Written by:	Spitale, 7/2015  	Adapted by:	Spitale, 5/2016   	Newly created or or freshly initialized solid descriptors, depending 	on the presence of the bd keyword.    STATUS: 	Complete    ");
   
   
 
@@ -5069,7 +5177,7 @@ libdata[libdataItem++] = new Array("tools/stereo_split.html", "stereo_split.pro"
 libdata[libdataItem++] = new Array("stn/stn_create_descriptors.html", "stn_create_descriptors.pro", '.pro file in <a href="stn/dir-overview.html">stn/ directory</a>', "stn_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("stn/stn_create_descriptors.html#stn_create_descriptors", "stn_create_descriptors", 'routine in <a href="stn/stn_create_descriptors.html">stn_create_descriptors.pro</a>', "stn_create_descriptors.pro", "", "stn_create_descriptors", "	Init method for the STATION class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   bdBody descriptor(s) to pass to bod_create_descriptors.   stdStation descriptor(s) to initialize, instead of creating new 		ones.   abbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayn     Number of station descriptors.   end_keywords", "NV/LIB/STN", "       Written by:     Spitale  	Adapted by:	Spitale, 5/2016          An array (n) of station descriptors.   STATUS:        Completed.    ");
+  libdata[libdataItem++] = new Array("stn/stn_create_descriptors.html#stn_create_descriptors", "stn_create_descriptors", 'routine in <a href="stn/stn_create_descriptors.html">stn_create_descriptors.pro</a>', "stn_create_descriptors.pro", "", "stn_create_descriptors", "	Init method for the STATION class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   bdBody descriptor(s) to pass to bod_create_descriptors.   stdStation descriptor(s) to initialize, instead of creating new 		ones.   abbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayprimaryArray (n) of primary descriptors.   surface_ptn     Number of station descriptors.   end_keywords", "NV/LIB/STN", "       Written by:     Spitale  	Adapted by:	Spitale, 5/2016          An array (n) of station descriptors.   STATUS:        Completed.    ");
   
   
 
@@ -5083,7 +5191,7 @@ libdata[libdataItem++] = new Array("stn/stn_evolve.html", "stn_evolve.pro", '.pr
 libdata[libdataItem++] = new Array("stn/stn_primary.html", "stn_primary.pro", '.pro file in <a href="stn/dir-overview.html">stn/ directory</a>', "stn_primary.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("stn/stn_primary.html#stn_primary", "stn_primary", 'routine in <a href="stn/stn_primary.html">stn_primary.pro</a>', "stn_primary.pro", "", "stn_primary", "	Returns the primary string for each given station descriptor.    ", "noeventstd Array (nt) of STATION descriptors.   ", "NV/LIB/STN", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Primary string associated with each given station descriptor.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("stn/stn_primary.html#stn_primary", "stn_primary", 'routine in <a href="stn/stn_primary.html">stn_primary.pro</a>', "stn_primary.pro", "", "stn_primary", "	Returns the primary string for each given station descriptor.    ", "noeventstd Array (nt) of STATION descriptors.   ", "NV/LIB/STN", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   	Primary descriptor associated with each given station descriptor.    STATUS: 	Complete    ");
   
   
 
@@ -5097,7 +5205,7 @@ libdata[libdataItem++] = new Array("stn/stn_replicate.html", "stn_replicate.pro"
 libdata[libdataItem++] = new Array("stn/stn_set_primary.html", "stn_set_primary.pro", '.pro file in <a href="stn/dir-overview.html">stn/ directory</a>', "stn_set_primary.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("stn/stn_set_primary.html#stn_set_primary", "stn_set_primary", 'routine in <a href="stn/stn_set_primary.html">stn_set_primary.pro</a>', "stn_set_primary.pro", "", "stn_set_primary", "	Replaces the primary string in each given station descriptor.    ", "noeventstdArray (nt) of STATION descriptors.   primaryArray (nt) of primary strings.   ", "NV/LIB/STN", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
+  libdata[libdataItem++] = new Array("stn/stn_set_primary.html#stn_set_primary", "stn_set_primary", 'routine in <a href="stn/stn_set_primary.html">stn_set_primary.pro</a>', "stn_set_primary.pro", "", "stn_set_primary", "	Replaces the primary string in each given station descriptor.    ", "noeventstdArray (nt) of STATION descriptors.   primaryArray (nt) of primary descriptors.   ", "NV/LIB/STN", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
   
   
 
@@ -5118,7 +5226,7 @@ libdata[libdataItem++] = new Array("stn/stn_surface_pt.html", "stn_surface_pt.pr
 libdata[libdataItem++] = new Array("str/str_create_descriptors.html", "str_create_descriptors.pro", '.pro file in <a href="str/dir-overview.html">str/ directory</a>', "str_create_descriptors.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("str/str_create_descriptors.html#str_create_descriptors", "str_create_descriptors", 'routine in <a href="str/str_create_descriptors.html">str_create_descriptors.pro</a>', "str_create_descriptors.pro", "", "str_create_descriptors", "	Init method for the STAR class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   bdBody descriptor(s) to pass to bod_create_descriptors.   sldSolid descriptor(s) to pass to sld_create_descriptors.   gbdGlobe descriptor(s) to pass to glb_create_descriptors.   sdStar descriptor(s) to initialize, instead of creating new ones.   abbrevusernametasksudataunametimeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJlumArray (n) of luminosity values.   spArray (n) of spectral class strings.   n     Number of star descriptors.   end_keywords", "NV/LIB/STR", "       Written by:     Haemmerle, 5/1998  	Adapted by:	Spitale, 5/2016          An array (n) of star descriptors.   STATUS:        Completed.    ");
+  libdata[libdataItem++] = new Array("str/str_create_descriptors.html#str_create_descriptors", "str_create_descriptors", 'routine in <a href="str/str_create_descriptors.html">str_create_descriptors.pro</a>', "str_create_descriptors.pro", "", "str_create_descriptors", "	Init method for the STAR class.    ", "crdCore descriptor(s) to pass to cor_create_descriptors.   bdBody descriptor(s) to pass to bod_create_descriptors.   sldSolid descriptor(s) to pass to sld_create_descriptors.   gbdGlobe descriptor(s) to pass to glb_create_descriptors.   sdStar descriptor(s) to initialize, instead of creating new ones.   abbrevusernametasksudataunameassoc_xdfn_body_to_inertialfn_inertial_to_bodyib_data_timeorientavelposvelopaquelibv__libdlibdtarrayopacitymassGMrefl_fnrefl_parmphase_fnphase_parmalbedotyperadiiloralrefrrefJlumArray (n) of luminosity values.   spArray (n) of spectral class strings.   n     Number of star descriptors.   end_keywords", "NV/LIB/STR", "       Written by:     Haemmerle, 5/1998  	Adapted by:	Spitale, 5/2016          An array (n) of star descriptors.   STATUS:        Completed.    ");
   
   
 
@@ -5182,6 +5290,13 @@ libdata[libdataItem++] = new Array("tools/sub_latlon.html", "sub_latlon.pro", '.
   
   
   libdata[libdataItem++] = new Array("tools/sub_latlon.html#sub_latlon", "sub_latlon", 'routine in <a href="tools/sub_latlon.html">sub_latlon.pro</a>', "sub_latlon.pro", "", "sub_latlon", "	Computes sub-observer latitude and longitude on a globe.   ", "body_ptArray (nv,3,nt) giving the sub-observer point in 			BODY coordinates.   surf_ptArray (nv,3,nt) giving the sub-observer point in 			SURFACE coordinates.    graphic  If set, use planetographic coordinates.   gbxArray (nt) of any subclass of GLOBE.   vArray (nv,3,nt) giving the observer position in the BODY frame.   sublatsublon", "NV/LIB/TOOLS", "       Written by:     Spitale   	sublat:	Array (nv,nt) of latitude of sub-observer point on gbx.  	sublon:	Array (nv,nt) of longitude of sub-observer point on gbx.    ");
+  
+  
+
+libdata[libdataItem++] = new Array("tools/composite/surface_hide_points.html", "surface_hide_points.pro", '.pro file in <a href="tools/composite/dir-overview.html">tools/composite/ directory</a>', "surface_hide_points.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("tools/composite/surface_hide_points.html#surface_hide_points", "surface_hide_points", 'routine in <a href="tools/composite/surface_hide_points.html">surface_hide_points.pro</a>', "surface_hide_points.pro", "", "surface_hide_points", "	Hides points with respect to surface objects.    ", "bxArray (nt) of any subclass of BODY descriptors with 		the expected surface parameters.   vArray (nv,3,nt) giving viewer positions in the BODY frame.   rArray (nv,3,nt) giving points to hide in the BODY frame.    ", "NV/LIB/TOOLS/COMPOSITE", " 	Written by:	Spitale, 7/2016   	Subscripts of the points in p that are hidden by the object.    STATUS: 	Complete    ");
   
   
 

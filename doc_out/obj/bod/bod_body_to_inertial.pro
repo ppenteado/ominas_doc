@@ -45,7 +45,17 @@
 ;	
 ;-
 ;=============================================================================
-function bod_body_to_inertial, bd, v,camvecs=camvecs
+function bod_body_to_inertial, bd, v, _sub=sub
+@core.include
+ _bd = cor_dereference(bd)
+ return, call_function(_bd[0].fn_body_to_inertial, bd, v, _sub=sub)
+end
+;===========================================================================
+
+
+
+;=============================================================================
+function bod_body_to_inertial, bd, v, _sub=sub
 @core.include
  _bd = cor_dereference(bd)
 
@@ -53,23 +63,8 @@ function bod_body_to_inertial, bd, v,camvecs=camvecs
  sv = size(v)
  nv = sv[1]
 
- sub = linegen3x(nv,3,nt)
- 
- orients=list()
- if (isa(_bd,'ominas_camera') and ptr_valid(_bd.fn_data_p) and (n_elements(camvecs) gt 0)) then begin
-  fnd=*(_bd.fn_data_p)
-  inds=fnd.inds
-  for i=0,n_elements(camvecs)/2-1 do begin
-    dists=reform((camvecs[0,i]-inds[0,*])^2+(camvecs[1,i]-inds[1,*])^2)
-    mindis=min(dists,minloc)
-    orients.add,fnd.orients[*,*,minloc]
-  endfor
- endif else begin
-  orients.add,_bd.orient[*,0,*]
- endelse
-rs=list()
-foreach orient,orients,ior do begin
-  
+ if(NOT keyword_set(sub)) then sub = linegen3x(nv,3,nt)
+
  M0 = (_bd.orient[*,0,*])[sub]
  M1 = (_bd.orient[*,1,*])[sub]
  M2 = (_bd.orient[*,2,*])[sub]
@@ -78,13 +73,8 @@ foreach orient,orients,ior do begin
  r[*,0,*] = total(M0*v,2)
  r[*,1,*] = total(M1*v,2)
  r[*,2,*] = total(M2*v,2)
- rs.add,r
- endforeach
- ret=r
- foreach rr,rs,ir do ret[ir,*]=rr[ir,*]
- 
 
- return, ret
+ return, r
 end
 ;===========================================================================
 

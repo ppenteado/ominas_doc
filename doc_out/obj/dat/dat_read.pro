@@ -91,15 +91,6 @@
 ;	expansion of the given file specifications.
 ;
 ;
-; RESTRICTIONS:
-;	Under unix, the IDL findfile routine does not expand the ~ symbol,
-;	but openr does.  In order to salvage some functionality, dat_read 
-;	allows filespecs to pass even if they don't expand to anything using
-;	findfile.  In this way, a filespec contianing ~ can be properly
-;	expanded, but only if it expands to one filename.  If it expands
-;	to multiple filenames, then openr will choke on it.
-;
-;
 ; PROCEDURE:
 ;	dat_read expands all file specifications and then attempts to detect
 ;	the filetype for each resulting filename using the filetype detectors
@@ -149,7 +140,7 @@ function dat_read, filespec, data, header, $
  ;------------------------------
  ; expand filespec
  ;------------------------------
- filenames = findfile1(filespec)
+ filenames = file_search(filespec)
 
  ;========================================
  ; create data descriptors for each file
@@ -171,7 +162,7 @@ function dat_read, filespec, data, header, $
       begin
        dot = '.'
        if(strmid(extensions[ii], 0, 1) EQ '.') then dot = ''
-       filename = findfile(_filename + dot + extensions[ii])
+       filename = file_search(_filename + dot + extensions[ii])
        ii = ii + 1
       end
     end
@@ -211,19 +202,18 @@ function dat_read, filespec, data, header, $
        if(input_fn EQ '') then $
                      nv_message, 'No input function available.', name='dat_read'
 
-       ;---------------------
-       ; read the file
-       ;---------------------
+       ;-----------------------------------------
+       ; read the header, and data parameters
+       ;-----------------------------------------
        _udata = 0
-       _nodata = nodata OR (maintain GT 0)
        if(NOT silent) then print, 'Reading ' + filename
-       _data = call_function(input_fn, filename, _header, _udata, _dim, _type, $
-                                            nodata=_nodata, /silent, sample=sample)
+       _data = call_function(input_fn, filename, $
+                       _header, _udata, _dim, _type, _min, _max, $
+                                         /nodata, /silent, sample=sample, gff=gff)
        if(NOT defined(_type)) then $
         begin
          nv_message, /con, name='dat_read', $
                    'WARNING: Type code not determined, converting to byte.'
-         _data = bytscl(_data)
          _type = 1
         end
 
@@ -245,19 +235,21 @@ function dat_read, filespec, data, header, $
         begin
          if(multi) then $
           begin
-           if(defined(_data)) then data = *_data[j]
            if(keyword_set(_header)) then header = *_header[j]
            if(keyword_set(_udata)) then udata = *_udata[j]
            dim = *_dim[j]
            type = _type[j]
+           min = _min[j]
+           max = _max[j]
           end $
          else $
           begin
-           if(defined(_data)) then data = _data
            if(keyword_set(_header)) then header = _header
            if(keyword_set(_udata)) then udata = _udata
            dim = _dim
            type = _type
+           min = _min
+           max = _max
           end 
 
 
@@ -277,7 +269,7 @@ function dat_read, filespec, data, header, $
 
 
          ;---------------------------------
-         ; transform the data if necessary
+         ; transforms
          ;--------------------------------- 
          if(keyword_set(instrument)) then $
           begin
@@ -288,10 +280,6 @@ function dat_read, filespec, data, header, $
                                          input_transforms = _input_transforms
            if(NOT defined(output_transforms)) then $
                                          output_transforms = _output_transforms
-
-           if((keyword_set(input_transforms)) AND (NOT keyword_set(nodata))) then $
-              for j=0, n_elements(input_transforms)-1 do $
-                 data = call_function(input_transforms[j], data, header, silent=silent)
           end
 
 
@@ -306,10 +294,12 @@ function dat_read, filespec, data, header, $
          ;------------------------
          dd = dat_create_descriptors(1, $
 		filename=filename, $
+		min=min, $
+		max=max, $
 		dim=dim, $
 		type=type, $
+		gff=gff, $
 		name=name, $
-		data=data, $
 		nhist=nhist, $
 		udata=udata, $
 		header=header, $
@@ -326,6 +316,12 @@ function dat_read, filespec, data, header, $
 		compress=compress, $
                 tab_translators=tab_translators, silent=silent $
 	      )
+
+
+         ;------------------------
+         ; get data if requested
+         ;------------------------
+         if(arg_present(data)) then dat_load_data, dd, data=data
 
 
          ;------------------------

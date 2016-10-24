@@ -1,6 +1,6 @@
 ;=============================================================================
 ;+
-; points:
+; NAME:
 ;	pnt_get
 ;
 ;
@@ -11,7 +11,7 @@
 ;
 ;
 ; CATEGORY:
-;	NV/SYS/PS
+;	NV/OBJ/PNT
 ;
 ;
 ; CALLING SEQUENCE:
@@ -79,7 +79,7 @@ end_keywords)
  if(arg_present(input)) then input = pnt_input(ptd, /noevent)
  if(arg_present(data)) then data = pnt_data(ptd, cat=cat, condition=condition, /noevent)
  if(arg_present(tags)) then tags = pnt_tags(ptd, /noevent)
- if(arg_present(assoc_xd)) then assoc_xd = pnt_assoc_xd(ptd, /noevent)
+ if(arg_present(assoc_xd)) then assoc_xd = cor_assoc_xd(ptd, /noevent)
  if(arg_present(udata)) then udata = cor_udata(ptd, uname, /noevent)
  if(arg_present(nv)) then nv = pnt_nv(ptd, /noevent, condition=condition)
  if(arg_present(nt)) then nt = pnt_nt(ptd, /noevent, condition=condition)

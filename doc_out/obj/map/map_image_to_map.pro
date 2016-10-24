@@ -71,7 +71,12 @@ function map_image_to_map, md, _image_pts, valid=valid
    valid = [-1]
    return, 0
   end
+  
+ nmap_pts = map_pts
+ w = where(finite(_md.pole.lat) + finite(_md.pole.lon) + finite(_md.pole.rot) EQ 3)
+ if(w[0] NE -1) then $
+      nmap_pts[*,*,w] = _map_apply_pole(_md[w], map_pts[*,*,w], /inverse)
 
- return, map_pts
+ return, nmap_pts
 end
 ;===========================================================================

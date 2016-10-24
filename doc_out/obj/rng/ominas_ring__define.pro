@@ -3,18 +3,18 @@
 ;
 ;=============================================================================
 function ominas_ring::init, ii, crd=crd0, bd=bd0, sld=sld0, dkd=dkd0, rd=rd0, $
-@ring__keywords.include
+@rng__keywords.include
 end_keywords
 @core.include
  
  void = self->ominas_disk::init(ii, crd=crd0, bd=bd0, sld=sld0, dkd=dkd0, $
-@disk__keywords.include
+@dsk__keywords.include
 end_keywords)
  if(keyword_set(rd0)) then struct_assign, rd0, self
 
  self.abbrev = 'RNG'
 
- if(keyword__set(primary)) then self.primary = decrapify(primary[ii])
+ if(keyword__set(primary)) then self.__PROTECT__primary = decrapify(primary[ii])
  if(keyword__set(desc)) then self.desc = decrapify(desc[ii])
 
  return, 1
@@ -47,7 +47,7 @@ end
 ;		Methods: rng_disk, rng_set_disk
 ;
 ;
-;	primary:	String giving the name of the primary body.
+;	primary:	Primary body descriptor.
 ;
 ;			Methods: rng_primary, rng_set_primary
 ;
@@ -71,8 +71,8 @@ pro ominas_ring__define
 
  struct = $
     { ominas_ring, inherits ominas_disk, $
-	desc:		 '', $			; 'EDGE', 'PEAK', 'TROUGH'
-	primary:	 '' $			; Name of primary planet
+	desc:			'', $		; 'EDGE', 'PEAK', 'TROUGH'
+        __PROTECT__primary:     obj_new() $	; primary pd
     }
 
 end

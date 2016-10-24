@@ -116,7 +116,7 @@ pro pgdp_draw, points, $
             colors, psyms, psizes, thick, line, $
             csizes, cthicks, corient, align, plabel_offset, label_colors, $
             label_points=label_points, plabels=plabels
-
+ 
 
  p = (convert_coord(points, /data, /to_device))[0:1,*]
  w = in_image(0, p, slop=1, $
@@ -196,10 +196,11 @@ pro pg_draw_point, _pp, literal=literal, $
  if(keyword_set(print)) then print, print
 
  if(NOT keyword_set(_pp)) then return
+ pp = reform(_pp)
 
  if(NOT keyword_set(label_shade)) then label_shade = 1.0
  if(NOT defined(_colors)) then _colors = ctwhite()
- if(keyword_set(wnum)) then wset, wnum
+ if(keyword_set(wnum)) then tvim, wnum
 
 
  ;---------------------------------------
@@ -233,10 +234,10 @@ pro pg_draw_point, _pp, literal=literal, $
  ;------------------------------------------------------
  ; if inputs given as points array, draw and return
  ;------------------------------------------------------
- type = size(_pp, /type)
+ type = size(pp, /type)
  if(type NE 11) then $
   begin
-   pgdp_draw, _pp, $
+   pgdp_draw, pp, $
        _colors, _psyms, _psizes, _thick, _line, $
        _csizes, _cthicks, _corient, _align, plabel_offset, label_colors, $
        label_points=label_points, plabels=plabels
@@ -249,7 +250,7 @@ pro pg_draw_point, _pp, literal=literal, $
  ;---------------------------------------------------------
  ; for POINT input, draw one-at-a-time
  ;---------------------------------------------------------
- pp = pnt_cull(_pp, /nofree)
+ pp = pnt_cull(pp, /nofree)
  n_objects = n_elements(pp)
 
  ;- - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -292,7 +293,7 @@ pro pg_draw_point, _pp, literal=literal, $
 
 
  if(keyword_set(xormode)) then device, set_graphics=6
-
+;psyms = -psyms
 
  ;- - - - - - - - - - - - - - - - -
  ; plot arrays
@@ -302,18 +303,23 @@ pro pg_draw_point, _pp, literal=literal, $
    ;- - - - - - - - - - - - - - - - -
    ; visible, unselected points
    ;- - - - - - - - - - - - - - - - -
-   points = pnt_points(pp[i], /visible, /unselected)
+   points = pnt_points(pp[i], /visible, /unselected, segments=segments)
 
    if(keyword_set(points)) then $
-     pgdp_draw, points, $
-       colors[i], psyms[i], psizes[i], thick[i], line[i], $
-       csizes[i], cthicks[i], corient[i], align[i], plabel_offset, label_colors[i], $
-       label_points=label_points, plabels=plabels[i]
+    begin
+
+     for j=0, n_elements(segments)-1 do $
+       pgdp_draw, points[*,segments[j].start:segments[j].stop], $
+         colors[i], psyms[i], psizes[i], thick[i], line[i], $
+         csizes[i], cthicks[i], corient[i], align[i], plabel_offset, label_colors[i], $
+         label_points=label_points, plabels=plabels[i]
+
+    end
 
    ;- - - - - - - - - - - - - - - - -
    ; visible, selected points
    ;- - - - - - - - - - - - - - - - -
-   points = pnt_points(pp[i], /visible, /selected)
+   points = pnt_points(pp[i], /visible, /selected, segments=segments)
 
    if(keyword_set(points)) then $
     begin
@@ -328,10 +334,12 @@ pro pg_draw_point, _pp, literal=literal, $
       end $
      else th = th*2 
 
-     pgdp_draw, points, $
+     for j=0, n_elements(segments)-1 do $
+       pgdp_draw, points[*,segments[j].start:segments[j].stop], $
          colors[i], psym, size, th, line[i], $
          csizes[i], cthicks[i], corient[i], align[i], plabel_offset, label_colors[i], $
          label_points=label_points, plabels=plabels[i]
+
     end
 
   end

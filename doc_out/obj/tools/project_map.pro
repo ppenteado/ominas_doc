@@ -391,11 +391,11 @@ function project_map, image, md=md, cd=cd, bx=bx, sund=sund, $
         ;----------------------------------------------
         ; compute projection
         ;----------------------------------------------
-        ;map_image_pts = 0
+        map_image_pts = 0
         if(valid[0] NE -1) then $
          begin
           surface_pts = map_to_surface(md, bx_map, map_pts)
-          ;map_pts = 0
+          map_pts = 0
 
           ;-----------------------------------
           ; test bounds

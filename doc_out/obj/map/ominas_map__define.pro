@@ -8,7 +8,7 @@ end_keywords
 @core.include
  
  void = self->ominas_core::init(ii, crd=crd0,  $
-@core__keywords.include
+@cor__keywords.include
 end_keywords)
  if(keyword_set(md0)) then struct_assign, md0, self
 
@@ -39,6 +39,10 @@ end_keywords)
  if(keyword_set(center)) then self.center = center[*,ii] $
  else self.center = _md0.center
 
+ range = decrapify(range)
+ if(keyword_set(range)) then self.range = range[*,*,ii] $
+ else self.range = [[-1d100,1d100], [-1,1]*!dpi]
+
  radii = decrapify(radii)
  if(n_elements(radii) NE 0) then self.radii = radii[*,ii] $ 
  else self.radii[*] = 1d
@@ -46,13 +50,17 @@ end_keywords)
  if(keyword_set(scale)) then self.scale = decrapify(scale[*,ii]) $
  else self.scale = _md0.scale
 
+ if(keyword_set(pole)) then self.pole = decrapify(pole[ii]) $
+ else self.pole = _md0.pole
 
- if(keyword_set(fn_data_p)) then $
-   self.fn_data_p = decrapify(fn_data_p[ii])
+;;; if(keyword_set(fn_data)) then map_set_fn_data, md0, fn_data
 
  if(keyword_set(graphic)) then self.graphic = decrapify(graphic[ii])
 
  if(keyword_set(rotate)) then self.rotate = decrapify(rotate[ii])
+ 
+ 
+
 
 
  return, 1
@@ -92,8 +100,8 @@ end
 ;		Methods: map_type, map_set_type
 ;
 ;
-;	units:	2-element array to converts map radians to other
-;  		units (map radians/unit).
+;	units:	2-element array (lat,lon) to converts map radians to other
+;  		units (map radians/unit).  
 ;
 ;		Methods: map_units, map_set_units
 ;
@@ -114,6 +122,12 @@ end
 ;		Methods: map_center, map_set_center
 ;
 ;
+;	range:	2-element array giving the map coordinates of the
+;		lat/lon ranges of the map.
+;
+;		Methods: map_range, map_set_range
+;
+;
 ;	origin:	2-element array giving the image coordinates corresponding
 ;		to the center of the map.
 ;
@@ -131,9 +145,6 @@ end
 ;		Only the relative ratios are important.  All elements are 
 ;		set to 1 by default.
 ;
-;	fn_data_p:	Pointer to any data to be passed to transfrmation 
-;			functions.
-;
 ;
 ; STATUS:
 ;	Complete
@@ -146,6 +157,8 @@ end
 ;=============================================================================
 pro ominas_map__define
 
+ pole = {ominas_map_pole, lon:0d0, lat:0d0, rot:0d0}
+
  struct = $
     { ominas_map, inherits ominas_core, $
 	type:		  '', $			; Name of map projection type
@@ -155,6 +168,8 @@ pro ominas_map__define
 	scale:		  0d, $			; map 'scale'; Actually zoom.
 	origin:		  dblarr(2), $		; image coords of map center
 	center:		  dblarr(2), $		; lat,lon of map center
+	pole:		  pole, $		; location of the map projection's pole
+	range:		  dblarr(2,2), $	; lat,lon map ranges
 	radii:		  dblarr(3), $		; ref. radii of triaxial ellipsoid
 
 	graphic:	  0b, $			; If set, planetographic 
@@ -162,8 +177,7 @@ pro ominas_map__define
 
 	rotate:		  0b, $			; Rotate value as in idl 'rotate'
 
-	fn_data_p:	   nv_ptr_new() $	; data for user functions
-    }
+	fn_data_p:	   nv_ptr_new()}	; data for user functions
 
 end
 ;===========================================================================

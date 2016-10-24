@@ -90,16 +90,10 @@ function map_image_to_map_ring, md, image_pts, valid=valid
 
  lon = (image_pts[0,*,*] - origin[0,*,*])/a[1,*,*] + center[1,*,*]
  tt=2547.8649d0
- tt=2547.9680697068629
  la=(8.8d0+5.3d0+(tt*(2.7052d0-2.6859d0))) mod 360
  ;mo=map_offset(_md)
  mo=map_center(_md)
- ;print,'map_center: ',mo,format='(2(E22.15,1X))' 
- ;print,' mo,la ',mo[1]*180d0/!dpi,la
- la+=60d0;
- ta=(lon-mo[1]-la*!dpi/180d0)
- ;print,minmax(lon-mo[1])*180d0/!dpi
- ;print,minmax(lon)*180d0/!dpi
+ ta=lon+mo[1]-la*!dpi/180d0
  sa=140223.92d3
  ecc=2.3636d-3
  rref=sa*(1d0-ecc^2)/(1d0+ecc*cos(ta))
@@ -121,8 +115,7 @@ function map_image_to_map_ring, md, image_pts, valid=valid
 
  r0[valid] = (im1 - o1)/a0 + c0
  ;rref=rref[valid]
- ;r0=r0*rref/sa
- ;r0=r0+(-rref+sa)
+ r0=r0*rref/sa
 
  result = [r0,r1]
  return, result

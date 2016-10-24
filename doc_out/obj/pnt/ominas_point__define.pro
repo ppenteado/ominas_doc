@@ -3,12 +3,12 @@
 ;
 ;=============================================================================
 function ominas_point::init, ii, crd=crd0, ptd=ptd0, $
-@point__keywords.include
+@pnt__keywords.include
 end_keywords
 @core.include
  
  void = self->ominas_core::init(ii, crd=crd0, $
-@core__keywords.include
+@cor__keywords.include
 end_keywords)
  if(keyword_set(ptd0)) then struct_assign, ptd0, self
 
@@ -139,6 +139,8 @@ end_keywords)
  if(keyword_set(nv)) then self.nv = nv[ii]
  if(keyword_set(nt)) then self.nt = nt[ii]
 
+
+
  return, 1
 end
 ;=============================================================================
@@ -156,7 +158,7 @@ end
 ;
 ;
 ; CATEGORY:
-;	NV/SYS/PS
+;	NV/OBJ/PNT
 ;
 ;
 ; CALLING SEQUENCE:
@@ -169,8 +171,6 @@ end
 ;	points_p:	Pointer to image points.
 ;
 ;	vectors_p:	Pointer to inertial vectors.
-;
-;	assoc_xd:	Associated descriptor, if applicable.
 ;
 ;	data_p:		Pointer to a point-by-point user data array.
 ;
@@ -192,7 +192,7 @@ end
 ;
 ;
 ; MODIFICATION HISTORY:
-;  Spitale, 11/2015; 	Adapted from pg_POINT__define
+;  Spitale, 11/2015; 	Adapted from pg_points_struct__define
 ;	
 ;-
 ;=============================================================================
@@ -207,12 +207,7 @@ pro ominas_point__define
 		tags_p:		ptr_new(), $	; tags for p-b-p user data
 		input:		'', $		; description of input data
 		nv:		0l, $
-		nt:		0l, $
-
-		dst: 		{nv_directive_stop}, $	; Protect subsequent pointers
-
-
-		assoc_xd:	obj_new() $	; associated descriptor
+		nt:		0l $
 	}
 
 end

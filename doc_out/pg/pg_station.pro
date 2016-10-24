@@ -97,7 +97,7 @@ function pg_station, cd=cd, std=std, gbx=gbx, dkx=dkx, bx=bx, gd=gd, $
    xd = 0
    if(keyword_set(bx)) then $
     begin
-     w = where(stn_primary(std[i,0]) EQ cor_name(bx[*,0]))
+     w = where(stn_primary(std[i,0]) EQ bx[*,0])
 
      if(w[0] NE -1) then $
       begin
@@ -115,7 +115,8 @@ function pg_station, cd=cd, std=std, gbx=gbx, dkx=dkx, bx=bx, gd=gd, $
     if(keyword_set(body_pts)) then $
      inertial_pts = bod_body_to_inertial_pos(xd, body_pts)
 
-   name = cor_name(xd) + ':' + cor_name(std[i])
+;   name = cor_name(xd) + ':' + cor_name(std[i])
+   name = cor_name(std[i])
 
    ;-----------------------------------
    ; store grid
@@ -126,6 +127,7 @@ function pg_station, cd=cd, std=std, gbx=gbx, dkx=dkx, bx=bx, gd=gd, $
 		           assoc_xd = xd, $
 		           points = points, $
 		           vectors = inertial_pts)
+   cor_set_udata, station_ptd[i], 'SURFACE_PTS', surf_pts
    flags = pnt_flags(station_ptd[i])
    if(NOT keyword__set(valid)) then flags[*] = PTD_MASK_INVISIBLE
    pnt_set_flags, station_ptd[i], flags

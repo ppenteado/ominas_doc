@@ -3,12 +3,12 @@
 ;
 ;=============================================================================
 function ominas_camera::init, ii, crd=crd0, bd=bd0, cd=cd0, $
-@camera__keywords.include
+@cam__keywords.include
 end_keywords
 @core.include
  
  void = self->ominas_body::init(ii, crd=crd0, bd=bd0, $
-@body__keywords.include
+@bod__keywords.include
 end_keywords)
  if(keyword_set(cd0)) then struct_assign, cd0, self
 
@@ -160,14 +160,10 @@ pro ominas_camera__define
 	fn_psf:		'', $			; Point-spread fn.
 
 	fn_focal_to_image:   '', $		; user procedures to tranform
-<<<<<<< HEAD
-	fn_image_to_focal:   '', $		; between focal and image
 	fn_data_p:	 nv_ptr_new(), $		; data for functions
 	fn_body_to_image:'',$
-        fn_body_to_inertial:''$
-=======
+  ;fn_body_to_inertial:'',$
 	fn_image_to_focal:   '' $		; between focal and image
->>>>>>> Spitale
     }
 
 end

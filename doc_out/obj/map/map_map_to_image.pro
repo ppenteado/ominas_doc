@@ -58,7 +58,11 @@ function map_map_to_image, md, _map_pts, valid=valid, nowrap=nowrap, all=all
  pi2 = !dpi/2d
  
  map_pts = _map_pts
-
+ nmap_pts = map_pts
+ w = where(finite(_md.pole.lat) + finite(_md.pole.lon) + finite(_md.pole.rot) EQ 3)
+ if(w[0] NE -1) then $
+      nmap_pts[*,*,w] = _map_apply_pole(_md[w], map_pts[*,*,w])
+  
  ii = transpose(linegen3z(2,nt,nv), [0,2,1])
  jj = transpose(gen3y(nt,nv,1))
 
@@ -67,13 +71,15 @@ function map_map_to_image, md, _map_pts, valid=valid, nowrap=nowrap, all=all
 
  fn = map_fn_map_to_image(md[0])
 
- image_pts = call_function(fn, md, map_pts)
+ image_pts = call_function(fn, md, nmap_pts)
  image_pts = rotate_coord(image_pts, rotate, size=size)
 
  if(NOT keyword_set(nowrap)) then image_pts = map_wrap_points(_md, image_pts, map_pts)
 
  if(NOT keyword_set(all)) then valid = map_valid_points(_md, map_pts, image_pts) $
  else valid = lindgen(nv*nt)
+
+
 
  return, image_pts
 end
