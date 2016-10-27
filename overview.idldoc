@@ -15,6 +15,12 @@ Paulo Penteado, Jackie Ryan and Mark Moretto.
 Funding for its initial development was provided through the
 Cassini mission.
 
+
+Download and installation
+-------------------------
+
+See the `installation guide <install_guide.html>`.
+
 Functional requirements
 -----------------------
 
@@ -110,3 +116,4 @@ routines referred to as `PG <./com/pg/index.html>`.
 The graphical interface to OMINAS is called `GRIM <./gr/index.html>`.
 Although it's designed to be used along with the command line like a
 fancy TVIM, GRIM may be used on its own.
+
