@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>mosaic_example.pro (OMINAS API Documentation)</title>
+    <title>multimission_example.pro (OMINAS API Documentation)</title>
 
     
 
@@ -160,7 +160,7 @@
 
     <script type="text/javascript">
       function setTitle() {
-        parent.document.title="mosaic_example.pro (OMINAS API Documentation)";
+        parent.document.title="multimission_example.pro (OMINAS API Documentation)";
       }
     </script>
   </head>
@@ -187,7 +187,7 @@
     
         
         <td >
-          <a href="mosaic_example-code.html" title="Chromocoded source">Source</a> <a href="mosaic_example.pro" title=".pro file"><img src="idldoc-resources/attach.png" alt="[attach.png]" align="top"/></a>
+          <a href="multimission_example-code.html" title="Chromocoded source">Source</a> <a href="multimission_example.pro" title=".pro file"><img src="idldoc-resources/attach.png" alt="[attach.png]" align="top"/></a>
         </td>
         
     
@@ -238,7 +238,7 @@
 
     <div class="content">
       <h2 class="directory">./</h2>
-      <h1 class="basename">mosaic_example.pro<span class="file-attributes"></span></h1>
+      <h1 class="basename">multimission_example.pro<span class="file-attributes"></span></h1>
       
 
       <span class="file_attribute small">batch file</span>
@@ -246,83 +246,6 @@
       
       <br/>
 
-      
-      <div id="file_comments">
-        <div class="small "><h2> MOSAIC EXAMPLE</h2>
-
-<p>   This example requires the following kernel files, which are
-   included in the demo's data directory:
-<div><div><code class="listing"><span class="code-output"> $CAS_SPICE_CK/001103_001105ra.bc</span>
-<span class="code-output"> $CAS_SPICE_CK/001105_001108.bc</span>
-<span class="code-output"> $CAS_SPICE_CK/001026_001029ra.bc</span>
-<span class="code-output"> $CAS_SPICE_CK/001029_001031ra.bc</span>
-</code></div></div>   This example file demonstrates how to construct a mosaic using OMINAS.
-   This example file can be executed from the UNIX command line using:
-<div><div><code class="listing"></code></div></div>  	  idl mosaic_example
-</p>
-
-<p>   or from within IDL using:
-<div><div><code class="listing"></code></div></div>  	  @mosaic_example
-</p>
-
-<p>   After the example stops, later code samples in this file may be executed by
-   pasting them onto the IDL command line.
-</p>
-
-<h2> Navigate on limbs automatically</h2>
-
-<p>   pg_farfit finds the limb to within a few pixels.  In reality, you would
-   want to refine the pointing by scanning for the limb and performing a
-   least-squares fit, but for the purposes of clarity in this example, the
-   inital fit will do.  See jup_cassini.example and dione.example for examples
-   of least-squares fits to image features.
-</p>
-
-<h2> Correct photometry</h2>
-
-<p>   Here, a crude photometric correction is performed for the purposes
-   of this example.
-</p>
-
-<p>   In addition to the corrected images, the output descriptors, dd_pht,
-   will contain the photometric angles in their user data arrays with
-   the names 'EMM', 'INC' and 'PHASE'.
-</p>
-
-<h2> Project maps</h2>
-
-<p>   Note that all map projections use the same map descriptor.
-</p>
-
-<p>   Also, aux=['EMM'] is used with pg_map to direct it to reproject
-   the emmision angle array that was produced and stored in the data descriptor
-   by pg_photom.  That array will be needed by pg_mosaic.
-</p>
-
-<h2> Introducing wind profiles</h2>
-
-<p> Use the commented commands instead to include a zonal wind profile in
- the projection.
-</p>
-
-<h2> Construct the mosaic</h2>
-
-<p>   The combination function 'emm' combines the maps
-   using wighting proprtional to emm^x, where emm is the emmision
-   cosine.  It also imposes a minimum emmision cosine, emm0.  Note
-   that the emission angles were computed by pg_photom and
-   reprojected by pg_map, as directed by the 'aux' keyword.
-</p>
-
-<h2> Save the mosaic and map info</h2>
-
-<p>   To read the mosaic and projection info:
-<div><div><code class="listing"><span class="code-output"> dd = dat_read('./data/test.msc', mosaic, label)</span>
-<span class="code-output"> md = pg_get_maps(dd)</span>
-</code></div></div></p>
-
-</div>
-      </div>
       
 
       
@@ -349,19 +272,14 @@
         <table class="attribute small" summary="File attributes">
           <tr>
             <td class="name">Modification date:</td>
-            <td>Thu Jun  1 19:09:26 2017</td>
+            <td>Mon Jun 12 10:06:53 2017</td>
           </tr>
 
           <tr>
             <td class="name">Lines:</td>
-            <td>47</td>
+            <td>4</td>
           </tr>
 
-          
-          <tr>
-            <td class="name">Docformat:</td>
-            <td>rst rst</td>
-          </tr>
           
         </table>
       </div>
