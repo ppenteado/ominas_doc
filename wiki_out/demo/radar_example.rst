@@ -3,8 +3,8 @@ radar\_example.pro
 
 `source <./`radar_example.pro>`_
 
-*batch file*
 
+*includes main-level program*
 
 
 
@@ -14,9 +14,11 @@ radar\_example.pro
    This script demonstrates reading a Cassini RADAR SAR image and projecting it
    onto an orthographical map for display.
 
-   The data file, `BIFQI22N068_D045_T003S01_V02.IMG`, must first be
-   `downloaded from PDS <http//pds-imaging.jpl.nasa.gov/data/cassini/cassini_orbiter/CORADR_0045/DATA/BIDR/BIFQI22N068_D045_T003S01_V02.ZIP>`_,
-   then unzipped (the zip file is 202MB).
+   The data file used, `BIFQI22N068_D045_T003S01_V02.IMG`, is too large (202 MB)
+   to include with the OMINAS distribution. This script will look for the file
+   under ~/ominas_data/sar/, and if not found, will download it from
+   `PDS<http://pds-imaging.jpl.nasa.gov/data/cassini/cassini_orbiter/CORADR_0045/DATA/BIDR/BIFQI22N068_D045_T003S01_V02.ZIP>`,
+   then unzip it.
 
    Setup: The instrument detectors, translators and transforms must contain the
    RADAR definitions, as is included in `demo/data/instrument_detectors.tab`,
@@ -29,11 +31,9 @@ radar\_example.pro
 
    .. code:: IDL
 
-    img='~/radar/BIFQI22N068_D045_T003S01_V02.IMG'
-    @radar_example
+    .run radar_example
    
-   from the `demo` directory. Note that you have to set the variable `img` to the
-   location of your data file.
+   From within an OMINAS IDL session.
 
  Read SAR file
 
@@ -42,7 +42,19 @@ radar\_example.pro
 
    .. code:: IDL
 
-    img=n_elements(img) ? img : '~/radar/BIFQI22N068_D045_T003S01_V02.IMG'
+    ;Download the file, if needed
+    ldir='~/ominas_data/sar'
+    spawn,'eval echo '+ldir,res
+    ldir=res
+    img=ldir+path_sep()+'BIFQI22N068_D045_T003S01_V02.IMG'
+    if ~file_test(img,/read) then begin
+      print,'SAR file needed for the demo not found. Downloading it from PDS...'
+      p=pp_wget('http://pds-imaging.jpl.nasa.gov/data/cassini/cassini_orbiter/CORADR_0045/DATA/BIDR/BIFQI22N068_D045_T003S01_V02.ZIP',localdir=ldir)
+      p.geturl
+      print,'ZIP file downloaded, decompressing it...'
+      file_unzip,ldir+path_sep()+'CORADR_0045/DATA/BIDR/BIFQI22N068_D045_T003S01_V02.ZIP',/verbose
+    endif
+   
     ;Read the file
     dd=dat_read(img)
 
@@ -106,7 +118,7 @@ radar\_example.pro
 
    .. code:: IDL
 
-    grim,dd_map,cd=mdp,overlays=['planet_grid']
+    grim,dd_map,cd=mdp;,overlays=['planet_grid']
    
 
    

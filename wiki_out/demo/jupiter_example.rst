@@ -25,13 +25,13 @@ jupiter\_example.pro
 
     .. code:: IDL
 
-    idl jupiter.example
+    ominas jupiter_example.pro
     
-    or from within IDL using:
+    or from within an OMINAS IDL session using:
 
     .. code:: IDL
 
-    @jupiter.example
+    @jupiter_example.pro
     
     After the example stops, later code samples in this file may be executed by
     pasting them onto the IDL command line.
@@ -62,8 +62,8 @@ jupiter\_example.pro
 
    .. code:: IDL
 
-    file = 'data/N1350122987_2.IMG'
-    dd = dat_read(file, im, label, /silent)
+    file = getenv('OMINAS_DIR')+'/demo/data/N1350122987_2.IMG'     ; Cassini Image
+    dd = dat_read(file, im, label)
     ctmod, top=top
     tvim, im, zoom=0.75, /order, /new, top=top
 
@@ -91,6 +91,7 @@ jupiter\_example.pro
 
    The commented lines shows how translator keywords can be passed to
    override the keywords given in the translators table.
+ ctmod, top=top
 
    The keyword 'name' could be used in pg_get_planets to select only Jupiter
    and the Galilean satellites.  By default, every body that's relevant to
@@ -129,10 +130,10 @@ jupiter\_example.pro
 
    .. code:: IDL
 
-    limb_ptd = pg_limb(gd=gd) & pg_hide, limb_ptd, gd=gd, /rm, /disk
-              pg_hide, limb_ptd, /limb, gd=gd, od=sund
-    ring_ptd = pg_disk(gd=gd) & pg_hide, ring_ptd, gd=gd, /globe
-    term_ptd = pg_limb(gd=gd, od=gd.sund) & pg_hide, term_ptd, gd=gd, /limb
+    limb_ptd = pg_limb(gd=gd) & pg_hide, limb_ptd, gd=gd, bx=rd, /rm
+              pg_hide, limb_ptd, /assoc, gd=gd, bx=pd, od=sund
+    ring_ptd = pg_disk(gd=gd) & pg_hide, ring_ptd, gd=gd, bx=pd
+    term_ptd = pg_limb(gd=gd, od=gd.sund) & pg_hide, term_ptd, gd=gd, bx=pd, /assoc
    
     center_ptd = pg_center(gd=gd, bx=pd)
     center_o=pnt_points(center_ptd[0])    ;get the center of Jupiter from the points object
@@ -236,11 +237,11 @@ jupiter\_example.pro
    
     ;Recalculate the geometry and redisplay the image with the new overlays
    
-    limb_ptd = pg_limb(gd=gd) & pg_hide, limb_ptd, gd=gd, /rm, /disk
-           pg_hide, limb_ptd, /limb, gd=gd, od=sund
-    ring_ptd = pg_disk(gd=gd) & pg_hide, ring_ptd, gd=gd, /globe
+    limb_ptd = pg_limb(gd=gd) & pg_hide, limb_ptd, gd=gd, bx=rd, /rm
+           pg_hide, limb_ptd, /assoc, gd=gd, bx=pd, od=sund
+    ring_ptd = pg_disk(gd=gd) & pg_hide, ring_ptd, gd=gd, bx=pd
     center_ptd = pg_center(gd=gd, bx=pd)
-    term_ptd = pg_limb(gd=gd, od=gd.sund) & pg_hide, term_ptd, gd=gd, /limb
+    term_ptd = pg_limb(gd=gd, od=gd.sund) & pg_hide, term_ptd, gd=gd, bx=pd, /assoc
     object_ptd = [center_ptd,limb_ptd,ring_ptd,term_ptd]
    
     tvim, im
@@ -333,11 +334,11 @@ jupiter\_example.pro
     print, dxy, dtheta*180./!pi, chisq, covar
     pg_repoint, dxy, dtheta, axis=center_ptd[0], gd=gd
    
-    limb_ptd = pg_limb(gd=gd) & pg_hide, limb_ptd, gd=gd, /rm, /disk
-            pg_hide, limb_ptd, /limb, gd=gd, od=sund
-    ring_ptd = pg_disk(gd=gd) & pg_hide, ring_ptd, gd=gd, /globe
+    limb_ptd = pg_limb(gd=gd) & pg_hide, limb_ptd, gd=gd, bx=rd, /rm
+            pg_hide, limb_ptd, bx=pd, /assoc, gd=gd, od=sund
+    ring_ptd = pg_disk(gd=gd) & pg_hide, ring_ptd, gd=gd, bx=pd
     center_ptd = pg_center(gd=gd, bx=pd)
-    term_ptd = pg_limb(gd=gd, od=gd.sund) & pg_hide, term_ptd, gd=gd, /limb
+    term_ptd = pg_limb(gd=gd, od=gd.sund) & pg_hide, term_ptd, gd=gd, bx=pd, /assoc
     object_ptd = [center_ptd,limb_ptd,ring_ptd,term_ptd]
    
     tvim, im
@@ -362,20 +363,20 @@ jupiter\_example.pro
    .. code:: IDL
 
     grid_ptd = pg_grid(gd=gd, lat=lat, lon=lon)
-    pg_hide, grid_ptd, cd=cd, gbx=pd, /limb
-    pg_hide, grid_ptd, cd=cd, gbx=pd, od=sund, /limb
-    pg_hide, grid_ptd, gd=gd, /disk
+    pg_hide, grid_ptd, cd=cd, bx=pd, /assoc
+    pg_hide, grid_ptd, cd=cd, bx=pd, od=sund, /assoc
+    pg_hide, grid_ptd, gd=gd, bx=rd
     pg_draw, grid_ptd, color=ctblue()
    
     plat_ptd = pg_grid(gd=gd, slon=!dpi/2d, lat=lat, nlon=0)
-    pg_hide, plat_ptd[0], cd=cd, gbx=pd[0], /limb
+    pg_hide, plat_ptd[0], cd=cd, bx=pd[0], /, bx=pd
     pg_draw, plat_ptd[0], psym=3, plabel=strtrim(round(lat*180d/!dpi),2), /label_p
    
     plon_ptd = pg_grid(gd=gd, slat=0d, lon=lon, nlat=0)
-    pg_hide, plon_ptd[0], cd=cd, gbx=pd[0], /limb
+    pg_hide, plon_ptd[0], cd=cd, bx=pd[0], /assoc
     pg_draw, plon_ptd[0], psym=3, plabel=strtrim(round(lon*180d/!dpi),2), /label_p
    
-    dgrid_ptd=pg_grid(gd=gd, bx=rd) & pg_hide, dgrid_ptd, gd=gd, /globe
+    dgrid_ptd=pg_grid(gd=gd, bx=rd) & pg_hide, dgrid_ptd, gd=gd, bx=pd
     pg_draw, dgrid_ptd, color=ctpurple()
 
 

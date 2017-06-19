@@ -14,11 +14,11 @@
 ;   This example file demonstrates how to construct a mosaic using OMINAS.
 ;   This example file can be executed from the UNIX command line using::
 ;
-;  	  idl mosaic.example
+;  	  ominas mosaic_example
 ;
-;   or from within IDL using::
+;   or from within an OMINAS IDL session using::
 ;
-;  	  @mosaic.example
+;  	  @mosaic_example
 ;
 ;   After the example stops, later code samples in this file may be executed by
 ;   pasting them onto the IDL command line.
@@ -34,7 +34,7 @@ zoom = 0.3
 ;         './data/n1351469359.2', $
 ;         './data/n1351523119.2', $
 ;         './data/n1352037683.2']
-files = ['data/n1350122987.2', $
+files = getenv('OMINAS_DIR')+'/demo/'+['data/n1350122987.2', $
          'data/n1351469359.2']
 n = n_elements(files)
 
@@ -217,7 +217,7 @@ pg_put_maps, dd_mosaic, md=md
 dat_write, './data/test.mos', dd_mosaic, filetype = 'VICAR'
 
 
-
+end
 
 
 

@@ -21,13 +21,13 @@ saturn\_example.pro
 
     .. code:: IDL
 
-    	  idl ominas saturn.example
+    	  ominas ominas saturn_example
     
-  	 or from within IDL using:
+  	 or from within an OMINAS IDL session using:
 
     .. code:: IDL
 
-    	  @saturn.example
+    	  @saturn_example
     
   	 After the example stops, later code samples in this file may be executed by
   	 pasting them onto the IDL command line.
@@ -50,7 +50,7 @@ saturn\_example.pro
 
  .. code:: IDL
 
-     dd = dat_read('data/c3440346.gem', im, label)
+   dd = dat_read(getenv('OMINAS_DIR')+'/demo/data/c3440346.gem', im, label)
    ctmod, top=top
    tvim, im, zoom=0.5, /order, /new, top=top
  
@@ -93,8 +93,8 @@ saturn\_example.pro
   the planet center (center_ptd) using the routine pg_center.  It uses the
   generic descriptor (gd) to pass the camera, planet and ring descriptors
   to these routines.  It also uses pg_hide to remove (/rm) points from the
-  ring (/disk) from the limb points and then again to remove the ring points
-  covered by the planet (/globe).  It then groups each of these into
+  ring from the limb points and then again to remove the ring points
+  covered by the planet.  It then groups each of these into
   object_ptd for plotting.  The colors, psyms, psizes and plables variables
   are defined for the plot.  The center is drawn in the default color
   (!p.color), the limb is in yellow (ctyellow) and the inner and outer ring

@@ -17,11 +17,11 @@
 ;
 ; This example file can be executed from the UNIX command line using::
 ;
-;  idl stars.example
+;  ominas stars_example
 ;
-; or from within IDL using::
+; or from within an OMINAS IDL session using::
 ;
-;  @stars.example
+;  @stars_example
 ;
 ; After the example stops, later code samples in this file may be executed by
 ; pasting them onto the IDL command line.
@@ -52,13 +52,13 @@
 ; Code::
 ;
 ;  ;dd = dat_read('data/c1138223.gem', im, label)           ; VICAR format file
-;  dd = dat_read('data/N1456251768_1.IMG', im, label)       ; Cas ISS-NA image
+;  dd = dat_read(getenv('OMINAS_DIR')+'/demo/data/N1456251768_1.IMG', im, label)    ; Cas ISS-NA image
 ;  tvim, im, zoom=0.75, /order
 ;
 ;-
 ;-------------------------------------------------------------------------
 ;dd = dat_read('data/c1138223.gem', im, label)			; VICAR format file
-dd = dat_read('data/N1456251768_1.IMG', im, label)		; Cas ISS-NA image
+dd = dat_read(getenv('OMINAS_DIR')+'/demo/data/N1456251768_1.IMG', im, label)		; Cas ISS-NA image
 
 tvim, im, zoom=0.75, /order
 
@@ -186,7 +186,7 @@ sd = pg_get_stars(dd, od=cd, 'faint=14')
 ;
 ; Code::
 ;
-;  star_ptd=pg_center(bx=sd, gd=gd) & pg_hide, star_ptd, gd=gd, /rm, /globe
+;  star_ptd=pg_center(bx=sd, gd=gd) & pg_hide, star_ptd, gd=gd, bx=pd, /rm
 ;  n_stars=n_elements(sd)
 ;  color = ctred()
 ;  psym = 6
@@ -194,7 +194,7 @@ sd = pg_get_stars(dd, od=cd, 'faint=14')
 ;  plabels = cor_name(sd)
 ;-
 ;-------------------------------------------------------------------------
-star_ptd=pg_center(bx=sd, gd=gd) & pg_hide, star_ptd, gd=gd, /rm, /globe
+star_ptd=pg_center(bx=sd, gd=gd) & pg_hide, star_ptd, gd=gd, bx=pd, /rm
 n_stars=n_elements(sd)
 
 color = ctred()
@@ -297,7 +297,7 @@ pg_draw, star_ptd, color=color, psym=psym, plabel=smag, csi=csizes
 ;  tvim, im
 ;  dxy = pg_drag(star_ptd, dtheta=dtheta, axis=optic_ptd, symbol=6)  ; square
 ;  pg_repoint, dxy, dtheta, axis=optic_ptd, gd=gd
-;  star_ptd=pg_center(bx=sd, gd=gd) & pg_hide, star_ptd, gd=gd, /rm, /globe
+;  star_ptd=pg_center(bx=sd, gd=gd) & pg_hide, star_ptd, gd=gd, bx=pd, /rm
 ;  tvim, im
 ;  pg_draw, star_ptd, color=color, psym=psym, plabel=plabels
 ;-
@@ -307,7 +307,7 @@ tvim, im
 dxy = pg_drag(star_ptd, dtheta=dtheta, axis=optic_ptd, symbol=6)  ; square
 pg_repoint, dxy, dtheta, axis=optic_ptd, gd=gd
 
-star_ptd=pg_center(bx=sd, gd=gd) & pg_hide, star_ptd, gd=gd, /rm, /globe
+star_ptd=pg_center(bx=sd, gd=gd) & pg_hide, star_ptd, gd=gd, bx=pd, /rm
 
 tvim, im
 pg_draw, star_ptd, color=color, psym=psym, plabel=plabels
@@ -409,7 +409,7 @@ pg_draw, ptscan_ptd, psym=1, col=ctyellow()
 ;  covar = pg_covariance([ptscan_cf])
 ;  print, dxy, dtheta*180./!pi, chisq, covar
 ;  pg_repoint, dxy, dtheta, axis=optic_ptd, gd=gd
-;  star_ptd = pg_center(bx=sd, gd=gd) & pg_hide, star_ptd, gd=gd, /rm, /globe
+;  star_ptd = pg_center(bx=sd, gd=gd) & pg_hide, star_ptd, gd=gd, bx=pd, /rm
 ;  tvim, im
 ;  pg_draw, star_ptd, color=color, psym=psym, plabel=plabels
 ;-
@@ -422,7 +422,7 @@ covar = pg_covariance([ptscan_cf])
 print, dxy, dtheta*180./!pi, chisq, covar
 pg_repoint, dxy, dtheta, axis=optic_ptd, gd=gd
 
-star_ptd = pg_center(bx=sd, gd=gd) & pg_hide, star_ptd, gd=gd, /rm, /globe
+star_ptd = pg_center(bx=sd, gd=gd) & pg_hide, star_ptd, gd=gd, bx=pd, /rm
 
 tvim, im
 pg_draw, star_ptd, color=color, psym=psym, plabel=plabels
@@ -441,8 +441,10 @@ pg_draw, star_ptd, color=color, psym=psym, plabel=plabels
 ; Code::
 ;
 ;  pg_put_cameras, dd, gd=gd
-;  dat_write, 'data/c1138223_nv.gem', dd
+;  dat_write, getenv('OMINAS_DIR')+'/demo/data/c1138223_nv.gem', dd
+;  
 ;-
 ;-------------------------------------------------------------------------
 pg_put_cameras, dd, gd=gd
-dat_write, 'data/c1138223_nv.gem', dd
+;dat_write, getenv('OMINAS_DIR')+'/demo/data/c1138223_nv.gem', dd
+end

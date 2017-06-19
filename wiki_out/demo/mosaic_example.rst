@@ -3,8 +3,8 @@ mosaic\_example.pro
 
 `source <./`mosaic_example.pro>`_
 
-*batch file*
 
+*includes main-level program*
 
 
 
@@ -27,14 +27,14 @@ mosaic\_example.pro
    .. code:: IDL
 
 
-  	  idl mosaic.example
+  	  ominas mosaic_example
 
-   or from within IDL using:
+   or from within an OMINAS IDL session using:
 
    .. code:: IDL
 
 
-  	  @mosaic.example
+  	  @mosaic_example
 
    After the example stops, later code samples in this file may be executed by
    pasting them onto the IDL command line.
