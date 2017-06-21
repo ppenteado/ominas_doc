@@ -56,22 +56,22 @@ tvim, im, zoom=0.5, /order, /new
 ; Obtaining the descriptors
 ; -------------------------
 ;
-;  	This section obtains the camera descriptor (cd), the planet descriptor
-;  	(pd) and the ring descriptor (rd) for use by the software.  In this
-;  	example, the various elements of these descriptors are overridden with
-;  	values that causes the software not to try to read these values from
-;  	a detached header or through a translator that would access the data
-;  	from the default source.
+;   This section obtains the camera descriptor (cd), the planet descriptor
+;   (pd) and the ring descriptor (rd) for use by the software.  In this
+;   example, the various elements of these descriptors are overridden with
+;   values that causes the software not to try to read these values from
+;   a detached header or through a translator that would access the data
+;   from the default source.
 ;
-;  	Change override to zero to read the data through the translators using
-;  	the Voyager SEDR instead (assuming you have installed the SEDR data 
-;  	files, which are not provided in the default installation)::
-;  	
-;  	  override=1
-;  	  
-;  	Camera descriptor::
-;  	
-;  	  if(override) then $
+;   Change override to zero to read the data through the translators using
+;   the Voyager SEDR instead (assuming you have installed the SEDR data 
+;   files, which are not provided in the default installation)::
+;   
+;     override=1
+;     
+;   Camera descriptor::
+;   
+;     if(override) then $
 ;       cd = pg_get_cameras(dd, /over, $
 ;       name='VGR1_ISS_NA', $
 ;       orient= $
@@ -88,7 +88,7 @@ tvim, im, zoom=0.5, /order, /new
 ;       fn_focal_to_image='cam_focal_to_image_linear', $
 ;       fn_image_to_focal='cam_image_to_focal_linear', $
 ;       fi_data=ptr_new())
-; 
+;       
 ;   Planet descriptor::
 ; 
 ;       if(override) then $
@@ -124,8 +124,8 @@ tvim, im, zoom=0.5, /order, /new
 ;           sma=tr([75000000.0,136800000.0]), $
 ;           ecc=tr([0.0, 0.0]))
 ;           
-;    Sun (star) descriptor::
-;
+;   Sun (star) descriptor::
+;   
 ;           if(override) then $
 ;             sund = pg_get_stars(dd, od=cd, /over, $
 ;             name='SUN', $
@@ -723,29 +723,31 @@ pg_draw, outline_ptd, col=ctgreen()
 ; Plotting ring sector plots
 ; --------------------------
 ;
-;  		Below is the code for four different types of plots using pg_profile_ring.
-;  		Radial (default) and longitudinal (/azimuthal), interpolated (default)
-;  		and binned (/bin).  There is an oversamp keyword which defines the amount
-;  		to oversample (vs. 1 pixel).  In the case of a longitudinal bin scan,
-;  		pixelization can cause some bins to contain very low numbers or none at
-;  		all.  In this example oversamp=0.3 to cause the plot to have larger bins
-;  		to help alleviate this problem.  The calculated profile is then plotted
-;  		in a new window.
-;  		
-;  		Radial scan::
-;  		
-;  		  dd_prof = pg_profile_ring(dd, gd=gd, outline_ptd, dsk_pts=dsk_pts, profile=profile)
-;       window, /free, xs=500, ys=300
-;       plot, dsk_pts[*,0], profile
-;
-;     .. image:: saturn_sector_1.jpeg
-;
+;     Below is the code for four different types of plots using pg_profile_ring.
+;     Radial (default) and longitudinal (/azimuthal), interpolated (default)
+;     and binned (/bin).  There is an oversamp keyword which defines the amount
+;     to oversample (vs. 1 pixel).  In the case of a longitudinal bin scan,
+;     pixelization can cause some bins to contain very low numbers or none at
+;     all.  In this example oversamp=0.3 to cause the plot to have larger bins
+;     to help alleviate this problem.  The calculated profile is then plotted
+;     in a new window.
+;     
+;     Radial scan::
+;     
+;         dd_prof=pg_profile_ring(dd, gd=gd, outline_ptd, dsk_pts=dsk_pts, profile=profile)
+;         window, /free, xs=500, ys=300
+;         plot, dsk_pts[*,0], profile
+;       
+;     .. image:: saturn_sector_2.jpeg
+;     
 ;     Longitudinal scan::
+;     
 ;       dd_prof = pg_profile_ring(dd, gd=gd, outline_ptd, /azimuthal, dsk_pts=dsk_pts, profile=profile)
 ;       window, /free, xs=500, ys=300
 ;       plot, dsk_pts[*,1], profile, /yno
-;
+;       
 ;     .. image:: saturn_sector_3.jpeg
+;     
 ;     
 ;-
 ;-------------------------------------------------------------------------
