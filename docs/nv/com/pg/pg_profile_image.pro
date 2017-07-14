@@ -67,7 +67,8 @@ function pg_profile_image, dd, cd=cd, gd=gd, outline_ptd, distance=distance, $
  ;-----------------------------------------------
  ; dereference the generic descriptor if given
  ;-----------------------------------------------
- pgs_gd, gd, cd=cd, dd=dd
+ if(NOT keyword_set(dd)) then dd = dat_gd(gd, /dd)
+ if(NOT keyword_set(cd)) then cd = dat_gd(gd, dd=dd, /cd)
 
  im = dat_data(dd)
 
@@ -77,7 +78,7 @@ function pg_profile_image, dd, cd=cd, gd=gd, outline_ptd, distance=distance, $
  outline_pts = pnt_points(outline_ptd)
  nl = cor_udata(outline_ptd, 'nl')
  nw = cor_udata(outline_ptd, 'nw')
- sample= cor_udata(outline_ptd, 'sample')
+ sample = cor_udata(outline_ptd, 'sample')
  nl = nl[0] & nw = nw[0] & sample = sample[0]
 
 

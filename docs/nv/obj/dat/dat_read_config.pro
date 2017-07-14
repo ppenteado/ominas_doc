@@ -54,10 +54,18 @@ pro dat_read_config, env, table_p, filenames_p, continue=continue, status=status
  ;----------------------------------
  ; separate files list
  ;----------------------------------
- filenames = str_nsplit(getenv(env), ':')
+ path = getenv(env)
+ if(NOT keyword_set(path)) then $
+    nv_message, /con, 'Environment variable ' + env + ' not defined.'
+
+ filenames = str_nsplit(path, ':')
 
  w = where(filenames NE '')
- if(w[0] EQ -1) then return
+ if(w[0] EQ -1) then $
+  begin
+   status = -1
+   return
+  end
  filenames = filenames[w]
 
  if(NOT keyword_set(filenames[0])) then $
@@ -75,7 +83,12 @@ pro dat_read_config, env, table_p, filenames_p, continue=continue, status=status
  ; concatenate all files
  ;----------------------------------
  n = n_elements(filenames)
- for i=0, n-1 do lines = append_array(lines, read_txt_file(filenames[i]))
+ for i=0, n-1 do $
+  begin
+   s = read_txt_file(filenames[i], status=status)
+   if(status EQ 0) then lines = append_array(lines, s) $
+   else nv_message, /con, 'Not found: ' + filenames[i]
+  end
 
  w = where(lines NE '')
  if(w[0] EQ -1) then return

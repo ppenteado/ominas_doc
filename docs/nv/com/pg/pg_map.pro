@@ -119,7 +119,15 @@ function pg_map, dd, md=md, cd=cd, bx=bx, gbx=_gbx, dkx=dkx, sund=sund, gd=gd, $
  ;-----------------------------------------------
  ; dereference the generic descriptor if given
  ;-----------------------------------------------
- pgs_gd, gd, dd=dd, cd=cd, bx=bx, md=md, sund=sund, dkx=dkx, gbx=_gbx
+ if(NOT keyword_set(dd)) then dd = dat_gd(gd, /dd)
+ if(NOT keyword_set(cd)) then cd = dat_gd(gd, dd=dd, /cd)
+ if(NOT keyword_set(bx)) then bx = dat_gd(gd, dd=dd, /bx)
+ if(NOT keyword_set(_gbx)) then _gbx = dat_gd(gd, dd=dd, /gbx)
+ if(NOT keyword_set(dkx)) then dkx = dat_gd(gd, dd=dd, /dkx)
+ if(NOT keyword_set(sund)) then sund = dat_gd(gd, dd=dd, /sund)
+ if(NOT keyword_set(md)) then md = dat_gd(gd, dd=dd, /md)
+
+
  if(keyword_set(_gbx)) then gbx = _gbx
  if(NOT keyword_set(bx)) then $
   begin
@@ -129,8 +137,7 @@ function pg_map, dd, md=md, cd=cd, bx=bx, gbx=_gbx, dkx=dkx, sund=sund, gd=gd, $
 
  if(keyword_set(dkx)) then $
   begin
-   if(NOT keyword_set(_gbx)) then $
-            nv_message, name='pg_map', 'Globe descriptor required.'
+   if(NOT keyword_set(_gbx)) then nv_message, 'Globe descriptor required.'
    gbx = _gbx[0,*]
    __gbx = get_primary(cd, _gbx, rx=dkx)
    if(keyword_set(__gbx)) then gbx = __gbx  
@@ -140,7 +147,9 @@ function pg_map, dd, md=md, cd=cd, bx=bx, gbx=_gbx, dkx=dkx, sund=sund, gd=gd, $
  ;---------------------------------------
  ; create map data descriptor
  ;---------------------------------------
- dd_map = dat_create_descriptors(1, instrument='MAP', filetype=dat_filetype(dd))
+ dd_map = dat_create_descriptors(1, $
+       instrument='MAP', filetype=dat_filetype(dd), $
+       name=cor_name(bx))
 
 
  ;------------------------------------------------------------------

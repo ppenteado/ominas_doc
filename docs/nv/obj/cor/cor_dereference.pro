@@ -5,7 +5,7 @@
 ;
 ;
 ; PURPOSE:
-;	Turns an array of pointers to descriptors into an array of descriptors.
+;	Turns an array of objects into an array of structures.
 ;
 ;
 ; CATEGORY:
@@ -18,7 +18,8 @@
 ;
 ; ARGUMENTS:
 ;  INPUT:
-;	xd:	Array of pointers to an arbitrary type of descriptor.
+;	xd:	Array of objects.  Objects may have different classes, but only
+;		their common fields are dereferenced.
 ;
 ;  OUTPUT:
 ;	NONE
@@ -28,7 +29,7 @@
 ;
 ;
 ; RETURN:
-;	Array of descriptors (structures).
+;	Array of structures.
 ;
 ;
 ; STATUS:

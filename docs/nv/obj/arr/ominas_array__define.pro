@@ -13,8 +13,9 @@ end_keywords)
  if(keyword_set(ard0)) then struct_assign, ard0, self
 
  self.abbrev = 'ARR'
+ self.tag = 'ARD'
 
- if(keyword__set(primary)) then self.__PROTECT__primary = decrapify(primary[ii])
+ if(keyword__set(primary)) then self.__PROTECT__primary_xd = decrapify(primary[ii])
  if(keyword__set(surface_pts)) then $
            self.surface_pts_p = nv_ptr_new(decrapify(surface_pts[*,*,ii]))
 
@@ -74,7 +75,7 @@ pro ominas_array__define
  struct = $
     { ominas_array, inherits ominas_core, $
 	surface_pts_p:	 ptr_new(), $		; Surface coords of location.
-        __PROTECT__primary:     obj_new() $	; primary pd
+        __PROTECT__primary_xd:     obj_new() $	; primary pd
     }
 
 end

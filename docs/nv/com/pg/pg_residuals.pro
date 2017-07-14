@@ -58,7 +58,7 @@ function pg_residuals, scan_ptd
    ;-------------------
    ; get scan data
    ;-------------------
-   pnt_get, scan_ptd[i], data=scan_data, desc=desc, points=scan_pts, /visible
+   pnt_query, scan_ptd[i], data=scan_data, desc=desc, points=scan_pts, /visible
 
    if(keyword__set(scan_data)) then $
     begin
@@ -84,7 +84,7 @@ function pg_residuals, scan_ptd
        resx = [resx, dx]
        resy = [resy, dy]
       end $
-     else nv_message, name='pg_residuals', 'Invalid data set.'
+     else nv_message, 'Invalid data set.'
 
     end
   end

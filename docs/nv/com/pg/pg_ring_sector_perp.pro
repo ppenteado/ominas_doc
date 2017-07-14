@@ -56,7 +56,7 @@
 ;        nodsk:     If set, image points will not be included in the output 
 ;                   POINT.
 ;
-;    noverbose:     If set, messages are suppressed.
+;       silent:     If set, messages are suppressed.
 ;
 ;
 ;  OUTPUT:
@@ -68,6 +68,10 @@
 ;      spacing is determined by the sample keyword.  The POINT object
 ;      also contains the disk coordinate for each point and the user fields
 ;      'nrad' and 'nlon' giving the number of points in radius and longitude.
+;
+; KNOWN BUGS:
+;	The sector flips when it hits zero azimuth rather than retaining a 
+;	consistent sense.
 ;
 ;
 ; ORIGINAL AUTHOR : J. Spitale ; 5/2005
@@ -86,7 +90,7 @@ function pg_ring_sector_perp, p, cd=cd, dkx=dkx, gd=gd, $
                          win_num=win_num, $
                          restore=restore, slope=slope, $
                          p0=p0, xor_graphics=xor_graphics, $
-                         color=color, noverbose=noverbose, nodsk=nodsk
+                         color=color, silent=silent, nodsk=nodsk
 
  if(NOT keyword__set(win_num)) then win_num=!window
  if(NOT keyword__set(color)) then color=!p.color
@@ -95,19 +99,16 @@ function pg_ring_sector_perp, p, cd=cd, dkx=dkx, gd=gd, $
  ;-----------------------------------------------
  ; dereference the generic descriptor if given
  ;-----------------------------------------------
- if(keyword__set(gd)) then $
-  begin
-   if(NOT keyword_set(cd)) then cd=gd.cd
-   if(NOT keyword_set(dkx)) then dkx=gd.dkx
-  end
+ if(NOT keyword_set(cd)) then cd = dat_gd(gd, dd=dd, /cd)
+ if(NOT keyword_set(dkx)) then dkx = dat_gd(gd, dd=dd, /dkx)
 
  ;-----------------------------------
  ; validate descriptors
  ;-----------------------------------
- if(n_elements(dkx) GT 1) then nv_message, name='pg_ring_sector_perp', $
-                          'No more than one ring descriptor may be specified.'
- if(n_elements(cds) GT 1) then nv_message, name='pg_ring_sector_perp', $
-                        'No more than one camera descriptor may be specified.'
+ if(n_elements(dkx) GT 1) then $
+               nv_message, 'No more than one ring descriptor may be specified.'
+ if(n_elements(cds) GT 1) then $
+               nv_message, 'No more than one camera descriptor may be specified.'
  rd = dkx[0]
 
  nrad = 3 & nlon = 5
@@ -136,11 +137,8 @@ function pg_ring_sector_perp, p, cd=cd, dkx=dkx, gd=gd, $
 
 
 
-   if(NOT keyword_set(noverbose)) then $
-    begin
-     nv_message, 'Drag and release to define ring sector', $
-                                   name='pg_ring_sector_perp', /continue
-    end
+   if(NOT keyword_set(silent)) then $
+           nv_message, 'Drag and release to define ring sector', /continue
 
    ;-----------------------------------
    ; initial point

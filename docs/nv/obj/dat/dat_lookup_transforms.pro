@@ -30,8 +30,7 @@
 ;
 ;
 ; KEYWORDS:
-;  INPUT: 
-;	silent:	If set, messages are suppressed.
+;  INPUT: NONE
 ;
 ;  OUTPUT: NONE
 ;
@@ -50,7 +49,7 @@
 ;=============================================================================
 pro dat_lookup_transforms, instrument, $
        input_transforms, output_transforms, $
-        tab_transforms=tab_transforms, silent=silent
+        tab_transforms=tab_transforms
 @nv_block.common
 @core.include
 
@@ -67,7 +66,7 @@ pro dat_lookup_transforms, instrument, $
    dat_read_config, 'NV_TRANSFORMS', stat=stat, /con, $
               nv_state.trf_table_p, nv_state.transforms_filenames_p
  if(stat NE 0) then $
-   nv_message, name='dat_lookup_transforms', /con, $
+   nv_message, /con, $
      'No transforms table.', $
        exp=['The transforms table specifies the names of programs to transform', $
             'data values as they are read or written.  OMINAS should work fine', $

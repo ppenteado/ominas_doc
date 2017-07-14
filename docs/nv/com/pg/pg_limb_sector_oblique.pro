@@ -67,6 +67,10 @@
 ;      returned disk descriptor, and the user fields 'nrad' and 'nlon' 
 ;      giving the number of points in altitude and azimuth.
 ;
+; KNOWN BUGS:
+;	The sector flips when it hits zero azimuth rather than retaining a 
+;	consistent sense.
+;
 ;
 ; MODIFICATION HISTORY : 
 ;	Spitale; 1/2007		original version
@@ -85,7 +89,7 @@ function pg_limb_sector_oblique, cd=cd, gbx=_gbx, gd=gd, $
                          win_num=win_num, $
                          restore=restore, $
                          p0=_p0, p1=p1, width=width, xor_graphics=xor_graphics, $
-                         color=color, noverbose=noverbose, nodsk=nodsk, $
+                         color=color, silent=silent, nodsk=nodsk, $
                          dkd=dkd, altitudes=altitudes, azimuths=azimuths, $
                          limb_pts_body=limb_pts_body, cw=cw
 
@@ -96,14 +100,10 @@ function pg_limb_sector_oblique, cd=cd, gbx=_gbx, gd=gd, $
  ;-----------------------------------------------
  ; dereference the generic descriptor if given
  ;-----------------------------------------------
- if(keyword__set(gd)) then $
-  begin
-   if(NOT keyword__set(cd)) then cd=gd.cd
-   if(NOT keyword__set(_gbx)) then _gbx=gd.gbx
-  end
+ if(NOT keyword_set(cd)) then cd = dat_gd(gd, dd=dd, /cd)
+ if(NOT keyword_set(_gbx)) then _gbx = dat_gd(gd, dd=dd, /gbx)
 
- if(NOT keyword__set(_gbx)) then $
-            nv_message, name='pg_limb_sector', 'Globe descriptor required.'
+ if(NOT keyword__set(_gbx)) then nv_message, 'Globe descriptor required.'
  __gbx = get_primary(cd, _gbx)
  if(keyword__set(__gbx[0])) then gbx = __gbx $
  else  gbx = _gbx[0,*]
@@ -111,8 +111,8 @@ function pg_limb_sector_oblique, cd=cd, gbx=_gbx, gd=gd, $
  ;-----------------------------------
  ; validate descriptors
  ;-----------------------------------
- if(n_elements(cds) GT 1) then nv_message, name='pg_limb_sector', $
-                        'No more than one camera descriptor may be specified.'
+ if(n_elements(cds) GT 1) then $
+           nv_message, 'No more than one camera descriptor may be specified.'
 
  ;-----------------------------------
  ; setup pixmap
@@ -129,11 +129,8 @@ function pg_limb_sector_oblique, cd=cd, gbx=_gbx, gd=gd, $
 
 
 
- if(NOT keyword__set(noverbose)) then $
-  begin
-   nv_message, 'Drag and release to define radial extent of limb sector', $
-                                         name='pg_limb_sector_oblique', /continue
-  end
+ if(NOT keyword__set(silent)) then $
+   nv_message, 'Drag and release to define radial extent of limb sector', /con
 
 
  ;-----------------------------------
@@ -157,11 +154,8 @@ function pg_limb_sector_oblique, cd=cd, gbx=_gbx, gd=gd, $
  ;----------------------------------------------------------
  ; select azimuthal extent of sector
  ;----------------------------------------------------------
- if(NOT keyword__set(noverbose)) then $
-  begin
-   nv_message, 'Drag and click to define azimuthal extent of limb sector', $
-                                           name='pg_limb_sector_oblique', /continue
-  end
+ if(NOT keyword__set(silent)) then $
+   nv_message, 'Drag and click to define azimuthal extent of limb sector', /con
 
 
 

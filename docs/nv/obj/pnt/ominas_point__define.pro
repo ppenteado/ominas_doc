@@ -13,16 +13,12 @@ end_keywords)
  if(keyword_set(ptd0)) then struct_assign, ptd0, self
 
  self.abbrev = 'PNT'
+ self.tag = 'PTD'
 
  ;-----------------------
  ; desc
  ;-----------------------
  if(keyword_set(desc)) then self.desc = desc[ii]
-
- ;-----------------------
- ; input
- ;-----------------------
- if(keyword_set(input)) then self.input = input[ii]
 
  ;-----------------------
  ; points
@@ -57,8 +53,7 @@ end_keywords)
      nt = ntv
     end $
    else if((nvv NE nv) OR (ntv NE nt)) then $
-                 nv_message, name='ominas_point::init', $
-                                       'Incompatible vector array dimensions.'
+                     nv_message, 'Incompatible vector array dimensions.'
   end
 
  ;-----------------------
@@ -84,8 +79,7 @@ end_keywords)
      nt = ntf
     end $
    else if((nvf NE nv) OR (ntf NE nt)) then $
-                nv_message, name='ominas_point::init', $
-                                          'Incompatible flag array dimensions.'
+                         nv_message, 'Incompatible flag array dimensions.'
   end
 
 
@@ -109,8 +103,7 @@ end_keywords)
      nt = ntd
     end $
    else if((nvd NE nv) OR (ntd NE nt)) then $
-              nv_message, name='ominas_point::init', $
-                            'Incompatible point-by-point data array dimensions.'
+              nv_message, 'Incompatible point-by-point data array dimensions.'
   end
 
 
@@ -126,9 +119,7 @@ end_keywords)
    nvt = dim[0]
 
    if(keyword_set(ndat)) then $
-       if(nvt NE ndat) then nv_message, $
-                     name='ominas_point::init', $
-                                       'Incompatible tags array dimensions.'
+       if(nvt NE ndat) then nv_message, 'Incompatible tags array dimensions.'
   end
 
 
@@ -140,6 +131,7 @@ end_keywords)
  if(keyword_set(nt)) then self.nt = nt[ii]
 
 
+ if(keyword_set(assoc_xd)) then self.__protect__assoc_xd = assoc_xd[ii]
 
  return, 1
 end
@@ -178,12 +170,11 @@ end
 ;
 ;	flags_p:	Pointer to point-by-point flag array.
 ;
-;	input:		Description of input data used to produce these
-;			points.
-;
 ;	nv:		Number of elements in the nv direction.
 ;
 ;	nt:		Number of elements in the nt direction.
+;
+;	assoc_xd:	Associated descriptor. 
 ;
 ;
 ;
@@ -205,9 +196,9 @@ pro ominas_point__define
 		flags_p:	ptr_new(), $	; flags
 		data_p:		ptr_new(), $	; point-by-point user data
 		tags_p:		ptr_new(), $	; tags for p-b-p user data
-		input:		'', $		; description of input data
 		nv:		0l, $
-		nt:		0l $
+		nt:		0l, $
+		__PROTECT__assoc_xd: 	obj_new() $	; Associated descriptor
 	}
 
 end

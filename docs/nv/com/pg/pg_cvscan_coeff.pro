@@ -98,7 +98,7 @@ function pg_cvscan_coeff, scan_ptd, axis_ptd=_axis_ptd, fix=fix
  ;===============================================
  for i=0, n_objects-1 do $
   begin
-   pnt_get, scan_ptd[i], data=scan_data, points=scan_pts, /visible
+   pnt_query, scan_ptd[i], data=scan_data, points=scan_pts, /visible
 
    ;---------------------------------------------------------------
    ; if scan data exists, compute the least-squares coefficients
@@ -155,8 +155,7 @@ function pg_cvscan_coeff, scan_ptd, axis_ptd=_axis_ptd, fix=fix
  ;---------------------------
  ; error if no scans exist
  ;---------------------------
- if(n_scans EQ 0) then nv_message, name='pg_cvscan_coeff', $
-                                      'No scan data available - use pg_cvcsan.'
+ if(n_scans EQ 0) then nv_message, 'No scan data available - use pg_cvcsan.'
 
 
 

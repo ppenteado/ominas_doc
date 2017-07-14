@@ -52,6 +52,9 @@
 ;=============================================================================
 pro cor_set_udata, crd, name, udata, noevent=noevent
 @core.include
+
+ if(NOT defined(udata)) then return
+
  _crd = cor_dereference(crd)
 
  if(NOT keyword_set(name)) then _crd.udata_tlp = udata $
@@ -86,7 +89,7 @@ pro cor_set_udata, crd, name, udata, noevent=noevent
      nn = dim[ndim]
      dim = dim[0:ndim-1]
 
-     if(nn NE n) then nv_message, name='cor_set_udata', 'Inconsistent array.'
+     if(nn NE n) then nv_message, 'Inconsistent array.'
 
      ss = replicate({x:make_array(type=type, dim=dim)}, n)
      ss.x = udata

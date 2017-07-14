@@ -31,8 +31,11 @@
 ;	dkx:	 Array (n_objects, n_timesteps) of descriptors of objects 
 ;		 which must be a subclass of DISK.
 ;
-;	gd:	 Generic descriptor.  If given, the descriptor inputs 
-;		 are taken from the this structure.
+;	gd:	Generic descriptor.  If given, the descriptor inputs 
+;		are taken from this structure if not explicitly given.
+;
+;	dd:	Data descriptor containing a generic descriptor to use
+;		if gd not given.
 ;
 ;	inner/outer: If either of these keywords are set, then only
 ;	             that edge is computed.
@@ -43,10 +46,10 @@
 ;	reveal:	 Normally, points computed for objects whose opaque flag
 ;		 is set are made invisible.  /reveal suppresses this behavior.
 ;
-;	fov:	 If set points are computed only within this many camera
+;	clip:	 If set points are computed only within this many camera
 ;		 fields of view.
 ;
-;	cull:	 If set, POINT objects excluded by the fov keyword
+;	cull:	 If set, POINT objects excluded by the clip keyword
 ;		 are not returned.  Normally, empty POINT objects
 ;		 are returned as placeholders.
 ;
@@ -69,15 +72,15 @@
 ;	
 ;-
 ;=============================================================================
-function pg_disk, cd=cd, dkx=dkx, gd=gd, fov=fov, cull=cull, $
+function pg_disk, cd=cd, dkx=dkx, dd=dd, gd=gd, clip=clip, cull=cull, $
                   inner=inner, outer=outer, npoints=npoints, reveal=reveal
 @pnt_include.pro
 
  ;-----------------------------------------------
  ; dereference the generic descriptor if given
  ;-----------------------------------------------
- pgs_gd, gd, cd=cd, dkx=dkx
- if(NOT keyword_set(cd)) then cd = 0 
+ if(NOT keyword_set(cd)) then cd = dat_gd(gd, dd=dd, /cd)
+ if(NOT keyword_set(dkx)) then dkx = dat_gd(gd, dd=dd, /dkx)
 
  if(NOT keyword_set(dkx)) then return, obj_new()
 
@@ -89,14 +92,14 @@ function pg_disk, cd=cd, dkx=dkx, gd=gd, fov=fov, cull=cull, $
  inner = keyword_set(inner) OR keyword_set(both)
  outer = keyword_set(outer) OR keyword_set(both)
 
- if(keyword_set(fov)) then slop = (cam_size(cd[0]))[0]*(fov-1) > 1
+ if(keyword_set(clip)) then slop = (cam_size(cd[0]))[0]*(clip-1) > 1
 
  ;-----------------------------------
  ; validate descriptors
  ;-----------------------------------
  nt = n_elements(cd)
- pgs_count_descriptors, dkx, nd=n_disks, nt=nt1
- if(nt NE nt1) then nv_message, name='pg_disk', 'Inconsistent timesteps.'
+ cor_count_descriptors, dkx, nd=n_disks, nt=nt1
+ if(nt NE nt1) then nv_message, 'Inconsistent timesteps.'
 
 
  hide_flags = make_array(npoints, val=PTD_MASK_INVISIBLE)
@@ -117,11 +120,11 @@ function pg_disk, cd=cd, dkx=dkx, gd=gd, fov=fov, cull=cull, $
        xd = reform(dkx[i,ii], nt)
 
        ;- - - - - - - - - - - - - - - - -
-       ; fov 
+       ; clip 
        ;- - - - - - - - - - - - - - - - -
        ta = 0
        continue = 1
-       if(keyword_set(fov)) then $
+       if(keyword_set(clip)) then $
         begin
          dsk_image_bounds, cd, xd, slop=slop, /plane, $
                  lonmin=lonmin, lonmax=lonmax, border_pts_im=border_pts_im
@@ -143,8 +146,8 @@ function pg_disk, cd=cd, dkx=dkx, gd=gd, fov=fov, cull=cull, $
          outer_disk_ptd[i] = $
             pnt_create_descriptors(name = cor_name(xd) + '-OUTER', $
 		    desc = 'disk_outer', $
-;		    input = pgs_desc_suffix(dkx=dkx[i,0], gbx=gbx[0], cd[0]), $
-		    input = pgs_desc_suffix(dkx=dkx[i,0], cd[0]), $
+;		    gd = {dkx:dkx[i,0], gbx:gbx[0], cd:cd[0]}, $
+		    gd = {dkx:dkx[i,0], cd:cd[0]}, $
 		    assoc_xd = xd, $
 		    points = image_pts, $
 		    vectors = inertial_pts)
@@ -172,11 +175,11 @@ function pg_disk, cd=cd, dkx=dkx, gd=gd, fov=fov, cull=cull, $
        xd = reform(dkx[i,ii], nt)
 
        ;- - - - - - - - - - - - - - - - -
-       ; fov 
+       ; clip 
        ;- - - - - - - - - - - - - - - - -
        ta = 0
        continue = 1
-       if(keyword_set(fov)) then $
+       if(keyword_set(clip)) then $
         begin
          dsk_image_bounds, cd, xd, slop=slop, /plane, $
                lonmin=lonmin, lonmax=lonmax, border_pts_im=border_pts_im
@@ -198,8 +201,8 @@ function pg_disk, cd=cd, dkx=dkx, gd=gd, fov=fov, cull=cull, $
          inner_disk_ptd[i] = $
             pnt_create_descriptors(name = cor_name(xd) + '-INNER', $
 		    desc = 'disk_inner', $
-;		    input = pgs_desc_suffix(dkx=dkx[i,0], gbx=gbx[0], cd[0]), $
-		    input = pgs_desc_suffix(dkx=dkx[i,0], cd[0]), $
+;		    gd = {dkx:dkx[i,0], gbx:gbx[0], cd:cd[0]}, $
+		    gd = {dkx:dkx[i,0], cd:cd[0]}, $
 		    assoc_xd = xd, $
 		    points = image_pts, $
 		    vectors = inertial_pts)
@@ -229,7 +232,7 @@ function pg_disk, cd=cd, dkx=dkx, gd=gd, fov=fov, cull=cull, $
  ; crop to fov, if desired
  ;  Note, that one image size is applied to all points
  ;------------------------------------------------------
- if(keyword_set(fov)) then $
+ if(keyword_set(clip)) then $
   begin
    pg_crop_points, disk_ptd, cd=cd[0], slop=slop
    if(keyword_set(cull)) then disk_ptd = pnt_cull(disk_ptd)

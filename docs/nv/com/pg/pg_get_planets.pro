@@ -63,7 +63,44 @@
 ;			to use instead of those in the translators table.  If
 ;			this keyword is specified, no translators from the 
 ;			table are called, but the translators keywords
-;			from the table are still used.   
+;			from the table are still used.  
+;
+;
+;    Descriptor Select Keywords
+;    --------------------------
+;    Descriptor select keywords are combined with OR logic.  They are implemented
+;    in this routine as described below after the translators have been called,
+;    but they are also added to the translator keywords.  The purpose of sending
+;    then to the translators as well is to give the translators an opportunity
+;    to filter their outputs before potentially generating a huge array of
+;    descriptors that would mostly be filtered out by this routine.   
+;
+;	fov/cov:	Select all planets that fall within this many fields of
+;			view (fov) (+/- 10%) from the center of view (cov).
+;			Default cov is the camera optic axis.
+;
+;	pix:		Select all planets whose apparent size (in pixels) is 
+;			greater than or equal to this value.
+;
+;	radmax:		Select all planets whose radius is greater than or 
+;			equal to this value.
+;
+;	radmin:		Select all planets whose radius is less than or 
+;			equal to this value.
+;
+;	distmax:	Select all planets whose distance is greater than or 
+;			equal to this value.
+;
+;	distmin:	Select all planets whose distance is less than or 
+;			equal to this value.
+;
+;	nlarge:		Select n largest planets.
+;
+;	nsmall:		Select n smallest planets.
+;
+;	nclose:		Select n closst planets.
+;
+;	nfar:		Select n farthest planets.
 ;
 ;
 ; RETURN:
@@ -86,7 +123,46 @@
 ;	
 ;-
 ;=============================================================================
-function pg_get_planets, dd, trs, pd=_pd, od=od, sd=sd, gd=gd, $
+
+
+
+;===========================================================================
+; pggp_select_planets
+;
+;
+;===========================================================================
+pro pggp_select_planets, dd, pd, od=od, select
+
+ ;------------------------------------------------------------------------
+ ; standard body filters
+ ;------------------------------------------------------------------------
+ sel = pg_select_bodies(dd, pd, od=od, select)
+
+ ;------------------------------------------------------------------------
+ ; implement any selections
+ ;------------------------------------------------------------------------
+ if(keyword_set(sel)) then $
+  begin
+   sel = unique(sel)
+
+   w = complement(pd, sel)
+   if(w[0] NE -1) then nv_free, pd[w]
+
+   if(sel[0] EQ -1) then pd = obj_new() $
+   else pd = pd[sel]
+  end
+
+
+end
+;===========================================================================
+
+
+
+;===========================================================================
+; pg_get_planets
+;
+;===========================================================================
+function pg_get_planets, dd, trs, pd=_pd, od=od, sd=sd, _extra=select, $
                              override=override, verbatim=verbatim, raw=raw, $
 @plt__keywords.include
 @nv_trs_keywords_include.pro
@@ -95,14 +171,19 @@ function pg_get_planets, dd, trs, pd=_pd, od=od, sd=sd, gd=gd, $
  ndd = n_elements(dd)
 
  ;-----------------------------------------------
+ ; add selection keywords to translator keywords
+ ;-----------------------------------------------
+ if(keyword_set(select)) then pg_add_selections, trs, select
+
+ ;-----------------------------------------------
  ; dereference the generic descriptor if given
  ;-----------------------------------------------
- pgs_gd, gd, od=od, sd=sd, dd=dd
+ if(NOT keyword_set(sd)) then sd = dat_gd(gd, dd=dd, /sd)
+ if(NOT keyword_set(od)) then od = dat_gd(gd, dd=dd, /od)
 
  if(keyword_set(od)) then $
    if(n_elements(od) NE n_elements(dd)) then $
-               nv_message, name='pg_get_planets', $
-                    'One observer descriptor required for each data descriptor'
+          nv_message, 'One observer descriptor required for each data descriptor'
 
 
  ;-------------------------------------------------------------------
@@ -112,34 +193,21 @@ function pg_get_planets, dd, trs, pd=_pd, od=od, sd=sd, gd=gd, $
   begin
    n = n_elements(name)
 
+   if(keyword_set(dd)) then gd = dd
    pd = plt_create_descriptors(n, $
-		name=name, $
-		orient=orient, $
-		avel=avel, $
-		pos=pos, $
-		vel=vel, $
-		time=time, $
-		radii=radii, $
-		mass=mass, $
-		albedo=albedo, $
-		refl_fn=refl_fn, $
-		refl_parm=refl_parm, $
-		phase_fn=phase_fn, $
-		phase_parm=phase_parm, $
-		opaque=opaque, $
-		opacity=opacity, $
-		lora=lora)
+@plt__keywords.include
+end_keywords)
+   gd = !null
+
   end $
  ;-------------------------------------------------------------------
  ; otherwise, get planet descriptors from the translators
  ;-------------------------------------------------------------------
  else $
   begin
-   ;- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-   ; if names requested, the force tr_first
-   ;- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-   if(keyword_set(name)) then tr_first = 1
-
+   ;-----------------------------------------------
+   ; call translators
+   ;-----------------------------------------------
    pd = dat_get_value(dd, 'PLT_DESCRIPTORS', key1=od, key2=sd, key4=_pd, $
                                 key7=time, key8=name, trs=trs, $
 @nv_trs_keywords_include.pro
@@ -176,34 +244,35 @@ function pg_get_planets, dd, trs, pd=_pd, od=od, sd=sd, gd=gd, $
    if(keyword_set(od) AND (NOT keyword_set(raw))) then $
     for i=0, ndd-1 do $
      begin
-      w = where(cor_assoc_xd(pd) EQ dd[i])
-      if(w[0] NE -1) then pd[w] = abcorr(od[i], pd[w], c=pgc_const('c'));, /iterate)
+      w = where(cor_gd(pd, /dd) EQ dd[i])
+      if(w[0] NE -1) then abcorr, od[i], pd[w], c=const_get('c')
      end
 
    ;-------------------------------------------------------------------
    ; override the specified values (name cannot be overridden)
    ;-------------------------------------------------------------------
-   w = nwhere(dd, cor_assoc_xd(pd))
-   if(n_elements(time) NE 0) then bod_set_time, pd, time[w]
-   if(n_elements(orient) NE 0) then bod_set_orient, pd, orient[*,*,w]
-   if(n_elements(avel) NE 0) then bod_set_avel, pd, avel[*,*,w]
-   if(n_elements(pos) NE 0) then bod_set_pos, pd, pos[*,*,w]
-   if(n_elements(vel) NE 0) then bod_set_vel, pd, vel[*,*,w]
-   if(n_elements(radii) NE 0) then glb_set_radii, pd, radii[*,w]
-   if(n_elements(mass) NE 0) then sld_set_mass, pd, mass[w]
-   if(n_elements(lora) NE 0) then glb_set_lora, pd, lora[w]
-   if(n_elements(albedo) NE 0) then sld_set_albedo, pd, albedo[w]
-   if(n_elements(refl_fn) NE 0) then sld_set_refl_fn, pd, refl_fn[w]
-   ;if(n_elements(refl_parm) NE 0) then sld_set__refl_parm, pd, refl_parm[w] ;no such function
-   if(n_elements(phase_fn) NE 0) then sld_set_phase_fn, pd, phase_fn[w]
-   ;if(n_elements(phase_parm) NE 0) then sld_set__phase_parm, pd, phase_parm[w] ;no such function
-   if(n_elements(opaque) NE 0) then bod_set_opaque, pd, opaque[w]
-   if(n_elements(opacity) NE 0) then sld_set_opacity, pd, opacity[w]
+   if(defined(name)) then _name = name & name = !null
+   plt_assign, pd, /noevent, $
+@plt__keywords.include
+end_keywords
+    if(defined(_name)) then name = _name
+
   end
 
+ ;--------------------------------------------------------
+ ; filter planets
+ ;--------------------------------------------------------
+ if(NOT keyword_set(pd)) then return, obj_new()
+ if(keyword_set(select)) then pggp_select_planets, dd, pd, od=od, select
+ if(NOT keyword_set(pd)) then return, obj_new()
 
+ ;--------------------------------------------------------
+ ; update generic descriptors
+ ;--------------------------------------------------------
+ if(keyword_set(dd)) then dat_set_gd, dd, gd, od=od, sd=sd
+ dat_set_gd, pd, gd, od=od, sd=sd
 
-return, pd
+ return, pd
 end
 ;===========================================================================
 

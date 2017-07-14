@@ -1,15 +1,15 @@
 ;=============================================================================
 ;+
-; assoc_xd:
+; NAME:
 ;	pnt_assoc_xd
 ;
 ;
 ; PURPOSE:
-;	Returns the associated descriptor for a POINT object.
+;	Returns the associated descriptor for a CORE object.
 ;
 ;
 ; CATEGORY:
-;	NV/SYS/PS
+;	NV/SYS/PNT
 ;
 ;
 ; CALLING SEQUENCE:
@@ -18,7 +18,7 @@
 ;
 ; ARGUMENTS:
 ;  INPUT:
-;	ptd:	Points object.
+;	ptd:	POINT object.
 ;
 ;  OUTPUT: NONE
 ;
@@ -51,7 +51,7 @@
 function pnt_assoc_xd, ptd, noevent=noevent
  nv_notify, ptd, type = 1, noevent=noevent
  _ptd = cor_dereference(ptd)
- return, _ptd.assoc_xd
+ return, _ptd.__protect__assoc_xd
 end
 ;===========================================================================
 

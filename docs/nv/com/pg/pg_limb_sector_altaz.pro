@@ -81,6 +81,10 @@
 ;      returned disk descriptor, and the user fields 'nrad' and 'nlon' 
 ;      giving the number of points in altitude and azimuth.
 ;
+; KNOWN BUGS:
+;	The sector flips when it hits zero azimuth rather than retaining a 
+;	consistent sense.
+;
 ;
 ; ORIGINAL AUTHOR : 
 ;	Spitale; 8/2006
@@ -99,11 +103,8 @@ function pg_limb_sector_altaz, cd=cd, gbx=_gbx, gd=gd, dkd=dkd, $
  ;-----------------------------------------------
  ; dereference the generic descriptor if given
  ;-----------------------------------------------
- if(keyword__set(gd)) then $
-  begin
-   if(NOT keyword__set(cd)) then cd=gd.cd
-   if(NOT keyword__set(_gbx)) then _gbx=gd.gbx
-  end
+ if(NOT keyword_set(cd)) then cd = dat_gd(gd, dd=dd, /cd)
+ if(NOT keyword_set(_gbx)) then _gbx = dat_gd(gd, dd=dd, /gbx)
 
  if(NOT keyword__set(_gbx)) then $
             nv_message, name='pg_limb_sector_altaz', 'Globe descriptor required.'
@@ -154,7 +155,6 @@ function pg_limb_sector_altaz, cd=cd, gbx=_gbx, gd=gd, dkd=dkd, $
                       data = transpose(dsk_outline_pts))
  cor_set_udata, outline_ptd, 'nrad', [nalt]
  cor_set_udata, outline_ptd, 'nlon', [naz]
-		udata = [naz])
 
  return, outline_ptd
 end

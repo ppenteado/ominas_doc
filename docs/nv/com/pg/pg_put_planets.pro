@@ -14,7 +14,6 @@
 ;
 ; CALLING SEQUENCE:
 ;	pg_put_planets, dd, pd=pd
-;	pg_put_planets, dd, gd=gd
 ;
 ;
 ; ARGUMENTS:
@@ -34,12 +33,11 @@
 ;
 ; KEYWORDS:
 ;  INPUT:
-;	pds:	Planet descriptors to output.
-;
-;	gd:	Generic descriptor.  If present, planet descriptors are
-;		taken from the gd.pd field.
+;	pd:	Planet descriptors to output.
 ;
 ;	plt_*:		All planet override keywords are accepted.
+;
+;	raw:		If set, no aberration corrections are performed.
 ;
 ;	tr_override:	String giving a comma-separated list of translators
 ;			to use instead of those in the translators table.  If
@@ -74,46 +72,43 @@
 ;	
 ;-
 ;=============================================================================
-pro pg_put_planets, dd, trs, pds=pds, ods=ods, gd=gd, $
+pro pg_put_planets, dd, trs, pd=_pd, ods=ods, raw=raw, $
 @plt__keywords.include
 @nv_trs_keywords_include.pro
 		end_keywords
 
 
- ;-----------------------------------------------
- ; dereference the generic descriptor if given
- ;-----------------------------------------------
- if(keyword_set(gd)) then $
-  begin
-   if(NOT keyword_set(pds)) then pds=gd.pds
-   if(NOT keyword_set(ods)) then ods=gd.ods
-  end
- if(NOT keyword_set(pds)) then nv_message, $
-                                name='pg_put_planets', 'No planet descriptor.'
- if(NOT keyword_set(ods)) then nv_message, $
-                               name='pg_put_planets', 'No observer descriptor.'
-
-
  ;-------------------------------------------------------------------
  ; override the specified values (name cannot be overridden)
  ;-------------------------------------------------------------------
- if(n_elements(orient) NE 0) then bod_set_orient, pds, orient
- if(n_elements(avel) NE 0) then bod_set_avel, pds, avel
- if(n_elements(pos) NE 0) then bod_set_pos, pds, pos
- if(n_elements(vel) NE 0) then bod_set_vel, pds, vel
- if(n_elements(time) NE 0) then bod_set_time, pds, time
- if(n_elements(radii) NE 0) then glb_set_radii, pds, radii
- if(n_elements(lora) NE 0) then glb_set_lora, pds, lora
+ pd = nv_clone(_pd)
+
+ if(defined(name)) then _name = name & name = !null
+ plt_assign, pd, /noevent, $
+@plt__keywords.include
+end_keywords
+ if(defined(_name)) then name = _name
+
+
+ ;-------------------------------------------------------------------
+ ; invert aberration corrections
+ ;-------------------------------------------------------------------
+ if(keyword_set(ods) AND (NOT keyword_set(raw))) then $
+  for i=0, n_elements(dd)-1 do $
+   begin
+    w = where(cor_gd(pd, /dd) EQ dd[i])
+    if(w[0] NE -1) then abcorr, ods[i], pd[w], c=const_get('c'), /invert
+   end
 
 
  ;-------------------------------
  ; put descriptor
  ;-------------------------------
- dat_put_value, dd, 'PLT_DESCRIPTORS', pds, trs=trs, $
+ dat_put_value, dd, 'PLT_DESCRIPTORS', pd, trs=trs, $
 @nv_trs_keywords_include.pro
                              end_keywords
 
-
+ nv_free, pd
 end
 ;===========================================================================
 

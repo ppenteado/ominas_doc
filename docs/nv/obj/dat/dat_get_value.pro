@@ -46,6 +46,11 @@
 ;			descriptor of a given name for each input data 
 ;			descriptor.  /tr_nosort disables this action.
 ;
+;	tr_order:	If set (and tr_nosort not set), dat_get_value selects 
+;			the latest of any duplicately named output descriptors 
+;			instead of the earliest.
+;
+;
 ;  OUTPUT: 
 ;	status:		0 if at least one translator call was successful, 
 ;			-1 otherwise.
@@ -86,11 +91,13 @@ function dat_get_value, dd, keyword, status=status, trs=trs, $
  ;--------------------------------------------
  ; record any transient keyvals
  ;--------------------------------------------
- _dd[0] = dat_add_transient_keyvals(_dd[0], trs)
+ _dd = dat_add_transient_keyvals(_dd, trs)
+
 
  ;--------------------------------------------
  ; build translators list
  ;--------------------------------------------
+; need to group dd based on instrument...
  if(NOT keyword_set(tr_override)) then $
   begin
    if(NOT ptr_valid(_dd[0].input_translators_p)) then $
@@ -102,51 +109,67 @@ function dat_get_value, dd, keyword, status=status, trs=trs, $
    translators = *_dd[0].input_translators_p
   end $
  else translators = str_nsplit(tr_override, ',')
-; else translators = $
-;	   nv_match(*_dd[0].input_translators_p, str_nsplit(tr_override, ','))
  n = n_elements(translators)
 
 
  ;----------------------------------------------------------------
  ; call all translators, building a list of returned values
  ;----------------------------------------------------------------
- n_total = 0
- nmax = 0
- chunk_n = 20
+ nv_suspend_events
+ nv_message, verb=0.9, 'Data descriptor ' + cor_name(dd)
+ nv_message, verb=0.9, 'Keyword ' + keyword
 
  for i=0, n-1 do $
   begin
+   nv_message, verb=0.9, 'Calling translator ' + translators[i]
+
    _dd.last_translator = [i,0]#make_array(ndd, val=1)
    cor_rereference, dd, _dd
+
    xd = call_function(translators[i], dd, keyword, values=xds, stat=stat, $
 @nv_trs_keywords_include.pro
 @nv_trs_keywords1_include.pro
 		    end_keywords)
+
 
    ;--------------------------------------
    ; add values to list
    ;--------------------------------------
    if(stat EQ 0) then $
     begin
+     nv_message, verb=0.9, 'Returned descriptors: ' + $
+                                           str_comma_list([cor_name(xd)])
+     dat_set_gd, dd, xd=xd
      xds = append_array(xds, xd)
+     sort_names = append_array(sort_names, $
+               cor_name(xd) + '-' + str_pad(strtrim(i,2), 4, c='0', align=1))
      if(keyword_set(tr_first)) then i=n
-    end
-  end
+    end $
+   else nv_message, verb=0.9, 'No value.' 
+  end 
  nxds = n_elements(xds)
 
  ;----------------------------------------------------------------
- ; sort xds
+ ; sort xds: remove descriptors with duplicate names, keeping
+ ; the earliest (or latest if /tr_order) returned versions
  ;----------------------------------------------------------------
  result = 0
- if(keyword_set(xds)) then begin
+ if(keyword_set(xds)) then $
+  begin
    status = 0
-   if(NOT keyword_set(tr_nosort)) then begin
-    for i=0, ndd-1 do begin
-      w = where(cor_assoc_xd(xds) EQ dd[i])
+   if(NOT keyword_set(tr_nosort)) then $
+    for i=0, ndd-1 do $
+     begin
+      w = where(cor_gd(xds, /dd) EQ dd[i])
       nw = n_elements(w)
-      if(w[0] NE -1) then begin
+      if(w[0] NE -1) then $
+       begin
+        if(NOT keyword_set(tr_order)) then w = rotate(w,2)		
+				; uniq chooses highest index, so this ensures
+				; that earliest xd gets selected unless /tr_order
         names = cor_name(xds[w])
-        ss = sort(names)
+        sort_names = sort_names[w]
+	ss = sort(sort_names)
         uu = uniq(names[ss])
 
         ii = lindgen(nxds)
@@ -154,11 +177,12 @@ function dat_get_value, dd, keyword, status=status, trs=trs, $
         ii = ii[sort(ii)]
 
         result = append_array(result, xds[ii])
-      endif
-    endfor
-   endif else result = xds
- endif
+       end
+     end $
+    else result = xds
+  end
 
+ nv_resume_events
  return, result
 end
 ;===========================================================================

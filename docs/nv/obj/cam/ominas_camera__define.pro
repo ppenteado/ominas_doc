@@ -13,6 +13,7 @@ end_keywords)
  if(keyword_set(cd0)) then struct_assign, cd0, self
 
  self.abbrev = 'CAM'
+ self.tag = 'CD'
 
  if(keyword_set(scale)) then self.scale = scale[*,ii]
  if(keyword_set(oaxis)) then self.oaxis = oaxis[*,ii]
@@ -32,7 +33,7 @@ end_keywords)
  if(keyword_set(fn_body_to_inertial)) then $
    self.fn_body_to_inertial=decrapify(fn_body_to_inertial[ii])
 
-;;; if(keyword_set(fi_data)) then cam_set_fi_data, cd0, fi_data[ii]
+;;; if(keyword_set(fi_data)) then cam_set_fi_data, cd0, fi_data[ii], /noevent
 
  return, 1
 end
@@ -151,7 +152,7 @@ pro ominas_camera__define
 						; (radians/pixel)
 	oaxis:		 dblarr(2), $		; image coordinates of optical
 						; axis
-	size:		 dblarr(3), $		; Image size, pixels
+	size:		 dblarr(2), $		; Image size, pixels
 	exposure:	 0d, $			; exposure duration; body time
 						; is specified at center of this
 						; interval
