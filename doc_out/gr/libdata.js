@@ -11,7 +11,7 @@ libdataItem = 0;
 
 
 
-libdata[libdataItem++] = new Array("./brim.html", "brim.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "brim.pro", "", "", "	Image browser.    	brim may be run standalone or from within grim.  If no files or data 	descriptors are given, brim first prompts the user to select a list of 	files.  brim then displays thumbnails of all valid files.  Files may be 	selected by clicking with the left mouse button.  By default, the image 	is opened in a new grim window.  Alternate actions may be defined 	through procedures supplied by the caller.    EXAMPLES: 	To load files into brim using a file-selection widget:  	 IDL> brim   	To load all recognizeable images in the current directory into brim:  	 IDL> brim, '*'   	To browse a set of data descriptors:  	 IDL> dd = dat_read('*') 	 IDL> brim, dd    STATUS: 	Complete.    ", "", "          -1", " 	Written by:	Spitale, 10/2002   ");
+libdata[libdataItem++] = new Array("./brim.html", "brim.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "brim.pro", "", "", " NAME: 	brim    PURPOSE: 	Image browser.    CATEGORY: 	NV/GR    CALLING SEQUENCE: 	brim, files    ARGUMENTS:   INPUT: 	files:	List of filenames and file specifications.  Only files whose 		filetypes can be detected are loaded.  If this argument is not 		given, the user is prompted for a list of files.  An array of 		data descriptors may also be specified.    OUTPUT: NONE    KEYWORDS:   INPUT: 	thumbsize:	Size of the thumbnal images.  Default is 100 pixels. 			Thumbnail images are alwasy square.  	labels:		Labels to use for each thumbnail.  If none given, the 			filename is used, is one exists.  	ids:		Array to identify each thumbnail.  If none given, the 			labels are used, if they exist.  	select_ids:	Ids of Initial thumbnail(s) to appear selected.  	left_fn:	Name of a procedure to call when the left mouse button 			is clicked on a thumbnail.  Default procedure selects 			that image and opens it in a new grim window.  The 			user procedure is called as follows:  				left_fn, fn_data, i, id, status=status  			fn_data is supplied by the caller through the fn_data 			keyword, i is the index of the thumbnail, id is the 			thumbnail id as given by the ids keyword, 			and status should return 0 if successful and nonzero 			otherwise.  	middle_fn:	Name of a procedure to call when the middle mouse button 			is clicked on a thumbnail.  There is no default.  	right_fn:	Name of a procedure to call when the right mouse button 			is clicked on a thumbnail.  There is no default.  	fn_data:	Data to be supplied to the above user procedures.  	exclusive_selection: 			If set, only one image may be selected at once. 			(Currently multiple image selection is not supported.)  	path:		Initial path to use for the file selection widget, 			which appears only if the file argument is not given.  	modal:		If set, only the brim widget may be used until it 			is closed.  	title:		Title to use for the brim widget instead of 'brim'.  	order:		Display order for thumbnails.  Default is 0.  	filter:		Initial filter to use when loading files.    OUTPUT: 	get_path:	Final path selected in the file selection widget.  	select_ids:	On return, select_ids contains the ids of the selected 			images.  If there are no selections, its value will be 			the null string: ''.    RETURN: 	NONE    PROCEDURE: 	brim may be run standalone or from within grim.  If no files or data 	descriptors are given, brim first prompts the user to select a list of 	files.  brim then displays thumbnails of all valid files.  Files may be 	selected by clicking with the left mouse button.  By default, the image 	is opened in a new grim window.  Alternate actions may be defined 	through procedures supplied by the caller.    EXAMPLES: 	To load files into brim using a file-selection widget:  	 IDL> brim   	To load all recognizeable images in the current directory into brim:  	 IDL> brim, '*'   	To browse a set of data descriptors:  	 IDL> dd = dat_read('*') 	 IDL> brim, dd    STATUS: 	Complete.    MODIFICATION HISTORY:  	Written by:	Spitale, 10/2002   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./brim.html#brim_display_image", "brim_display_image", 'routine in <a href="./brim.html">brim.pro</a>', "brim.pro", "", "brim_display_image", "", "brim_data_iimage", "          -1", "");
@@ -32,39 +32,6 @@ libdata[libdataItem++] = new Array("./brim.html", "brim.pro", '.pro file in <a h
   
   libdata[libdataItem++] = new Array("./brim.html#brim", "brim", 'routine in <a href="./brim.html">brim.pro</a>', "brim.pro", "", "brim", "", "thumbsizelabelsselect_idsleft_fnright_fnmiddle_fnfn_dataexclusive_selectionpathget_pathmodaltitleidsorderfilterenable_selectionbasefiles", "          -1", "");
   
-  
-
-libdata[libdataItem++] = new Array("bitmaps/compile_bitmaps.html", "compile_bitmaps.pro", '.pro file in <a href="bitmaps/dir-overview.html">bitmaps/ directory</a>', "compile_bitmaps.pro", "", "", "", "", "          -1", "");
-  
-
-libdata[libdataItem++] = new Array("dred/compile_dred.html", "compile_dred.pro", '.pro file in <a href="dred/dir-overview.html">dred/ directory</a>', "compile_dred.pro", "", "", "", "", "          -1", "");
-  
-
-libdata[libdataItem++] = new Array("interface/compile_interface.html", "compile_interface.pro", '.pro file in <a href="interface/dir-overview.html">interface/ directory</a>', "compile_interface.pro", "", "", "", "", "          -1", "");
-  
-
-libdata[libdataItem++] = new Array("scripts/compile_scripts.html", "compile_scripts.pro", '.pro file in <a href="scripts/dir-overview.html">scripts/ directory</a>', "compile_scripts.pro", "", "", "", "", "          -1", "");
-  
-
-libdata[libdataItem++] = new Array("tools/compile_tools.html", "compile_tools.pro", '.pro file in <a href="tools/dir-overview.html">tools/ directory</a>', "compile_tools.pro", "", "", "", "", "          -1", "");
-  
-
-libdata[libdataItem++] = new Array("bitmaps/doc_bitmaps.html", "doc_bitmaps.pro", '.pro file in <a href="bitmaps/dir-overview.html">bitmaps/ directory</a>', "doc_bitmaps.pro", "", "", "", "", "          -1", "");
-  
-
-libdata[libdataItem++] = new Array("dred/doc_dred.html", "doc_dred.pro", '.pro file in <a href="dred/dir-overview.html">dred/ directory</a>', "doc_dred.pro", "", "", "", "", "          -1", "");
-  
-
-libdata[libdataItem++] = new Array("./doc_gr.html", "doc_gr.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "doc_gr.pro", "", "", "", "", "          -1", "");
-  
-
-libdata[libdataItem++] = new Array("interface/doc_interface.html", "doc_interface.pro", '.pro file in <a href="interface/dir-overview.html">interface/ directory</a>', "doc_interface.pro", "", "", "", "", "          -1", "");
-  
-
-libdata[libdataItem++] = new Array("scripts/doc_scripts.html", "doc_scripts.pro", '.pro file in <a href="scripts/dir-overview.html">scripts/ directory</a>', "doc_scripts.pro", "", "", "", "", "          -1", "");
-  
-
-libdata[libdataItem++] = new Array("tools/doc_tools.html", "doc_tools.pro", '.pro file in <a href="tools/dir-overview.html">tools/ directory</a>', "doc_tools.pro", "", "", "", "", "          -1", "");
   
 
 libdata[libdataItem++] = new Array("dred/dred.html", "dred.pro", '.pro file in <a href="dred/dir-overview.html">dred/ directory</a>', "dred.pro", "", "", "", "", "          -1", "");
@@ -90,14 +57,14 @@ libdata[libdataItem++] = new Array("dred/dred.html", "dred.pro", '.pro file in <
   
   
 
-libdata[libdataItem++] = new Array("interface/gr_draw.html", "gr_draw.pro", '.pro file in <a href="interface/dir-overview.html">interface/ directory</a>', "gr_draw.pro", "", "", "", "", "          -1", "");
+libdata[libdataItem++] = new Array("interface/gr_draw.html", "gr_draw.pro", '.pro file in <a href="interface/dir-overview.html">interface/ directory</a>', "gr_draw.pro", "", "", " NAME: 	gr_    PURPOSE: 	xx    CATEGORY: 	NV/GR    CALLING SEQUENCE: 	result = xx(xx, xx) 	xx, xx, xx    ARGUMENTS:   INPUT: 	xx:	xx  	xx:	xx    OUTPUT: 	xx:	xx  	xx:	xx    KEYWORDS:   INPUT: 	xx:	xx  	xx:	xx    OUTPUT: 	xx:	xx  	xx:	xx    ENVIRONMENT VARIABLES: 	xx:	xx  	xx:	xx    RETURN: 	xx    COMMON BLOCKS: 	xx:	xx  	xx:	xx    SIDE EFFECTS: 	xx    RESTRICTIONS: 	xx    PROCEDURE: 	xx    EXAMPLE: 	xx    STATUS: 	xx    SEE ALSO: 	xx, xx, xx    MODIFICATION HISTORY:  	Written by:	xx, xx/xx/xxxx   ", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("interface/gr_draw.html#gr_draw", "gr_draw", 'routine in <a href="interface/gr_draw.html">gr_draw.pro</a>', "gr_draw.pro", "", "gr_draw", "	xx    Environment variables:   	xx:	xx  	xx:	xx    	xx:	xx  	xx:	xx    	xx    	xx    	xx    ", "gdcdpdrdsdsundodpsymsymsizecolortagpngrnumpp", "NV/GR", " 	Written by:	xx, xx/xx/xxxx   	xx    STATUS: 	xx    SEE ALSO: 	xx, xx, xx 	xx    ");
+  libdata[libdataItem++] = new Array("interface/gr_draw.html#gr_draw", "gr_draw", 'routine in <a href="interface/gr_draw.html">gr_draw.pro</a>', "gr_draw.pro", "", "gr_draw", "", "gdcdpdrdsdardstdsundodpsymsymsizecolortagpngrnumpp", "          -1", "");
   
   
 
-libdata[libdataItem++] = new Array("tools/gr_lsqtool.html", "gr_lsqtool.pro", '.pro file in <a href="tools/dir-overview.html">tools/ directory</a>', "gr_lsqtool.pro", "", "", "", "", "          -1", " 	Written by:	Spitale 7/2002   ");
+libdata[libdataItem++] = new Array("tools/gr_lsqtool.html", "gr_lsqtool.pro", '.pro file in <a href="tools/dir-overview.html">tools/ directory</a>', "gr_lsqtool.pro", "", "", " NAME: 	gr_lsqtool    DESCRIPTION: 	Graphical least-squares navigation tool.    CALLING SEQUENCE:  	gr_lsqtool    ARGUMENTS:   INPUT: NONE     OUTPUT: NONE    KEYWORDS:   INPUT: NONE     OUTPUT: NONE    LAYOUT: 	The gr_lsqtool layout consists of the following items:  	 Scan width: 		Width if the scan about the model points.  	 Edge proximity: 		Points closer than this to the edge of the image are not 		scanned.  	 Min correlation: 		Miniumum acceptable correlation coefficient in the scan.  	 Max correlation: 		Maxiumum acceptable correlation coefficient in the scan.  	Scan button: 		Scans the image according to the current widget settings. 		The resulting points are entered as user points in the 		appropriate GRIM widget.  	Fix buttons: 		Select fit parameters to fix.  x and y are the image offsets 		in the repective direction, theta is the rotation about the 		center given by the parameter center_ptdp.  If center_ptdp 		contains no points, then theta is automatically fixed.  	Fit button: 		Performs a simultaneous linear least-square fit to all of the 		objects that have been scanned.  This button causes the given 		camera descriptor to be modified.  	Close button 		Causes gr_lsqtool to exit.     OPERATION:    gr_lsqtool allows the user to produce a subpixel  pointing correction    by fitting model points to those observed in the image.  When the     Scan  button is pressed, an image scan is performed for each active    array in the primary grim window.  Limbs, terminators, and rings are    scanned as edges, while stars and planet centers are scanned as point    sources.  Scans may also be performed individually on different objects.    The  Scan Width  entry specifies the width of the scan about each active    array.  The  Edge Proximity  field specifies the closest that a scan    will come to the image edge.  The correlation fields give the    correlation criterion for accepting scanned points.     After you have scanned your points, you can use the  Fit  button to    perform a least-square fit between each active object and the    corresponding scanned points.  The Fit statistics are displayed in    the text window at the bottom.  You can specify which parameters to    fix using the  Fix  buttons.     Because this fit is linear, it requires the initial guess to be close    to the actual solution.  You may need to iterate to converge to a    good solution; you must rescan your points each time, however.    STATUS: 	Incomplete.    MODIFICATION HISTORY:  	Written by:	Spitale 7/2002   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("tools/gr_lsqtool.html#lsq_descriptor__define", "lsq_descriptor__define", 'routine in <a href="tools/gr_lsqtool.html">gr_lsqtool.pro</a>', "gr_lsqtool.pro", "", "lsq_descriptor__define", "", "", "          -1", "");
@@ -138,7 +105,7 @@ libdata[libdataItem++] = new Array("tools/gr_lsqtool.html", "gr_lsqtool.pro", '.
   
   libdata[libdataItem++] = new Array("tools/gr_lsqtool.html#grlsq_make_tag", "grlsq_make_tag", 'routine in <a href="tools/gr_lsqtool.html">gr_lsqtool.pro</a>', "gr_lsqtool.pro", "", "grlsq_make_tag", "", "ptd", "          -1", "");
   
-  libdata[libdataItem++] = new Array("tools/gr_lsqtool.html#grlsq_scan", "grlsq_scan", 'routine in <a href="tools/gr_lsqtool.html">gr_lsqtool.pro</a>', "gr_lsqtool.pro", "", "grlsq_scan", "", "silentnocreatestatusnoscanlsqdgrim_datadata", "          -1", "");
+  libdata[libdataItem++] = new Array("tools/gr_lsqtool.html#grlsq_scan", "grlsq_scan", 'routine in <a href="tools/gr_lsqtool.html">gr_lsqtool.pro</a>', "gr_lsqtool.pro", "", "grlsq_scan", "", "nocreatestatusnoscanlsqdgrim_datadata", "          -1", "");
   
   libdata[libdataItem++] = new Array("tools/gr_lsqtool.html#grlsq_fit", "grlsq_fit", 'routine in <a href="tools/gr_lsqtool.html">gr_lsqtool.pro</a>', "gr_lsqtool.pro", "", "grlsq_fit", "", "statusgrim_datadatalsqd", "          -1", "");
   
@@ -152,7 +119,7 @@ libdata[libdataItem++] = new Array("tools/gr_lsqtool.html", "gr_lsqtool.pro", '.
   
   
 
-libdata[libdataItem++] = new Array("tools/gr_maptool.html", "gr_maptool.pro", '.pro file in <a href="tools/dir-overview.html">tools/ directory</a>', "gr_maptool.pro", "", "", "", "", "          -1", " 	Written by:	Spitale 7/2002   ");
+libdata[libdataItem++] = new Array("tools/gr_maptool.html", "gr_maptool.pro", '.pro file in <a href="tools/dir-overview.html">tools/ directory</a>', "gr_maptool.pro", "", "", " NAME: 	gr_maptool    DESCRIPTION: 	Graphical map projection tool.    CALLING SEQUENCE:  	gr_maptool    ARGUMENTS:   INPUT: NONE     OUTPUT: NONE    KEYWORDS:   INPUT: NONE     OUTPUT: NONE    LAYOUT: 	The gr_maptool layout consists of the following items:  	 Map projection control: 		A map projection is selected using the droplist and 		the map parameters are input using the text widgets below. 		Angles are in radians.  	'Ok' button: 		Creates the map projection described by the current widget 		settings and exits.  	'Apply' button: 		Creates the map projection described by the current widget 		settings without exiting.  	'Cancel' button 		Exits with no map projection.     OPERATION: 	gr_ maptool allows the user to create map projections of images 	using a simple graphical interface.  It is most easily run from within 	GRIM, but may be run directly from the command line as well.    STATUS: 	Incomplete.    MODIFICATION HISTORY:  	Written by:	Spitale 7/2002   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("tools/gr_maptool.html#grmt_get_md", "grmt_get_md", 'routine in <a href="tools/gr_maptool.html">gr_maptool.pro</a>', "gr_maptool.pro", "", "grmt_get_md", "", "indexdatatype", "          -1", "");
@@ -177,7 +144,7 @@ libdata[libdataItem++] = new Array("tools/gr_maptool.html", "gr_maptool.pro", '.
   
   
 
-libdata[libdataItem++] = new Array("tools/gr_phttool.html", "gr_phttool.pro", '.pro file in <a href="tools/dir-overview.html">tools/ directory</a>', "gr_phttool.pro", "", "", "", "", "          -1", " 	Written by:	Spitale 7/2002   ");
+libdata[libdataItem++] = new Array("tools/gr_phttool.html", "gr_phttool.pro", '.pro file in <a href="tools/dir-overview.html">tools/ directory</a>', "gr_phttool.pro", "", "", " NAME: 	gr_phttool    DESCRIPTION: 	Graphical photometric correction tool.    CALLING SEQUENCE:  	gr_phttool    ARGUMENTS:   INPUT: NONE     OUTPUT: NONE    KEYWORDS:   INPUT: NONE     OUTPUT: NONE    ENVIRONMENT VARIABLES: 	GR_PHT_DIR:	Sets the directory in which to find the photometric 			functions.    LAYOUT: 	The gr_phttool layout consists of the following items:  	 Reflectance function controls: 		A reflectance function is selected using the droplist and 		the relevant parameters (whose purpose depend on the specific 		function) are input using the text widgets below.  	 Phase function controls: 		A phase function is selected using the droplist and 		the relevant parameters (whose purpose depend on the specific 		function) are input using the text widgets below.  	   Reflectance and phase functions are determined by looking for any 	   complied function whose name starts with 'pht_refl_' or 'pht_phase', 	   or any routines in the directory pointed to by the environment variable 	   GR_PHT_DIR. The function lists may be updated using the corresponding 	   'Refresh' button.  The calling sequences are as follows:  	   refl_corr = refl_fn(mu, mu0, refl_parm) 	   phase_corr = phase_fn(g, phase_parm)  	   where the photometric arguments are all cosines, and the *_parm 	   arguments come from the corresponding input text widgets.   	'Ok' button: 		Applies the photometric correction described by the current 		widget settings and exits.  	'Apply' button: 		Applies the photometric correction described by the current 		widget settings without exiting.  	'Apply All' button: 		Applies the photometric correction described by the current 		widget settings to all planes of the primary grim window for 		which outline points have been activated.  	'Cancel' button 		Exits with no photometric correction.     OPERATION: 	gr_phttool allows the user to apply photometric corrections to images 	using a simple graphical interface.  Corrections are applied to data 	within any active limb points.    STATUS: 	Incomplete.    MODIFICATION HISTORY:  	Written by:	Spitale 7/2002   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("tools/gr_phttool.html#pht_descriptor__define", "pht_descriptor__define", 'routine in <a href="tools/gr_phttool.html">gr_phttool.pro</a>', "gr_phttool.pro", "", "pht_descriptor__define", "", "", "          -1", "");
@@ -230,538 +197,8 @@ libdata[libdataItem++] = new Array("interface/gr_tp.html", "gr_tp.pro", '.pro fi
   
   
 
-libdata[libdataItem++] = new Array("./grim.html", "grim.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim.pro", "", "", "	Graphical interface for oMINAS.    	Grim operates directly on the memory images of the descriptors that 	it is given.  Therefore, those descriptors are modified during 	a session.  This architecture allows data to be operated on concurrently 	through grim and from the command line; see ingrid.pro for details.    LAYOUT: 	The grim layout consists of the following items:  	 Menu bar: Most of grim's functionality is accessed through the 	           system of pulldown menus at the top.  Individual menu 	           items are described in their own sections below.  	 Shortcut buttons: Some common-used menu options are duplicated as 			   shortcut buttons, which are arranged horizontally 			   just beneath the menu bar.  The following shortcuts 			   are available, from left to right:  		Previous plane: Changes to the previous plane.  		Next plane: Changes to the next plane.  		Refresh: Redisplays the image and overlays.  		Entire Image: Resets display parameters so that the enitre 		              image is visible.  		Previous view: Reverts to the previous view settings.  		Hide/Unhide: Toggles overlays on/off.  		Colors: Opens the color tool.  		Tracking: Toggles cursor tracking on/off.  		Grid: Toggles RA/DEC grid on/off.  		Axes: Toggles axes on/off.  		Activate all: Activates all overlays.  		Deactivate all: Deactivates all overlays.  		Header: Opens a window showing the image header.   	 Modes buttons: Modes buttons are arranged vertically along the 	                left side.  The following modes are available, in order 	                of their appearance in the grim widget:  		Select: The top button toggles a given grim instance between 		        selected and unselected states, for use with functions 		        that require input from more than one grim instance. 		        When a given instance is selected, this button 		        displays an asterisk.  		Context: This button toggles the visibility of a small context 			 window superimposed over the top-left corner of the 			 main image.  The context window always displays the 			 entire image and all of these modes except activation 			 function in the same way in the context window as in 			 the main window.  		Activate: In activate mode, overlay objects may be activated 			  or deactivated by clicking and/or dragging using the 			  left or right mouse buttons respectively.  This 			  activation mechanism allows the user to select which 			  among a certain type of objects should be used in a 			  given menu selection.  A left click on an overlay 			  activates that overlay and a right click deactivates 			  it.  A double click activates or deactivates all 			  overlays associated with a given descriptor, or all 			  stars.  Active overlays appear in the colors selected 			  in the 'Overlay Settings' menu selection.  Inactive 			  overlays appear in cyan.  A descriptor is active 			  whenever any of its overlays are active.  		Zoom: The zoom button puts grim in a zoom cursor mode, wherein 		      the image zoom and offset are controlled by selecting 		      a box in the image.  When the box is created using the 		      left mouse button, zoom and offset are changed so that 		      the contents of the box best fill the current graphics 		      window.  When the right button is used, the contents of 		      the current graphics window are shrunken so as to best 		      fill the box.  In other words, the left button zooms in 		      and the right button zooms out.  		Pan: The pan button puts grim in a pan cursor mode, wherein the 		     image offset is controlled by selecting an offset vector 		     using the left mouse button.  The middle button may be 		     used to center the image on a selected point.  		Pixel Readout:	In pixel readout mode, a text window appears 				and displays data about the pixel selected 				using the left mouse button.  		Tiepoint: In tiepoint mode, tiepoints are added using the 		          left mouse button and deleted using the right button. 		          Tiepoints appear as crosses identified by numbers. 			  The use of tiepoints is determined by the particular 			  option selected by the user.  		Magnify: In magnify mode, image pixels in the graphics 		         window may be magnifed using either the right or left 		         mouse buttons.  The left button magnifies the displayed 		         pixels, directly from the graphics window.  The right 		         button magnifies the data itself, without the overlays.  		XY Zoom: Same as 'zoom' above, except the aspect ratio is                         set by the proportions of the selected box.  	 Graphics window: The graphics window displays the image associated 	                  with the given data descriptor using the current 	                  zoom, offset, and display order.  The edges of the 	                  image are indicated by a dotted line.  	 Pixel readout: The cursor position and corresponding data value are 	                are displayed beneath the graphics window, next to the 	                message line.  	 Message line: The message line displays short messages pertaining 	               grim's current state.   RESOURCE NAMES 	The following X-windows resource names apply to grim: 	 grim_base:		top level base 	 grim_mbar:		menu bar 	 grim_shortcuts_base:	base containing shortcut buttons 	 grim_modes_base:	base containing modes buttons 	 grim_draw:		grim draw widget 	 grim_label:		grim bottom label widget  	To turn off the confusing higlight box around the modes buttons, 	put the following line in your ~/.Xdefaults file:  	 Idl*grim_modes_base*highlightThickness:	0    OPERATION: 	Grim maintains any number of image planes as well as associated 	geometric data (camera, planet, ring, star descriptors) for each of 	those planes.  Image planes are completely independent unless the 	user chooses to display them simultaneously in separate red, green, 	and blue display channels.  	Each image plane also contains numerous overlay arrays for displaying 	various geometric objects -- limbs, rings, stars, etc.  An array of 	user overlay points is maintained to be used for application-specific 	purposes.  Generally, a set of overlay points or a descriptor must be 	activated in order to be used as input to a menu item; see activate 	mode above.  	There are exclusive and non-exclusive mechanisms for selecting grim 	windows.  Grim windows may be non-exclusively selected using the select 	mode button mentioned above (upper-left corner).  The exclusive 	selection mechanism consists of a 'primary' grim window, indicated by 	a red outline in the graphics window.  The primary selection is 	changed by pressing any mode or shortcut button, or by clicking in 	the graphics area of the desired grim window.    EXAMPLES: 	(1) To create a new grim instance with no data:  		IDL> grim, /new  	(2) To create a new grim instance with data from a file of name 	     filename :  		IDL> dd = dat_read(filename) 		IDL> grim, dd  	(3) To give a grim instance a new camera descriptor:  		IDL> grim, cd=cd    STATUS: 	Incomplete.    SEE ALSO: 	ingrid, gr_draw    ", "", "          -1", " 	Written by:	Spitale 7/2002   ");
+libdata[libdataItem++] = new Array("./grim.html", "grim.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim.pro", "", "", " NAME: 	GRIM    PURPOSE: 	General-purpose GRaphical Interface for oMinas.    CATEGORY: 	NV/GR    CALLING SEQUENCE:  	grim, arg1, arg2    ARGUMENTS:   INPUT: 	arg1, arg2: 		Grim accepts up to two arguments, which can appear in either 		order.  Possible arguments are:   			data descriptors (object) 			file specification (string)  			grnum (scalar)  			plot (1d array)  			image (2d array)  			cube (3d array)  	Plots are displayed as graphs whose abscissa are the array index, unless 	an abscissa is present in the data descriptor.  Many functions are not 	available in this mode.  	Cubes are handled as multiple image planes unless /rgb is used 	(see below).  All grim planes will contain the same data array, 	but display only data ranges corresponding to one channel of the cube. 	For /rgb (assuming the cube has three channels), the data are placed 	on a single image plane with each cube channel assigned the R, G, or B 	color channel.     OUTPUT: NONE    KEYWORDS:   INPUT: 	Descriptor Keywords 	------------------- 	The following inputs replace objects already maintained by GRIM.  For 	the case of a single plane, all given descriptors are placed in that 	plane.  In that case, only one cd, od, or sund are allowed.  For a cube, 	cd and od must have either one element, or the same number of elements 	as the number of channels in the cube, and are assigned one-to-one to 	the grim planes.  In this case, all other decriptors are assigned to all 	planes.  For multiple images, descriptors are assigned to planes by 	matching their generic decsriptor dd fields (or assoc_dd if given) to 	the data descriptor for each plane.  	 cd:	Replaces the current camera descriptor.  This may also be 		a map descriptor, in which case some of GRIM's functions 		will not be available.  When using a map descriptor instead 		of a camera descriptor, you can specify a camera descriptor 		as the observer descriptor (see the 'od' keyword below) and 		some additional geometry functions will be available.  	 od:	Replaces the current observer descriptor.  The observer 		descriptor is used to allow some geometry objects (limb, 		terminator) to be computed when using a map descriptor instead 		of a camera descriptor.  	 sund:	Replaces the current sun descriptor.  	 pd:	Adds/replaces planet descriptors.  	 rd:	Adds/replaces ring descriptors.  	 sd:	Adds/replaces star descriptors.  	 std:	Adds/replaces station descriptors  	 ard:	Adds/replaces array descriptors  	 gd:	Generic descriptor containing some or all of the above 		descriptors.  	 assoc_dd: 		If given, use these data descriptors to assign descriptors to 		planes instead of matching the data descriptors from their 		generic descriptors.   	Descriptor Select Keywords 	-------------------------- 	Descriptor select keywords (see pg_get_*) are specified using the 	standard prefix corresponding to the descriptor type.  For example, 	the fov keyword to pg_get_planets would be given to grim as plt_fov.   	Initial Colormap Keywords 	------------------------- 	The colormap structure (see colormap_descriptor__define) can be 	be initialized via keywords prefied with 'cmd_', e.g., 'cmd_shade'. 	In addition, the following keywords apply to the initial color map:  	*auto_stretch: 		If set, the color table for each plane is automatically 		stretched.  This is identical to using the 'Auto' button 		on on the grim color tool.   	Translator Keywords 	------------------- 	The following keywords are passed directly to the translators, which 	are responsible for interpreting their meanings.  	*cam_trs: 		String giving translator keywords for the camera descriptors.  	*sun_trs: 		String giving translator keywords for the sun descriptors.  	*plt_trs: 		String giving translator keywords for the planet descriptors.   	*rng_trs: 		String giving translator keywords for the ring descriptors.   	*str_trs: 		String giving translator keywords for the star descriptors.   	*stn_trs: 		String giving translator keywords for the stations descriptors.   	*arr_trs: 		String giving translator keywords for the array descriptors.   	TVIM Keywords 	------------- 	The following keywords set the initial viewing parameters and are 	simply passed to TVIM.  	*xsize:	Size of the graphics window in the x direction.  Defaults to 		400 pixels.  	*ysize:	Size of the graphics window in the y direction.  Defaults to 		400 pixels.  	*zoom:	Initial zoom to be applied to the image.  If not given, grim 		computes an initial zoom such that the entire image fits on the 		screen.  	*rotate: 		Initial rotate value to be applied to the image (as in the IDL 		ROTATE routine).  If not given, 0 is assumed.  	*order:	Initial display order to be applied to the image.  	*offset: 		Initial offset (dx,dy) to be applied to the image.  	 doffset: 		Change the offset viewing parameter by this amount.  	 default: 		If set, use default tvim properties (zoom=[1,1], offset=[0,0]                order=0 [bottom-up])  	 previous: 		If set, restore last-used tvim viewing parameters.  	 restore: 		If set, use saved tvim viewing paramters.   	Customization Keywords 	---------------------- 	*menu_extensions: 		Array of strings giving the names of functions that return 		menu definitions, as defined by cw_pdmenu.  These menus are 		added to the built-in GRIM menus between the Overlays menu 		and the Help menu.  The default is 'grim_default_menus'.  If 		the first character in the first menu function is '+', then 		grim_default_menus is retained an the new menu are appended 		after that menu.  Otherwise, 'grim_default_menus' is replaced.  	*button_extensions: 		Array of strings giving the names of definition functions 		for custom cursor modes to be added after the built-in 		cursor modes.  The definition function takes one argument 		(see arg_extensions below) and returns a grim_user_mode_struct.  	*arg_extensions: 		Argument to be provided to the button extension definition 		function above.  	*menu_fname: 		Name of a file containing additional menus to add to 		the grim widget.  The file syntax follows that for cw_pdmenu.   	Other Keywords 	-------------- 	*extensions: 		String array giving extensions to try for each input file. 		see dat_read.  	*new:	If set, a new grim instance is created and all keywords apply 		to that instance.  	 erase:	If set, erase the current image before doing anything else.  	*mode_init: 		Initial cursor mode.  See below.  	*mode_args: 		Array giving arguments for the cursor modes initialization 		functions.  If a string, then syntax is NAME:ARG, where NAME 		is the name of the cursor mode, and ARG is the argument for 		that mode.  For example:  			mode_args='READOUT:myreadout_fn'  		would cause the function 'myreadout_fn' to be added to 		the list of functions called by pg_cursor and pg_measure 		via the readout cursor mode.  If not a string, the argument 		is passed to the initialization function with no processing.  	*retain: 		Retain settings for backing store (see  backing store  in 		the IDL reference guide).  Defaults to 2.  	*clip:	Controls the number of fields of view in which overlays are 		computed.  	*fov:	Controls the number of fields of view in which to request 		planet, ring and star descriptors.  Values are as follows:   			 0 : get all descriptors                   	<0 : relative to viewport                  	>0 : relative to image / optic axis  		Note that fov > 0 is the same as setting the fov descriptor 		select keywords (see above).  Default is 0, but stars operate 		best when fov > 0.  	*hide:	If set, overlays are hidden w.r.t shadows and obstructions.  		Default is on.  	 no_erase: 		If set, GRIM does not erase the draw window.  When called.  	*rgb:	If set, grim interprets a 3-plane cube as a 3-channel image                to be displayed on a single plane.  	*channel: 		Array of bitmasks specifying the color channel in which to 		display each given image: 1b, 2b, or 4b.  	*visibility: 		Initial visibility setting for planes:                  	0: Only the current plane is drawn.                 	1: All planes are drawn.                  Default is 0.  	*max:	Maximum data value to scale to when displaying images. 		Values larger than this are set to the maximum color table 		index.  If not set, the maximum value in the data set is used. 		In cases where the data array is being subsampled, this value 		may not be known, resulting in varying image scaling as more 		and more data values are sampled.  That problem may be 		eliminated via this keyword.  	 exit:	If set, GRIM immediately exits.  This can be used to kill an 		existing GRIM window.  	 modal:	If set, grim is run as a modal widget, i.e., there is no command 		prompt.  	*frame:	If set, the initial view is set such that all members of the 		named overlay types are are visible.  If /frame, then all 		overlays are framed.  Note that object types that rely on the 		view to determine which objects to compute (e.g., stars) 		cannot be framed in this way.  	 refresh_callbacks: 		Array of strings giving the names of procedures to be 		called after each refresh.  See CALLBACK PROCEDURES 		below.  Refresh callbacks receive only the data argument.  	 refresh_callback_data_ps: 		Array of pointers (one per callback) to data for the refresh 		callback procedures specified using the refresh_callbacks 		keyword.  See CALLBACK PROCEDURES below.  	 plane_callbacks: 		Array of strings giving the names of procedures to be 		called after each plane change.  See CALLBACK PROCEDURES 		below.  Plane callbacks receive only the data argument.  	 plane_callback_data_ps: 		Array of pointers (one per callback) to data for the plane 		callback procedures specified using the plane_callbacks 		keyword.  See CALLBACK PROCEDURES below.  	*nhist:	History setting to be applied to data decriptor (see 		ominas_data__define).  GRIM uses data descriptor history to 		undo changes to the data array.  If nhist is not set, or is 		equal to 1, the undo menu option will not function.  	*maintain: 		If given, this maintainance setting is applied to the data 		descriptor (see ominas_data__define).  	*compress: 		Compression setting to be applied to data decriptor (see 		ominas_data__define).  	*filter: 		Initial filter to use when loading or browsing files.  	*load_path: 		Initial path for the file loading dialog.  	*save_path: 		Initial path for the file saving dialog.  	*path:	Sets both load_path and save_path to this value.  	*workdir: 		Default directory for saving user points, masks, tie 		points, curves  	 user_psym: 		Default plotting symbol for user overlays.  	 grnum:	Identifies a specific GRIM window by number.  Grim numbers are 		displayed in the status bar, e.g.: grim <grnum>.  	 pn:	Directs GRIM to change to the plane correspondng to this plane 		number.  	*cursor_swap: 		If set, cursor bitmaps are byte-order swapped.  	*loadct: 		Index of color table to load.  	*beta:	If set beta features are enabled.  	*npoints: 		Number of point to compute for various overlays.  Default is 1000.   	*plane_syncing: Turns plane syncing on (1) or off(0).  Default is 0.   	*tiepoint_syncing: Turns tiepoint syncing on (1) or off(0).  Default is 0.   	*curve_syncing: Turns curve syncing on (1) or off(0).  Default is 0.   	 position: 		Sets the plot position; see the POSITION grahics keyword.   	 color:	Sets the line color index for plots.  One element per plane.   	 xrange: 		Sets the X-axis range for plots.   	 yrange: 		Sets the Y-axis range for plots.  	 thick:	Sets the line thickness for plots.  One element per plane.  	 title:	For plots, sets the plot title for plots; one element per plane. 		For images, sets the base default title.  	 xtitle: 		Sets the X-axis label for plots.  One element per plane.  	 ytitle: 		Sets the Y-axis label for plots.  One element per plane.  	 psym:	Sets the plotting symbol for plots.  One element per plane.  	 nsum:	See OPLOT.  One element per plane.   	*overlays: 		List of initial overlays to compute on startup.  Each element 		is of the form:                            type[:name1,name2,...]  		where 'type' is one of {limb, terminator, planet_center, 		star, ring, planet_grid, array, station} and the names 		identify the name of the desired object.  Note that grim 		will load more objects than named if required by another 		startup overlay.  For example:                           overlays='ring:a_ring'  		will cause only one ring descriptor to load, whereas                           overlays=['limb:saturn', 'ring:a_ring']  		will cause all of Saturn's rings to load because they are 		required in computing the limb points (for hiding).  		Different results may be obtained using translator keywords, 		because those keywords are evaluated at the translator level. 		For example:  			overlays='ring:fn54'  		may result in no ring, while:  			overlays='ring', trs_rd='name=fn54'  		would be more likely to yield a ring.  In the former example, 		the specified name is compared against whatever default ring 		descriptors are returned by the tranlators, while in the latter 		case, the 'name' translator keyword is compared against all 		rings available to the translator.   	*delay_overlays: 		If set, initial overlays (see 'overlays' above) are not computed 		until the first time they are accessed.  This option can greatly 		improve performance in cases where a large number of image planes 		are loaded with initial overlays, particularly if it is not 		expected that all planes will necesarily be viewed or otherwise 		accessed.  Typically this option will cause overlays to be 		computed only for the initially visible planes, with other 		planes loading overlays only as they are made visible.  However, 		there may be other cirumstances that can cause initial overlays 		to be loaded without actually viewing a plane.  	*activate: 		If set, inital overlay are activated.  	*ndd: 	Sets the global ndd value in the OMINAS sate structure, which 		controls the maximum number of data descriptors with maintain == 1 		to keep in memory at any given time  	*render_sample: 		Over-sampling value for rendering.  See pg_render.  	*render_pht_min: 		Minimum value to assign to photometric output in renderings. 		See pg_render.   	Incomplete Keywords 	------------------- 	*rendering: 		If set, perform a rendering on the initial descriptor set.     OUTPUT: NONE    RESOURCE FILE: 	The keywords marked above with an asterisk may be overridden using 	the file $HOME/.ominas/grimrc.  Keyword=value pairs may be entered, one per 	line, using the same syntax as if the keyword were entered on the IDL 	command line to invoke grim.  Lines beginning with '#' are ignored. 	Keywords entered in the resource file override the default values, and 	are themselves overridden by keywords entered on the command line.   SHELL INTERFACE 	The 'grim' alias may be used to start grim from the shell prompt 	via the XIDL interface.  The shell interface accepts all keywords 	marked above with an asterisk.  See grim.bat.  	Example (assuming the grim alias described in grim.bat):  	 % grim -beta data/*.img overlay=planet_center,limb:JUPITER    ENVIRONMENT VARIABLES: 	Grim currently defines no environment variables..    COMMON BLOCKS: 	 grim_block: 		Keeps track of most recent grim instance and which ones are 		selected.    SIDE EFFECTS: 	Grim operates directly on the memory images of the descriptors that 	it is given.  Therefore, those descriptors are modified during 	a session.  This architecture allows data to be operated on concurrently 	through grim and from the command line; see ingrid.pro for details.    LAYOUT: 	The philosphy that drives GRIM's layout is that the maximum possible 	screen space should be devoted to displaying the data.  This policy 	allows for many GRIM windows to be used simultaneously without being 	obscured by crazy control panels full of buttons, gadgets, widgets, 	doodads, whirly-gigs, and what-nots.  The grim layout consists of the 	following items:  	 Title bar: 		The title bar displays the grim window number (grnum), 		the current plane number (pn), the total number of planes, the 		name field of the data descriptor for the current plane, the 		default title (if given; see the title keyword above), and 		a string indicating which RGB channels are associated with the 		current plane.  	 Menu bar: 		Most of grim's functionality is accessed through the 		system of pulldown menus at the top.  Individual menu 		items are described in their own sections.  	 Shortcut buttons: 		Some commonly used menu options are duplicated as shortcut 		buttons arranged horizontally just beneath the menu bar.  The 		function of each button is displayed in the status bar (see 		below) when the mouse cursor is hovered ove the button.  	 Cursor mode buttons: 		Cursor mode shortcut buttons are arranged vertically along the 		left side of the GRIM window, and as provided as shortcuts 		for the corresponding options in the Mode menu.  The following 		modes are available:  		Activate: 			In activate mode, overlay objects may be activated 			or deactivated by clicking and/or dragging using the 			left or right mouse buttons respectively.  This 			activation mechanism allows the user to select which 			among a certain type of objects should be used in a 			given menu selection.  A left click on an overlay 			activates that overlay and a right click deactivates 			it.  A double click activates or deactivates all 			overlays associated with a given descriptor, or all 			stars.  Active overlays appear in the colors selected 			in the 'Overlay Settings' menu selection.  Inactive 			overlays appear in cyan.  A descriptor is active 			whenever any of its overlays are active.  		Zoom:	The zoom button puts grim in a zoom cursor mode, wherein 			the image zoom and offset are controlled by selecting 			a box in the image.  When the box is created using the 			left mouse button, zoom and offset are changed so that 			the contents of the box best fill the current graphics 			window.  When the right button is used, the contents of 			the current graphics window are shrunken so as to best 			fill the box.  In other words, the left button zooms in 			and the right button zooms out.  		Pan: 	The pan button puts grim in a pan cursor mode, wherein the 			image offset is controlled by selecting an offset vector 			using the left mouse button.  The middle button may be 			used to center the image on a selected point.  		Pixel Readout: 			In pixel readout mode, a text window appears 			and displays data about the pixel selected 			using the left mouse button.  		Tiepoint: 			In tiepoint mode, tiepoints are added using the 			left mouse button and deleted using the right button. 			Tiepoints appear as crosses identified by numbers. 			The use of tiepoints is determined by the particular 			option selected by the user.  		Curve: 			In curve mode, curves are added using the 			left mouse button and deleted using the right button. 			Curves appear as red lines identified by numbers at 			each end.  The use of curves is determined by the 			particular option selected by the user.  		Mask: 			GRIM maintains a mask for each plane whose use is 			appication-dependent.  Mask mode allows pixels in the 			mask to be toggled on and off.  		Magnify: 			In magnify mode, image pixels in the graphics 			window may be magnifed using either the right or left 			mouse buttons.  The left button magnifies the displayed 			pixels, directly from the graphics window.  The right 			button magnifies the data itself, without the overlays.  		XY Zoom: 			Same as 'zoom' above, except the aspect ratio is 			set by the proportions of the selected box.  		Remove overlays: 			Allows the user to remove overlay arrays.  		Trim overlays: 			Allows the user to trim points from overlay arrays.  		Select within overlays: 			Allows the user to select points within overlay arrays.  		Define Region: 			Allows the user to define GRIM's region of interest.  		Smooth: 			Allows the user to select a smoothing box to be applied 			to the data array.  		Select Plane: 			Allows the user to change planes using the pointer. 			This option is only useful in cases where multiple 			planes are displayed.  		Drag Image: 			Allows the user to reposition the current plane by 			clicking and dragging.  		Navigate: 			Allows the user to modify the camera position and 			orientation usng the mouse.   	 Graphics window: 		The graphics window displays the data associated with the 		given data descriptor using the current zoom, offset, and 		display order.  The edges of an image are indicated by a dotted 		line.  The camera optic axis is indicated by a large red cross.  	 Pixel readout: 		The cursor position and corresponding data value are are 		displayed beneath the graphics window, next to the message line.  	 Message line: 		The message line displays short messages pertaining GRIM's 		 current state, or displayng button functions.   CALLBACK PROCEDURES: 	GRIM callback procedures are called with one or two arguments:        the first argument is a pointer to data that was provided 	when the callback was added.  The second argument, if present, depends 	on the applicatation.    RESOURCE NAMES 	The following X-windows resource names apply to grim: 	 grim_base:		top level base 	 grim_mbar:		menu bar 	 grim_shortcuts_base:	base containing shortcut buttons 	 grim_modes_base:	base containing modes buttons 	 grim_draw:		grim draw widget 	 grim_label:		grim bottom label widget  	To turn off the confusing higlight box around the modes buttons, 	put the following line in your ~/.Xdefaults file:  	 Idl*grim_modes_base*highlightThickness:	0    OPERATION: 	GRIM displays 1-, 2-, and 3-dimensional data sets.  1-dimensional 	data arrays are displayed as plots.  In that case, the abscissa is 	the sample number unless the data descriptor contains an abscissa. 	2- and 3-dimensional arrays are displaye as image planes.  The only 	difference between images and cubes in GRIM is that images planes 	each have their own data descriptor, while cubes are represented by 	multiple image planes that share a common data descriptor; each plane 	in a cube corresponds to a unique offset in the data array stored in 	the common data descriptor.  Some functionality is not available when 	working with plots.  In that case, those options do not appear in the 	menus.  	GRIM requests only the data samples needed for the current viewing 	parameters.  Therefore, GRIM can display data sets of arbitrary size 	when used with a file reader that supports subsampling.  However, note 	that specific menu options may request the entire data array, depending 	on the application.  	Each GRIM window may contain any number of planes as well as 	associated geometric data (i.e. object descriptors) and overlay arrays 	for displaying various geometric objects -- limbs, rings, stars, etc. 	An array of user overlay points is maintained to be used for application- 	specific purposes.  Generally, a set of overlay points or a descriptor 	must be activated in order to be used as input to a menu item; see 	activate mode above.  	There are exclusive and non-exclusive mechanisms for selecting grim 	windows.  Grim windows may be non-exclusively selected using the select 	mode button mentioned above (upper-left corner).  The exclusive 	selection mechanism consists of a  primary  GRIM window, indicated by 	a red outline in the graphics window.  The primary selection is 	changed by pressing any mode or shortcut button, or by clicking in 	the graphics area of the desired grim window.  The meaning of the 	various selections depends on the application.  	The functions of the left and right mouse buttons are determined by the 	cursor mode; some cursor modes define modifier keys to broaden the number 	of functions available in that mode.  The middle mouse button toggles 	the activation state of overlay arrays, or pans the image if no overlay 	appears beneath the cursor.  The mouse wheel cycles among cursor modes, 	or zooms about the cursor position if the control key is held down.  	Objects maintained by GRIM are accessible via the INGRID interface, 	for example:  		IDL> ingrid, dd=dd, cd=cd, pd=pd, limb_ptd=limb_ptd  	returns the data desciptor, camera descriptor, planet descriptors, 	and limb points associated with the current plane.  	GRIM registers event handlers for all of its objects, so the window 	is updated any time an object is modifed, whether by GRIM or by some 	other program, or from the command line.    EXAMPLES: 	(1) To create a new grim instance with no data:  		IDL> grim, /new  	(2) To create a new grim instance with data from a file of name 	     filename :  		IDL> dd = dat_read(filename) 		IDL> grim, dd  		   or  		IDL> grim, filename  	(3) To give an existing grim instance a new camera descriptor:  		IDL> grim, cd=cd    KNOWN BUGS: 	Window resizing is not precise.  GRIM tries to resize to the selected 	size, but typically overshoots.  This is probably platform-dependent.  	Objects inherited by rendering planes do not respond to events.  	Image shifting: 	 -  Descriptors not updated if shift performed form another window 	    because the there's no way for the irst window to know to 	    update its descriptors         - fix wrap-around; clip instead  	Plane->Coregister does not update descriptors  	Navigate mode gets weird when you do certain modifer key presses 	   --> maybe a conflict with <ctrl> wheel zoom action  	Crashes occur with File->Close  	/no_erase is not enabled for images, just plots.  Probably should fix 	that.  	Initial visibility setting does not seem to work until applied 	using plane settings window.  	/frame causes a crash if there are no initial overlays.  	It's not clear whether the symsize keyword is actually used.  	pn keyword does not function.  	Crash when tiepoint syncing is on and tiepoint selected with 	multiple planes.  	Title keyword does not properly map multiple elements to multiple 	planes.  	Nsum keyword does not properly map multiple elements to multiple 	planes.  	Plane syncing appears to be incomplete and I don't remember what it 	was supposed to be.  I'm sure it was awesome, though.  	Not sure what slave_overlays keyword does, or was supposed to do.  	Overlays on rendered planes do not respond to events  	Menu toggles don't update propoerly in some circumsumstances.  	grim_message sometimes pops up messages from nv_message, which can 	be pretty obnxious.  This probably has to do with the calls to 	grim_message in grim_compute.include    STATUS: 	Incomplete.    SEE ALSO: 	ingrid, gr_draw    MODIFICATION HISTORY:  	Written by:	Spitale 7/2002    FILE MENU    NAME: 	grim_menu_file_load_event    PURPOSE: 	Allows user to load images into new image planes.  The user is 	prompted for filenames and dat_read is used to read each image. 	Multiple images may be selected and a new plane is created for 	each image.  On X-windows systems, multiple files may be selected 	either by dragging across the filenames or by holding down the 	control key to toggle the selected files.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_file_browse_event    PURPOSE: 	Allows user to load images into new image planes using the brim 	browser.  Images are selected using the left mouse button and 	each image is loaded on a new plane.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 10/2002    NAME: 	grim_menu_file_save_event    PURPOSE: 	Allows user to save the current image plane and geometry.  If there 	is no current filename for the current plane, then the user is 	prompted for one.  All descriptors are written through the translators 	and then dat_write is used to write the data file.  Specific behavior 	is governed by OMINAS' configuration.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_file_save_as_event    PURPOSE: 	Same as 'Save' above, except always prompts for a filename.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_open_as_rgb_event    PURPOSE: 	Opens a new grim window with the current channal configuration 	reduced to a 3-channel RGB cube.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2016    NAME: 	grim_menu_file_save_user_ptd_event    PURPOSE: 	Writes user points for the current plane to a file called 	[image name].user_ptd    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 2/2004    NAME: 	grim_menu_file_save_all_user_ptd_event    PURPOSE: 	Writes user points for all planes to files called 	[image name].user_ptd    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 2/2004    NAME: 	grim_menu_file_load_user_ptd_event    PURPOSE: 	loads user points for the current plane from a file called 	[image name].user_ptd    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 2/2004    NAME: 	grim_menu_file_load_all_user_ptd_event    PURPOSE: 	Loads user points for all planes from files called 	[image name].user_ptd    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 2/2004    NAME: 	grim_menu_file_save_tie_ptd_event    PURPOSE: 	Writes tie points for the current plane to a file called 	[image name].tie_ptd    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 2/2004    NAME: 	grim_menu_file_save_all_tie_ptd_event    PURPOSE: 	Writes tie points for all planes to files called 	[image name].tie_ptd    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 2/2004    NAME: 	grim_menu_file_load_tie_ptd_event    PURPOSE: 	loads tie points for the current plane from a file called 	[image name].tie_ptd    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 2/2004    NAME: 	grim_menu_file_load_all_tie_ptd_event    PURPOSE: 	Loads tie points for all planes from files called 	[image name].tie_ptd    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 2/2004    NAME: 	grim_menu_file_save_curves_event    PURPOSE: 	Writes curves for the current plane to a file called 	[image name].curve_ptd    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 12/2015    NAME: 	grim_menu_file_save_all_curves_event    PURPOSE: 	Writes curves for all planes to files called 	[image name].curve_ptd    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 12/2015    NAME: 	grim_menu_file_load_curves_event    PURPOSE: 	loads curves for the current plane from a file called 	[image name].curve_ptd    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 12/2015    NAME: 	grim_menu_file_load_all_curves_event    PURPOSE: 	Loads curves for all planes from files called 	[image name].curve_ptd    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 12/2015    NAME: 	grim_menu_file_save_mask_event    PURPOSE: 	Writes mask points for the current plane to a file called 	[image name].mask    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2013    NAME: 	grim_menu_file_save_all_masks_event    PURPOSE: 	Writes mask points for all planes to files called 	[image name].mask    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2013    NAME: 	grim_menu_file_load_mask_event    PURPOSE: 	loads mask points for the current plane from a file called 	[image name].mask    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2013    NAME: 	grim_menu_file_load_all_masks_event    PURPOSE: 	Loads mask points for all planes from files called 	[image name].mask    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2013    NAME: 	grim_menu_file_save_ps_event    PURPOSE: 	Saves the current view as a postscript file.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 12/2002    NAME: 	grim_menu_repeat_event    PURPOSE: 	Repeats the last menu option.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2006    NAME: 	grim_menu_undo_event    PURPOSE: 	Undoes the last data modification.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 11/2006    NAME: 	grim_menu_redo_event    PURPOSE: 	Redoes the last data modification.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 11/2006    NAME: 	grim_select_event    PURPOSE: 	Selects or unselects a grim window.  This functionality is for use 	with functions that require input from more than one grim instance. 	The selected state is red; unselected is gray.    CATEGORY: 	NV/GR    OPERATION: 	This option toggles a given grim instance between selected 	and unselected states, for use with functions that require 	input from more than one grim instance.  When a given instance 	is selected, this button displays an asterisk.    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_identify_event    PURPOSE: 	Causes grim to identify itself on the IDL command line.    CATEGORY: 	NV/GR    OPERATION: 	This option causes grim to print a message on the IDL command line. 	It is useful in cases where multiple grim instances are running in 	multiple IDL sessions.    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2009    NAME: 	grim_menu_file_close_event    PURPOSE: 	Closes the current image plane.  All other image plane numbers 	remain the same.  If there is only one image plane, the grim exits.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    PLANE MENU    NAME: 	grim_menu_plane_next_event    PURPOSE: 	Changes to the next-numbered image plane.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_plane_previous_event    PURPOSE: 	Changes to the previous-numbered image plane.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_plane_jump_event    PURPOSE: 	Prompts the user and jumps to a new plane.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 5/2005    NAME: 	grim_menu_plane_browse_event    PURPOSE: 	Opens a brim browser showing all planes.  The left mouse button 	may be used to jump among planes.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 10/2002    NAME: 	grim_menu_plane_open_event    PURPOSE: 	Opens the image of the current plane in a new grim window.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 11/2002    NAME: 	grim_menu_plane_evolve_event    PURPOSE: 	Evolves the selected objects onto all other planes.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 2/2004    NAME: 	grim_menu_plane_crop_event    PURPOSE: 	Crops the data to the current viewing parameters.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2013    NAME: 	grim_menu_plane_reorder_time_event    PURPOSE: 	Rearranges all planes in time order.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 2/2004    NAME: 	grim_menu_plane_sequence_event    PURPOSE: 	Displays all planes in sequence using xinteranimate.  This option is 	useful or blinking as well.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2002    NAME: 	grim_menu_plane_dump_event    PURPOSE: 	Dumps all planes to png files entitled [filename].png.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2004    NAME: 	grim_menu_plane_coregister_event    PURPOSE: 	Shifts the images on each plane so as to center the active object 	at the same pixel on each plane.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 11/2002    NAME: 	grim_menu_plane_coadd_event    PURPOSE: 	Averages all planes.  Not implemented.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 5/2004    NAME: 	grim_menu_plane_toggle_plane_syncing_event    PURPOSE: 	Toggles plane syncing on/off.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2016    NAME: 	grim_menu_plane_highlight_event    PURPOSE: 	Toggles highlighting of the current plane image.  Useful when 	multiple planes are visible simultaneously.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2008    NAME: 	grim_menu_plane_copy_tiepoints_event    PURPOSE: 	Copies all tieppoints from the current plane to all other planes.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2004    NAME: 	grim_menu_plane_propagate_tiepoints_event    PURPOSE: 	Copies all tieppoints from the current plane to all other planes.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2004    NAME: 	grim_menu_plane_toggle_tiepoint_syncing_event    PURPOSE: 	Toggles tiepoint syncing on/off.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 10/2012    NAME: 	grim_menu_plane_clear_tiepoints_event    PURPOSE: 	Clears all tiepoints from the current plane.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 11/2004    NAME: 	grim_menu_plane_copy_curves_event    PURPOSE: 	Copies all curves from the current plane to all other planes.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2004    NAME: 	grim_menu_plane_toggle_curve_syncing_event    PURPOSE: 	Toggles curve syncing on/off.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 10/2012    NAME: 	grim_menu_plane_clear_curves_event    PURPOSE: 	Clears all curves from the current plane.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 11/2004    NAME: 	grim_menu_plane_copy_mask_event    PURPOSE: 	Copies mask from the current plane to all other planes.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2013    NAME: 	grim_menu_plane_clear_mask_event    PURPOSE: 	Clears the mask from the current plane.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2013    NAME: 	grim_menu_plane_settings_event    PURPOSE: 	Allows the user modify settings for the loaded image planes. 	Each plane may displayed in any combination of the three color 	channels.  Also, a plane may be made visible even when it is not 	the current plane, instead of the default behavior, which is to 	display the plane only whenit is current.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2002    DATA MENU    NAME: 	grim_menu_data_adjust_event    PURPOSE: 	This option allows the user to adjust data values.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 2/2014    VIEW MENU    NAME: 	grim_menu_view_refresh_event    PURPOSE: 	Redraws the overlays on the graphics display.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_view_zoom_event    PURPOSE: 	Prompts the user for a new zoom factor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 5/2005    NAME: 	grim_menu_view_zoom_double_event    PURPOSE: 	Doubles the current zoom, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_half_event    PURPOSE: 	Halves the current zoom, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_1_event    PURPOSE: 	Sets the current zoom to 1, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_2_event    PURPOSE: 	Sets the current zoom to 2, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_3_event    PURPOSE: 	Sets the current zoom to 3, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_4_event    PURPOSE: 	Sets the current zoom to 4, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_5_event    PURPOSE: 	Sets the current zoom to 5, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_6_event    PURPOSE: 	Sets the current zoom to 6, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_7_event    PURPOSE: 	Sets the current zoom to 7, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_8_event    PURPOSE: 	Sets the current zoom to 8, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_9_event    PURPOSE: 	Sets the current zoom to 9, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_10_event    PURPOSE: 	Sets the current zoom to 10, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_1_2_event    PURPOSE: 	Sets the current zoom to 1/2, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_1_3_event    PURPOSE: 	Sets the current zoom to 1/3, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_1_4_event    PURPOSE: 	Sets the current zoom to 1/4, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_1_5_event    PURPOSE: 	Sets the current zoom to 1/5, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_1_5_event    PURPOSE: 	Sets the current zoom to 1/5, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_1_6_event    PURPOSE: 	Sets the current zoom to 1/6, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_1_7_event    PURPOSE: 	Sets the current zoom to 1/7, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_1_8_event    PURPOSE: 	Sets the current zoom to 1/8, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_1_9_event    PURPOSE: 	Sets the current zoom to 1/9, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_zoom_1_10_event    PURPOSE: 	Sets the current zoom to 1/10, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_rotate_0_event    PURPOSE: 	Sets the current rotate to 0, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2013    NAME: 	grim_menu_view_rotate_1_event    PURPOSE: 	Sets the current rotate to 1, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2013    NAME: 	grim_menu_view_rotate_2_event    PURPOSE: 	Sets the current rotate to 2, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2013    NAME: 	grim_menu_view_rotate_3_event    PURPOSE: 	Sets the current rotate to 3, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2013    NAME: 	grim_menu_view_rotate_4_event    PURPOSE: 	Sets the current rotate to 4, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2013    NAME: 	grim_menu_view_rotate_5_event    PURPOSE: 	Sets the current rotate to 5, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2013    NAME: 	grim_menu_view_rotate_6_event    PURPOSE: 	Sets the current rotate to 6, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2013    NAME: 	grim_menu_view_rotate_7_event    PURPOSE: 	Sets the current rotate to 7, centered at the mouse cursor.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2013    NAME: 	grim_menu_view_recenter_event    PURPOSE: 	Recenters the view at the cursor position.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2008    NAME: 	grim_menu_view_apply_event    PURPOSE: 	Applys the current view to all planes.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 2/2016    NAME: 	grim_menu_view_home_event    PURPOSE: 	Sets the tvim home view settings.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 5/2005    NAME: 	grim_menu_view_save_event    PURPOSE: 	Saves the current view settings.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_view_restore_event    PURPOSE: 	Restores the last-saved view settings.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_view_previous_event    PURPOSE: 	Restores the previous view settings.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_view_entire_event    PURPOSE: 	Applies the 'entire' display parameters, as given in tvim.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_view_initial_event    PURPOSE: 	Reverts to the initial view parameters for this grim widget.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 10/2007    NAME: 	grim_menu_view_flip_event    PURPOSE: 	Reverses the curent display order.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_view_frame_event    PURPOSE: 	Modifies view settings so as to display the either all overlays 	or those that are active.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 9/2007    NAME: 	grim_menu_view_header_event    PURPOSE: 	Opens a text window showing the image header.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 10/2003    NAME: 	grim_menu_notes_event    PURPOSE: 	Opens a text window allowing the user to enter notes for each plane.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 10/2003    NAME: 	grim_menu_toggle_image_event    PURPOSE: 	Toggles the image On/Off.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 9/2012    NAME: 	grim_menu_toggle_image_overlays_event    PURPOSE: 	Toggles the image and overlays On/Off.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 9/2012    NAME: 	grim_menu_context_event    PURPOSE: 	Toggles the context window On/Off.   CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 9/2005    NAME: 	grim_menu_axes_event    PURPOSE: 	Toggles the axes window On/Off.  The colors are as follows:  	 Blue	- Inertial axes. 	 Red	- Camera axes. 	 Green	- Direction to primary planet, not foreshortened. 	 Yellow	- Direction to Sun, not foreshortened.  	Vectors pointing away from the camera are dotted.  The vectors are 	rooted at a point 1d5 distance units in front of the camera . 	In the direction corresponding to the image position of the drawn 	axes.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 9/2005    NAME: 	grim_menu_render_event    PURPOSE: 	Renders the visible scene and places it in a new plane unless 	the current plane is already rendering.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2015    NAME: 	grim_menu_view_colors_event    PURPOSE: 	Opens grim_colortool.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    OVERLAYS MENU    NAME: 	grim_menu_points_planet_centers_event    PURPOSE: 	Obtains the necessary descriptors through the translators and computes 	planet center positions using pg_center for all active objects.  If no 	active objects, then all centers are computed.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_points_limbs_event    PURPOSE: 	Obtains the necessary descriptors through the translators and computes 	limbs using pg_limbs for all active objects.  If no active objects, 	then all limbs are computed.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_points_terminators_event    PURPOSE: 	Obtains the necessary descriptors through the translators and computes 	terminators using pg_limb with the sun as the observer for all active 	objects.  If no active objects, then all terminators are computed.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_points_planet_grids_event    PURPOSE: 	Obtains the necessary descriptors through the translators and computes 	planet grids using pg_grid for all active objects.  If no active 	objects, then all grids are computed.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_points_rings_event    PURPOSE: 	Obtains the necessary descriptors through the translators and computes 	ring outlines using pg_disk.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_points_ring_grids_event    PURPOSE: 	Obtains the necessary descriptors through the translators and computes 	ring grids using pg_grid for all active objects.  If no active 	objects, then all grids are computed.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2004    NAME: 	grim_menu_points_stations_event    PURPOSE: 	Obtains the necessary descriptors through the translators and computes 	planet stations for all active objects.  If no active objects, then 	all stations are computed.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 2/2009    NAME: 	grim_menu_points_arrays_event    PURPOSE: 	Obtains the necessary descriptors through the translators and computes 	arrays for all active objects.  If no active objects, then 	all arrays are computed.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 3/2012    NAME: 	grim_menu_points_stars_event    PURPOSE: 	Obtains the necessary descriptors through the translators and computes 	star positions using pg_center.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_points_shadows_event    PURPOSE: 	Obtains the necessary descriptors through the translators and computes 	shadows of the currently active overlay points on all other objects. 	Note that you may have to disable overlay hiding in order to compute 	and activate all of the appropriate source points for the shadows 	since many point that are not visible to the observer may still have 	a line of sight to the sun.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 1/2003    NAME: 	grim_menu_points_reflections_event    PURPOSE: 	Obtains the necessary descriptors through the translators and computes 	reflections of the currently active overlay points on all other objects. 	Note that you may have to disable overlay hiding in order to compute 	and activate all of the appropriate source points for the reflections 	since many point that are not visible to the observer may still have 	a line of sight to the sun.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 1/2003    NAME: 	grim_menu_hide_all_event    PURPOSE: 	 Hides/unhides all overlay objects.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 1/2003    NAME: 	grim_menu_clear_all_event    PURPOSE: 	 Clears all objects.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 9/2002    NAME: 	grim_menu_clear_active_event    PURPOSE: 	 Clears all active objects.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 9/2002    NAME: 	grim_menu_activate_all_event    PURPOSE: 	 Activates all objects.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 9/2002    NAME: 	grim_menu_deactivate_all_event    PURPOSE: 	 Deactivates all objects.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 9/2002    NAME: 	grim_menu_invert_all_event    PURPOSE: 	 Inverts current overlay activations.  Desccriptor activations are 	 determined by the resulting overlay activations.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 11/2002    NAME: 	grim_menu_points_settings_event    PURPOSE: 	Allows the user modify settings relevant to the overlay points.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002   ", "", "          -1", "");
   
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_identify_bitmap", "grim_identify_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_identify_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_rotate_bitmap", "grim_rotate_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_rotate_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_reorient_bitmap", "grim_reorient_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_reorient_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_mp40_bitmap", "grim_mp40_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_mp40_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_dagger_bitmap", "grim_dagger_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_dagger_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_crop_bitmap", "grim_crop_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_crop_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_redo_bitmap", "grim_redo_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_redo_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_undo_bitmap", "grim_undo_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_undo_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_notes_bitmap", "grim_notes_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_notes_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_remove1_bitmap", "grim_remove1_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_remove1_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_remove2_bitmap", "grim_remove2_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_remove2_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_repeat_bitmap", "grim_repeat_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_repeat_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_unselect_bitmap", "grim_unselect_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_unselect_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_select_bitmap", "grim_select_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_select_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_context_bitmap", "grim_context_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_context_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_previous_bitmap", "grim_previous_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_previous_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_next_bitmap", "grim_next_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_next_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_mag_bitmap", "grim_mag_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_mag_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_refresh_bitmap", "grim_refresh_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_refresh_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_entire_bitmap", "grim_entire_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_entire_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_view_previous_bitmap", "grim_view_previous_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_view_previous_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_hide_bitmap", "grim_hide_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_hide_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_unhide_bitmap", "grim_unhide_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_unhide_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_colors_bitmap", "grim_colors_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_colors_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_tracking_bitmap", "grim_tracking_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_tracking_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_activate_all_bitmap", "grim_activate_all_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_activate_all_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_deactivate_all_bitmap", "grim_deactivate_all_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_deactivate_all_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_grid_bitmap", "grim_grid_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_grid_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_header_bitmap", "grim_header_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_header_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_axes_bitmap", "grim_axes_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_axes_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_unhide_image_bitmap", "grim_unhide_image_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_unhide_image_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_hide_image_bitmap", "grim_hide_image_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_hide_image_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_unrender_bitmap", "grim_unrender_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_unrender_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_render_bitmap", "grim_render_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_render_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_settings_bitmap", "grim_settings_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_settings_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_pixel_grid_bitmap", "grim_pixel_grid_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_pixel_grid_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_guideline_bitmap", "grim_guideline_bitmap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_guideline_bitmap", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_n_colors", "grim_n_colors", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_n_colors", "", "type", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_body_by_name_single", "grim_get_body_by_name_single", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_body_by_name_single", "", "xd_pname", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_body_by_name", "grim_get_body_by_name", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_body_by_name", "", "planename", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_shade_threshold", "grim_shade_threshold", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_shade_threshold", "", "ptdshadethreshold", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_parse_overlay", "grim_parse_overlay", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_parse_overlay", "", "overlaynames", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_cat_bodies", "grim_cat_bodies", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_cat_bodies", "", "plane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_cursor_swap", "grim_get_cursor_swap", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_cursor_swap", "", "grim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_wset", "grim_wset", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_wset", "", "get_infosavenoplotsilentgrim_datawnum", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_logging_callback", "grim_logging_callback", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_logging_callback", "", "data_pmessage", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_logging", "grim_logging", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_logging", "", "startstopgrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_delim_event", "grim_menu_delim_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_delim_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_parse_form_entry", "grim_parse_form_entry", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_parse_form_entry", "", "nulldropnumericstringidstagstag", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_set_form_entry", "grim_set_form_entry", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_set_form_entry", "", "dropcwbuttonsensitiveidstagstagvalue", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_add_callback", "grim_add_callback", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_add_callback", "", "callbacksdata_pscallbacks_listdata_ps_list", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_rm_callback", "grim_rm_callback", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_rm_callback", "", "data_pscallbacks_listdata_ps_list", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_call_callbacks", "grim_call_callbacks", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_call_callbacks", "", "_callbacks_list_data_ps_listevent", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_crop_plane", "grim_crop_plane", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_crop_plane", "", "grim_dataplane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_next_plane", "grim_next_plane", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_next_plane", "", "norefreshgrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_previous_plane", "grim_previous_plane", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_previous_plane", "", "grim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_plane", "grim_get_plane", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_plane", "", "allpnvisiblegrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_plane_set_visible", "grim_plane_set_visible", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_plane_set_visible", "", "togglegrim_dataplanesval", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_visible_planes", "grim_get_visible_planes", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_visible_planes", "", "grim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_set_plane", "grim_set_plane", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_set_plane", "", "pngrim_dataplane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_rm_plane", "grim_rm_plane", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_rm_plane", "", "grim_datapn", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_init_parms", "grim_init_parms", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_init_parms", "", "colorthicknsumpsymsymsizen", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_clone_plane", "grim_clone_plane", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_clone_plane", "", "planegrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_channel_to_rgb", "grim_channel_to_rgb", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_channel_to_rgb", "", "channel", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_add_planes", "grim_add_planes", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_add_planes", "", "pnsfilterfovhidepathsave_pathload_pathtrs_cdtrs_pdtrs_rdtrs_sdtrs_stdtrs_ardtrs_sundcolorxrangeyrangethicknsumxtitleytitlepsymsymsizemaxvisibilitychannelrender_samplerender_pht_mindata_offsetsgrim_datadd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_blank", "grim_blank", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_blank", "", "xsizeysize", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_init", "grim_init", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_init", "", "dd0zoomwnumgrnumfilterretainuser_callbacksuser_psymuser_graphics_fnuser_thickuser_linefaintcursor_swappathsave_pathload_pathfovtrs_cdtrs_pdtrs_rdtrs_sdtrs_stdtrs_ardtrs_sundfiletypehidetypecolorxrangeyrangenpointsthicknsumxtitleytitlepsymcursor_modesreadout_fnssymsizenhistmaintainworkdircompressextensionsmaxbetatiepoint_syncingcurve_syncingvisibilitychanneltitleslave_overlaysrender_samplerender_pht_mindata_offsetsdd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_exists", "grim_exists", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_exists", "", "grim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_grnum_to_top", "grim_grnum_to_top", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_grnum_to_top", "", "grnum", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_data", "grim_get_data", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_data", "", "grnumplanedeadprimaryno_wsettop", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_set_data", "grim_set_data", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_set_data", "", "primarygrim_datatop", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_set_primary", "grim_set_primary", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_set_primary", "", "top", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_set_mode_data", "grim_set_mode_data", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_set_mode_data", "", "grim_datadata", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_add_primary_callback", "grim_add_primary_callback", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_add_primary_callback", "", "callbacksdata_ps", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_rm_primary_callback", "grim_rm_primary_callback", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_rm_primary_callback", "", "data_ps", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_call_primary_callbacks", "grim_call_primary_callbacks", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_call_primary_callbacks", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_add_plane_callback", "grim_add_plane_callback", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_add_plane_callback", "", "topno_wsetcallbacksdata_ps", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_rm_plane_callback", "grim_rm_plane_callback", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_rm_plane_callback", "", "topdata_ps", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_call_plane_callbacks", "grim_call_plane_callbacks", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_call_plane_callbacks", "", "grim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_selected", "grim_get_selected", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_selected", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_select", "grim_select", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_select", "", "grim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_identify", "grim_identify", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_identify", "", "grim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_grnum_create", "grim_grnum_create", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_grnum_create", "", "top", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_grnum_destroy", "grim_grnum_destroy", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_grnum_destroy", "", "grnum", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_top_to_grnum", "grim_top_to_grnum", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_top_to_grnum", "", "newtop", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_test_map", "grim_test_map", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_test_map", "", "planegrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_jump_to_plane", "grim_jump_to_plane", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_jump_to_plane", "", "validgrim_datapn", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_user_ptd_struct__define", "grim_user_ptd_struct__define", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_user_ptd_struct__define", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_add_user_points", "grim_add_user_points", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_add_user_points", "", "grnumupdatecolorshade_fnpsymthicklinesymsizeshade_thresholdgraphics_fnxgraphicsnodrawinactiveno_refreshplaneuser_ptdtag", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_update_user_points", "grim_update_user_points", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_update_user_points", "", "planegrnumcolorshade_fnpsymthicklinesymsizeshade_thresholdgraphics_fnxgraphicsnodrawno_refreshuser_ptdtag", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_rm_user_points", "grim_rm_user_points", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_rm_user_points", "", "planegrnumgrim_datatag", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_test_active_user_ptd", "grim_test_active_user_ptd", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_test_active_user_ptd", "", "prefixplanetag", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_user_ptd", "grim_get_user_ptd", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_user_ptd", "", "grnumprefixplanecolorshade_fnxgraphicsgraphics_fnshade_thresholdpsymthicklinesymsizetagsactivetag", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_active_user_overlays", "grim_get_active_user_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_active_user_overlays", "", "active_tagsinactive_tagsplane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_trim_user_overlays", "grim_trim_user_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_trim_user_overlays", "", "planegrim_dataregion", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_activate_user_overlay", "grim_activate_user_overlay", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_activate_user_overlay", "", "planeindices", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_deactivate_user_overlay", "grim_deactivate_user_overlay", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_deactivate_user_overlay", "", "planeindices", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_clear_user_overlays", "grim_clear_user_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_clear_user_overlays", "", "planetags", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_clear_active_user_overlays", "grim_clear_active_user_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_clear_active_user_overlays", "", "plane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_invert_active_user_overlays", "grim_invert_active_user_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_invert_active_user_overlays", "", "plane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_set_user_data", "grim_set_user_data", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_set_user_data", "", "grim_datatagdata", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_user_data", "grim_get_user_data", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_user_data", "", "grim_datatag", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_compute_planet_center", "grim_compute_planet_center", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_compute_planet_center", "", "mapfovhidegdactive_xdsactive_ptddatanpointsxds", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_symsize_planet_center", "grim_symsize_planet_center", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_symsize_planet_center", "", "data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_shade_planet_center", "grim_shade_planet_center", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_shade_planet_center", "", "dataptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_compute_limb", "grim_compute_limb", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_compute_limb", "", "mapfovhidegdactive_xdsactive_ptddatanpointsxds", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_symsize_limb", "grim_symsize_limb", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_symsize_limb", "", "data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_shade_limb", "grim_shade_limb", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_shade_limb", "", "dataptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_compute_terminator", "grim_compute_terminator", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_compute_terminator", "", "mapfovhidegdactive_xdsactive_ptddatanpointsxds", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_symsize_terminator", "grim_symsize_terminator", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_symsize_terminator", "", "data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_shade_terminator", "grim_shade_terminator", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_shade_terminator", "", "dataptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_compute_planet_grid", "grim_compute_planet_grid", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_compute_planet_grid", "", "mapfovhidegdactive_xdsactive_ptddatanpointsxds", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_symsize_planet_grid", "grim_symsize_planet_grid", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_symsize_planet_grid", "", "data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_shade_planet_grid", "grim_shade_planet_grid", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_shade_planet_grid", "", "dataptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_compute_station", "grim_compute_station", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_compute_station", "", "mapfovhidegdactive_xdsactive_ptddatanpointsxds", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_symsize_station", "grim_symsize_station", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_symsize_station", "", "data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_shade_station", "grim_shade_station", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_shade_station", "", "dataptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_compute_array", "grim_compute_array", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_compute_array", "", "mapfovhidegdactive_xdsactive_ptddatanpointsxds", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_symsize_array", "grim_symsize_array", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_symsize_array", "", "data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_shade_array", "grim_shade_array", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_shade_array", "", "dataptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_compute_star", "grim_compute_star", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_compute_star", "", "mapfovhidegdactive_xdsactive_ptddatanpointsxds", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_symsize_star", "grim_symsize_star", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_symsize_star", "", "data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_shade_star", "grim_shade_star", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_shade_star", "", "dataptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_compute_shadow", "grim_compute_shadow", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_compute_shadow", "", "mapfovhidegdactive_xdsactive_ptddatanpointsxds", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_symsize_shadow", "grim_symsize_shadow", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_symsize_shadow", "", "data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_shade_shadow", "grim_shade_shadow", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_shade_shadow", "", "dataptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_compute_reflection", "grim_compute_reflection", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_compute_reflection", "", "mapfovhidegdactive_xdsactive_ptddatanpointsxds", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_symsize_reflection", "grim_symsize_reflection", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_symsize_reflection", "", "data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_shade_reflection", "grim_shade_reflection", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_shade_reflection", "", "dataptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_compute_ring", "grim_compute_ring", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_compute_ring", "", "mapfovhidegdactive_xdsactive_ptddatanpointsxds", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_symsize_ring", "grim_symsize_ring", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_symsize_ring", "", "data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_shade_ring", "grim_shade_ring", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_shade_ring", "", "dataptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_compute_ring_grid", "grim_compute_ring_grid", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_compute_ring_grid", "", "mapfovhidegdactive_xdsactive_ptddatanpointsxds", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_symsize_ring_grid", "grim_symsize_ring_grid", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_symsize_ring_grid", "", "data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_shade_ring_grid", "grim_shade_ring_grid", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_shade_ring_grid", "", "dataptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_set_overlay_update_flag", "grim_set_overlay_update_flag", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_set_overlay_update_flag", "", "ptdvalue", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_overlay_update_flag", "grim_get_overlay_update_flag", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_overlay_update_flag", "", "ptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_updated_ptd", "grim_get_updated_ptd", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_updated_ptd", "", "iiclear_ptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_xd", "grim_get_xd", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_xd", "", "planegrim_dataclass", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_overlay_ptdp", "grim_get_overlay_ptdp", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_overlay_ptdp", "", "planedataclassdeplabelsiicolorpsymtlabtshadesymsizeshadetfillgenrefastgrim_dataname", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_active_overlays", "grim_get_active_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_active_overlays", "", "planeactive_indicesinactive_indicesgrim_datatype", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_all_active_overlays", "grim_get_all_active_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_all_active_overlays", "", "planenamesgrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_all_overlays", "grim_get_all_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_all_overlays", "", "planenamesgrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_active_xds", "grim_get_active_xds", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_active_xds", "", "active_indicesinactive_indicesplaneclass", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_update_activated", "grim_update_activated", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_update_activated", "", "planegrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_add_activation_callback", "grim_add_activation_callback", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_add_activation_callback", "", "topno_wsetcallbacksdata_ps", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_rm_activation_callback", "grim_rm_activation_callback", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_rm_activation_callback", "", "topdata_ps", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_call_activation_callbacks", "grim_call_activation_callbacks", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_call_activation_callbacks", "", "planeptdarg", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_fill", "grim_fill", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_fill", "", "ptdnamecolor", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_draw_standard_points", "grim_draw_standard_points", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_draw_standard_points", "", "psympsizeplabelsgrim_dataplane_ptdnamedatacolortshadeshade", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_draw_standard_overlays", "grim_draw_standard_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_draw_standard_overlays", "", "updatemlabgrim_dataplaneinactive_color", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_draw_user_points", "grim_draw_user_points", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_draw_user_points", "", "xmapgrim_dataplanetags", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_draw_user_overlays", "grim_draw_user_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_draw_user_overlays", "", "grim_dataplaneinactive_color", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_draw_roi", "grim_draw_roi", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_draw_roi", "", "grim_dataplane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_draw_indexed_arrays", "grim_draw_indexed_arrays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_draw_indexed_arrays", "", "psymptdp", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_draw_curves", "grim_draw_curves", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_draw_curves", "", "grim_dataplane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_draw_tiepoints", "grim_draw_tiepoints", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_draw_tiepoints", "", "grim_dataplane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_draw_mask", "grim_draw_mask", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_draw_mask", "", "grim_dataplane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_draw", "grim_draw", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_draw", "", "planesallwnumusertiepointsmaskcurveslabelreadoutmeasureupdatenopointsroino_usergrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_draw_grids", "grim_draw_grids", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_draw_grids", "", "planeno_wsetgrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_draw_axes", "grim_draw_axes", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_draw_axes", "", "planeno_contextno_wsetgrim_datadata", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_cat_points", "grim_cat_points", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_cat_points", "", "allactiveplanegrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_rm_points", "grim_rm_points", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_rm_points", "", "planeptdpii", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_match_overlays", "grim_match_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_match_overlays", "", "ptdptd0", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_update_points", "grim_update_points", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_update_points", "", "planegrim_dataptd0ptdxds", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_add_points", "grim_add_points", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_add_points", "", "planenamecddatagrim_dataptdxds", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_default_activations", "grim_default_activations", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_default_activations", "", "planegrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_clear_overlay_points", "grim_clear_overlay_points", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_clear_overlay_points", "", "ptdpactive_ptdp", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_clear_active_overlays", "grim_clear_active_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_clear_active_overlays", "", "plane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_frame_overlays", "grim_frame_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_frame_overlays", "", "slopxygrim_dataplaneptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_hide_overlays", "grim_hide_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_hide_overlays", "", "no_refreshbmgrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_clear_objects", "grim_clear_objects", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_clear_objects", "", "allcdpdrdsdstdsundplanesgrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_place_readout_mark", "grim_place_readout_mark", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_place_readout_mark", "", "grim_datap", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_place_measure_mark", "grim_place_measure_mark", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_place_measure_mark", "", "grim_datap", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_indexed_array", "grim_get_indexed_array", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_indexed_array", "", "planename", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_indexed_array_fname", "grim_indexed_array_fname", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_indexed_array_fname", "", "basenamegrim_dataplanename", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_write_indexed_arrays", "grim_write_indexed_arrays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_write_indexed_arrays", "", "fnamegrim_dataplanename", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_read_indexed_arrays", "grim_read_indexed_arrays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_read_indexed_arrays", "", "fnamegrim_dataplanename", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_unique_array_label", "grim_unique_array_label", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_unique_array_label", "", "prefixptdp", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_add_indexed_array", "grim_add_indexed_array", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_add_indexed_array", "", "ptdnointerpspacingflagslabelptdpp", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_select_array_by_box", "grim_select_array_by_box", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_select_array_by_box", "", "planegrim_dataptdcxcy", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_select_array_by_point", "grim_select_array_by_point", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_select_array_by_point", "", "allplanegrim_dataptdp", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_select_array", "grim_select_array", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_select_array", "", "planegrim_dataptdp", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_rm_indexed_array", "grim_rm_indexed_array", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_rm_indexed_array", "", "planeallgrim_datanamep", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_add_tiepoint", "grim_add_tiepoint", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_add_tiepoint", "", "planenointerpspacingno_syncflagsgrim_datap", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_add_curve", "grim_add_curve", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_add_curve", "", "planenointerpspacingno_syncflagsgrim_datap", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_rm_tiepoint", "grim_rm_tiepoint", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_rm_tiepoint", "", "allplanenosyncgrim_datap", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_rm_curve", "grim_rm_curve", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_rm_curve", "", "allplanenosyncgrim_datap", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_set_roi", "grim_set_roi", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_set_roi", "", "planegrim_dataroip", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_add_mask", "grim_add_mask", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_add_mask", "", "planereplacesubscriptgrim_datap", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_copy_indexed_array", "grim_copy_indexed_array", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_copy_indexed_array", "", "grim_dataplaneplanesname", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_copy_tiepoint", "grim_copy_tiepoint", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_copy_tiepoint", "", "grim_dataplaneplanes", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_copy_curve", "grim_copy_curve", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_copy_curve", "", "grim_dataplaneplanes", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_tiepoint_indices", "grim_get_tiepoint_indices", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_tiepoint_indices", "", "planegrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_replace_tiepoints", "grim_replace_tiepoints", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_replace_tiepoints", "", "planegrim_dataiip", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_image_to_surface", "grim_image_to_surface", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_image_to_surface", "", "body_ptsfar_ptsnamesvalidbxgrim_dataplaneimage_pts", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_surface_to_image", "grim_surface_to_image", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_surface_to_image", "", "validgrim_dataplanesurf_ptsnames", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_sync_indexed_array", "grim_sync_indexed_array", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_sync_indexed_array", "", "grim_dataplaneptd_grim_data_plane_ptdp", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_push_indexed_array", "grim_push_indexed_array", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_push_indexed_array", "", "rmgrim_dataptdname", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_rm_mask_by_point", "grim_rm_mask_by_point", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_rm_mask_by_point", "", "planeppgrim_datap", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_rm_mask_by_box", "grim_rm_mask_by_box", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_rm_mask_by_box", "", "planeppgrim_datacxcy", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_rm_mask", "grim_rm_mask", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_rm_mask", "", "allplaneppgrim_datap", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_object_overlays", "grim_get_object_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_object_overlays", "", "planexd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_deactivate_xd", "grim_deactivate_xd", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_deactivate_xd", "", "planexds", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_deactivate_overlay", "grim_deactivate_overlay", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_deactivate_overlay", "", "xdsassoc_xdspptdno_callbackplaneptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_activate_xd", "grim_activate_xd", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_activate_xd", "", "planexds", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_deactivate_all_xds", "grim_deactivate_all_xds", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_deactivate_all_xds", "", "plane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_activate_all_xds", "grim_activate_all_xds", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_activate_all_xds", "", "plane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_activate_overlay", "grim_activate_overlay", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_activate_overlay", "", "xdspptdno_callbackplaneptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_activate_all_overlays", "grim_activate_all_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_activate_all_overlays", "", "plane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_deactivate_all_overlays", "grim_deactivate_all_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_deactivate_all_overlays", "", "plane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_invert_active_overlays", "grim_invert_active_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_invert_active_overlays", "", "xdsplaneptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_invert_all_overlays", "grim_invert_all_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_invert_all_overlays", "", "plane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_nearest_overlay", "grim_nearest_overlay", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_nearest_overlay", "", "mmplanepobject_ptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_enclosed_overlays", "grim_enclosed_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_enclosed_overlays", "", "mmcornersobject_ptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_remove_by_point", "grim_remove_by_point", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_remove_by_point", "", "clicksuserplanep0", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_activate_by_point", "grim_activate_by_point", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_activate_by_point", "", "deactivateclicksinvertplanep0", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_trim_overlays", "grim_trim_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_trim_overlays", "", "planegrim_dataregion", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_select_overlay_points", "grim_select_overlay_points", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_select_overlay_points", "", "planedeselectgrim_dataregion", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_remove_by_box", "grim_remove_by_box", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_remove_by_box", "", "statuserplanecxcy", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_activate_by_box", "grim_activate_by_box", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_activate_by_box", "", "deactivateplanecxcy", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_activate_select", "grim_activate_select", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_activate_select", "", "deactivateclicksptdplanep0", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_remove_overlays", "grim_remove_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_remove_overlays", "", "clicksstatuserplanep0", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_create_overlay", "grim_create_overlay", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_create_overlay", "", "classdep_classescolorpsymsymsizeshadetlabtshadetfillgenregrim_dataplanenamedep_overlays", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_create_overlays", "grim_create_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_create_overlays", "", "grim_dataplane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_hide", "grim_hide", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_hide", "", "gdgrim_dataplaneptd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_overlay", "grim_overlay", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_overlay", "", "planedepptdsource_ptdobj_namereplacetempgrim_dataname", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_descriptor_notify_handle", "grim_descriptor_notify_handle", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_descriptor_notify_handle", "", "refreshnewgrim_dataxd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_suspend_events", "grim_suspend_events", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_suspend_events", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_resume_events", "grim_resume_events", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_resume_events", "", "", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_descriptor_notify", "grim_descriptor_notify", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_descriptor_notify", "", "refreshnewevents", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_rm_descriptor", "grim_rm_descriptor", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_rm_descriptor", "", "planegrim_data_xd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_mark_descriptor", "grim_mark_descriptor", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_mark_descriptor", "", "xdval", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_demark_descriptor", "grim_demark_descriptor", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_demark_descriptor", "", "xd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_mark_descriptors", "grim_mark_descriptors", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_mark_descriptors", "", "allcdpdrdsdstdardsundplanesgrim_dataval", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_add_descriptor", "grim_add_descriptor", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_add_descriptor", "", "onereplacenoregistergrim_dataxdpxd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_cameras", "grim_get_cameras", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_cameras", "", "replaceplanegrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_planets", "grim_get_planets", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_planets", "", "replaceplanenamesgrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_sun", "grim_get_sun", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_sun", "", "replaceplanegrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_stars", "grim_get_stars", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_stars", "", "replacesilentplanenamesgrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_rings", "grim_get_rings", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_rings", "", "replaceplanenamesgrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_stations", "grim_get_stations", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_stations", "", "replaceplanenamesgrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_arrays", "grim_get_arrays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_arrays", "", "replaceplanenamesgrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_clear_descriptors", "grim_clear_descriptors", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_clear_descriptors", "", "planesgrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_load_descriptors", "grim_load_descriptors", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_load_descriptors", "", "planeclasscdpdrdsundsdardstdodobj_namereplacegdgrim_dataname", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_n_colors", "grim_get_n_colors", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_n_colors", "", "planetypegrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_visible_planes", "grim_visible_planes", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_visible_planes", "", "planecurrentgrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_plane_by_xy", "grim_get_plane_by_xy", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_plane_by_xy", "", "grim_dataxy", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_plane_by_overlay", "grim_get_plane_by_overlay", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_plane_by_overlay", "", "grim_dataxy", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_test_single_channel", "grim_test_single_channel", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_test_single_channel", "", "grim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_toggle_image", "grim_toggle_image", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_toggle_image", "", "no_refreshbmgrim_dataplane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_toggle_image_overlays", "grim_toggle_image_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_toggle_image_overlays", "", "no_refreshgrim_dataplane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_render_image", "grim_render_image", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_render_image", "", "planeimage_ptsgrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_image", "grim_image", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_image", "", "planepncolormapchannelcurrentxrangeyrangegrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_scale_image", "grim_scale_image", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_scale_image", "", "currentplaneno_scaletopxrangeyrangegrim_datargb", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_display_image", "grim_display_image", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_display_image", "", "planeentirewnumdoffsetzoomrotateorderdefaultpreviousfliprestorexsizeysizeoffsettopnoplotno_scaleno_wsetno_coordtvimageminmaxhomedraw_pixmapcurrentno_copygrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_display_plot", "grim_display_plot", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_display_plot", "", "planedoffsetwnumxrangeyrangeno_wsetdefaultpreviousfliprestorexsizeysizepositiondxdyentireeraseno_coordcolornodrawcurrentgrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_display", "grim_display", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_display", "", "planewnumhomeno_imageno_axesdoffsetno_erasezoomrotateorderxsizeysizeoffsetdefaultpreviousfliprestoreuse_pixmappixmap_box_centerno_copypixmap_box_sideno_backentireno_wsetno_coordtvimageno_plotnodrawxrangeyrangedxdycurrentpixmap_to_usegrim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_show_context_image", "grim_show_context_image", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_show_context_image", "", "grim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_show_axes", "grim_show_axes", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_show_axes", "", "grim_dataplane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_add_refresh_callback", "grim_add_refresh_callback", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_add_refresh_callback", "", "topno_wsetcallbacksdata_ps", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_rm_refresh_callback", "grim_rm_refresh_callback", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_rm_refresh_callback", "", "topdata_ps", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_call_refresh_callbacks", "grim_call_refresh_callbacks", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_call_refresh_callbacks", "", "grim_data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_title", "grim_title", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_title", "", "primaryplane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_refresh", "grim_refresh", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_refresh", "", "wnumplaneno_imageno_objectsno_axesno_titlehomexrangeyrangedoffsetno_erasezoomrotateorderdefaultpreviousfliprestorexsizeysizeoffsetuse_pixmappixmap_box_centerpixmap_box_sidecontextentirenoglassno_wsetno_contextno_callbackno_backno_coordtvimageno_plotjust_imagedxdyupdatecurrentno_copyno_mainno_usergrim_data", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_constants", "grim_constants", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_constants", "", "", "          -1", "");
   
@@ -771,27 +208,23 @@ libdata[libdataItem++] = new Array("./grim.html", "grim.pro", '.pro file in <a h
   
   libdata[libdataItem++] = new Array("./grim.html#grim_test_motion_event", "grim_test_motion_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_test_motion_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_cmds", "grim_get_cmds", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_cmds", "", "allgrim_data", "          -1", "");
-  
   libdata[libdataItem++] = new Array("./grim.html#grim_set_ct", "grim_set_ct", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_set_ct", "", "grim_data", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_set_mode", "grim_set_mode", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_set_mode", "", "newinitdata_pgrim_datamode", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_write_ptd", "grim_write_ptd", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_write_ptd", "", "grim_datafilename", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_write", "grim_write", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_write", "", "grim_data", "          -1", "");
+  libdata[libdataItem++] = new Array("./grim.html#grim_write", "grim_write", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_write", "", "filetypegrim_datafilename", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_save_filename", "grim_get_save_filename", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_save_filename", "", "grim_data", "          -1", "");
+  libdata[libdataItem++] = new Array("./grim.html#grim_get_save_filename", "grim_get_save_filename", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_save_filename", "", "filetypegrim_data", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_kill_notify", "grim_kill_notify", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_kill_notify", "", "top", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_load_files", "grim_load_files", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_load_files", "", "load_pathgrim_datafilenames", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_deactivate_all", "grim_deactivate_all", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_deactivate_all", "", "plane", "          -1", "");
+  libdata[libdataItem++] = new Array("./grim.html#grim_deactivate_all", "grim_deactivate_all", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_deactivate_all", "", "grim_dataplane", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_activate_all", "grim_activate_all", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_activate_all", "", "plane", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_modify_colors_callback", "grim_modify_colors_callback", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_modify_colors_callback", "", "allcmdcb_data", "          -1", "");
+  libdata[libdataItem++] = new Array("./grim.html#grim_activate_all", "grim_activate_all", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_activate_all", "", "grim_dataplane", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_modify_colors", "grim_modify_colors", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_modify_colors", "", "grim_data", "          -1", "");
   
@@ -845,6 +278,8 @@ libdata[libdataItem++] = new Array("./grim.html", "grim.pro", '.pro file in <a h
   
   libdata[libdataItem++] = new Array("./grim.html#grim_interrupt_callback", "grim_interrupt_callback", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_interrupt_callback", "", "data", "          -1", "");
   
+  libdata[libdataItem++] = new Array("./grim.html#grim_sampling_fn", "grim_sampling_fn", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_sampling_fn", "", "ddsource_image_pts_sampledata", "          -1", "");
+  
   libdata[libdataItem++] = new Array("./grim.html#grim_render_dim_fn", "grim_render_dim_fn", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_render_dim_fn", "", "dddim_orig", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_render_sampling_fn", "grim_render_sampling_fn", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_render_sampling_fn", "", "ddsource_image_pts_samplesource_image_pts_grid", "          -1", "");
@@ -865,137 +300,133 @@ libdata[libdataItem++] = new Array("./grim.html", "grim.pro", '.pro file in <a h
   
   libdata[libdataItem++] = new Array("./grim.html#grim_draw_event", "grim_draw_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_draw_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_help_event", "grim_menu_file_load_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_help_event", "	Allows user to load images into new image planes.  The user is 	prompted for filenames and dat_read is used to read each image. 	Multiple images may be selected and a new plane is created for 	each image.  On X-windows systems, multiple files may be selected 	either by dragging across the filenames or by holding down the 	control key to toggle the selected files.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_help_event", "grim_menu_file_load_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_event", "grim_menu_file_load_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_browse_help_event", "grim_menu_file_browse_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_browse_help_event", "	Allows user to load images into new image planes using the brim 	browser.  Images are selected using the left mouse button and 	each image is loaded on a new plane.    ", "event", "NV/GR", " 	Written by:	Spitale, 10/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_browse_help_event", "grim_menu_file_browse_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_browse_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_browse_file_left_event", "grim_browse_file_left_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_browse_file_left_event", "", "statusbaseiid", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_browse_event", "grim_menu_file_browse_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_browse_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_help_event", "grim_menu_file_save_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_help_event", "	Allows user to save the current image plane and geometry.  If there 	is no current filename for the current plane, then the user is 	prompted for one.  All descriptors are written through the translators 	and then dat_write is used to write the data file.  Specific behavior 	is governed by OMINAS' configuration.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_help_event", "grim_menu_file_save_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_event", "grim_menu_file_save_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_as_help_event", "grim_menu_file_save_as_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_as_help_event", "	Same as 'Save' above, except always prompts for a filename.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_as_help_event", "grim_menu_file_save_as_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_as_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_as_event", "grim_menu_file_save_as_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_as_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_user_ptd_help_event", "grim_menu_file_save_user_ptd_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_user_ptd_help_event", "	Writes user points for the current plane to a file called 	[image name].user_ptd    ", "event", "NV/GR", " 	Written by:	Spitale, 2/2004   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_open_as_rgb_help_event", "grim_menu_open_as_rgb_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_open_as_rgb_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_open_as_rgb_event", "grim_menu_open_as_rgb_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_open_as_rgb_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_user_ptd_help_event", "grim_menu_file_save_user_ptd_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_user_ptd_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_user_ptd_event", "grim_menu_file_save_user_ptd_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_user_ptd_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_all_user_ptd_help_event", "grim_menu_file_save_all_user_ptd_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_all_user_ptd_help_event", "	Writes user points for all planes to files called 	[image name].user_ptd    ", "event", "NV/GR", " 	Written by:	Spitale, 2/2004   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_all_user_ptd_help_event", "grim_menu_file_save_all_user_ptd_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_all_user_ptd_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_all_user_ptd_event", "grim_menu_file_save_all_user_ptd_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_all_user_ptd_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_user_ptd_help_event", "grim_menu_file_load_user_ptd_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_user_ptd_help_event", "	loads user points for the current plane from a file called 	[image name].user_ptd    ", "event", "NV/GR", " 	Written by:	Spitale, 2/2004   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_user_ptd_help_event", "grim_menu_file_load_user_ptd_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_user_ptd_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_user_ptd_event", "grim_menu_file_load_user_ptd_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_user_ptd_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_all_user_ptd_help_event", "grim_menu_file_load_all_user_ptd_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_all_user_ptd_help_event", "	Loads user points for all planes from files called 	[image name].user_ptd    ", "event", "NV/GR", " 	Written by:	Spitale, 2/2004   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_all_user_ptd_help_event", "grim_menu_file_load_all_user_ptd_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_all_user_ptd_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_all_user_ptd_event", "grim_menu_file_load_all_user_ptd_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_all_user_ptd_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_tie_ptd_help_event", "grim_menu_file_save_tie_ptd_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_tie_ptd_help_event", "	Writes tie points for the current plane to a file called 	[image name].tie_ptd    ", "event", "NV/GR", " 	Written by:	Spitale, 2/2004   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_tie_ptd_help_event", "grim_menu_file_save_tie_ptd_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_tie_ptd_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_tie_ptd_event", "grim_menu_file_save_tie_ptd_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_tie_ptd_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_all_tie_ptd_help_event", "grim_menu_file_save_all_tie_ptd_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_all_tie_ptd_help_event", "	Writes tie points for all planes to files called 	[image name].tie_ptd    ", "event", "NV/GR", " 	Written by:	Spitale, 2/2004   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_all_tie_ptd_help_event", "grim_menu_file_save_all_tie_ptd_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_all_tie_ptd_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_all_tie_ptd_event", "grim_menu_file_save_all_tie_ptd_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_all_tie_ptd_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_tie_ptd_help_event", "grim_menu_file_load_tie_ptd_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_tie_ptd_help_event", "	loads tie points for the current plane from a file called 	[image name].tie_ptd    ", "event", "NV/GR", " 	Written by:	Spitale, 2/2004   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_tie_ptd_help_event", "grim_menu_file_load_tie_ptd_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_tie_ptd_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_tie_ptd_event", "grim_menu_file_load_tie_ptd_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_tie_ptd_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_all_tie_ptd_help_event", "grim_menu_file_load_all_tie_ptd_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_all_tie_ptd_help_event", "	Loads tie points for all planes from files called 	[image name].tie_ptd    ", "event", "NV/GR", " 	Written by:	Spitale, 2/2004   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_all_tie_ptd_help_event", "grim_menu_file_load_all_tie_ptd_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_all_tie_ptd_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_all_tie_ptd_event", "grim_menu_file_load_all_tie_ptd_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_all_tie_ptd_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_curves_help_event", "grim_menu_file_save_curves_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_curves_help_event", "	Writes curves for the current plane to a file called 	[image name].curve_ptd    ", "event", "NV/GR", " 	Written by:	Spitale, 12/2015   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_curves_help_event", "grim_menu_file_save_curves_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_curves_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_curves_event", "grim_menu_file_save_curves_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_curves_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_all_curves_help_event", "grim_menu_file_save_all_curves_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_all_curves_help_event", "	Writes curves for all planes to files called 	[image name].curve_ptd    ", "event", "NV/GR", " 	Written by:	Spitale, 12/2015   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_all_curves_help_event", "grim_menu_file_save_all_curves_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_all_curves_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_all_curves_event", "grim_menu_file_save_all_curves_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_all_curves_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_curves_help_event", "grim_menu_file_load_curves_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_curves_help_event", "	loads curves for the current plane from a file called 	[image name].curve_ptd    ", "event", "NV/GR", " 	Written by:	Spitale, 12/2015   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_curves_help_event", "grim_menu_file_load_curves_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_curves_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_curves_event", "grim_menu_file_load_curves_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_curves_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_all_curves_help_event", "grim_menu_file_load_all_curves_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_all_curves_help_event", "	Loads curves for all planes from files called 	[image name].curve_ptd    ", "event", "NV/GR", " 	Written by:	Spitale, 12/2015   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_all_curves_help_event", "grim_menu_file_load_all_curves_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_all_curves_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_all_curves_event", "grim_menu_file_load_all_curves_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_all_curves_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_mask_help_event", "grim_menu_file_save_mask_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_mask_help_event", "	Writes mask points for the current plane to a file called 	[image name].mask    ", "event", "NV/GR", " 	Written by:	Spitale, 8/2013   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_mask_help_event", "grim_menu_file_save_mask_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_mask_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_mask_event", "grim_menu_file_save_mask_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_mask_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_all_masks_help_event", "grim_menu_file_save_all_masks_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_all_masks_help_event", "	Writes mask points for all planes to files called 	[image name].mask    ", "event", "NV/GR", " 	Written by:	Spitale, 8/2013   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_all_masks_help_event", "grim_menu_file_save_all_masks_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_all_masks_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_all_masks_event", "grim_menu_file_save_all_masks_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_all_masks_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_mask_help_event", "grim_menu_file_load_mask_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_mask_help_event", "	loads mask points for the current plane from a file called 	[image name].mask    ", "event", "NV/GR", " 	Written by:	Spitale, 8/2013   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_mask_help_event", "grim_menu_file_load_mask_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_mask_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_mask_event", "grim_menu_file_load_mask_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_mask_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_all_masks_help_event", "grim_menu_file_load_all_masks_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_all_masks_help_event", "	Loads mask points for all planes from files called 	[image name].mask    ", "event", "NV/GR", " 	Written by:	Spitale, 8/2013   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_all_masks_help_event", "grim_menu_file_load_all_masks_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_all_masks_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_load_all_masks_event", "grim_menu_file_load_all_masks_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_load_all_masks_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_ps_help_event", "grim_menu_file_save_ps_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_ps_help_event", "	Saves the current view as a postscript file.    ", "event", "NV/GR", " 	Written by:	Spitale, 12/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_ps_help_event", "grim_menu_file_save_ps_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_ps_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_save_ps_event", "grim_menu_file_save_ps_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_save_ps_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_repeat_help_event", "grim_menu_repeat_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_repeat_help_event", "	Repeats the last menu option.    ", "event", "NV/GR", " 	Written by:	Spitale, 8/2006   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_repeat_help_event", "grim_menu_repeat_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_repeat_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_repeat_event", "grim_menu_repeat_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_repeat_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_undo_help_event", "grim_menu_undo_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_undo_help_event", "	Undoes the last data modification.    ", "event", "NV/GR", " 	Written by:	Spitale, 11/2006   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_undo_help_event", "grim_menu_undo_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_undo_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_undo_event", "grim_menu_undo_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_undo_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_redo_help_event", "grim_menu_redo_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_redo_help_event", "	Redoes the last data modification.    ", "event", "NV/GR", " 	Written by:	Spitale, 11/2006   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_redo_help_event", "grim_menu_redo_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_redo_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_redo_event", "grim_menu_redo_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_redo_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_close_help_event", "grim_menu_file_close_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_close_help_event", "	Closes the current image plane.  All other image plane numbers 	remain the same.  If there is only one image plane, the grim exits.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_select_help_event", "grim_select_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_select_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_select_event", "grim_select_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_select_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_identify_help_event", "grim_identify_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_identify_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_identify_event", "grim_identify_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_identify_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_close_help_event", "grim_menu_file_close_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_close_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_file_close_event", "grim_menu_file_close_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_file_close_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_next_help_event", "grim_menu_plane_next_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_next_help_event", "	Changes to the next-numbered image plane.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_next_help_event", "grim_menu_plane_next_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_next_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_next_event", "grim_menu_plane_next_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_next_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_previous_help_event", "grim_menu_plane_previous_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_previous_help_event", "	Changes to the previous-numbered image plane.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_previous_help_event", "grim_menu_plane_previous_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_previous_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_previous_event", "grim_menu_plane_previous_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_previous_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_jump_help_event", "grim_menu_plane_jump_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_jump_help_event", "	Prompts the user and jumps to a new plane.    ", "event", "NV/GR", " 	Written by:	Spitale, 5/2005   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_jump_help_event", "grim_menu_plane_jump_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_jump_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_jump_event", "grim_menu_plane_jump_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_jump_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_open_help_event", "grim_menu_plane_open_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_open_help_event", "	Opens the image of the current plane in a new grim window.    ", "event", "NV/GR", " 	Written by:	Spitale, 11/2002   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_open_event", "grim_menu_plane_open_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_open_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_evolve_help_event", "grim_menu_plane_evolve_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_evolve_help_event", "	Evolves the selected objects onto all other planes.    ", "event", "NV/GR", " 	Written by:	Spitale, 2/2004   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_evolve_event", "grim_menu_plane_evolve_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_evolve_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_crop_help_event", "grim_menu_plane_crop_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_crop_help_event", "	Crops the data to the current viewing parameters.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2013   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_crop_event", "grim_menu_plane_crop_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_crop_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_reorder_time_help_event", "grim_menu_plane_reorder_time_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_reorder_time_help_event", "	Rearranges all planes in time order.    ", "event", "NV/GR", " 	Written by:	Spitale, 2/2004   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_reorder_time_event", "grim_menu_plane_reorder_time_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_reorder_time_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_browse_help_event", "grim_menu_plane_browse_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_browse_help_event", "	Opens a brim browser showing all planes.  The left mouse button 	may be used to jump among planes.    ", "event", "NV/GR", " 	Written by:	Spitale, 10/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_browse_help_event", "grim_menu_plane_browse_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_browse_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_browse_plane_left_event", "grim_browse_plane_left_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_browse_plane_left_event", "", "statusbaseiid", "          -1", "");
   
@@ -1003,345 +434,361 @@ libdata[libdataItem++] = new Array("./grim.html", "grim.pro", '.pro file in <a h
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_browse_event", "grim_menu_plane_browse_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_browse_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_sequence_help_event", "grim_menu_plane_sequence_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_sequence_help_event", "	Displays all planes in sequence using xinteranimate1.  This option is 	useful or blinking as well.    ", "event", "NV/GR", " 	Written by:	Spitale, 8/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_open_help_event", "grim_menu_plane_open_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_open_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_open_event", "grim_menu_plane_open_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_open_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_evolve_help_event", "grim_menu_plane_evolve_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_evolve_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_evolve_event", "grim_menu_plane_evolve_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_evolve_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_crop_help_event", "grim_menu_plane_crop_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_crop_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_crop_event", "grim_menu_plane_crop_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_crop_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_reorder_time_help_event", "grim_menu_plane_reorder_time_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_reorder_time_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_reorder_time_event", "grim_menu_plane_reorder_time_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_reorder_time_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_sequence_help_event", "grim_menu_plane_sequence_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_sequence_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_sequence_event", "grim_menu_plane_sequence_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_sequence_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_dump_help_event", "grim_menu_plane_dump_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_dump_help_event", "	Dumps all planes to png files entitled [filename].png.    ", "event", "NV/GR", " 	Written by:	Spitale, 8/2004   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_dump_help_event", "grim_menu_plane_dump_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_dump_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_dump_event", "grim_menu_plane_dump_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_dump_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_coregister_help_event", "grim_menu_plane_coregister_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_coregister_help_event", "	Shifts the images on each plane so as to center the active object 	at the same pixel on each plane.    ", "event", "NV/GR", " 	Written by:	Spitale, 11/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_coregister_help_event", "grim_menu_plane_coregister_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_coregister_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_coregister_event", "grim_menu_plane_coregister_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_coregister_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_coadd_help_event", "grim_menu_plane_coadd_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_coadd_help_event", "	Averages all planes.  Not implemented.    ", "event", "NV/GR", " 	Written by:	Spitale, 5/2004   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_coadd_help_event", "grim_menu_plane_coadd_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_coadd_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_coadd_event", "grim_menu_plane_coadd_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_coadd_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_highlight_help_event", "grim_menu_plane_highlight_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_highlight_help_event", "	Toggles highlighting of the current plane image.  Useful when 	multiple planes are visible simultaneously.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_toggle_plane_syncing_help_event", "grim_menu_plane_toggle_plane_syncing_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_toggle_plane_syncing_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_toggle_plane_syncing_event", "grim_menu_plane_toggle_plane_syncing_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_toggle_plane_syncing_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_highlight_help_event", "grim_menu_plane_highlight_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_highlight_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_highlight_event", "grim_menu_plane_highlight_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_highlight_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_settings_help_event", "grim_menu_plane_settings_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_settings_help_event", "	Allows the user modify settings for the loaded image planes. 	Each plane may displayed in any combination of the three color 	channels.  Also, a plane may be made visible even when it is not 	the current plane, instead of the default behavior, which is to 	display the plane only whenit is current.    ", "event", "NV/GR", " 	Written by:	Spitale, 8/2002   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_settings_event", "grim_menu_plane_settings_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_settings_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_copy_curves_help_event", "grim_menu_plane_copy_curves_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_copy_curves_help_event", "	Copies all curves from the current plane to all other planes.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2004   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_copy_curves_event", "grim_menu_plane_copy_curves_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_copy_curves_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_copy_tiepoints_help_event", "grim_menu_plane_copy_tiepoints_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_copy_tiepoints_help_event", "	Copies all tieppoints from the current plane to all other planes.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2004   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_copy_tiepoints_help_event", "grim_menu_plane_copy_tiepoints_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_copy_tiepoints_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_copy_tiepoints_event", "grim_menu_plane_copy_tiepoints_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_copy_tiepoints_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_copy_mask_help_event", "grim_menu_plane_copy_mask_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_copy_mask_help_event", "	Copies mask from the current plane to all other planes.    ", "event", "NV/GR", " 	Written by:	Spitale, 8/2013   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_copy_mask_event", "grim_menu_plane_copy_mask_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_copy_mask_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_clear_curves_help_event", "grim_menu_plane_clear_curves_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_clear_curves_help_event", "	Clears all curves from the current plane.    ", "event", "NV/GR", " 	Written by:	Spitale, 11/2004   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_clear_curves_event", "grim_menu_plane_clear_curves_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_clear_curves_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_clear_tiepoints_help_event", "grim_menu_plane_clear_tiepoints_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_clear_tiepoints_help_event", "	Clears all tiepoints from the current plane.    ", "event", "NV/GR", " 	Written by:	Spitale, 11/2004   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_clear_tiepoints_event", "grim_menu_plane_clear_tiepoints_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_clear_tiepoints_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_clear_mask_help_event", "grim_menu_plane_clear_mask_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_clear_mask_help_event", "	Clears the mask from the current plane.    ", "event", "NV/GR", " 	Written by:	Spitale, 8/2013   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_clear_mask_event", "grim_menu_plane_clear_mask_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_clear_mask_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_toggle_curve_syncing_help_event", "grim_menu_plane_toggle_curve_syncing_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_toggle_curve_syncing_help_event", "	Toggles curve syncing on/off.    ", "event", "NV/GR", " 	Written by:	Spitale, 10/2012   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_toggle_curve_syncing_event", "grim_menu_plane_toggle_curve_syncing_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_toggle_curve_syncing_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_toggle_tiepoint_syncing_help_event", "grim_menu_plane_toggle_tiepoint_syncing_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_toggle_tiepoint_syncing_help_event", "	Toggles tiepoint syncing on/off.    ", "event", "NV/GR", " 	Written by:	Spitale, 10/2012   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_toggle_tiepoint_syncing_event", "grim_menu_plane_toggle_tiepoint_syncing_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_toggle_tiepoint_syncing_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_propagate_tiepoints_help_event", "grim_menu_plane_propagate_tiepoints_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_propagate_tiepoints_help_event", "	Copies all tieppoints from the current plane to all other planes.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2004   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_propagate_tiepoints_help_event", "grim_menu_plane_propagate_tiepoints_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_propagate_tiepoints_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_propagate_tiepoints_event", "grim_menu_plane_propagate_tiepoints_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_propagate_tiepoints_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_data_adjust_help_event", "grim_menu_data_adjust_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_data_adjust_help_event", "	This option allows the user to adjust data values.    ", "event", "NV/GR", " 	Written by:	Spitale, 2/2014   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_toggle_tiepoint_syncing_help_event", "grim_menu_plane_toggle_tiepoint_syncing_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_toggle_tiepoint_syncing_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_toggle_tiepoint_syncing_event", "grim_menu_plane_toggle_tiepoint_syncing_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_toggle_tiepoint_syncing_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_clear_tiepoints_help_event", "grim_menu_plane_clear_tiepoints_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_clear_tiepoints_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_clear_tiepoints_event", "grim_menu_plane_clear_tiepoints_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_clear_tiepoints_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_copy_curves_help_event", "grim_menu_plane_copy_curves_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_copy_curves_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_copy_curves_event", "grim_menu_plane_copy_curves_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_copy_curves_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_toggle_curve_syncing_help_event", "grim_menu_plane_toggle_curve_syncing_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_toggle_curve_syncing_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_toggle_curve_syncing_event", "grim_menu_plane_toggle_curve_syncing_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_toggle_curve_syncing_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_clear_curves_help_event", "grim_menu_plane_clear_curves_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_clear_curves_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_clear_curves_event", "grim_menu_plane_clear_curves_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_clear_curves_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_copy_mask_help_event", "grim_menu_plane_copy_mask_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_copy_mask_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_copy_mask_event", "grim_menu_plane_copy_mask_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_copy_mask_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_clear_mask_help_event", "grim_menu_plane_clear_mask_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_clear_mask_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_clear_mask_event", "grim_menu_plane_clear_mask_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_clear_mask_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_settings_help_event", "grim_menu_plane_settings_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_settings_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_plane_settings_event", "grim_menu_plane_settings_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_plane_settings_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_data_adjust_help_event", "grim_menu_data_adjust_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_data_adjust_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_data_adjust_event", "grim_menu_data_adjust_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_data_adjust_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_recenter_help_event", "grim_menu_view_recenter_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_recenter_help_event", "	Recenters the view at the cursor position.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_recenter_event", "grim_menu_view_recenter_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_recenter_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_home_help_event", "grim_menu_view_home_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_home_help_event", "	Sets the tvim home view settings.    ", "event", "NV/GR", " 	Written by:	Spitale, 5/2005   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_home_event", "grim_menu_view_home_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_home_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_previous_help_event", "grim_menu_view_previous_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_previous_help_event", "	Restores the previous view settings.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_previous_event", "grim_menu_view_previous_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_previous_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_refresh_help_event", "grim_menu_view_refresh_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_refresh_help_event", "	Redraws the overlays on the graphics display.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_refresh_help_event", "grim_menu_view_refresh_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_refresh_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_refresh_event", "grim_menu_view_refresh_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_refresh_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_help_event", "grim_menu_view_zoom_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_help_event", "	Prompts the user for a new zoom factor.    ", "event", "NV/GR", " 	Written by:	Spitale, 5/2005   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_help_event", "grim_menu_view_zoom_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_event", "grim_menu_view_zoom_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_double_help_event", "grim_menu_view_zoom_double_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_double_help_event", "	Doubles the current zoom, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_double_help_event", "grim_menu_view_zoom_double_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_double_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_double_event", "grim_menu_view_zoom_double_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_double_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_half_help_event", "grim_menu_view_zoom_half_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_half_help_event", "	Halves the current zoom, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_half_help_event", "grim_menu_view_zoom_half_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_half_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_half_event", "grim_menu_view_zoom_half_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_half_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_0_help_event", "grim_menu_view_rotate_0_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_0_help_event", "	Sets the current rotate to 0, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2013   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_0_event", "grim_menu_view_rotate_0_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_0_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_1_help_event", "grim_menu_view_rotate_1_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_1_help_event", "	Sets the current rotate to 1, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2013   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_1_event", "grim_menu_view_rotate_1_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_1_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_2_help_event", "grim_menu_view_rotate_2_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_2_help_event", "	Sets the current rotate to 2, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2013   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_2_event", "grim_menu_view_rotate_2_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_2_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_3_help_event", "grim_menu_view_rotate_3_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_3_help_event", "	Sets the current rotate to 3, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2013   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_3_event", "grim_menu_view_rotate_3_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_3_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_4_help_event", "grim_menu_view_rotate_4_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_4_help_event", "	Sets the current rotate to 4, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2013   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_4_event", "grim_menu_view_rotate_4_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_4_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_5_help_event", "grim_menu_view_rotate_5_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_5_help_event", "	Sets the current rotate to 5, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2013   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_5_event", "grim_menu_view_rotate_5_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_5_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_6_help_event", "grim_menu_view_rotate_6_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_6_help_event", "	Sets the current rotate to 6, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2013   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_6_event", "grim_menu_view_rotate_6_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_6_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_7_help_event", "grim_menu_view_rotate_7_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_7_help_event", "	Sets the current rotate to 7, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2013   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_7_event", "grim_menu_view_rotate_7_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_7_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_help_event", "grim_menu_view_zoom_1_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_help_event", "	Sets the current zoom to 1, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_help_event", "grim_menu_view_zoom_1_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_event", "grim_menu_view_zoom_1_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_2_help_event", "grim_menu_view_zoom_2_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_2_help_event", "	Sets the current zoom to 2, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_2_help_event", "grim_menu_view_zoom_2_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_2_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_2_event", "grim_menu_view_zoom_2_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_2_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_3_help_event", "grim_menu_view_zoom_3_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_3_help_event", "	Sets the current zoom to 3, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_3_help_event", "grim_menu_view_zoom_3_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_3_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_3_event", "grim_menu_view_zoom_3_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_3_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_4_help_event", "grim_menu_view_zoom_4_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_4_help_event", "	Sets the current zoom to 4, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_4_help_event", "grim_menu_view_zoom_4_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_4_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_4_event", "grim_menu_view_zoom_4_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_4_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_5_help_event", "grim_menu_view_zoom_5_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_5_help_event", "	Sets the current zoom to 5, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_5_help_event", "grim_menu_view_zoom_5_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_5_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_5_event", "grim_menu_view_zoom_5_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_5_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_6_help_event", "grim_menu_view_zoom_6_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_6_help_event", "	Sets the current zoom to 6, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_6_help_event", "grim_menu_view_zoom_6_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_6_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_6_event", "grim_menu_view_zoom_6_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_6_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_7_help_event", "grim_menu_view_zoom_7_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_7_help_event", "	Sets the current zoom to 7, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_7_help_event", "grim_menu_view_zoom_7_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_7_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_7_event", "grim_menu_view_zoom_7_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_7_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_8_help_event", "grim_menu_view_zoom_8_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_8_help_event", "	Sets the current zoom to 8, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_8_help_event", "grim_menu_view_zoom_8_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_8_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_8_event", "grim_menu_view_zoom_8_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_8_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_9_help_event", "grim_menu_view_zoom_9_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_9_help_event", "	Sets the current zoom to 9, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_9_help_event", "grim_menu_view_zoom_9_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_9_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_9_event", "grim_menu_view_zoom_9_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_9_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_10_help_event", "grim_menu_view_zoom_10_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_10_help_event", "	Sets the current zoom to 10, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_10_help_event", "grim_menu_view_zoom_10_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_10_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_10_event", "grim_menu_view_zoom_10_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_10_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_2_help_event", "grim_menu_view_zoom_1_2_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_2_help_event", "	Sets the current zoom to 1/2, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_2_help_event", "grim_menu_view_zoom_1_2_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_2_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_2_event", "grim_menu_view_zoom_1_2_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_2_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_3_help_event", "grim_menu_view_zoom_1_3_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_3_help_event", "	Sets the current zoom to 1/3, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_3_help_event", "grim_menu_view_zoom_1_3_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_3_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_3_event", "grim_menu_view_zoom_1_3_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_3_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_4_help_event", "grim_menu_view_zoom_1_4_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_4_help_event", "	Sets the current zoom to 1/4, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_4_help_event", "grim_menu_view_zoom_1_4_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_4_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_4_event", "grim_menu_view_zoom_1_4_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_4_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_5_help_event", "grim_menu_view_zoom_1_5_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_5_help_event", "	Sets the current zoom to 1/5, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_5_help_event", "grim_menu_view_zoom_1_5_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_5_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_5_event", "grim_menu_view_zoom_1_5_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_5_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_5_help_event", "grim_menu_view_zoom_1_5_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_5_help_event", "	Sets the current zoom to 1/5, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_5_help_event", "grim_menu_view_zoom_1_5_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_5_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_5_event", "grim_menu_view_zoom_1_5_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_5_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_6_help_event", "grim_menu_view_zoom_1_6_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_6_help_event", "	Sets the current zoom to 1/6, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_6_help_event", "grim_menu_view_zoom_1_6_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_6_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_6_event", "grim_menu_view_zoom_1_6_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_6_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_7_help_event", "grim_menu_view_zoom_1_7_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_7_help_event", "	Sets the current zoom to 1/7, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_7_help_event", "grim_menu_view_zoom_1_7_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_7_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_7_event", "grim_menu_view_zoom_1_7_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_7_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_8_help_event", "grim_menu_view_zoom_1_8_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_8_help_event", "	Sets the current zoom to 1/8, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_8_help_event", "grim_menu_view_zoom_1_8_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_8_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_8_event", "grim_menu_view_zoom_1_8_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_8_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_9_help_event", "grim_menu_view_zoom_1_9_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_9_help_event", "	Sets the current zoom to 1/9, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_9_help_event", "grim_menu_view_zoom_1_9_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_9_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_9_event", "grim_menu_view_zoom_1_9_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_9_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_10_help_event", "grim_menu_view_zoom_1_10_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_10_help_event", "	Sets the current zoom to 1/10, centered at the mouse cursor.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2008   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_10_help_event", "grim_menu_view_zoom_1_10_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_10_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_zoom_1_10_event", "grim_menu_view_zoom_1_10_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_zoom_1_10_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_save_help_event", "grim_menu_view_save_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_save_help_event", "	Saves the current view settings.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_0_help_event", "grim_menu_view_rotate_0_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_0_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_0_event", "grim_menu_view_rotate_0_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_0_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_1_help_event", "grim_menu_view_rotate_1_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_1_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_1_event", "grim_menu_view_rotate_1_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_1_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_2_help_event", "grim_menu_view_rotate_2_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_2_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_2_event", "grim_menu_view_rotate_2_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_2_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_3_help_event", "grim_menu_view_rotate_3_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_3_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_3_event", "grim_menu_view_rotate_3_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_3_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_4_help_event", "grim_menu_view_rotate_4_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_4_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_4_event", "grim_menu_view_rotate_4_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_4_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_5_help_event", "grim_menu_view_rotate_5_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_5_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_5_event", "grim_menu_view_rotate_5_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_5_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_6_help_event", "grim_menu_view_rotate_6_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_6_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_6_event", "grim_menu_view_rotate_6_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_6_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_7_help_event", "grim_menu_view_rotate_7_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_7_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_rotate_7_event", "grim_menu_view_rotate_7_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_rotate_7_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_recenter_help_event", "grim_menu_view_recenter_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_recenter_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_recenter_event", "grim_menu_view_recenter_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_recenter_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_apply_help_event", "grim_menu_view_apply_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_apply_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_apply_event", "grim_menu_view_apply_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_apply_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_home_help_event", "grim_menu_view_home_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_home_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_home_event", "grim_menu_view_home_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_home_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_save_help_event", "grim_menu_view_save_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_save_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_save_event", "grim_menu_view_save_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_save_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_restore_help_event", "grim_menu_view_restore_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_restore_help_event", "	Restores the last-saved view settings.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_restore_help_event", "grim_menu_view_restore_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_restore_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_restore_event", "grim_menu_view_restore_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_restore_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_entire_help_event", "grim_menu_view_entire_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_entire_help_event", "	Applies the 'entire' display parameters, as given in tvim.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_previous_help_event", "grim_menu_view_previous_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_previous_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_previous_event", "grim_menu_view_previous_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_previous_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_entire_help_event", "grim_menu_view_entire_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_entire_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_entire_event", "grim_menu_view_entire_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_entire_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_initial_help_event", "grim_menu_view_initial_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_initial_help_event", "	Reverts to the initial view parameters for this grim widget.    ", "event", "NV/GR", " 	Written by:	Spitale, 10/2007   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_initial_help_event", "grim_menu_view_initial_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_initial_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_initial_event", "grim_menu_view_initial_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_initial_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_flip_help_event", "grim_menu_view_flip_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_flip_help_event", "	Reverses the curent display order.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_flip_help_event", "grim_menu_view_flip_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_flip_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_flip_event", "grim_menu_view_flip_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_flip_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_frame_help_event", "grim_menu_view_frame_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_frame_help_event", "	Modifies view settings so as to display the either all overlays 	or those that are active.    ", "event", "NV/GR", " 	Written by:	Spitale, 9/2007   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_frame_help_event", "grim_menu_view_frame_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_frame_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_frame_event", "grim_menu_view_frame_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_frame_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_header_help_event", "grim_menu_view_header_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_header_help_event", "	Opens a text window showing the image header.    ", "event", "NV/GR", " 	Written by:	Spitale, 10/2003   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_header_help_event", "grim_menu_view_header_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_header_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_header_event", "grim_menu_view_header_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_header_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_notes_help_event", "grim_menu_notes_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_notes_help_event", "	Opens a text window allowing the user to enter notes for each plane.    ", "event", "NV/GR", " 	Written by:	Spitale, 10/2003   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_notes_help_event", "grim_menu_notes_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_notes_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_notes_event", "grim_menu_notes_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_notes_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_context_help_event", "grim_menu_context_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_context_help_event", "	Toggles the ontext window On/Off.    ", "event", "NV/GR", " 	Written by:	Spitale, 9/2005   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_context_event", "grim_menu_context_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_context_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_image_help_event", "grim_menu_image_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_image_help_event", "	Toggles the image On/Off.    ", "event", "NV/GR", " 	Written by:	Spitale, 9/2012   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_image_help_event", "grim_menu_image_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_image_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_toggle_image_event", "grim_menu_toggle_image_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_toggle_image_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_image_overlays_help_event", "grim_menu_image_overlays_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_image_overlays_help_event", "	Toggles the image and overlays On/Off.    ", "event", "NV/GR", " 	Written by:	Spitale, 9/2012   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_image_overlays_help_event", "grim_menu_image_overlays_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_image_overlays_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_toggle_image_overlays_event", "grim_menu_toggle_image_overlays_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_toggle_image_overlays_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_render_help_event", "grim_menu_render_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_render_help_event", "	Renders the visible scene and places it in a new plane unless 	the current plane is already rendering.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2015   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_context_help_event", "grim_menu_context_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_context_help_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_render_event", "grim_menu_render_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_render_event", "", "event", "          -1", "");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_context_event", "grim_menu_context_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_context_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_axes_help_event", "grim_menu_axes_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_axes_help_event", "	Toggles the axes window On/Off.  The colors are as follows:  	 Blue	- Inertial axes. 	 Red	- Camera axes. 	 Green	- Direction to primary planet, not foreshortened. 	 Yellow	- Direction to Sun, not foreshortened.  	Vectors pointing away from the camera are dotted.  The vectors are 	rooted at a point 1d5 distance units in front of the camera . 	In the direction corresponding to the image position of the drawn 	axes.    ", "event", "NV/GR", " 	Written by:	Spitale, 9/2005   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_axes_help_event", "grim_menu_axes_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_axes_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_axes_event", "grim_menu_axes_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_axes_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_colors_help_event", "grim_menu_view_colors_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_colors_help_event", "	Reverses the current display order.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_render_help_event", "grim_menu_render_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_render_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_render_event", "grim_menu_render_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_render_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_colors_help_event", "grim_menu_view_colors_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_colors_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_view_colors_event", "grim_menu_view_colors_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_colors_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_limbs_help_event", "grim_menu_points_limbs_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_limbs_help_event", "	Obtains the necessary descriptors through the translators and computes 	limbs using pg_limbs for all active objects.  If no active objects, 	then all limbs are computed.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_limbs_event", "grim_menu_points_limbs_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_limbs_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_planet_grids_help_event", "grim_menu_points_planet_grids_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_planet_grids_help_event", "	Obtains the necessary descriptors through the translators and computes 	planet grids using pg_grid for all active objects.  If no active 	objects, then all grids are computed.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_planet_grids_event", "grim_menu_points_planet_grids_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_planet_grids_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_stations_help_event", "grim_menu_points_stations_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_stations_help_event", "	Obtains the necessary descriptors through the translators and computes 	planet stations for all active objects.  If no active objects, then 	all stations are computed.    ", "event", "NV/GR", " 	Written by:	Spitale, 2/2009   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_stations_event", "grim_menu_points_stations_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_stations_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_arrays_help_event", "grim_menu_points_arrays_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_arrays_help_event", "	Obtains the necessary descriptors through the translators and computes 	arrays for all active objects.  If no active objects, then 	all arrays are computed.    ", "event", "NV/GR", " 	Written by:	Spitale, 3/2012   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_arrays_event", "grim_menu_points_arrays_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_arrays_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_ring_grids_help_event", "grim_menu_points_ring_grids_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_ring_grids_help_event", "	Obtains the necessary descriptors through the translators and computes 	ring grids using pg_grid for all active objects.  If no active 	objects, then all grids are computed.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2004   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_ring_grids_event", "grim_menu_points_ring_grids_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_ring_grids_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_terminators_help_event", "grim_menu_points_terminators_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_terminators_help_event", "	Obtains the necessary descriptors through the translators and computes 	terminators using pg_limb with the sun as the observer for all active 	objects.  If no active objects, then all terminators are computed.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_terminators_event", "grim_menu_points_terminators_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_terminators_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_rings_help_event", "grim_menu_points_rings_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_rings_help_event", "	Obtains the necessary descriptors through the translators and computes 	ring outlines using pg_disk.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_rings_event", "grim_menu_points_rings_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_rings_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_stars_help_event", "grim_menu_points_stars_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_stars_help_event", "	Obtains the necessary descriptors through the translators and computes 	star positions using pg_center.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_stars_event", "grim_menu_points_stars_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_stars_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_reflections_help_event", "grim_menu_points_reflections_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_reflections_help_event", "	Obtains the necessary descriptors through the translators and computes 	reflections of the currently active overlay points on all other objects. 	Note that you may have to disable overlay hiding in order to compute 	and activate all of the appropriate source points for the reflections 	since many point that are not visible to the observer may still have 	a line of sight to the sun.    ", "event", "NV/GR", " 	Written by:	Spitale, 1/2003   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_reflections_event", "grim_menu_points_reflections_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_reflections_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_shadows_help_event", "grim_menu_points_shadows_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_shadows_help_event", "	Obtains the necessary descriptors through the translators and computes 	shadows of the currently active overlay points on all other objects. 	Note that you may have to disable overlay hiding in order to compute 	and activate all of the appropriate source points for the shadows 	since many point that are not visible to the observer may still have 	a line of sight to the sun.    ", "event", "NV/GR", " 	Written by:	Spitale, 1/2003   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_shadows_event", "grim_menu_points_shadows_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_shadows_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_planet_centers_help_event", "grim_menu_points_planet_centers_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_planet_centers_help_event", "	Obtains the necessary descriptors through the translators and computes 	planet center positions using pg_center for all active objects.  If no 	active objects, then all centers are computed.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_planet_centers_help_event", "grim_menu_points_planet_centers_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_planet_centers_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_planet_centers_event", "grim_menu_points_planet_centers_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_planet_centers_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_hide_all_help_event", "grim_menu_hide_all_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_hide_all_help_event", "	 Hides/unhides all overlay objects.    ", "event", "NV/GR", " 	Written by:	Spitale, 1/2003   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_limbs_help_event", "grim_menu_points_limbs_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_limbs_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_limbs_event", "grim_menu_points_limbs_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_limbs_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_terminators_help_event", "grim_menu_points_terminators_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_terminators_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_terminators_event", "grim_menu_points_terminators_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_terminators_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_planet_grids_help_event", "grim_menu_points_planet_grids_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_planet_grids_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_planet_grids_event", "grim_menu_points_planet_grids_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_planet_grids_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_rings_help_event", "grim_menu_points_rings_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_rings_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_rings_event", "grim_menu_points_rings_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_rings_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_ring_grids_help_event", "grim_menu_points_ring_grids_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_ring_grids_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_ring_grids_event", "grim_menu_points_ring_grids_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_ring_grids_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_stations_help_event", "grim_menu_points_stations_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_stations_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_stations_event", "grim_menu_points_stations_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_stations_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_arrays_help_event", "grim_menu_points_arrays_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_arrays_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_arrays_event", "grim_menu_points_arrays_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_arrays_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_stars_help_event", "grim_menu_points_stars_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_stars_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_stars_event", "grim_menu_points_stars_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_stars_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_shadows_help_event", "grim_menu_points_shadows_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_shadows_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_shadows_event", "grim_menu_points_shadows_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_shadows_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_reflections_help_event", "grim_menu_points_reflections_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_reflections_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_reflections_event", "grim_menu_points_reflections_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_reflections_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_hide_all_help_event", "grim_menu_hide_all_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_hide_all_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_hide_all_event", "grim_menu_hide_all_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_hide_all_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_clear_all_help_event", "grim_menu_clear_all_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_clear_all_help_event", "	 Clears all objects.    ", "event", "NV/GR", " 	Written by:	Spitale, 9/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_clear_all_help_event", "grim_menu_clear_all_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_clear_all_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_clear_all_event", "grim_menu_clear_all_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_clear_all_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_clear_active_help_event", "grim_menu_clear_active_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_clear_active_help_event", "	 Clears all active objects.    ", "event", "NV/GR", " 	Written by:	Spitale, 9/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_clear_active_help_event", "grim_menu_clear_active_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_clear_active_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_clear_active_event", "grim_menu_clear_active_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_clear_active_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_activate_all_help_event", "grim_menu_activate_all_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_activate_all_help_event", "	 Activates all objects.    ", "event", "NV/GR", " 	Written by:	Spitale, 9/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_activate_all_help_event", "grim_menu_activate_all_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_activate_all_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_activate_all_event", "grim_menu_activate_all_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_activate_all_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_deactivate_all_help_event", "grim_menu_deactivate_all_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_deactivate_all_help_event", "	 Deactivates all objects.    ", "event", "NV/GR", " 	Written by:	Spitale, 9/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_deactivate_all_help_event", "grim_menu_deactivate_all_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_deactivate_all_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_deactivate_all_event", "grim_menu_deactivate_all_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_deactivate_all_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_invert_all_help_event", "grim_menu_invert_all_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_invert_all_help_event", "	 Inverts current overlay activations.  Desccriptor activations are 	 determined by the resulting overlay activations.    ", "event", "NV/GR", " 	Written by:	Spitale, 11/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_invert_all_help_event", "grim_menu_invert_all_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_invert_all_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_invert_event", "grim_menu_invert_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_invert_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_settings_help_event", "grim_menu_points_settings_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_settings_help_event", "	Allows the user modify settings relevant to the overlay points.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_settings_help_event", "grim_menu_points_settings_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_settings_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_menu_points_settings_event", "grim_menu_points_settings_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_points_settings_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_select_help_event", "grim_select_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_select_help_event", "	Selects or unselects a grim window.    ", "event", "NV/GR OPERATION:	This option toggles a given grim instance between selected	and unselected states for use with functions that require	input from more than one grim instance When a given instance	is selected this button displays an asterisk", " 	Written by:	Spitale, 7/2002   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_select_event", "grim_select_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_select_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_identify_help_event", "grim_identify_help_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_identify_help_event", "	Causes grim to identify itself on the IDL command line.    ", "event", "NV/GR OPERATION:	This option causes grim to print a message on the IDL command line It is useful in cases where multiple grim instances are running in	multiple IDL sessions", " 	Written by:	Spitale, 3/2009   ");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_identify_event", "grim_identify_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_identify_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_previous_event", "grim_previous_event", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_previous_event", "", "event", "          -1", "");
   
@@ -1415,25 +862,104 @@ libdata[libdataItem++] = new Array("./grim.html", "grim.pro", '.pro file in <a h
   
   libdata[libdataItem++] = new Array("./grim.html#grim_save_initial_view", "grim_save_initial_view", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_save_initial_view", "", "grim_data", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_initial_framing", "grim_initial_framing", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_initial_framing", "", "grim_dataframe", "          -1", "");
+  libdata[libdataItem++] = new Array("./grim.html#grim_initial_framing", "grim_initial_framing", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_initial_framing", "", "delay_overlaysgrim_dataframe", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_initial_overlays", "grim_initial_overlays", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_initial_overlays", "", "planeexcludeonlytempptdgrim_data_overlays", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_args_recurse", "grim_get_args_recurse", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_args_recurse", "", "ddgrnumnhistmaintaincompressextensionsrgbarg_ps", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("./grim.html#grim_get_args", "grim_get_args", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_args", "", "ddgrnumtypexzeronhistmaintaincompressextensionsrgbarg1arg2dd0", "          -1", "");
+  libdata[libdataItem++] = new Array("./grim.html#grim_rgb_dim_fn", "grim_rgb_dim_fn", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_rgb_dim_fn", "", "dddat", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim.html#grim_get_arg", "grim_get_arg", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_arg", "", "ddgrnumextensionsarg", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#__grim_get_args", "__grim_get_args", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "__grim_get_args", "", "ddgrnumtypexzeronhistmaintaincompressextensionsrgboffsetsarg1arg2", "          -1", "");
+  libdata[libdataItem++] = new Array("./grim.html#grim_get_args", "grim_get_args", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_get_args", "", "ddgrnumtypexzeronhistmaintaincompressextensionsrgbarg1arg2", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim_create_cursor_mode", "grim_create_cursor_mode", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_create_cursor_mode", "", "nameargcursor_modes", "          -1", "");
+  libdata[libdataItem++] = new Array("./grim.html#grim_create_cursor_mode", "grim_create_cursor_mode", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim_create_cursor_mode", "", "no_prefixnamemode_argscursor_modes", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim.html#grim", "grim", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim", "", "gdcdpdrdsdstdsundodsilentnewinheritxsizeysizedefaultpreviousrestoreactivatedoffsetno_erasefilterrgbvisibilitychannelexitzoomrotateorderoffsetretainmaintainset_infomodemodalxzeroframerefresh_callbacksrefresh_callback_data_psplane_callbacksplane_callback_data_psnhistcompresspathsymsizecursor_modesuser_psymupsworkdirsave_pathload_pathoverlayspnfaintmenu_fnamecursor_swapfovhidemenu_extensionsbutton_extensionsarg_extensionsloadctmaxgrnumextensionsbetarenderingnpointstrs_cdtrs_pdtrs_rdtrs_sdtrs_sundtrs_stdtrs_ardreadout_fnstiepoint_syncingcurve_syncingrender_samplerender_pht_minslave_overlayscolorxrangeyrangethicknsumnddxtitleytitlepsymtitlearg1arg2", "          -1", "");
+  libdata[libdataItem++] = new Array("./grim.html#grim", "grim", 'routine in <a href="./grim.html">grim.pro</a>', "grim.pro", "", "grim", "", "gd_extracdpdrdsdstdardsundodnewxsizeysizedefaultpreviousrestoreactivatedoffsetno_erasefilterrgbvisibilitychannelexitzoomrotateorderoffsetretainmaintainmode_initmodalxzeroframerefresh_callbacksrefresh_callback_data_psplane_callbacksplane_callback_data_psnhistcompresspathsymsizeuser_psymworkdirmode_argssave_pathload_pathoverlayspnmenu_fnamecursor_swapfovcliphidemenu_extensionsbutton_extensionsarg_extensionsloadctmaxgrnumextensionsbetarenderingnpointscam_trsplt_trsrng_trsstr_trssun_trsstn_trsarr_trsassoc_ddplane_syncingtiepoint_syncingcurve_syncingrender_samplerender_pht_minslave_overlayspositiondelay_overlaysauto_stretchcolorxrangeyrangethicknsumnddxtitleytitlepsymtitlearg1arg2", "          -1", "");
   
   
 
-libdata[libdataItem++] = new Array("./grim_colortool.html", "grim_colortool.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_colortool.pro", "", "", "", "", "          -1", "");
+libdata[libdataItem++] = new Array("./grim_bitmaps_include.html", "grim_bitmaps_include.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_bitmaps_include.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_identify_bitmap", "grim_identify_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_identify_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_rotate_bitmap", "grim_rotate_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_rotate_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_reorient_bitmap", "grim_reorient_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_reorient_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_mp40_bitmap", "grim_mp40_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_mp40_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_dagger_bitmap", "grim_dagger_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_dagger_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_crop_bitmap", "grim_crop_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_crop_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_redo_bitmap", "grim_redo_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_redo_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_undo_bitmap", "grim_undo_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_undo_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_notes_bitmap", "grim_notes_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_notes_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_remove1_bitmap", "grim_remove1_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_remove1_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_remove2_bitmap", "grim_remove2_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_remove2_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_repeat_bitmap", "grim_repeat_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_repeat_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_unselect_bitmap", "grim_unselect_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_unselect_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_select_bitmap", "grim_select_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_select_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_context_bitmap", "grim_context_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_context_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_previous_bitmap", "grim_previous_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_previous_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_next_bitmap", "grim_next_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_next_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_mag_bitmap", "grim_mag_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_mag_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_refresh_bitmap", "grim_refresh_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_refresh_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_entire_bitmap", "grim_entire_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_entire_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_view_previous_bitmap", "grim_view_previous_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_view_previous_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_hide_bitmap", "grim_hide_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_hide_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_unhide_bitmap", "grim_unhide_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_unhide_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_colors_bitmap", "grim_colors_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_colors_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_tracking_bitmap", "grim_tracking_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_tracking_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_activate_all_bitmap", "grim_activate_all_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_activate_all_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_deactivate_all_bitmap", "grim_deactivate_all_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_deactivate_all_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_grid_bitmap", "grim_grid_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_grid_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_header_bitmap", "grim_header_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_header_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_axes_bitmap", "grim_axes_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_axes_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_unhide_image_bitmap", "grim_unhide_image_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_unhide_image_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_hide_image_bitmap", "grim_hide_image_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_hide_image_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_unrender_bitmap", "grim_unrender_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_unrender_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_render_bitmap", "grim_render_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_render_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_settings_bitmap", "grim_settings_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_settings_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_pixel_grid_bitmap", "grim_pixel_grid_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_pixel_grid_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_guideline_bitmap", "grim_guideline_bitmap", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_guideline_bitmap", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_bitmaps_include.html#grim_bitmaps_include", "grim_bitmaps_include", 'routine in <a href="./grim_bitmaps_include.html">grim_bitmaps_include.pro</a>', "grim_bitmaps_include.pro", "", "grim_bitmaps_include", "", "", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("./grim_colortool.html", "grim_colortool.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_colortool.pro", "", "", " NAME: 	GRIM_COLORTOOL    PURPOSE: 	Tool for adjusting colors in GRIM.    CATEGORY: 	NV/GRIM    CALLING SEQUENCE:  	grim_colortool    ARGUMENTS: NONE    KEYWORDS: NONE    OPERATION: 	Color table plot: 		Displays a plot of the current color table, with a color 		bar at the bottom.  	Stretch Top slider: 		Controls the top value for the color table stretch.  	Stretch Bottom slider: 		Controls the bottom value for the color table stretch.  	Gamma slider: 		Controls the gamma value for the color table stretch.  	Shade slider: 		Vertial slider on the left side of the tool controlling the 		total brightness.  	Color table droplist: 		Selects IDL color table.  	Auto button: 		Performs an automatic stretch.  	All button: 		If set (or activated), the current color table is applied 		to all GRIM planes.  If 'Auto' is pressed while 'All' is 		on, the automatic stretch is performed independently for 		each plane.    SEE ALSO: 	grim    MODIFICATION HISTORY:  	Written by:	Spitale   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_colortool.html#grct_slider_to_gamma", "grct_slider_to_gamma", 'routine in <a href="./grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grct_slider_to_gamma", "", "value", "          -1", "");
@@ -1450,100 +976,287 @@ libdata[libdataItem++] = new Array("./grim_colortool.html", "grim_colortool.pro"
   
   libdata[libdataItem++] = new Array("./grim_colortool.html#grct_cleanup", "grct_cleanup", 'routine in <a href="./grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grct_cleanup", "", "base", "          -1", "");
   
+  libdata[libdataItem++] = new Array("./grim_colortool.html#grct_update", "grct_update", 'routine in <a href="./grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grct_update", "", "allautocmd", "          -1", "");
+  
   libdata[libdataItem++] = new Array("./grim_colortool.html#grim_colortool_event", "grim_colortool_event", 'routine in <a href="./grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grim_colortool_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_colortool.html#grim_colortool_change", "grim_colortool_change", 'routine in <a href="./grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grim_colortool_change", "", "basecmd", "          -1", "");
+  libdata[libdataItem++] = new Array("./grim_colortool.html#grim_colortool_change", "grim_colortool_change", 'routine in <a href="./grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grim_colortool_change", "", "base", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_colortool.html#grct_primary_notify", "grct_primary_notify", 'routine in <a href="./grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grct_primary_notify", "", "data_p", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_colortool.html#grim_colortool", "grim_colortool", 'routine in <a href="./grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grim_colortool", "", "callbackcb_datacmddd", "          -1", "");
+  libdata[libdataItem++] = new Array("./grim_colortool.html#grim_colortool", "grim_colortool", 'routine in <a href="./grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grim_colortool", "", "", "          -1", "");
   
   
 
-libdata[libdataItem++] = new Array("./grim_default_menus.html", "grim_default_menus.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_default_menus.pro", "", "", "", "", "          -1", "");
+libdata[libdataItem++] = new Array("./grim_compute_include.html", "grim_compute_include.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_compute_include.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_image_profile_help_event", "grim_menu_image_profile_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_image_profile_help_event", "	This option allows you extract a brightness profile in an arbitrary 	direction.  The left button selects the region's length and then 	width; the right button selects a region with a width of one-pixel.    ", "event", "NV/GR", " 	Written by:	Spitale, 6/2005   ");
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_compute_planet_center", "grim_compute_planet_center", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_compute_planet_center", "", "mapcliphidegdactive_xdsactive_ptddatanpoints", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_symsize_planet_center", "grim_symsize_planet_center", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_symsize_planet_center", "", "data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_shade_planet_center", "grim_shade_planet_center", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_shade_planet_center", "", "dataptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_compute_limb", "grim_compute_limb", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_compute_limb", "", "mapcliphidegdactive_xdsactive_ptddatanpoints", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_symsize_limb", "grim_symsize_limb", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_symsize_limb", "", "data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_shade_limb", "grim_shade_limb", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_shade_limb", "", "dataptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_compute_terminator", "grim_compute_terminator", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_compute_terminator", "", "mapcliphidegdactive_xdsactive_ptddatanpoints", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_symsize_terminator", "grim_symsize_terminator", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_symsize_terminator", "", "data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_shade_terminator", "grim_shade_terminator", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_shade_terminator", "", "dataptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_compute_planet_grid", "grim_compute_planet_grid", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_compute_planet_grid", "", "mapcliphidegdactive_xdsactive_ptddatanpoints", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_symsize_planet_grid", "grim_symsize_planet_grid", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_symsize_planet_grid", "", "data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_shade_planet_grid", "grim_shade_planet_grid", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_shade_planet_grid", "", "dataptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_compute_station", "grim_compute_station", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_compute_station", "", "mapcliphidegdactive_xdsactive_ptddatanpoints", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_symsize_station", "grim_symsize_station", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_symsize_station", "", "data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_shade_station", "grim_shade_station", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_shade_station", "", "dataptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_compute_array", "grim_compute_array", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_compute_array", "", "mapcliphidegdactive_xdsactive_ptddatanpoints", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_symsize_array", "grim_symsize_array", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_symsize_array", "", "data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_shade_array", "grim_shade_array", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_shade_array", "", "dataptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_compute_star", "grim_compute_star", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_compute_star", "", "mapcliphidegdactive_xdsactive_ptddatanpoints", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_symsize_star", "grim_symsize_star", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_symsize_star", "", "data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_shade_star", "grim_shade_star", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_shade_star", "", "dataptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_compute_shadow", "grim_compute_shadow", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_compute_shadow", "", "mapcliphidegdactive_xdsactive_ptddatanpoints", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_symsize_shadow", "grim_symsize_shadow", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_symsize_shadow", "", "data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_shade_shadow", "grim_shade_shadow", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_shade_shadow", "", "dataptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_compute_reflection", "grim_compute_reflection", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_compute_reflection", "", "mapcliphidegdactive_xdsactive_ptddatanpoints", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_symsize_reflection", "grim_symsize_reflection", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_symsize_reflection", "", "data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_shade_reflection", "grim_shade_reflection", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_shade_reflection", "", "dataptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_compute_ring", "grim_compute_ring", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_compute_ring", "", "mapcliphidegdactive_xdsactive_ptddatanpoints", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_symsize_ring", "grim_symsize_ring", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_symsize_ring", "", "data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_shade_ring", "grim_shade_ring", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_shade_ring", "", "dataptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_compute_ring_grid", "grim_compute_ring_grid", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_compute_ring_grid", "", "mapcliphidegdactive_xdsactive_ptddatanpoints", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_symsize_ring_grid", "grim_symsize_ring_grid", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_symsize_ring_grid", "", "data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_shade_ring_grid", "grim_shade_ring_grid", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_shade_ring_grid", "", "dataptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_compute_include.html#grim_compute_include", "grim_compute_include", 'routine in <a href="./grim_compute_include.html">grim_compute_include.pro</a>', "grim_compute_include.pro", "", "grim_compute_include", "", "", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("./grim_data_include.html", "grim_data_include.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_data_include.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_blank", "grim_blank", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_blank", "", "xsizeysize", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_init", "grim_init", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_init", "", "dd0zoomwnumgrnumfilterretainuser_callbacksuser_psymuser_graphics_fnuser_thickuser_linecursor_swapcmdpathsave_pathload_pathfovclipcam_trsplt_trsrng_trsstr_trsstn_trsarr_trssun_trshidetypecam_selectplt_selectrng_selectsun_selectstr_selectstn_selectarr_selectcolorxrangeyrangepositionnpointsthicknsumxtitleytitlepsymcursor_modessymsizenhistmaintainworkdircompressextensionsmaxbetavisibilitychanneltitleslave_overlaysrender_samplerender_pht_minoverlaysactivatedd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_exists", "grim_exists", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_exists", "", "grim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_grnum_to_top", "grim_grnum_to_top", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_grnum_to_top", "", "grnum", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_get_data", "grim_get_data", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_get_data", "", "grnumplanedeadprimaryno_wsettop", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_set_data", "grim_set_data", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_set_data", "", "primarygrim_datatop", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_set_primary", "grim_set_primary", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_set_primary", "", "top", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_set_mode_data", "grim_set_mode_data", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_set_mode_data", "", "grim_datadata", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_add_primary_callback", "grim_add_primary_callback", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_add_primary_callback", "", "callbacksdata_ps", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_rm_primary_callback", "grim_rm_primary_callback", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_rm_primary_callback", "", "data_ps", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_call_primary_callbacks", "grim_call_primary_callbacks", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_call_primary_callbacks", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_add_plane_callback", "grim_add_plane_callback", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_add_plane_callback", "", "topno_wsetcallbacksdata_ps", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_rm_plane_callback", "grim_rm_plane_callback", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_rm_plane_callback", "", "topdata_ps", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_call_plane_callbacks", "grim_call_plane_callbacks", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_call_plane_callbacks", "", "grim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_get_selected", "grim_get_selected", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_get_selected", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_select", "grim_select", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_select", "", "grim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_identify", "grim_identify", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_identify", "", "grim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_grnum_create", "grim_grnum_create", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_grnum_create", "", "top", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_grnum_destroy", "grim_grnum_destroy", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_grnum_destroy", "", "grnum", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_top_to_grnum", "grim_top_to_grnum", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_top_to_grnum", "", "newtop", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_jump_to_plane", "grim_jump_to_plane", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_jump_to_plane", "", "validnosyncgrim_datapn", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_sync_planes", "grim_sync_planes", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_sync_planes", "", "norefreshgrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_data_include.html#grim_data_include", "grim_data_include", 'routine in <a href="./grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_data_include", "", "", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("./grim_default_menus.html", "grim_default_menus.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_default_menus.pro", "", "", " NAME: 	grim_menu_core_event    PURPOSE: 	This option allows you extract a brightness profile at the selected 	location for each plane in the image.  The left button selects a single 	point, and the right button selects a region to average over.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2016    NAME: 	grim_menu_image_profile_event    PURPOSE: 	This option allows you extract a brightness profile in an arbitrary 	direction in the image.  The left button selects the region's length 	and then width; the right button selects a region with a width of 	one-pixel.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 6/2005    NAME: 	grim_menu_ring_box_profile_radial_event    PURPOSE:   This option allows you create a radial brightness profile from a   rectangular image region.     1) Activate the ring from which you wish to extract the profile.     2) Select this option and use the mouse to outline a ring sector:    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 6/2003    NAME: 	grim_menu_ring_box_profile_longitudinal_event    PURPOSE:   This option allows you create a longitudinal brightness profile from a   rectangular image region.      1) Activate the ring from which you wish to extract the profile.      2) Select this option and use the mouse to outline a ring sector.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 5/2003    NAME: 	grim_menu_ring_profile_radial_event    PURPOSE:   This option allows you create a radial brightness profile.     1) Activate the ring from which you wish to extract the profile.     2) Select this option and use the mouse to outline a ring sector:        Left Button:   the sector is bounded by lines of constant                      longitude.', $       Middle Button: the sector is selected in an arbitrary direction.       Left Button:   the sector is bounded by lines perpendicular to                      the projected longitudinal direction.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 5/2003    NAME: 	grim_menu_ring_profile_longitudinal_event    PURPOSE:   This option allows you create a longitudinal brightness profile.      1) Activate the ring from which you wish to extract the profile.      2) Select this option and use the mouse to outline a ring sector.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 5/2003    NAME: 	grim_menu_limb_profile_azimuthal_event    PURPOSE:   This option allows you create an azimutal brightness profile about a limb.      1) Activate the planet from which you wish to extract the profile.      2) Select this option and use the mouse to outline a sector.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2006    NAME: 	grim_menu_limb_profile_radial_event    PURPOSE:   This option allows you create radial brightness profile across a limb.      1) Activate the planet from which you wish to extract the profile.      2) Select this option and use the mouse to outline a sector.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2006    NAME: 	grim_menu_pointing_manual_event    PURPOSE:    This option allows you to change the pointing manually using pg_drag.      1) Activate the points that you wish to drag.      2) Select this option and use the left button to translate your        points, the middle button to rotate them, and the right button        to accept the change and correct the pointing.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_pointing_farfit_event    PURPOSE:    This option produces a rough pointing correction by comparing the    active points with edges detected in the image using pg_edges and    pg_farfit.      1) Activate the edges that you wish to correlate.      2) Select this option.     Only active limbs, terminators, and ring edges are used.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_pointing_renderfit_event    PURPOSE:    This option uses pg_renderfit to produce a pointing correction by comparing    the image with a simulated image.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 2/2017    NAME: 	grim_menu_pointing_lsq_event    PURPOSE: 	Opens a gr_lsqtool widget.  Using the current data, camera, active 	planet, and active ring descriptors.  See gr_lsqtool.pro for details.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2002    NAME: 	grim_menu_toggle_reorigin_event    PURPOSE:    This option allows the user to set whether geometry descriptors are    updated whenever the data array is shifted.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 12/2016    NAME: 	grim_menu_shift_enter_step_event    PURPOSE:    This option prompts the user to enter the step size for the image-shift    menu options.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 1/2012    NAME: 	grim_menu_shift_enter_offset_event    PURPOSE:    This option prompts the user to shift an image by entering an offset.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 1/2012    NAME: 	grim_menu_shift_left_event    PURPOSE:    This option shifts the image left and corrects the camera pointing    accordingly.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2002    NAME: 	grim_menu_shift_right_event    PURPOSE:    This option shifts the image right and corrects the camera pointing    accordingly.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2002    NAME: 	grim_menu_shift_up_event    PURPOSE:    This option shifts the image up and corrects the camera pointing    accordingly.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2002    NAME: 	grim_menu_shift_down_event    PURPOSE:    This option shifts the image down and corrects the camera pointing    accordingly.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2002    NAME: 	grim_menu_corrections_photometry_event    PURPOSE: 	Opens a gr_phttool widget.  Using the primary data, camera, planet, and 	ring descriptors.  See gr_phttool.pro for details.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_project_map_event    PURPOSE: 	Opens a gr_maptool widget.  Using the primary data, camera, planet, and 	ring descriptors.  See gr_maptool.pro for details.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002    NAME: 	grim_menu_mosaic_event    PURPOSE: 	Uses pg_mosaic to combine all visible image planes into a mosaic. 	The new mosiac is opened in a new grim instance.    CATEGORY: 	NV/GR    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002   ", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_core_help_event", "grim_menu_core_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_core_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_core_event", "grim_menu_core_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_core_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_image_profile_help_event", "grim_menu_image_profile_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_image_profile_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_image_profile_event", "grim_menu_image_profile_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_image_profile_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_ring_box_profile_radial_help_event", "grim_menu_ring_box_profile_radial_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_ring_box_profile_radial_help_event", "  This option allows you create a radial brightness profile from a   rectangular image region.     1) Activate the ring from which you wish to extract the profile.     2) Select this option and use the mouse to outline a ring sector:    ", "event", "NV/GR", " 	Written by:	Spitale, 6/2003   ");
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_ring_box_profile_radial_help_event", "grim_menu_ring_box_profile_radial_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_ring_box_profile_radial_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_ring_box_profile_radial_event", "grim_menu_ring_box_profile_radial_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_ring_box_profile_radial_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_ring_box_profile_longitudinal_help_event", "grim_menu_ring_box_profile_longitudinal_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_ring_box_profile_longitudinal_help_event", "  This option allows you create a longitudinal brightness profile from a   rectangular image region.      1) Activate the ring from which you wish to extract the profile.      2) Select this option and use the mouse to outline a ring sector.    ", "event", "NV/GR", " 	Written by:	Spitale, 5/2003   ");
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_ring_box_profile_longitudinal_help_event", "grim_menu_ring_box_profile_longitudinal_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_ring_box_profile_longitudinal_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_ring_box_profile_longitudinal_event", "grim_menu_ring_box_profile_longitudinal_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_ring_box_profile_longitudinal_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_ring_profile_radial_help_event", "grim_menu_ring_profile_radial_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_ring_profile_radial_help_event", "  This option allows you create a radial brightness profile.     1) Activate the ring from which you wish to extract the profile.     2) Select this option and use the mouse to outline a ring sector:        Left Button:   the sector is bounded by lines of constant                      longitude.', $       Middle Button: the sector is selected in an arbitrary direction.       Left Button:   the sector is bounded by lines perpendicular to                      the projected longitudinal direction.    ", "event", "NV/GR", " 	Written by:	Spitale, 5/2003   ");
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_ring_profile_radial_help_event", "grim_menu_ring_profile_radial_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_ring_profile_radial_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_ring_profile_radial_event", "grim_menu_ring_profile_radial_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_ring_profile_radial_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_ring_profile_longitudinal_help_event", "grim_menu_ring_profile_longitudinal_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_ring_profile_longitudinal_help_event", "  This option allows you create a longitudinal brightness profile.      1) Activate the ring from which you wish to extract the profile.      2) Select this option and use the mouse to outline a ring sector.    ", "event", "NV/GR", " 	Written by:	Spitale, 5/2003   ");
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_ring_profile_longitudinal_help_event", "grim_menu_ring_profile_longitudinal_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_ring_profile_longitudinal_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_ring_profile_longitudinal_event", "grim_menu_ring_profile_longitudinal_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_ring_profile_longitudinal_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_limb_profile_azimuthal_help_event", "grim_menu_limb_profile_azimuthal_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_limb_profile_azimuthal_help_event", "  This option allows you create an azimutal brightness profile about a limb.      1) Activate the planet from which you wish to extract the profile.      2) Select this option and use the mouse to outline a sector.    ", "event", "NV/GR", " 	Written by:	Spitale, 8/2006   ");
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_limb_profile_azimuthal_help_event", "grim_menu_limb_profile_azimuthal_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_limb_profile_azimuthal_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_limb_profile_azimuthal_event", "grim_menu_limb_profile_azimuthal_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_limb_profile_azimuthal_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_limb_profile_radial_help_event", "grim_menu_limb_profile_radial_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_limb_profile_radial_help_event", "  This option allows you create radial brightness profile across a limb.      1) Activate the planet from which you wish to extract the profile.      2) Select this option and use the mouse to outline a sector.    ", "event", "NV/GR", " 	Written by:	Spitale, 8/2006   ");
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_limb_profile_radial_help_event", "grim_menu_limb_profile_radial_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_limb_profile_radial_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_limb_profile_radial_event", "grim_menu_limb_profile_radial_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_limb_profile_radial_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_pointing_manual_help_event", "grim_menu_pointing_manual_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_pointing_manual_help_event", "   This option allows you to change the pointing manually using pg_drag.      1) Activate the points that you wish to drag.      2) Select this option and use the left button to translate your        points, the middle button to rotate them, and the right button        to accept the change and correct the pointing.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_pointing_manual_help_event", "grim_menu_pointing_manual_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_pointing_manual_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_pointing_manual_event", "grim_menu_pointing_manual_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_pointing_manual_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_pointing_farfit_help_event", "grim_menu_pointing_farfit_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_pointing_farfit_help_event", "   This option produces a rough pointing correction by comparing the    active points with edges detected in the image using pg_edges and    pg_farfit.      1) Activate the edges that you wish to correlate.      2) Select this option.     Only active limbs, terminators, and ring edges are used.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_pointing_farfit_help_event", "grim_menu_pointing_farfit_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_pointing_farfit_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_pointing_farfit_event", "grim_menu_pointing_farfit_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_pointing_farfit_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_pointing_lsq_help_event", "grim_menu_pointing_lsq_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_pointing_lsq_help_event", "	Opens a gr_lsqtool widget.  Using the current data, camera, active 	planet, and active ring descriptors.  See gr_lsqtool.pro for details.    ", "event", "NV/GR", " 	Written by:	Spitale, 8/2002   ");
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_pointing_renderfit_help_event", "grim_menu_pointing_renderfit_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_pointing_renderfit_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_pointing_renderfit_event", "grim_menu_pointing_renderfit_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_pointing_renderfit_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_pointing_lsq_help_event", "grim_menu_pointing_lsq_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_pointing_lsq_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_pointing_lsq_event", "grim_menu_pointing_lsq_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_pointing_lsq_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_get_shift_step", "grim_get_shift_step", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_get_shift_step", "", "grim_data", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_shift_enter_step_event_help_event", "grim_menu_shift_enter_step_event_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_shift_enter_step_event_help_event", "   This option prompts the user to enter the step size for the image-shift    menu options.    ", "event", "NV/GR", " 	Written by:	Spitale, 1/2012   ");
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_reposition", "grim_reposition", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_reposition", "", "cdgrim_dataplaneshift", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_toggle_reorigin_event_help_event", "grim_menu_toggle_reorigin_event_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_toggle_reorigin_event_help_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_toggle_reorigin_event", "grim_menu_toggle_reorigin_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_toggle_reorigin_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_shift_enter_step_event_help_event", "grim_menu_shift_enter_step_event_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_shift_enter_step_event_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_shift_enter_step_event", "grim_menu_shift_enter_step_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_shift_enter_step_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_shift_enter_offset_event_help_event", "grim_menu_shift_enter_offset_event_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_shift_enter_offset_event_help_event", "   This option prompts the user to shift an image by entering an offset.    ", "event", "NV/GR", " 	Written by:	Spitale, 1/2012   ");
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_shift_enter_offset_event_help_event", "grim_menu_shift_enter_offset_event_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_shift_enter_offset_event_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_shift_enter_offset_event", "grim_menu_shift_enter_offset_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_shift_enter_offset_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_shift_left_help_event", "grim_menu_shift_left_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_shift_left_help_event", "   This option shifts the image left and corrects the camera pointing    accordingly.    ", "event", "NV/GR", " 	Written by:	Spitale, 8/2002   ");
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_shift_left_help_event", "grim_menu_shift_left_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_shift_left_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_shift_left_event", "grim_menu_shift_left_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_shift_left_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_shift_right_help_event", "grim_menu_shift_right_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_shift_right_help_event", "   This option shifts the image right and corrects the camera pointing    accordingly.    ", "event", "NV/GR", " 	Written by:	Spitale, 8/2002   ");
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_shift_right_help_event", "grim_menu_shift_right_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_shift_right_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_shift_right_event", "grim_menu_shift_right_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_shift_right_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_shift_up_help_event", "grim_menu_shift_up_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_shift_up_help_event", "   This option shifts the image up and corrects the camera pointing    accordingly.    ", "event", "NV/GR", " 	Written by:	Spitale, 8/2002   ");
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_shift_up_help_event", "grim_menu_shift_up_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_shift_up_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_shift_up_event", "grim_menu_shift_up_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_shift_up_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_shift_down_help_event", "grim_menu_shift_down_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_shift_down_help_event", "   This option shifts the image down and corrects the camera pointing    accordingly.    ", "event", "NV/GR", " 	Written by:	Spitale, 8/2002   ");
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_shift_down_help_event", "grim_menu_shift_down_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_shift_down_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_shift_down_event", "grim_menu_shift_down_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_shift_down_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_corrections_photometry_help_event", "grim_menu_corrections_photometry_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_corrections_photometry_help_event", "	Opens a gr_phttool widget.  Using the primary data, camera, planet, and 	ring descriptors.  See gr_phttool.pro for details.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_corrections_photometry_help_event", "grim_menu_corrections_photometry_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_corrections_photometry_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_corrections_photometry_event", "grim_menu_corrections_photometry_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_corrections_photometry_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_project_map_help_event", "grim_menu_project_map_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_project_map_help_event", "	Opens a gr_maptool widget.  Using the primary data, camera, planet, and 	ring descriptors.  See gr_maptool.pro for details.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_project_map_help_event", "grim_menu_project_map_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_project_map_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_project_map_event", "grim_menu_project_map_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_project_map_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_mosaic_help_event", "grim_menu_mosaic_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_mosaic_help_event", "	Uses pg_mosaic to combine all visible image planes into a mosaic. 	The new mosiac is opened in a new grim instance.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_mosaic_help_event", "grim_menu_mosaic_help_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_mosaic_help_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_mosaic_event", "grim_menu_mosaic_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_mosaic_event", "", "event", "          -1", "");
   
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_menu_read_mind_event", "grim_menu_read_mind_event", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_menu_read_mind_event", "", "event", "          -1", "");
   
+  libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_default_menus_init", "grim_default_menus_init", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_default_menus_init", "", "grim_data", "          -1", "");
+  
   libdata[libdataItem++] = new Array("./grim_default_menus.html#grim_default_menus", "grim_default_menus", 'routine in <a href="./grim_default_menus.html">grim_default_menus.pro</a>', "grim_default_menus.pro", "", "grim_default_menus", "", "", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("./grim_descriptors_include.html", "grim_descriptors_include.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_descriptors_include.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_compute_fov", "grim_compute_fov", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_compute_fov", "", "covgrim_dataplane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_descriptor_notify_handle", "grim_descriptor_notify_handle", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_descriptor_notify_handle", "", "refreshnewgrim_dataxd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_suspend_events", "grim_suspend_events", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_suspend_events", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_resume_events", "grim_resume_events", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_resume_events", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_descriptor_notify", "grim_descriptor_notify", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_descriptor_notify", "", "refreshnewevents", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_rm_descriptor", "grim_rm_descriptor", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_rm_descriptor", "", "planegrim_dataxdpxd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_mark_descriptor", "grim_mark_descriptor", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_mark_descriptor", "", "xdval", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_demark_descriptor", "grim_demark_descriptor", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_demark_descriptor", "", "xd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_mark_descriptors", "grim_mark_descriptors", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_mark_descriptors", "", "allcdpdrdsdstdardsundplanesgrim_dataval", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_add_descriptor", "grim_add_descriptor", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_add_descriptor", "", "onenoregisterassoc_ddgrim_dataxdp_xd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_get_cameras", "grim_get_cameras", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_get_cameras", "", "planegrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_get_planets", "grim_get_planets", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_get_planets", "", "planenamesgrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_get_sun", "grim_get_sun", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_get_sun", "", "planegrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_get_stars", "grim_get_stars", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_get_stars", "", "planenamesgrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_get_rings", "grim_get_rings", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_get_rings", "", "planenamesgrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_get_stations", "grim_get_stations", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_get_stations", "", "planenamesgrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_get_arrays", "grim_get_arrays", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_get_arrays", "", "planenamesgrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_clear_descriptors", "grim_clear_descriptors", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_clear_descriptors", "", "planesgrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_load_descriptors", "grim_load_descriptors", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_load_descriptors", "", "planeclasscdpdrdsundsdardstdodobj_namegdgrim_dataname", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_descriptors_include.html#grim_descriptors_include", "grim_descriptors_include", 'routine in <a href="./grim_descriptors_include.html">grim_descriptors_include.pro</a>', "grim_descriptors_include.pro", "", "grim_descriptors_include", "", "", "          -1", "");
   
   
 
@@ -1554,6 +1267,55 @@ libdata[libdataItem++] = new Array("./grim_footprint_cursor.html", "grim_footpri
   
   
 
+libdata[libdataItem++] = new Array("./grim_image_include.html", "grim_image_include.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_image_include.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_get_n_colors", "grim_get_n_colors", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_get_n_colors", "", "planetypegrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_visible_planes", "grim_visible_planes", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_visible_planes", "", "planecurrentgrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_get_plane_by_xy", "grim_get_plane_by_xy", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_get_plane_by_xy", "", "grim_dataxy", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_get_plane_by_overlay", "grim_get_plane_by_overlay", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_get_plane_by_overlay", "", "grim_dataxy", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_test_single_channel", "grim_test_single_channel", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_test_single_channel", "", "grim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_toggle_image", "grim_toggle_image", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_toggle_image", "", "no_refreshbmgrim_dataplane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_toggle_image_overlays", "grim_toggle_image_overlays", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_toggle_image_overlays", "", "no_refreshgrim_dataplane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_render_image", "grim_render_image", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_render_image", "", "planeimage_ptsgrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_image", "grim_image", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_image", "", "planepncolormapchannelcurrentxrangeyrangegrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_scale_image", "grim_scale_image", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_scale_image", "", "currentplaneno_scaletopxrangeyrangegrim_datargb", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_display_image", "grim_display_image", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_display_image", "", "planeentirewnumdoffsetzoomrotateorderdefaultpreviousfliprestorexsizeysizeoffsettopnoplotno_scaleno_wsetno_coordtvimagehomedraw_pixmapcurrentno_copygrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_display_plot", "grim_display_plot", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_display_plot", "", "planedoffsetwnumxrangeyrangeno_wsetdefaultpreviousfliprestorexsizeysizepositiondxdyentireeraseno_coordcolornodrawcurrentgrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_display", "grim_display", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_display", "", "planewnumhomeno_imageno_axesdoffsetno_erasezoomrotateorderxsizeysizeoffsetdefaultpreviousfliprestoreuse_pixmappixmap_box_centerno_copypixmap_box_sideno_backentireno_wsetno_coordtvimageno_plotnodrawxrangeyrangedxdycurrentpixmap_to_usegrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_show_context_image", "grim_show_context_image", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_show_context_image", "", "grim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_show_axes", "grim_show_axes", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_show_axes", "", "grim_dataplane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_add_refresh_callback", "grim_add_refresh_callback", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_add_refresh_callback", "", "topno_wsetcallbacksdata_ps", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_rm_refresh_callback", "grim_rm_refresh_callback", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_rm_refresh_callback", "", "topdata_ps", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_call_refresh_callbacks", "grim_call_refresh_callbacks", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_call_refresh_callbacks", "", "grim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_title", "grim_title", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_title", "", "primaryplane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_channel_string", "grim_channel_string", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_channel_string", "", "plane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_refresh", "grim_refresh", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_refresh", "", "wnumplaneno_imageno_objectsno_axesno_titlehomexrangeyrangedoffsetno_erasezoomrotateorderdefaultpreviousfliprestorexsizeysizeoffsetuse_pixmappixmap_box_centerpixmap_box_sidecontextentirenoglassno_wsetno_contextno_callbackno_backno_coordtvimageno_plotjust_imagedxdyupdatecurrentno_copyno_mainno_usergrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_image_include.html#grim_image_include", "grim_image_include", 'routine in <a href="./grim_image_include.html">grim_image_include.pro</a>', "grim_image_include.pro", "", "grim_image_include", "", "", "          -1", "");
+  
+  
+
 libdata[libdataItem++] = new Array("./grim_message.html", "grim_message.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_message.pro", "", "", "", "", "          -1", "");
   
   
@@ -1561,7 +1323,7 @@ libdata[libdataItem++] = new Array("./grim_message.html", "grim_message.pro", '.
   
   
 
-libdata[libdataItem++] = new Array("./grim_mode_activate.html", "grim_mode_activate.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_activate.pro", "", "", "	Selects the activate cursor mode.    ", "", "          -1", " 	Written by:	Spitale, 7/2002   ");
+libdata[libdataItem++] = new Array("./grim_mode_activate.html", "grim_mode_activate.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_activate.pro", "", "", " NAME: 	grim_mode_activate_button_event    PURPOSE: 	Selects the activate cursor mode.    CATEGORY: 	NV/GR    OPERATION:  	Overlay objects may be activated or deactivated by clicking 	and/or dragging using the left or right mouse buttons 	respectively.  This activation mechanism allows the user to 	select which among a certain type of objects should be used 	in a given menu selection.  A left click on an overlay 	activates that overlay and a right click deactivates it.  A 	double click activates or deactivates all overlays associated 	with a given descriptor, or all stars.  Active overlays appear 	in the colors selected in the 'Overlay Settings' menu selection. 	Inactive overlays appear in cyan.  A descriptor is active 	whenever any of its overlays are active.    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_mode_activate.html#grim_mode_activate_bitmap", "grim_mode_activate_bitmap", 'routine in <a href="./grim_mode_activate.html">grim_mode_activate.pro</a>', "grim_mode_activate.pro", "", "grim_mode_activate_bitmap", "", "", "          -1", "");
@@ -1578,7 +1340,7 @@ libdata[libdataItem++] = new Array("./grim_mode_activate.html", "grim_mode_activ
   
   
 
-libdata[libdataItem++] = new Array("./grim_mode_curves.html", "grim_mode_curves.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_curves.pro", "", "", "	Selects the curves cursor mode.    ", "", "          -1", " 	Written by:	Spitale, 10/2012   ");
+libdata[libdataItem++] = new Array("./grim_mode_curves.html", "grim_mode_curves.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_curves.pro", "", "", " NAME: 	grim_mode_curves_button_event    PURPOSE: 	Selects the curves cursor mode.    CATEGORY: 	NV/GR    OPERATION: 	curves are added using the left mouse button and deleted 	using the right button.    MODIFICATION HISTORY:  	Written by:	Spitale, 10/2012   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_mode_curves.html#grim_mode_curves_bitmap", "grim_mode_curves_bitmap", 'routine in <a href="./grim_mode_curves.html">grim_mode_curves.pro</a>', "grim_mode_curves.pro", "", "grim_mode_curves_bitmap", "", "", "          -1", "");
@@ -1597,7 +1359,7 @@ libdata[libdataItem++] = new Array("./grim_mode_curves.html", "grim_mode_curves.
   
   
 
-libdata[libdataItem++] = new Array("./grim_mode_drag.html", "grim_mode_drag.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_drag.pro", "", "", "	Selects the drag cursor mode.    ", "", "          -1", " 	Written by:	Spitale, 2/2009   ");
+libdata[libdataItem++] = new Array("./grim_mode_drag.html", "grim_mode_drag.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_drag.pro", "", "", " NAME: 	grim_mode_drag_button_event    PURPOSE: 	Selects the drag cursor mode.    CATEGORY: 	NV/GR    OPERATION: 	Allow the user to drag the image.    MODIFICATION HISTORY:  	Written by:	Spitale, 2/2009   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_mode_drag.html#grim_mode_drag_bitmap", "grim_mode_drag_bitmap", 'routine in <a href="./grim_mode_drag.html">grim_mode_drag.pro</a>', "grim_mode_drag.pro", "", "grim_mode_drag_bitmap", "", "", "          -1", "");
@@ -1616,7 +1378,7 @@ libdata[libdataItem++] = new Array("./grim_mode_drag.html", "grim_mode_drag.pro"
   
   
 
-libdata[libdataItem++] = new Array("./grim_mode_magnify.html", "grim_mode_magnify.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_magnify.pro", "", "", "	Selects the magnify cursor mode.    ", "", "          -1", " 	Written by:	Spitale, 7/2002   ");
+libdata[libdataItem++] = new Array("./grim_mode_magnify.html", "grim_mode_magnify.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_magnify.pro", "", "", " NAME: 	grim_mode_magnify_button_event    PURPOSE: 	Selects the magnify cursor mode.    CATEGORY: 	NV/GR    OPERATION: 	Image pixels in the graphics window may be magnifed using 	either the left or right mouse buttons.  The left button 	magnifies the displayed pixels, directly from the graphics 	window.  The right button magnifies the data itself, without 	the overlays.    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_mode_magnify.html#grim_mode_magnify_bitmap", "grim_mode_magnify_bitmap", 'routine in <a href="./grim_mode_magnify.html">grim_mode_magnify.pro</a>', "grim_mode_magnify.pro", "", "grim_mode_magnify_bitmap", "", "", "          -1", "");
@@ -1641,7 +1403,7 @@ libdata[libdataItem++] = new Array("./grim_mode_magnify.html", "grim_mode_magnif
   
   
 
-libdata[libdataItem++] = new Array("./grim_mode_mask.html", "grim_mode_mask.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_mask.pro", "", "", "	Selects the mask cursor mode.    ", "", "          -1", " 	Written by:	Spitale, 8/2013   ");
+libdata[libdataItem++] = new Array("./grim_mode_mask.html", "grim_mode_mask.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_mask.pro", "", "", " NAME: 	grim_mode_mask_button_event    PURPOSE: 	Selects the mask cursor mode.    CATEGORY: 	NV/GR    OPERATION: 	Allowqs the user to select pixel to include in the mask.    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2013   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_mode_mask.html#grim_mode_mask_bitmap", "grim_mode_mask_bitmap", 'routine in <a href="./grim_mode_mask.html">grim_mode_mask.pro</a>', "grim_mode_mask.pro", "", "grim_mode_mask_bitmap", "", "", "          -1", "");
@@ -1658,7 +1420,7 @@ libdata[libdataItem++] = new Array("./grim_mode_mask.html", "grim_mode_mask.pro"
   
   
 
-libdata[libdataItem++] = new Array("./grim_mode_navigate.html", "grim_mode_navigate.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_navigate.pro", "", "", "	Selects the navigate cursor mode.    ", "", "          -1", " 	Written by:	Spitale, 2/2009   ");
+libdata[libdataItem++] = new Array("./grim_mode_navigate.html", "grim_mode_navigate.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_navigate.pro", "", "", " NAME: 	grim_mode_navigate_button_event    PURPOSE: 	Selects the navigate cursor mode.  	 Camera orientation: 	   Left button:		Allows the optic axis to be repointed.  	   Right button:	Allows the camera to twist about an axis 				corresponding to the selected pixel location.  	 Camera position: 	   <Shift> Left:	Allows the camera to be repositioned in the 				X-Z plane (image plane).  Speeds depend on 				the object under the cursor.  	   <Shift> Right:	Allows the camera to be repositioned and 				reoriented simultaneosly by tracking the 				object under the cursor.  	   <Shift> Wheel:	Allows the camera to be repositioned in the 				Y (optic axis) direction.  Speeds depend on 				the object under the cursor.    CATEGORY: 	NV/GR    OPERATION: 	Allow the user to fly around the system.    MODIFICATION HISTORY:  	Written by:	Spitale, 2/2009   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_mode_navigate.html#grim_mode_navigate_bitmap", "grim_mode_navigate_bitmap", 'routine in <a href="./grim_mode_navigate.html">grim_mode_navigate.pro</a>', "grim_mode_navigate.pro", "", "grim_mode_navigate_bitmap", "", "", "          -1", "");
@@ -1695,7 +1457,7 @@ libdata[libdataItem++] = new Array("./grim_mode_navigate.html", "grim_mode_navig
   
   
 
-libdata[libdataItem++] = new Array("./grim_mode_pan.html", "grim_mode_pan.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_pan.pro", "", "", "	Selects the pan cursor mode.    ", "", "          -1", " 	Written by:	Spitale, 7/2002   ");
+libdata[libdataItem++] = new Array("./grim_mode_pan.html", "grim_mode_pan.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_pan.pro", "", "", " NAME: 	grim_mode_pan_button_event    PURPOSE: 	Selects the pan cursor mode.    CATEGORY: 	NV/GR    OPERATION: 	The image offset is controlled by selecting an offset vector 	using the left mouse button, or the middle button may be 	used to center the image on a selected point.    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_mode_pan.html#grim_mode_pan_bitmap", "grim_mode_pan_bitmap", 'routine in <a href="./grim_mode_pan.html">grim_mode_pan.pro</a>', "grim_mode_pan.pro", "", "grim_mode_pan_bitmap", "", "", "          -1", "");
@@ -1712,7 +1474,7 @@ libdata[libdataItem++] = new Array("./grim_mode_pan.html", "grim_mode_pan.pro", 
   
   
 
-libdata[libdataItem++] = new Array("./grim_mode_pan_plot.html", "grim_mode_pan_plot.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_pan_plot.pro", "", "", "	Selects the pan cursor mode.    ", "", "          -1", " 	Written by:	Spitale, 7/2002   ");
+libdata[libdataItem++] = new Array("./grim_mode_pan_plot.html", "grim_mode_pan_plot.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_pan_plot.pro", "", "", " NAME: 	grim_mode_pan_plot_button_event    PURPOSE: 	Selects the pan cursor mode.    CATEGORY: 	NV/GR    OPERATION: 	The image offset is controlled by selecting an offset vector 	using the left mouse button, or the middle button may be 	used to center the image on a selected point.    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_mode_pan_plot.html#grim_mode_pan_plot_bitmap", "grim_mode_pan_plot_bitmap", 'routine in <a href="./grim_mode_pan_plot.html">grim_mode_pan_plot.pro</a>', "grim_mode_pan_plot.pro", "", "grim_mode_pan_plot_bitmap", "", "", "          -1", "");
@@ -1729,7 +1491,7 @@ libdata[libdataItem++] = new Array("./grim_mode_pan_plot.html", "grim_mode_pan_p
   
   
 
-libdata[libdataItem++] = new Array("./grim_mode_plane.html", "grim_mode_plane.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_plane.pro", "", "", "	Selects the plane cursor mode.    ", "", "          -1", " 	Written by:	Spitale, 8/2008   ");
+libdata[libdataItem++] = new Array("./grim_mode_plane.html", "grim_mode_plane.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_plane.pro", "", "", " NAME: 	grim_mode_plane_button_event    PURPOSE: 	Selects the plane cursor mode.    CATEGORY: 	NV/GR    OPERATION: 	Planes can be selected by clicking in the image window.  This option 	is not useful unless planes other than the current plane are visible. 	If more than one plane under the cursor contains data, the one with 	the lowest plane number is selected, unless one of them is the current 	plane.    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2008   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_mode_plane.html#grim_mode_plane_bitmap", "grim_mode_plane_bitmap", 'routine in <a href="./grim_mode_plane.html">grim_mode_plane.pro</a>', "grim_mode_plane.pro", "", "grim_mode_plane_bitmap", "", "", "          -1", "");
@@ -1746,7 +1508,7 @@ libdata[libdataItem++] = new Array("./grim_mode_plane.html", "grim_mode_plane.pr
   
   
 
-libdata[libdataItem++] = new Array("./grim_mode_readout.html", "grim_mode_readout.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_readout.pro", "", "", "	Selects the readout cursor mode.    ", "", "          -1", " 	Written by:	Spitale, 7/2002   ");
+libdata[libdataItem++] = new Array("./grim_mode_readout.html", "grim_mode_readout.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_readout.pro", "", "", " NAME: 	grim_mode_readout_button_event    PURPOSE: 	Selects the readout cursor mode.    CATEGORY: 	NV/GR    OPERATION: 	A text window appears and displays data about the pixel selected 	using the left mouse button.  The amount and type of information 	displayed depends on which descriptors are loaded.    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_mode_readout.html#grim_mode_readout_bitmap", "grim_mode_readout_bitmap", 'routine in <a href="./grim_mode_readout.html">grim_mode_readout.pro</a>', "grim_mode_readout.pro", "", "grim_mode_readout_bitmap", "", "", "          -1", "");
@@ -1771,7 +1533,7 @@ libdata[libdataItem++] = new Array("./grim_mode_readout.html", "grim_mode_readou
   
   
 
-libdata[libdataItem++] = new Array("./grim_mode_region.html", "grim_mode_region.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_region.pro", "", "", "	Selects the 'region' cursor mode.    ", "", "          -1", " 	Written by:	Spitale, 2/2014   ");
+libdata[libdataItem++] = new Array("./grim_mode_region.html", "grim_mode_region.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_region.pro", "", "", " NAME: 	grim_mode_region_button_event    PURPOSE: 	Selects the 'region' cursor mode.    CATEGORY: 	NV/GR    OPERATION: 	An image region is defined by clicking and dragging a box or curve.    MODIFICATION HISTORY:  	Written by:	Spitale, 2/2014   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_mode_region.html#grim_mode_region_bitmap", "grim_mode_region_bitmap", 'routine in <a href="./grim_mode_region.html">grim_mode_region.pro</a>', "grim_mode_region.pro", "", "grim_mode_region_bitmap", "", "", "          -1", "");
@@ -1788,7 +1550,7 @@ libdata[libdataItem++] = new Array("./grim_mode_region.html", "grim_mode_region.
   
   
 
-libdata[libdataItem++] = new Array("./grim_mode_remove.html", "grim_mode_remove.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_remove.pro", "", "", "	Selects the remove cursor mode.    ", "", "          -1", " 	Written by:	Spitale, 8/2006   ");
+libdata[libdataItem++] = new Array("./grim_mode_remove.html", "grim_mode_remove.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_remove.pro", "", "", " NAME: 	grim_mode_remove_button_event    PURPOSE: 	Selects the remove cursor mode.    CATEGORY: 	NV/GR    OPERATION: 	A single click on an overlay causes it to be deleted.  A        double click causes the entire object to be deleted.  The left 	button applies to standard overlays; the right button applies 	to user overlays.    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2006   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_mode_remove.html#grim_mode_remove_bitmap", "grim_mode_remove_bitmap", 'routine in <a href="./grim_mode_remove.html">grim_mode_remove.pro</a>', "grim_mode_remove.pro", "", "grim_mode_remove_bitmap", "", "", "          -1", "");
@@ -1809,7 +1571,7 @@ libdata[libdataItem++] = new Array("./grim_mode_remove.html", "grim_mode_remove.
   
   
 
-libdata[libdataItem++] = new Array("./grim_mode_select.html", "grim_mode_select.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_select.pro", "", "", "	Selects the 'select' cursor mode.    ", "", "          -1", " 	Written by:	Spitale, 2/2014   ");
+libdata[libdataItem++] = new Array("./grim_mode_select.html", "grim_mode_select.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_select.pro", "", "", " NAME: 	grim_mode_select_button_event    PURPOSE: 	Selects the 'select' cursor mode.    CATEGORY: 	NV/GR    OPERATION: 	Overlay points are selected by clicking and dragging and curve around 	the desired points.  The left button selects overlay points, the right 	deselects overlay points.    MODIFICATION HISTORY:  	Written by:	Spitale, 2/2014   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_mode_select.html#grim_mode_select_bitmap", "grim_mode_select_bitmap", 'routine in <a href="./grim_mode_select.html">grim_mode_select.pro</a>', "grim_mode_select.pro", "", "grim_mode_select_bitmap", "", "", "          -1", "");
@@ -1828,7 +1590,7 @@ libdata[libdataItem++] = new Array("./grim_mode_select.html", "grim_mode_select.
   
   
 
-libdata[libdataItem++] = new Array("./grim_mode_smooth.html", "grim_mode_smooth.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_smooth.pro", "", "", "	Selects the smooth cursor mode.    ", "", "          -1", " 	Written by:	Spitale, 10/2006   ");
+libdata[libdataItem++] = new Array("./grim_mode_smooth.html", "grim_mode_smooth.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_smooth.pro", "", "", " NAME: 	grim_mode_smooth_button_event    PURPOSE: 	Selects the smooth cursor mode.    CATEGORY: 	NV/GR    OPERATION: 	The user selects a box, which is used to determine the kernel 	size for smothing the data set.    MODIFICATION HISTORY:  	Written by:	Spitale, 10/2006   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_mode_smooth.html#grim_mode_smooth_bitmap", "grim_mode_smooth_bitmap", 'routine in <a href="./grim_mode_smooth.html">grim_mode_smooth.pro</a>', "grim_mode_smooth.pro", "", "grim_mode_smooth_bitmap", "", "", "          -1", "");
@@ -1847,7 +1609,7 @@ libdata[libdataItem++] = new Array("./grim_mode_smooth.html", "grim_mode_smooth.
   
   
 
-libdata[libdataItem++] = new Array("./grim_mode_tiepoints.html", "grim_mode_tiepoints.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_tiepoints.pro", "", "", "	Selects the tiepoints cursor mode.    ", "", "          -1", " 	Written by:	Spitale, 7/2002   ");
+libdata[libdataItem++] = new Array("./grim_mode_tiepoints.html", "grim_mode_tiepoints.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_tiepoints.pro", "", "", " NAME: 	grim_mode_tiepoints_button_event    PURPOSE: 	Selects the tiepoints cursor mode.    CATEGORY: 	NV/GR    OPERATION: 	Tiepoints are added using the left mouse button and deleted 	using the right button.  Tiepoints appear as crosses labeled 	by numbers.  The use of tiepoints is determined by the 	particular option selected by the user.    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_mode_tiepoints.html#grim_mode_tiepoints_bitmap", "grim_mode_tiepoints_bitmap", 'routine in <a href="./grim_mode_tiepoints.html">grim_mode_tiepoints.pro</a>', "grim_mode_tiepoints.pro", "", "grim_mode_tiepoints_bitmap", "", "", "          -1", "");
@@ -1866,7 +1628,7 @@ libdata[libdataItem++] = new Array("./grim_mode_tiepoints.html", "grim_mode_tiep
   
   
 
-libdata[libdataItem++] = new Array("./grim_mode_trim.html", "grim_mode_trim.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_trim.pro", "", "", "	Selects the trim cursor mode.    ", "", "          -1", " 	Written by:	Spitale, 8/2006   ");
+libdata[libdataItem++] = new Array("./grim_mode_trim.html", "grim_mode_trim.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_trim.pro", "", "", " NAME: 	grim_mode_trim_button_event    PURPOSE: 	Selects the trim cursor mode.    CATEGORY: 	NV/GR    OPERATION: 	Overlay points are trimmed by clicking and dragging and curve around 	the desired points.  The left button trims standard overlays, the right 	trims user overlay points.    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2006   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_mode_trim.html#grim_mode_trim_bitmap", "grim_mode_trim_bitmap", 'routine in <a href="./grim_mode_trim.html">grim_mode_trim.pro</a>', "grim_mode_trim.pro", "", "grim_mode_trim_bitmap", "", "", "          -1", "");
@@ -1885,7 +1647,7 @@ libdata[libdataItem++] = new Array("./grim_mode_trim.html", "grim_mode_trim.pro"
   
   
 
-libdata[libdataItem++] = new Array("./grim_mode_xyzoom.html", "grim_mode_xyzoom.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_xyzoom.pro", "", "", "	Selects the xy-zoom cursor mode.    ", "", "          -1", " 	Written by:	Spitale, 5/2005   ");
+libdata[libdataItem++] = new Array("./grim_mode_xyzoom.html", "grim_mode_xyzoom.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_xyzoom.pro", "", "", " NAME: 	grim_mode_xyzoom_button_event    PURPOSE: 	Selects the xy-zoom cursor mode.    CATEGORY: 	NV/GR    OPERATION: 	Same as 'zoom' mode, except the aspect ratio is set by the 	proportions of the selected box.    MODIFICATION HISTORY:  	Written by:	Spitale, 5/2005   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_mode_xyzoom.html#grim_mode_xyzoom_bitmap", "grim_mode_xyzoom_bitmap", 'routine in <a href="./grim_mode_xyzoom.html">grim_mode_xyzoom.pro</a>', "grim_mode_xyzoom.pro", "", "grim_mode_xyzoom_bitmap", "", "", "          -1", "");
@@ -1904,7 +1666,7 @@ libdata[libdataItem++] = new Array("./grim_mode_xyzoom.html", "grim_mode_xyzoom.
   
   
 
-libdata[libdataItem++] = new Array("./grim_mode_zoom.html", "grim_mode_zoom.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_zoom.pro", "", "", "	Selects the zoom cursor mode.    ", "", "          -1", " 	Written by:	Spitale, 7/2002   ");
+libdata[libdataItem++] = new Array("./grim_mode_zoom.html", "grim_mode_zoom.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_zoom.pro", "", "", " NAME: 	grim_mode_zoom_button_event    PURPOSE: 	Selects the zoom cursor mode.    CATEGORY: 	NV/GR    OPERATION: 	The image zoom and offset are controlled by selecting 	a box in the image.  When the box is created using the 	left mouse button, zoom and offset are changed so that 	the contents of the box best fill the current graphics 	window.  When the right button is used, the contents of 	the current graphics window are shrunken so as to best 	fill the box.  In other words, the left button zooms in 	and the right button zooms out.    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_mode_zoom.html#grim_mode_zoom_bitmap", "grim_mode_zoom_bitmap", 'routine in <a href="./grim_mode_zoom.html">grim_mode_zoom.pro</a>', "grim_mode_zoom.pro", "", "grim_mode_zoom_bitmap", "", "", "          -1", "");
@@ -1921,7 +1683,7 @@ libdata[libdataItem++] = new Array("./grim_mode_zoom.html", "grim_mode_zoom.pro"
   
   
 
-libdata[libdataItem++] = new Array("./grim_mode_zoom_plot.html", "grim_mode_zoom_plot.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_zoom_plot.pro", "", "", "	Selects the zoom cursor mode.    ", "", "          -1", " 	Written by:	Spitale, 7/2002   ");
+libdata[libdataItem++] = new Array("./grim_mode_zoom_plot.html", "grim_mode_zoom_plot.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_mode_zoom_plot.pro", "", "", " NAME: 	grim_mode_zoom_plot_button_event    PURPOSE: 	Selects the zoom cursor mode.    CATEGORY: 	NV/GR    OPERATION: 	The image zoom and offset are controlled by selecting 	a box in the image.  When the box is created using the 	left mouse button, zoom and offset are changed so that 	the contents of the box best fill the current graphics 	window.  When the right button is used, the contents of 	the current graphics window are shrunken so as to best 	fill the box.  In other words, the left button zooms in 	and the right button zooms out.    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./grim_mode_zoom_plot.html#grim_mode_zoom_plot_bitmap", "grim_mode_zoom_plot_bitmap", 'routine in <a href="./grim_mode_zoom_plot.html">grim_mode_zoom_plot.pro</a>', "grim_mode_zoom_plot.pro", "", "grim_mode_zoom_plot_bitmap", "", "", "          -1", "");
@@ -1966,6 +1728,203 @@ libdata[libdataItem++] = new Array("./grim_overlay_settings.html", "grim_overlay
   
   
 
+libdata[libdataItem++] = new Array("./grim_overlays_include.html", "grim_overlays_include.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_overlays_include.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_set_overlay_update_flag", "grim_set_overlay_update_flag", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_set_overlay_update_flag", "", "ptdvalue", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_get_overlay_update_flag", "grim_get_overlay_update_flag", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_get_overlay_update_flag", "", "ptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_get_updated_ptd", "grim_get_updated_ptd", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_get_updated_ptd", "", "iiclear_ptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_get_xd", "grim_get_xd", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_get_xd", "", "planegrim_dataclass", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_get_overlay_ptdp", "grim_get_overlay_ptdp", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_get_overlay_ptdp", "", "planedataclassdeplabelsiicolorpsymtlabtshadesymsizeshadetfillgenrefastgrim_dataname", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_get_active_overlays", "grim_get_active_overlays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_get_active_overlays", "", "planeactive_indicesinactive_indicesgrim_datatype", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_get_all_active_overlays", "grim_get_all_active_overlays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_get_all_active_overlays", "", "planenamesgrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_get_all_overlays", "grim_get_all_overlays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_get_all_overlays", "", "planenamesgrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_get_active_xds", "grim_get_active_xds", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_get_active_xds", "", "active_indicesinactive_indicesplaneclass", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_update_activated", "grim_update_activated", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_update_activated", "", "planegrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_add_activation_callback", "grim_add_activation_callback", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_add_activation_callback", "", "topno_wsetcallbacksdata_ps", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_rm_activation_callback", "grim_rm_activation_callback", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_rm_activation_callback", "", "topdata_ps", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_call_activation_callbacks", "grim_call_activation_callbacks", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_call_activation_callbacks", "", "planeptdarg", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_fill", "grim_fill", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_fill", "", "ptdnamecolor", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_draw_standard_points", "grim_draw_standard_points", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_draw_standard_points", "", "psympsizeplabelslabel_shadegrim_dataplane_ptdnamedatacolortshadeshade", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_draw_standard_overlays", "grim_draw_standard_overlays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_draw_standard_overlays", "", "updatemlabgrim_dataplaneinactive_color", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_draw_user_points", "grim_draw_user_points", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_draw_user_points", "", "xmapgrim_dataplanetags", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_draw_user_overlays", "grim_draw_user_overlays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_draw_user_overlays", "", "grim_dataplaneinactive_color", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_draw_roi", "grim_draw_roi", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_draw_roi", "", "grim_dataplane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_draw_indexed_arrays", "grim_draw_indexed_arrays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_draw_indexed_arrays", "", "psymptdp", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_draw_curves", "grim_draw_curves", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_draw_curves", "", "grim_dataplane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_draw_tiepoints", "grim_draw_tiepoints", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_draw_tiepoints", "", "grim_dataplane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_draw_mask", "grim_draw_mask", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_draw_mask", "", "grim_dataplane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_draw", "grim_draw", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_draw", "", "planesallwnumusertiepointsmaskcurveslabelreadoutmeasureupdatenopointsroino_usergrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_draw_grids", "grim_draw_grids", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_draw_grids", "", "planeno_wsetgrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_draw_axes", "grim_draw_axes", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_draw_axes", "", "planeno_contextno_wsetgrim_datadata", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_cat_points", "grim_cat_points", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_cat_points", "", "allactiveplanegrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_rm_points", "grim_rm_points", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_rm_points", "", "planeptdpii", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_match_overlays", "grim_match_overlays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_match_overlays", "", "ptdptd0", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_add_new_points", "grim_add_new_points", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_add_new_points", "", "planegrim_dataptdpptdnamecd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_rm_matched_points", "grim_rm_matched_points", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_rm_matched_points", "", "planegrim_dataptdpptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_update_points", "grim_update_points", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_update_points", "", "planegrim_dataptd0ptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_add_points", "grim_add_points", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_add_points", "", "planenamecddatagrim_dataptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_default_activations", "grim_default_activations", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_default_activations", "", "planegrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_clear_overlay_points", "grim_clear_overlay_points", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_clear_overlay_points", "", "ptdpactive_ptdp", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_clear_active_overlays", "grim_clear_active_overlays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_clear_active_overlays", "", "grim_dataplane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_frame_overlays", "grim_frame_overlays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_frame_overlays", "", "slopxygrim_dataplaneptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_hide_overlays", "grim_hide_overlays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_hide_overlays", "", "no_refreshbmgrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_clear_objects", "grim_clear_objects", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_clear_objects", "", "allcdpdrdsdstdsundplanesgrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_place_readout_mark", "grim_place_readout_mark", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_place_readout_mark", "", "grim_datap", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_place_measure_mark", "grim_place_measure_mark", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_place_measure_mark", "", "grim_datap", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_get_indexed_array", "grim_get_indexed_array", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_get_indexed_array", "", "planename", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_indexed_array_fname", "grim_indexed_array_fname", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_indexed_array_fname", "", "basenamegrim_dataplanename", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_write_indexed_arrays", "grim_write_indexed_arrays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_write_indexed_arrays", "", "fnamegrim_dataplanename", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_read_indexed_arrays", "grim_read_indexed_arrays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_read_indexed_arrays", "", "fnamegrim_dataplanename", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_unique_array_label", "grim_unique_array_label", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_unique_array_label", "", "ptdp", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_add_indexed_array", "grim_add_indexed_array", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_add_indexed_array", "", "ptdnointerpspacingflagslabelptdpp", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_select_array_by_box", "grim_select_array_by_box", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_select_array_by_box", "", "planegrim_dataptdcxcy", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_select_array_by_point", "grim_select_array_by_point", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_select_array_by_point", "", "allplanegrim_dataptdp", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_select_array", "grim_select_array", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_select_array", "", "planegrim_dataptdp", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_rm_indexed_array", "grim_rm_indexed_array", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_rm_indexed_array", "", "planeallgrim_datanamep", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_add_tiepoint", "grim_add_tiepoint", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_add_tiepoint", "", "planenointerpspacingno_syncflagsgrim_datap", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_add_curve", "grim_add_curve", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_add_curve", "", "planenointerpspacingno_syncflagsgrim_datap", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_rm_tiepoint", "grim_rm_tiepoint", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_rm_tiepoint", "", "allplanenosyncgrim_datap", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_rm_curve", "grim_rm_curve", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_rm_curve", "", "allplanenosyncgrim_datap", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_set_roi", "grim_set_roi", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_set_roi", "", "planegrim_dataroip", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_add_mask", "grim_add_mask", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_add_mask", "", "planereplacesubscriptgrim_datap", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_copy_mask", "grim_copy_mask", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_copy_mask", "", "grim_dataplaneplanes", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_copy_indexed_array", "grim_copy_indexed_array", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_copy_indexed_array", "", "grim_dataplaneplanesname", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_copy_tiepoint", "grim_copy_tiepoint", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_copy_tiepoint", "", "grim_dataplaneplanes", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_copy_curve", "grim_copy_curve", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_copy_curve", "", "grim_dataplaneplanes", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_get_tiepoint_indices", "grim_get_tiepoint_indices", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_get_tiepoint_indices", "", "planegrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_replace_tiepoints", "grim_replace_tiepoints", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_replace_tiepoints", "", "planegrim_dataiip", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_image_to_surface", "grim_image_to_surface", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_image_to_surface", "", "body_ptsfar_ptsnamesbxgrim_dataplaneimage_pts", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_surface_to_image", "grim_surface_to_image", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_surface_to_image", "", "validgrim_dataplanesurf_ptsnames", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_sync_indexed_array", "grim_sync_indexed_array", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_sync_indexed_array", "", "grim_dataplaneptd_grim_data_plane_ptdp", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_push_indexed_array", "grim_push_indexed_array", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_push_indexed_array", "", "rmgrim_dataptdname", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_rm_mask_by_point", "grim_rm_mask_by_point", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_rm_mask_by_point", "", "planeppgrim_datap", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_rm_mask_by_box", "grim_rm_mask_by_box", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_rm_mask_by_box", "", "planeppgrim_datacxcy", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_rm_mask", "grim_rm_mask", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_rm_mask", "", "allplaneppgrim_datap", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_get_object_overlays", "grim_get_object_overlays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_get_object_overlays", "", "grim_dataplanexd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_deactivate_xd", "grim_deactivate_xd", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_deactivate_xd", "", "planexds", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_deactivate_overlay", "grim_deactivate_overlay", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_deactivate_overlay", "", "xdsassoc_xdspptdno_callbackgrim_dataplaneptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_activate_xd", "grim_activate_xd", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_activate_xd", "", "planexds", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_deactivate_all_xds", "grim_deactivate_all_xds", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_deactivate_all_xds", "", "plane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_activate_all_xds", "grim_activate_all_xds", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_activate_all_xds", "", "plane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_activate_overlay", "grim_activate_overlay", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_activate_overlay", "", "xdspptdno_callbackgrim_dataplaneptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_activate_all_overlays", "grim_activate_all_overlays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_activate_all_overlays", "", "grim_dataplane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_deactivate_all_overlays", "grim_deactivate_all_overlays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_deactivate_all_overlays", "", "grim_dataplane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_invert_active_overlays", "grim_invert_active_overlays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_invert_active_overlays", "", "xdsgrim_dataplaneptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_invert_all_overlays", "grim_invert_all_overlays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_invert_all_overlays", "", "grim_dataplane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_nearest_overlay", "grim_nearest_overlay", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_nearest_overlay", "", "mmplanepobject_ptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_enclosed_overlays", "grim_enclosed_overlays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_enclosed_overlays", "", "mmcornersobject_ptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_remove_by_point", "grim_remove_by_point", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_remove_by_point", "", "clicksuserplanep0", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_activate_by_point", "grim_activate_by_point", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_activate_by_point", "", "deactivateclicksinvertgrim_dataplanep0", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_trim_overlays", "grim_trim_overlays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_trim_overlays", "", "planegrim_dataregion", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_select_overlay_points", "grim_select_overlay_points", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_select_overlay_points", "", "planedeselectgrim_dataregion", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_remove_by_box", "grim_remove_by_box", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_remove_by_box", "", "statuserplanecxcy", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_activate_by_box", "grim_activate_by_box", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_activate_by_box", "", "deactivategrim_dataplanecxcy", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_activate_select", "grim_activate_select", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_activate_select", "", "deactivateclicksptdgrim_dataplanep0", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_remove_overlays", "grim_remove_overlays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_remove_overlays", "", "clicksstatuserplanep0", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_create_overlay", "grim_create_overlay", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_create_overlay", "", "classdep_classescolorpsymsymsizeshadetlabtshadetfillgenregrim_dataplanenamedep_overlays", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_create_overlays", "grim_create_overlays", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_create_overlays", "", "grim_dataplane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_hide", "grim_hide", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_hide", "", "gdgrim_dataplaneptd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_overlay", "grim_overlay", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_overlay", "", "planedepptdsource_ptdobj_nametempgrim_dataname", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_overlays_include.html#grim_overlays_include", "grim_overlays_include", 'routine in <a href="./grim_overlays_include.html">grim_overlays_include.pro</a>', "grim_overlays_include.pro", "", "grim_overlays_include", "", "", "          -1", "");
+  
+  
+
 libdata[libdataItem++] = new Array("./grim_plane_settings.html", "grim_plane_settings.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_plane_settings.pro", "", "", "", "", "          -1", "");
   
   
@@ -1987,10 +1946,49 @@ libdata[libdataItem++] = new Array("./grim_plane_settings.html", "grim_plane_set
   
   
 
+libdata[libdataItem++] = new Array("./grim_planes_include.html", "grim_planes_include.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_planes_include.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("./grim_planes_include.html#grim_next_plane", "grim_next_plane", 'routine in <a href="./grim_planes_include.html">grim_planes_include.pro</a>', "grim_planes_include.pro", "", "grim_next_plane", "", "norefreshgrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_planes_include.html#grim_previous_plane", "grim_previous_plane", 'routine in <a href="./grim_planes_include.html">grim_planes_include.pro</a>', "grim_planes_include.pro", "", "grim_previous_plane", "", "grim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_planes_include.html#grim_get_plane", "grim_get_plane", 'routine in <a href="./grim_planes_include.html">grim_planes_include.pro</a>', "grim_planes_include.pro", "", "grim_get_plane", "", "allpnvisiblegrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_planes_include.html#grim_test_map", "grim_test_map", 'routine in <a href="./grim_planes_include.html">grim_planes_include.pro</a>', "grim_planes_include.pro", "", "grim_test_map", "", "planegrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_planes_include.html#grim_test_rgb", "grim_test_rgb", 'routine in <a href="./grim_planes_include.html">grim_planes_include.pro</a>', "grim_planes_include.pro", "", "grim_test_rgb", "", "grim_dataplane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_planes_include.html#grim_get_image", "grim_get_image", 'routine in <a href="./grim_planes_include.html">grim_planes_include.pro</a>', "grim_planes_include.pro", "", "grim_get_image", "", "planeabscissacurrentsamplechannelndgrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_planes_include.html#grim_stretch_plane", "grim_stretch_plane", 'routine in <a href="./grim_planes_include.html">grim_planes_include.pro</a>', "grim_planes_include.pro", "", "grim_stretch_plane", "", "grim_dataplanes", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_planes_include.html#grim_plane_set_visible", "grim_plane_set_visible", 'routine in <a href="./grim_planes_include.html">grim_planes_include.pro</a>', "grim_planes_include.pro", "", "grim_plane_set_visible", "", "togglegrim_dataplanesval", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_planes_include.html#grim_get_visible_planes", "grim_get_visible_planes", 'routine in <a href="./grim_planes_include.html">grim_planes_include.pro</a>', "grim_planes_include.pro", "", "grim_get_visible_planes", "", "grim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_planes_include.html#grim_set_plane", "grim_set_plane", 'routine in <a href="./grim_planes_include.html">grim_planes_include.pro</a>', "grim_planes_include.pro", "", "grim_set_plane", "", "pngrim_dataplane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_planes_include.html#grim_rm_plane", "grim_rm_plane", 'routine in <a href="./grim_planes_include.html">grim_planes_include.pro</a>', "grim_planes_include.pro", "", "grim_rm_plane", "", "grim_datapn", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_planes_include.html#grim_crop_plane", "grim_crop_plane", 'routine in <a href="./grim_planes_include.html">grim_planes_include.pro</a>', "grim_planes_include.pro", "", "grim_crop_plane", "", "grim_dataplane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_planes_include.html#grim_init_parms", "grim_init_parms", 'routine in <a href="./grim_planes_include.html">grim_planes_include.pro</a>', "grim_planes_include.pro", "", "grim_init_parms", "", "colorthicknsumpsymsymsizen", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_planes_include.html#grim_clone_plane", "grim_clone_plane", 'routine in <a href="./grim_planes_include.html">grim_planes_include.pro</a>', "grim_planes_include.pro", "", "grim_clone_plane", "", "planespawngrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_planes_include.html#grim_channel_to_rgb", "grim_channel_to_rgb", 'routine in <a href="./grim_planes_include.html">grim_planes_include.pro</a>', "grim_planes_include.pro", "", "grim_channel_to_rgb", "", "channel", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_planes_include.html#grim_add_planes", "grim_add_planes", 'routine in <a href="./grim_planes_include.html">grim_planes_include.pro</a>', "grim_planes_include.pro", "", "grim_add_planes", "", "pnsfilterfovcliphidepathsave_pathload_pathcam_trsplt_trsrng_trsstr_trsstn_trsarr_trssun_trscolorpositionxrangeyrangethicknsumxtitleytitlepsymsymsizemaxvisibilitychannelrender_samplerender_pht_minoverlayscmdgrim_datadd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_planes_include.html#grim_planes_include", "grim_planes_include", 'routine in <a href="./grim_planes_include.html">grim_planes_include.pro</a>', "grim_planes_include.pro", "", "grim_planes_include", "", "", "          -1", "");
+  
+  
+
 libdata[libdataItem++] = new Array("./grim_print.html", "grim_print.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_print.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("./grim_print.html#grim_print", "grim_print", 'routine in <a href="./grim_print.html">grim_print.pro</a>', "grim_print.pro", "", "grim_print", "", "grim_datas", "          -1", "");
+  libdata[libdataItem++] = new Array("./grim_print.html#grim_print", "grim_print", 'routine in <a href="./grim_print.html">grim_print.pro</a>', "grim_print.pro", "", "grim_print", "", "appendarg1arg2", "          -1", "");
   
   
 
@@ -1999,7 +1997,46 @@ libdata[libdataItem++] = new Array("./grim_rc_settings.html", "grim_rc_settings.
   
   libdata[libdataItem++] = new Array("./grim_rc_settings.html#grim_rc_value", "grim_rc_value", 'routine in <a href="./grim_rc_settings.html">grim_rc_settings.pro</a>', "grim_rc_settings.pro", "", "grim_rc_value", "", "keywordsvalue_pskeyword", "          -1", "");
   
-  libdata[libdataItem++] = new Array("./grim_rc_settings.html#grim_rc_settings", "grim_rc_settings", 'routine in <a href="./grim_rc_settings.html">grim_rc_settings.pro</a>', "grim_rc_settings.pro", "", "grim_rc_settings", "", "rcfilesilentnewxsizeysizemodenpointszoomrotateorderoffsetfilterretainpathsave_pathload_pathsymsizeoverlaysmenu_fnamecursor_swapfovmenu_extensionsbutton_extensionstrs_cdtrs_pdtrs_rdtrs_sdtrs_stdtrs_ardtrs_sundfiletypehidereadout_fnsxzerorgbpsymnhistmaintainnddworkdiractivateframecompressloadctmaxarg_extensionsextensionsbetarenderingtiepoint_syncingcurve_syncingvisibilitychannelrender_samplerender_pht_minslave_overlays", "          -1", "");
+  libdata[libdataItem++] = new Array("./grim_rc_settings.html#grim_rc_add_values", "grim_rc_add_values", 'routine in <a href="./grim_rc_settings.html">grim_rc_settings.pro</a>', "grim_rc_settings.pro", "", "grim_rc_add_values", "", "selectkeywordsvalue_psprefix", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_rc_settings.html#grim_rc_selections", "grim_rc_selections", 'routine in <a href="./grim_rc_settings.html">grim_rc_settings.pro</a>', "grim_rc_settings.pro", "", "grim_rc_selections", "", "cam_selectplt_selectrng_selectstr_selectstn_selectarr_selectsun_selectkeywordsvalue_pskeyvals", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_rc_settings.html#grim_rc_settings", "grim_rc_settings", 'routine in <a href="./grim_rc_settings.html">grim_rc_settings.pro</a>', "grim_rc_settings.pro", "", "grim_rc_settings", "", "rcfilekeyvalscam_selectplt_selectrng_selectstr_selectstn_selectarr_selectsun_selectcmdnewxsizeysizemode_initnpointszoomrotateorderoffsetfilterretainpathsave_pathload_pathsymsizeoverlaysmenu_fnamecursor_swapfovclipmenu_extensionsbutton_extensionscam_trsplt_trsrng_trsstr_trsstn_trsarr_trssun_trsfiletypehidemode_argsxzerorgbpsymnhistmaintainnddworkdiractivateframecompressloadctmaxarg_extensionsextensionsbetarenderingplane_syncingtiepoint_syncingcurve_syncingvisibilitychannelrender_samplerender_pht_minslave_overlaysdelay_overlaysauto_stretch", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("./grim_user_include.html", "grim_user_include.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_user_include.pro", "", "", "", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("./grim_user_include.html#grim_user_ptd_struct__define", "grim_user_ptd_struct__define", 'routine in <a href="./grim_user_include.html">grim_user_include.pro</a>', "grim_user_include.pro", "", "grim_user_ptd_struct__define", "", "", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_user_include.html#grim_add_user_points", "grim_add_user_points", 'routine in <a href="./grim_user_include.html">grim_user_include.pro</a>', "grim_user_include.pro", "", "grim_add_user_points", "", "grnumupdatecolorshade_fnpsymthicklinesymsizeshade_thresholdgraphics_fnxgraphicsnodrawinactiveno_refreshplaneuser_ptdtag", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_user_include.html#grim_user_notify", "grim_user_notify", 'routine in <a href="./grim_user_include.html">grim_user_include.pro</a>', "grim_user_include.pro", "", "grim_user_notify", "", "planegrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_user_include.html#grim_update_user_points", "grim_update_user_points", 'routine in <a href="./grim_user_include.html">grim_user_include.pro</a>', "grim_user_include.pro", "", "grim_update_user_points", "", "planegrnumcolorshade_fnpsymthicklinesymsizeshade_thresholdgraphics_fnxgraphicsnodrawno_refreshuser_ptdtag", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_user_include.html#grim_rm_user_points", "grim_rm_user_points", 'routine in <a href="./grim_user_include.html">grim_user_include.pro</a>', "grim_user_include.pro", "", "grim_rm_user_points", "", "planegrnumgrim_datatag", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_user_include.html#grim_test_active_user_ptd", "grim_test_active_user_ptd", 'routine in <a href="./grim_user_include.html">grim_user_include.pro</a>', "grim_user_include.pro", "", "grim_test_active_user_ptd", "", "prefixplanetag", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_user_include.html#grim_get_user_ptd", "grim_get_user_ptd", 'routine in <a href="./grim_user_include.html">grim_user_include.pro</a>', "grim_user_include.pro", "", "grim_get_user_ptd", "", "grnumprefixplanecolorshade_fnxgraphicsgraphics_fnshade_thresholdpsymthicklinesymsizetagsactivetag", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_user_include.html#grim_get_active_user_overlays", "grim_get_active_user_overlays", 'routine in <a href="./grim_user_include.html">grim_user_include.pro</a>', "grim_user_include.pro", "", "grim_get_active_user_overlays", "", "active_tagsinactive_tagsplane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_user_include.html#grim_trim_user_overlays", "grim_trim_user_overlays", 'routine in <a href="./grim_user_include.html">grim_user_include.pro</a>', "grim_user_include.pro", "", "grim_trim_user_overlays", "", "planegrim_dataregion", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_user_include.html#grim_activate_user_overlay", "grim_activate_user_overlay", 'routine in <a href="./grim_user_include.html">grim_user_include.pro</a>', "grim_user_include.pro", "", "grim_activate_user_overlay", "", "planeindices", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_user_include.html#grim_deactivate_user_overlay", "grim_deactivate_user_overlay", 'routine in <a href="./grim_user_include.html">grim_user_include.pro</a>', "grim_user_include.pro", "", "grim_deactivate_user_overlay", "", "planeindices", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_user_include.html#grim_clear_user_overlays", "grim_clear_user_overlays", 'routine in <a href="./grim_user_include.html">grim_user_include.pro</a>', "grim_user_include.pro", "", "grim_clear_user_overlays", "", "planetags", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_user_include.html#grim_clear_active_user_overlays", "grim_clear_active_user_overlays", 'routine in <a href="./grim_user_include.html">grim_user_include.pro</a>', "grim_user_include.pro", "", "grim_clear_active_user_overlays", "", "plane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_user_include.html#grim_invert_active_user_overlays", "grim_invert_active_user_overlays", 'routine in <a href="./grim_user_include.html">grim_user_include.pro</a>', "grim_user_include.pro", "", "grim_invert_active_user_overlays", "", "plane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_user_include.html#grim_user_include", "grim_user_include", 'routine in <a href="./grim_user_include.html">grim_user_include.pro</a>', "grim_user_include.pro", "", "grim_user_include", "", "", "          -1", "");
   
   
 
@@ -2010,14 +2047,67 @@ libdata[libdataItem++] = new Array("./grim_user_mode_struct__define.html", "grim
   
   
 
-libdata[libdataItem++] = new Array("interface/ingrid.html", "ingrid.pro", '.pro file in <a href="interface/dir-overview.html">interface/ directory</a>', "ingrid.pro", "", "", "", "", "          -1", "");
+libdata[libdataItem++] = new Array("./grim_util_include.html", "grim_util_include.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "grim_util_include.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("interface/ingrid.html#ingrid", "ingrid", 'routine in <a href="interface/ingrid.html">ingrid.pro</a>', "ingrid.pro", "", "ingrid", "	INterface to GRIm Data -- command-line access to grim data.    	The returned descriptors allow direct access to the memory images of 	grim's descriptor set.  Therefore changes made from the command line 	affect the descriptors that grim is using.  Moreover, grim monitors 	those descriptors and updates itself whenever a change occurs.    ", "gdGeneric descriptor containing all of the above descriptors.   ddGrim's data descriptor.   cdGrim's camera descriptor.   pdGrim's planet descriptors.   rdGrim's ring descriptors.   sdGrim's star descriptors.   stdardsundGrim's sun descriptor.   odGrim's observer descriptor.   limb_ptdPOINT giving the limb points.   ring_ptdPOINT giving the ring points.   star_ptdPOINT giving the star points.   station_ptdarray_ptdterm_ptdPOINT giving the terminator points.   plgrid_ptdPOINT giving teh planet grid points.   center_ptdPOINT giving the planet centers.   object_ptdPOINT giving all overlay points.   tie_ptd	POINT giving the tie points.   curve_ptdPOINT giving the curve points.    shadow_ptdreflection_ptdpnPlane numer(s) to access.  If not given, then current plane 		is used.   allIf set, all planes are used.   grnumactive_pdactive_rdactive_sdactive_stdactive_ardactive_xdactive_limb_ptdactive_ring_ptdactive_star_ptdactive_term_ptdactive_plgrid_ptdactive_center_ptdactive_shadow_ptdactive_reflection_ptdactive_station_ptdactive_array_ptdgrnumGrim window number.  If not given, the most recently accessed 	        grim instance is used.   ", "NV/GR", " 	Written by:	Spitale, 7/2002   	(1) Open a grim window, load an image, and compute limb points.  	(2) At the command line:  		IDL> ingrid, cd=cd 		IDL> pg_repoint, [50,50], 0d, cd=cd  	Grim should detect the change to the camera descriptor and update 	itself by recomputing the limb points.    STATUS: 	Complete    SEE ALSO: 	grim, gr_draw ");
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_set_user_data", "grim_set_user_data", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_set_user_data", "", "grim_datatagdata", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_get_user_data", "grim_get_user_data", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_get_user_data", "", "grim_datatag", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_n_colors", "grim_n_colors", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_n_colors", "", "type", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_get_body_by_name_single", "grim_get_body_by_name_single", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_get_body_by_name_single", "", "xd_pname", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_get_body_by_name", "grim_get_body_by_name", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_get_body_by_name", "", "planename", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_shade_threshold", "grim_shade_threshold", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_shade_threshold", "", "ptdshadethreshold", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_parse_overlay", "grim_parse_overlay", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_parse_overlay", "", "overlaynames", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_cat_bodies", "grim_cat_bodies", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_cat_bodies", "", "plane", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_get_cursor_swap", "grim_get_cursor_swap", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_get_cursor_swap", "", "grim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_wset", "grim_wset", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_wset", "", "get_infosavenoplotgrim_datawnum", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_logging_callback", "grim_logging_callback", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_logging_callback", "", "data_pmessage", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_logging", "grim_logging", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_logging", "", "startstopgrim_data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_menu_delim_event", "grim_menu_delim_event", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_menu_delim_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_parse_form_entry", "grim_parse_form_entry", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_parse_form_entry", "", "nulldropnumericstringidstagstag", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_set_form_entry", "grim_set_form_entry", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_set_form_entry", "", "dropcwbuttonsensitiveidstagstagvalue", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_add_callback", "grim_add_callback", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_add_callback", "", "callbacksdata_pscallbacks_listdata_ps_list", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_rm_callback", "grim_rm_callback", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_rm_callback", "", "data_pscallbacks_listdata_ps_list", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_call_callbacks", "grim_call_callbacks", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_call_callbacks", "", "_callbacks_list_data_ps_listevent", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_get_menu_id", "grim_get_menu_id", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_get_menu_id", "", "grim_datadesc", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_update_menu_toggle", "grim_update_menu_toggle", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_update_menu_toggle", "", "grim_datanameflag", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_get_toggle_flag", "grim_get_toggle_flag", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_get_toggle_flag", "", "grim_dataname", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_set_toggle_flag", "grim_set_toggle_flag", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_set_toggle_flag", "", "grim_datanameflag", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_compare", "grim_compare", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_compare", "", "x1x2", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("./grim_util_include.html#grim_util_include", "grim_util_include", 'routine in <a href="./grim_util_include.html">grim_util_include.pro</a>', "grim_util_include.pro", "", "grim_util_include", "", "", "          -1", "");
   
   
 
-libdata[libdataItem++] = new Array("./rim.html", "rim.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "rim.pro", "", "", "	Prints the headers, or specific header values, for the specified files.    ", "", "          -1", " 	Written by:	Spitale, 8/2013   ");
+libdata[libdataItem++] = new Array("interface/ingrid.html", "ingrid.pro", '.pro file in <a href="interface/dir-overview.html">interface/ directory</a>', "ingrid.pro", "", "", " NAME: 	INGRID    PURPOSE: 	INterface to GRIm Data -- command-line access to GRIM data. 	The returned descriptors allow direct access to the memory images of 	GRIM's descriptor set.  Therefore changes made from the command line 	affect the descriptors that GRIM is using.  GRIM monitors those 	descriptors and updates itself whenever a change occurs.    CATEGORY: 	NV/GR    CALLING SEQUENCE: 	ingrid, arg, <xd>=<xd>    ARGUMENTS:   INPUT: 	arg:	GRIM window number or GRIM data struture.  If not given, the 		most recently accessed grim instance is used.    OUTPUT: NONE    KEYWORDS:   INPUT: 	plane:	Grim plane structure(s) instead of giving pn.  Note all planes 		must belong to the same grim instance.  	pn:	Plane numer(s) to access.  If not given, then current plane 		is used.  	all:	If set, all planes are used.    OUTPUT: 	dd:	GRIM's data descriptor.  	cd:	GRIM's camera descriptor.  	od:	GRIM's observer descriptor.  	sund:	GRIM's sun descriptor.  	pd:	GRIM's planet descriptors.  	rd:	GRIM's ring descriptors.  	sd:	GRIM's star descriptors.  	std:	GRIM's station descriptors.  	ard:	GRIM's array descriptors.  	gd:	Generic descriptor containing all of the above descriptors.  	center_ptd: 		POINT object giving the planet centers.  	limb_ptd: 		POINT object giving the limb points.  	ring_ptd: 		POINT object giving the ring points.  	star_ptd: 		POINT object giving the star points.  	term_ptd: 		POINT object giving the terminator points.  	station_ptd: 		POINT object giving the station points.  	array_ptd: 		POINT object giving the array points.  	plgrid_ptd: 		POINT object giving the planet grid points.  	shadow_ptd: 		POINT object giving the shadow points.  	object_ptd: 		POINT object giving all overlay points.  	tie_ptd: 		POINT object giving the tie points.  	curve_ptd: 		POINT object giving the curve points.  	active_*_ptd: 		Returns same as above ptd outputs, except ony active arrays 		are returned.    EXAMPLE: 	(1) Open a GRIM window, load an image, and compute limb points.  	(2) At the command line, type:  		IDL> ingrid, cd=cd 		IDL> pg_repoint, [50,50], 0d, cd=cd  	GRIM should detect the change to the camera descriptor and update 	itself by recomputing the limb points and refreshing the display.    KNOWN ISSUES: 	This procedure has unresolved issues, is unreliable, behaves 	irrationally, is overly complicated, and has periodic breakdowns for 	no externally apparent reason.    STATUS: 	Has unresolved issues that need to be confronted and addressed.    SEE ALSO: 	grim, gr_draw    MODIFICATION HISTORY:  	Written by:	Spitale, 7/2002   ", "", "          -1", "");
+  
+  
+  libdata[libdataItem++] = new Array("interface/ingrid.html#ingrid", "ingrid", 'routine in <a href="interface/ingrid.html">ingrid.pro</a>', "ingrid.pro", "", "ingrid", "", "planegdddcdpdrdsdstdardsundodlimb_ptdring_ptdstar_ptdstation_ptdarray_ptdterm_ptdplgrid_ptdcenter_ptdobject_ptdtie_ptdcurve_ptdshadow_ptdreflection_ptdpnallgrnumactive_pdactive_rdactive_sdactive_stdactive_ardactive_xdactive_limb_ptdactive_ring_ptdactive_star_ptdactive_term_ptdactive_plgrid_ptdactive_center_ptdactive_shadow_ptdactive_reflection_ptdactive_station_ptdactive_array_ptdarg", "          -1", "");
+  
+  
+
+libdata[libdataItem++] = new Array("./rim.html", "rim.pro", '.pro file in <a href="./dir-overview.html">./ directory</a>', "rim.pro", "", "", " NAME: 	rim    PURPOSE: 	Prints the headers, or specific header values, for the specified files.    CATEGORY: 	NV/GR    CALLING SEQUENCE: 	rim, files    ARGUMENTS:   INPUT: 	files:	List of filenames and file specifications.  Only files whose 		filetypes can be detected are loaded.  An array of 		data descriptors may also be specified.    OUTPUT: NONE    KEYWORDS:   INPUT: 	keywords:	String array giving keywords for which values are 			desired.  Results are filetype-dependent.  If keywords 			are specfied, the results are printed as a table.    OUTPUT: NONE    RETURN: 	NONE    STATUS: 	Complete.    MODIFICATION HISTORY:  	Written by:	Spitale, 8/2013   ", "", "          -1", "");
   
   
   libdata[libdataItem++] = new Array("./rim.html#rim", "rim", 'routine in <a href="./rim.html">rim.pro</a>', "rim.pro", "", "rim", "", "keywordsfiles", "          -1", "");
