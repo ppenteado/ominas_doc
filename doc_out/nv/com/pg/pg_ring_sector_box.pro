@@ -39,7 +39,7 @@
 ; xor_graphics:     If set, the sector outline is drawn and erased using xor
 ;                   graphics instead of a pixmap.
 ;
-;    noverbose:     If set, messages are suppressed.
+;       silent:     If set, messages are suppressed.
 ;
 ;       sample:     Grid sampling, default is 1.
 ;
@@ -51,6 +51,10 @@
 ; RETURN: 
 ;      POINT containing points on the sector outline.  The point
 ;      spacing is determined by the sample keyword.
+;
+; KNOWN BUGS:
+;	The sector flips when it hits zero azimuth rather than retaining a 
+;	consistent sense.
 ;
 ;
 ; ORIGINAL AUTHOR : J. Spitale ; 6/2005
@@ -69,15 +73,13 @@ function pg_ring_sector_box, p, $
                          win_num=win_num, $
                          restore=restore, button=button, $
                          p0=p0, xor_graphics=xor_graphics, $
-                         color=color, noverbose=noverbose
+                         color=color, silent=silent
 
 
  ;----------------------------------------------------------------
  ; Wait for a click and call the appropriate routine
  ;----------------------------------------------------------------
- if(NOT keyword_set(noverbose)) then $
-              nv_message, /con, name='pg_ring_sector', $
-                 'Left:ortho, Right:oblique'
+ if(NOT keyword_set(silent)) then nv_message, /con, 'Left:ortho, Right:oblique'
 
  if(keyword_set(p0)) then $
   begin
@@ -101,7 +103,7 @@ function pg_ring_sector_box, p, $
                          win_num=win_num, $
                          restore=restore, $
                          p0=[px,py], xor_graphics=xor_graphics, $
-                         color=color, noverbose=noverbose)
+                         color=color, silent=silent)
 
 	;----------------------------------------
 	; right: oblique
@@ -111,7 +113,7 @@ function pg_ring_sector_box, p, $
                          win_num=win_num, $
                          restore=restore, $
                          p0=[px,py], xor_graphics=xor_graphics, $
-                         color=color, noverbose=noverbose)
+                         color=color, silent=silent)
 	else:
  endcase
 

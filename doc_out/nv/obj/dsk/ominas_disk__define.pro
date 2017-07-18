@@ -13,6 +13,7 @@ end_keywords)
  if(keyword_set(dkd0)) then struct_assign, dkd0, self
 
  self.abbrev = 'DSK'
+ self.tag = 'DKD'
 
 
  self.m = -1
@@ -213,7 +214,6 @@ pro ominas_disk__define
  ndv = bod_ndv()
  nm = dsk_get_nm()
  nl = dsk_get_nl()
- npht = dsk_npht()
 
  struct = $
     { ominas_disk, inherits ominas_solid, $

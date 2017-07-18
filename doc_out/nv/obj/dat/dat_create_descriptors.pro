@@ -27,17 +27,17 @@
 ;  INPUT:  
 ;	filename:	Name of data file.
 ;
-;	dim:	Array giving the dimensions of the data array.
+;	dim:		Array giving the dimensions of the data array.
 ;
-;	type:	Integer giving the type code of the data array.
+;	typecode:	Integer giving the type code of the data array.
 ;
-;	data:	Data array.
+;	data:		Data array.
 ;
-;	nhist:	Number of past version of the data array to archive.
-;		If not given, the environment variable NV_NHIST is
-;		used.  If that is not set, then nhist defaults to 1.
+;	nhist:		Number of past version of the data array to archive.
+;			If not given, the environment variable NV_NHIST is
+;			used.  If that is not set, then nhist defaults to 1.
 ;
-;	header:	Header array.
+;	header:		Header array.
 ;
 ;	filetype:	Filetype identifier string.  If not given
 ;			an attempt is made to detect it.
@@ -60,8 +60,6 @@
 ;	maintain:	Data maintenance mode.
 ;
 ;	compress:	Compression suffix.
-;
-;	silent:		If set, messages are suppressed.
 ;
 ;
 ;  OUTPUT: NONE
@@ -87,7 +85,7 @@
 ;	
 ;-
 ;=============================================================================
-function dat_create_descriptors, n, crd=crd0, dd=dd0, silent=silent, $
+function dat_create_descriptors, n, crd=_crd0, dd=_dd0, $
 @dat__keywords.include
 end_keywords
 @core.include
@@ -96,6 +94,8 @@ end_keywords
  dd = objarr(n)
  for i=0, n-1 do $
   begin
+   if(keyword_set(_crd0)) then crd0 = _crd0[i]
+   if(keyword_set(_dd0)) then dd0 = _dd0[i]
 
    dd[i] = ominas_data(i, crd=crd0, dd=dd0, $
 @dat__keywords.include

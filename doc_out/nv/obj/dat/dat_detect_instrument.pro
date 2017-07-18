@@ -14,14 +14,12 @@
 ;
 ;
 ; CALLING SEQUENCE:
-;	filinstrumentype = dat_detect_instrument(header, udata, filetype)
+;	instrument = dat_detect_instrument(dd)
 ;
 ;
 ; ARGUMENTS:
 ;  INPUT:
-;	header:		Header from the data file.
-;
-;	udata:		User data for the detectors.
+;	dd:		Data descriptor containing header an filetype.  
 ;
 ;	filetype:	Filetype from dat_detect_filetype.
 ;
@@ -29,8 +27,7 @@
 ;
 ;
 ; KEYWORDS:
-;  INPUT: 
-;	silent:	If set, messages will be suppressed.
+;  INPUT: NONE
 ;
 ;  OUTPUT: NONE
 ;
@@ -48,10 +45,11 @@
 ;	
 ;-
 ;=============================================================================
-function dat_detect_instrument, label, udata, filetype, silent=silent
+function dat_detect_instrument, dd
 @nv_block.common
 @core.include
 
+ filetype = dat_filetype(dd)
 
  ;=====================================================
  ; read the instrument table if it doesn't exist
@@ -61,7 +59,7 @@ function dat_detect_instrument, label, udata, filetype, silent=silent
    dat_read_config, 'NV_INS_DETECT', stat=stat, $
               nv_state.ins_table_p, nv_state.ins_detectors_filenames_p
  if(stat NE 0) then $
-   nv_message, name='dat_detect_instrument', $
+   nv_message, $
      'No instrument table.', /con, $
        exp=['The instrument table specifies the names of instrument detector functions.', $
             'Without this table, OMINAS cannot determine which translators to use.']
@@ -81,7 +79,7 @@ function dat_detect_instrument, label, udata, filetype, silent=silent
    ftp = table[i,1]
    if(filetype EQ ftp) then $
     begin
-     string = call_function(detect_fn, label, udata)
+     string = call_function(detect_fn, dd)
      if(string NE '') then return, string
     end
   end

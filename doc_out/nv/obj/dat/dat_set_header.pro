@@ -28,9 +28,7 @@
 ;
 ; KEYWORDS:
 ;  INPUT: 
-;	update:	Update mode flag.  If not given, in will be taken from dd.
-;
-;	silent:	If set, messages are suppressed.
+;	update:	Update mode flag.  If not given, it will be taken from dd.
 ;
 ;  OUTPUT: NONE
 ;
@@ -52,26 +50,26 @@
 ;	
 ;-
 ;=============================================================================
-pro dat_set_header, dd, header, silent=silent, update=update, noevent=noevent
+pro dat_set_header, dd, header, update=update, noevent=noevent
 @core.include
  _dd = cor_dereference(dd)
 
- if(NOT defined(update)) then update = _dd.update
+ if(NOT defined(update)) then update = (*_dd.dd0p).update
  if(update EQ -1) then return
 
 
- if((NOT keyword_set(silent)) and (_dd.maintain GT 0)) then $
-  nv_message, /con, name='dat_set_header', $
+ if((*_dd.dd0p).maintain GT 0) then $
+  nv_message, verb=0.1, $
    'WARNING: Changes to header array may be lost due to the maintainance level.'
 
 
  ;-----------------------------
  ; modify header array 
  ;-----------------------------
- if(keyword_set(_dd.header_dap)) then dap = _dd.header_dap
- data_archive_set, dap, header, index=_dd.dap_index
- _dd.header_dap = dap
- _dd.dap_index = 0
+ if(keyword_set((*_dd.dd0p).header_dap)) then dap = (*_dd.dd0p).header_dap
+ data_archive_set, dap, header, index=(*_dd.dd0p).dap_index
+ (*_dd.dd0p).header_dap = dap
+ (*_dd.dd0p).dap_index = 0
 
 
  ;--------------------------------------------

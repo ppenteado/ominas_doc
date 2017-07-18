@@ -13,8 +13,9 @@ end_keywords)
  if(keyword_set(bd0)) then struct_assign, bd0, self
 
  self.abbrev = 'STN'
+ self.tag = 'STD'
 
- if(keyword__set(primary)) then self.__PROTECT__primary = decrapify(primary[ii])
+ if(keyword__set(primary)) then self.__PROTECT__primary_xd = decrapify(primary[ii])
  if(keyword__set(surface_pt)) then self.surface_pt = decrapify(surface_pts[*,*,ii])
 
 
@@ -54,7 +55,7 @@ end
 ;
 ;	surface_pt:	Vector giving the surface coordinates of the 
 ;			stations location on the primary.  This 
-;			is redeundant with the location of bd, but it 
+;			is redundant with the location of bd, but it 
 ;			allows one to compute map coordinates without
 ;			a body descriptor present.
 ;
@@ -77,7 +78,7 @@ pro ominas_station__define
  struct = $
     { ominas_station, inherits ominas_body, $
 	surface_pt:	 dblarr(1,3), $		; Surface coords of location.
-        __PROTECT__primary:     obj_new() $	; primary pd
+        __PROTECT__primary_xd:     obj_new() $	; primary pd
     }
 
 end

@@ -25,12 +25,15 @@
 ;
 ; KEYWORDS:
 ;  INPUT: 
-;	abscissa: If set, the abscissa array is returned instead of the data 
-;		  array.
-;
 ;	samples:  Sampling indices.  If set, only these data elements are
 ;		  returned.  May be 1D or the same number of dimensions as
-;		  the data array.   
+;		  the data array.  
+;
+;	slice:	  Slice coordinates.
+;
+;	current:  If set, the current loaded samples are returned.  In this
+;		  case, the sample indices are returned in the "samples"
+;		  keyword.
 ;
 ;	nd:       If set, the samples input is taken to be an ND coordinate
 ;	          rather than a 1D subscript.  dat_data can normally tell
@@ -42,7 +45,10 @@
 ;	true:     If set, the actual data array is returned, even if there is
 ;	          a sampling function.
 ;
-;  OUTPUT: NONE
+;  OUTPUT: 
+;	abscissa: The abscissa is returned in this array.
+;
+;	samples:  Output sample indices for /current.
 ;
 ;
 ; RETURN:
@@ -63,28 +69,51 @@
 ;	
 ;-
 ;=============================================================================
-function dat_data, dd, samples=_samples, offset=offset, $
+function dat_data, dd, samples=_samples, current=current, slice=slice, $
                   nd=nd, true=true, noevent=noevent, abscissa=_abscissa
 @core.include
  nv_notify, dd, type = 1, noevent=noevent
  _dd = cor_dereference(dd)
 
+ dim = dat_dim(_dd)
+ nelm = product(dim)
+
  sampled = 0
- if(NOT keyword_set(offset)) then offset = 0
+
+ sample0 = *(*_dd.dd0p).sample_p
+ if(keyword_set(current)) then if(sample0[0] NE -1) then _samples = sample0
+
+
+ ;--------------------------------------------------------------
+ ; compute slice offset
+ ;--------------------------------------------------------------
+ full_array = 0
+ if(defined(slice)) then offset = dat_slice_offset({slice:slice, dd0:_dd}) $
+ else if(ptr_valid(_dd.slice_struct.slice_p)) then offset = dat_slice_offset(_dd)
+
+ if(defined(offset)) then $
+  begin
+   if(NOT keyword_set(_samples)) then $
+    begin
+     _samples = lindgen(nelm)
+     full_array = 1
+    end 
+  end $
+ else offset = 0
+
 
  ;-------------------------------------------------------------------------
  ; If there is a sampling function, but no samples are given, then 
  ; generate sampling for the entire data array.  This way the sampling
  ; function always gets called and a sensible result is obtained.
  ;-------------------------------------------------------------------------
- full_array = 0
  if(keyword_set(_dd.sampling_fn) $
         AND (NOT keyword_set(_samples)) $
                AND NOT keyword_set(true)) then $
-   begin
-    _samples = gridgen(*_dd.dim_p) 
-    full_array = 1
-   end
+  begin
+   _samples = lindgen(nelm)
+   full_array = 1
+  end
 
 
  ;-------------------------------------------------------------------------
@@ -106,7 +135,7 @@ function dat_data, dd, samples=_samples, offset=offset, $
    samples = round(samples)
    sdim = size(samples, /dim)
    if((n_elements(sdim) NE 1) OR keyword_set(nd)) then $
-                                 samples = nd_to_w(*(_dd.dim_p), samples)
+                                           samples = nd_to_w(dim, samples)
   end
  if(keyword_set(samples)) then samples = samples + offset
 
@@ -114,7 +143,7 @@ function dat_data, dd, samples=_samples, offset=offset, $
  ;-------------------------------------------------------------------------
  ; Load data array
  ;-------------------------------------------------------------------------
-;_dat_load_data, _dd, sample=samples
+; dat_load_data, _dd, sample=samples
  dat_load_data, dd, sample=samples
  _dd = cor_dereference(dd)
 
@@ -130,18 +159,16 @@ function dat_data, dd, samples=_samples, offset=offset, $
  ;  if some samples are already loaded, determine subscripts into 
  ;  loaded array
  ;-------------------------------------------------------------------------
- if(keyword_set(samples)) then $
+ if(keyword_set(samples)) then if(sample0[0] NE -1) then $
   begin
-   sample0 = data_archive_get(_dd.sample_dap, _dd.dap_index)
-   if(sample0[0] NE -1) then $
-    begin
-     int = set_intersection(long(sample0), long(samples), ii, jj, kk)
-     if(defined(kk)) then samples = kk
-    end
+   int = set_intersection(long(sample0), long(samples), ii, jj, kk)
+   if(defined(kk)) then samples = kk
   end
 
- data = data_archive_get(_dd.data_dap, _dd.dap_index, samples=samples)
- abscissa = data_archive_get(_dd.abscissa_dap, _dd.dap_index, samples=samples)
+ data = data_archive_get((*_dd.dd0p).data_dap, $
+                                (*_dd.dd0p).dap_index, samples=samples)
+ abscissa = data_archive_get((*_dd.dd0p).abscissa_dap, $
+                                 (*_dd.dd0p).dap_index, samples=samples)
 
 
  ;-------------------------------------------------------------------------
@@ -150,21 +177,21 @@ function dat_data, dd, samples=_samples, offset=offset, $
  ;-------------------------------------------------------------------------
  if(full_array) then $
   begin
-   data = reform(data, *_dd.dim_p, /over)
-   if(keyword_set(abscissa)) then abscissa = reform(abscissa, *_dd.dim_p, /over)
+   data = reform(data, dim, /over)
+   if(keyword_set(abscissa)) then abscissa = reform(abscissa, dim, /over)
   end
 
 
  ;-------------------------------------------------------------------------
- ; compute data ranges -- not accurate if data array is being subsampled
+ ; compute data ranges -- not reliable if data array is being subsampled
  ;-------------------------------------------------------------------------
  max = max(data)
  min = min(data)
+ abmax = max(abscissa)
+ abmin = min(abscissa)
 
  if(max GT _dd.max) then _dd.max = max
  if(min LT _dd.min) then _dd.min = min
-
- cor_rereference, dd, _dd
 
 
  ;-------------------------------------------------------------------------
@@ -174,9 +201,13 @@ function dat_data, dd, samples=_samples, offset=offset, $
  else $
   begin
    if(keyword_set(samples)) then _abscissa = samples $
-   else _abscissa = lindgen(*_dd.dim_p)
-;;;; _abscissa = w_to_nd(*_dd.dim_p, _abscissa)
+   else _abscissa = lindgen(dim)
   end
+
+ if(abmax GT _dd.abmax) then _dd.abmax = abmax
+ if(abmin LT _dd.abmin) then _dd.abmin = abmin
+
+ cor_rereference, dd, _dd
 
 
  ;-------------------------------------------------------------------------

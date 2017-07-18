@@ -30,6 +30,12 @@
 ;		 the points instead of the camera descriptor.  Use this
 ;		 input if cd is a map.
 ;
+;	gd:	Generic descriptor.  If given, the descriptor inputs 
+;		are taken from this structure if not explicitly given.
+;
+;	dd:	Data descriptor containing a generic descriptor to use
+;		if gd not given.
+;
 ;	r:	 Array (nv,3,nt) of inertial vectors giving the starting
 ;		 point for each ray.
 ;
@@ -39,16 +45,12 @@
 ;	len:	 Array (nv,nt) giving the length for each ray.  Lengths 
 ;		 default to 1 if not given.
 ;
-;	gd:	 Generic descriptor.  If given, the cd input 
-;		 is taken from the cd field of this structure
-;		 instead of from that keyword.
-;
 ;	npoints: Number of points to compute per ray.  Default is 1000.
 ;
-;	fov:	 If set points are computed only within this many camera
+;	clip:	 If set points are computed only within this many camera
 ;		 fields of view.
 ;
-;	cull:	 If set, POINT objects excluded by the fov keyword
+;	cull:	 If set, POINT objects excluded by the clip keyword
 ;		 are not returned.  Normally, empty POINT objects
 ;		 are returned as placeholders.
 ;
@@ -94,7 +96,7 @@ end
 ; pg_ray
 ;
 ;=============================================================================
-function pg_ray, r=r, v=v, len=_len, cd=cd, bx=bx, gd=gd, fov=fov, cull=cull, $
+function pg_ray, r=r, v=v, len=_len, cd=cd, bx=bx, dd=dd, gd=gd, clip=clip, cull=cull, $
              npoints=npoints, cat=cat, density_fn=density_fn, dispersion=dispersion
 @pnt_include.pro
 
@@ -104,11 +106,13 @@ function pg_ray, r=r, v=v, len=_len, cd=cd, bx=bx, gd=gd, fov=fov, cull=cull, $
  ;-----------------------------------------------
  ; dereference the generic descriptor if given
  ;-----------------------------------------------
- pgs_gd, gd, cd=cd, bx=bx, od=od
- if(NOT keyword_set(cd)) then cd = 0 
+ if(NOT keyword_set(cd)) then cd = dat_gd(gd, dd=dd, /cd)
+ if(NOT keyword_set(bx)) then bx = dat_gd(gd, dd=dd, /bx)
+ if(NOT keyword_set(od)) then od = dat_gd(gd, dd=dd, /od)
+
  if(NOT keyword_set(bx)) then bx = cd 
 
- if(keyword_set(fov)) then slop = (image_size(cd[0]))[0]*(fov-1) > 1
+ if(keyword_set(clip)) then slop = (image_size(cd[0]))[0]*(clip-1) > 1
 
 
  ;-----------------------------------
@@ -126,10 +130,8 @@ function pg_ray, r=r, v=v, len=_len, cd=cd, bx=bx, gd=gd, fov=fov, cull=cull, $
  ntv = 1
  if(n_elements(vdim) GT 2) then ntv = vdim[2]
 
- if((nt NE ntr) OR (nt NE ntv)) then nv_message, name='pg_ray', $
-                                                      'Inconsistent timesteps.'
-
- if(nvr NE nvv) then nv_message, name='pg_ray', 'Inconsistent dimensions.'
+ if((nt NE ntr) OR (nt NE ntv)) then nv_message, 'Inconsistent timesteps.'
+ if(nvr NE nvv) then nv_message, 'Inconsistent dimensions.'
 
  nv = nvr
 
@@ -183,7 +185,7 @@ function pg_ray, r=r, v=v, len=_len, cd=cd, bx=bx, gd=gd, fov=fov, cull=cull, $
     end
 
    ray_ptd[i] = pnt_create_descriptors(desc=desc, $
-                       input=pgs_desc_suffix(cd[0]), $
+                       gd={cd:cd[0]}, $
                        points = points, $
                        vectors = ray_pts)
   end
@@ -193,7 +195,7 @@ function pg_ray, r=r, v=v, len=_len, cd=cd, bx=bx, gd=gd, fov=fov, cull=cull, $
  ; crop to fov, if desired
  ;  Note, that one image size is applied to all points
  ;------------------------------------------------------
- if(keyword_set(fov)) then $
+ if(keyword_set(clip)) then $
   begin
    pg_crop_points, ray_ptd, cd=cd[0], slop=slop
    if(keyword_set(cull)) then ray_ptd = pnt_cull(ray_ptd)

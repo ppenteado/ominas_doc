@@ -50,9 +50,9 @@ pro dat_set_compress, dd, compress
  data = dat_data(dd)
 
  _dd = cor_dereference(dd)
- _dd.compress = compress
+ (*_dd.dd0p).compress = compress
  cor_rereference, dd, _dd
 
- dat_set_data, dd, data, /silent	; this will trigger the data event
+ dat_set_data, dd, data		; this will trigger the data event
 end
 ;===========================================================================

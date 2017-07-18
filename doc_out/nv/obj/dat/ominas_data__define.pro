@@ -13,77 +13,90 @@ end_keywords)
  if(keyword_set(dd0)) then struct_assign, dd0, self
 
  self.abbrev = 'DAT'
+ self.tag = 'DD'
 
  if(NOT keyword_set(nhist)) then nhist = 1
  _nhist = getenv('NV_NHIST')
  if(keyword_set(_nhist)) then nhist = fix(_nhist)
 
  ;-----------------------
+ ; data structure
+ ;-----------------------
+ self.dd0p = nv_ptr_new({dat_dd0_struct})
+
+ ;-----------------------
  ; filename
  ;-----------------------
- if(keyword_set(filename)) then self.filename = filename
+ if(keyword_set(filename)) then (*self.dd0p).filename = filename
 
  ;-----------------------
  ; maintain
  ;-----------------------
- if(keyword_set(maintain)) then self.maintain = maintain
+ if(keyword_set(maintain)) then (*self.dd0p).maintain = maintain
 
  ;-----------------------
  ; compress
  ;-----------------------
- if(keyword_set(compress)) then self.compress = compress
+ if(keyword_set(compress)) then (*self.dd0p).compress = compress
 
  ;-----------------------
- ; type
+ ; typecode
  ;-----------------------
- if(keyword_set(type)) then self.type = type
+ if(keyword_set(typecode)) then (*self.dd0p).typecode = typecode
 
  ;-----------------------
  ; gff
  ;-----------------------
- if(keyword_set(gff)) then self.gffp = nv_ptr_new(gff)
+ (*self.dd0p).gffp = nv_ptr_new(0)
+ if(keyword_set(gff)) then *(*self.dd0p).gffp = gff
+
+ ;-----------------------
+ ; dh
+ ;-----------------------
+ (*self.dd0p).dhp = nv_ptr_new('')
+ if(keyword_set(dh)) then *(*self.dd0p).dhp = dh
 
  ;-----------------------
  ; file properties
  ;-----------------------
- if(keyword_set(filetype)) then self.filetype=filetype $
- else self.filetype = dat_detect_filetype(/default)
- if(keyword_set(input_fn)) then self.input_fn=input_fn
- if(keyword_set(output_fn)) then self.output_fn=output_fn
- if(keyword_set(keyword_fn)) then self.keyword_fn=keyword_fn
+ if(keyword_set(filetype)) then (*self.dd0p).filetype = filetype $
+ else (*self.dd0p).filetype = dat_detect_filetype(/default)
+ if(keyword_set(input_fn)) then self.input_fn = input_fn
+ if(keyword_set(output_fn)) then self.output_fn = output_fn
+ if(keyword_set(keyword_fn)) then self.keyword_fn = keyword_fn
 
 
  ;-----------------------
  ; instrument
  ;-----------------------
- if(keyword_set(instrument)) then self.instrument=instrument $
+ if(keyword_set(instrument)) then self.instrument = instrument $
  else if(keyword_set(filetype) AND keyword_set(header)) then $
   begin
-   self.instrument = dat_detect_instrument(header, udata, filetype, silent=silent)
+   self.instrument = dat_detect_instrument(header, udata, filetype)
    if(self.instrument EQ '') then $
-              nv_message, /continue, $
-                     'Unable to detect instrument.', name='data_descriptor::init'
+                   nv_message, /continue, 'Unable to detect instrument.'
   end
 
 
  ;-----------------------
  ; translators
  ;-----------------------
+ self.input_translators_p = nv_ptr_new('')
+ self.output_translators_p = nv_ptr_new('')
+ self.input_keyvals_p = nv_ptr_new('')
+ self.output_keyvals_p = nv_ptr_new('')
  if(keyword_set(self.instrument)) then $
   begin
    dat_lookup_translators, self.instrument, tab_translators=tab_translators, $
-           input_translators, output_translators, input_keyvals, output_keyvals, $
-           silent=silent
+           input_translators, output_translators, input_keyvals, output_keyvals
 
    if(input_translators[0] EQ '') then $
-        nv_message, /continue, 'No input translators available.', $
-                                                    name='nv_init_descriptor' $
-   else self.input_translators_p=nv_ptr_new(input_translators)
+                nv_message, /continue, 'No input translators available.' $
+   else *self.input_translators_p = input_translators
 
    if(output_translators[0] EQ '') then $
-       nv_message, /continue, 'No output translators available.', $
-                                                    name='nv_init_descriptor' $
-   else self.output_translators_p=nv_ptr_new(output_translators)
+                nv_message, /continue, 'No output translators available.' $
+   else *self.output_translators_p = output_translators
 
    if(keyword_set(input_keyvals)) then $
                    self.input_keyvals_p = nv_ptr_new(dat_parse_keyvals(input_keyvals))
@@ -101,23 +114,25 @@ end_keywords)
  ;---------------------------------
  ; dimensions
  ;---------------------------------
- if(keyword_set(dim)) then self.dim_p = nv_ptr_new(dim)
+ if(keyword_set(dim)) then *self.dim = dim		;;;;;
 
 
  ;-----------------------
  ; cache size
  ;-----------------------
- if(keyword_set(cache)) then self.cache = cache $
- else self.cache = dat_cache()
+ if(keyword_set(cache)) then (*self.dd0p).cache = cache $
+ else (*self.dd0p).cache = dat_cache()
 
 
  ;---------------------------------
  ; transforms
  ;---------------------------------
+ self.input_transforms_p = nv_ptr_new('')
  if(keyword_set(input_transforms)) then $
-		      self.input_transforms_p = nv_ptr_new(input_transforms)
+		           *self.input_transforms_p = input_transforms
+ self.output_transforms_p = nv_ptr_new('')
  if(keyword_set(output_transforms)) then $
-                        self.output_transforms_p = nv_ptr_new(output_transforms)
+		           *self.output_transforms_p = output_transforms
 
 
 
@@ -137,26 +152,34 @@ end_keywords)
   end
  
 
+ self.abmax = -1d100
+ self.abmin = 1d100
+
+ if(defined(abmin)) then self.abmin = abmin
+ if(defined(abmax)) then self.abmax = abmax
+
+ if(defined(abscissa)) then $
+  begin
+   self.abmax = max(abscissa)
+   self.abmin = min(abscissa)
+  end
+ 
+
  ;-----------------------
  ; data and header
  ;-----------------------
- dap = self.sample_dap
- data_archive_set, dap, -1, nhist=nhist
- self.sample_dap = dap
+ (*self.dd0p).sample_p = nv_ptr_new(-1)
+ (*self.dd0p).order_p = nv_ptr_new(-1)
 
- dap = self.order_dap
- data_archive_set, dap, -1, nhist=nhist
- self.order_dap = dap
-
- if(defined(data)) then dat_set_data, self, data, abscissa=abscissa, /silent
+ if(defined(data)) then dat_set_data, self, data, abscissa=abscissa, /noevent
 
 
- dat_set_nhist, self, nhist
+ dat_set_nhist, self, nhist, /noevent
 
 
  _header = ''
  if(keyword_set(header)) then _header = header
- dat_set_header, self, _header
+ dat_set_header, self, _header, /noevent
 
 
  return, 1
@@ -190,18 +213,35 @@ end
 ;	abscissa_dap:	Pointer to data archive containing the abscissa 
 ;			and nhist past versions.
 ;
+;	header_dap:	Pointer to data archive containing the header 
+;			and nhist past versions.
+;
 ;	dap_index:	Index of archived data to use.  
+;
+;	dhp:		Pointer to detached header.
 ;
 ;	max:		Maximum data value.
 ;
 ;	min:		Minimum data value.
 ;
+;	abmax:		Maximum abscissa value.
+;
+;	abmin:		Minimum abscissa value.
+;
 ;	cache:		Max cache size data array.  Used to deterine whether 
 ;			to load / unload data samples.  -1 means infinite.
 ;
-;	dim_p:	Pointer to array giving data dimensions.
+;	dim:		Array giving data dimensions.
 ;
-;	type:	Data type code.
+;	slice_struct:	Structure containing array giving coordinates for a 
+;			subarray.  If slice coordinates exist, the dat methods 
+;			act as if the data descriptor contains only this slice of 
+;			data.  Dimensions, min, and max are set accordingly.  
+;			Dimensions of the subarray are the difference between 
+;			the dimensions of the full array and the dimensionality 
+;			of the slice coordinates.
+;
+;	typecode:	Data type code.
 ;
 ;	filename:	Name of data file.
 ;
@@ -283,28 +323,83 @@ end
 ;	
 ;-
 ;=============================================================================
+
+
+
+;=============================================================================
+; dat_dd0_struct__define
+;
+;=============================================================================
+pro dat_dd0_struct__define
+
+
+ struct = $
+    { dat_dd0_struct, $
+	data_dap:		nv_ptr_new(), $	; Pointer to the data archive
+	abscissa_dap:		nv_ptr_new(), $	; Pointer to the abscissa archive
+	header_dap:		nv_ptr_new(), $	; Pointer to the generic header archive
+        dap_index:		0, $		; data archive index
+	dhp:			nv_ptr_new(), $	; Pointer to detached header.
+	sample_p:		nv_ptr_new(), $	; Pointer to the array of loaded samples
+	order_p:		nv_ptr_new(), $	; Pointer to the sample load order array
+
+	filename:		'', $		; Name of source file.
+	filetype:		'', $		; Filetype string
+	typecode:		0b, $		; data type code
+
+	gffp:			nv_ptr_new(), $	; GFF pointer
+
+	cache:			0l, $		; Max. cache size for data array (Mb)
+						;  Doesn't apply to maintenance 0
+
+	compress:		'', $		; Data compression function suffix
+	compress_data_p:	nv_ptr_new(), $
+
+	maintain:		0b, $		; Data maintenance mode:
+						;  0: load initially
+						;  1: load when needed; retain
+						;     only ndd data descriptor
+						;     arrays in memory.
+						;  2: Load when needed, but
+						;     do not retain.
+
+	update:			0 $		; Data update mode:
+						; -1: Locked; applies to data, header,
+						;     and udata.
+						;  0: Normal
+						;  1: Clone a new descriptor 
+						;     and leave original dd
+						;     unchanged.
+    }
+
+
+end
+;===========================================================================
+
+
+
+;===========================================================================
+; ominas_data__define
+;
+;===========================================================================
 pro ominas_data__define
 
 
  struct = $
     { ominas_data, inherits ominas_core, $
-	data_dap:		nv_ptr_new(), $	; Pointer to the data archive
-	abscissa_dap:		nv_ptr_new(), $	; Pointer to the abscissa archive
-	sample_dap:		nv_ptr_new(), $	; Pointer to the sample archive
-	order_dap:		nv_ptr_new(), $	; Pointer to the sample load order
-	header_dap:		nv_ptr_new(), $	; Pointer to the generic header archive
-        dap_index:		0, $		; data archive index
+	dd0p:			nv_ptr_new(), $	; Pointer to basic data descriptor
+						; fields.  This allows these fields
+						; to apply to any slices of this
+						; data descriptor.
 
-	cache:			0l, $		; Max. cache size for data array (Mb)
-						;  Doesn't apply to maintenance 0
+	slice_struct:		{dat_slice}, $	; Slice structure
 
 	max:			0d, $		; Maximum data value
 	min:			0d, $		; Minimum data value
-	dim_p:			nv_ptr_new(), $	; data dimensions
-	type:			0b, $		; data type
+	abmax:			0d, $		; Maximum abscissa value
+	abmin:			0d, $		; Minimum abscissa value
+	dim:			lonarr(8), $	; data dimensions
 
-	filename:		'', $		; Name of source file.
-	filetype:		'', $		; Filetype string
 	input_transforms_p:	nv_ptr_new(), $	; Input transform function
 	output_transforms_p:	nv_ptr_new(), $	; Output transform function
 	input_fn:		'', $		; Function to read file
@@ -318,38 +413,15 @@ pro ominas_data__define
 	transient_keyvals_p:	nv_ptr_new(), $	; Keyvals parsed per-command
 	last_translator:	lonarr(2), $	; Description of last translator
 						; called
+
 	sampling_fn:		'', $		; Optional sampling function.
 	dim_fn:			'', $		; Optional dimension function.
-
-	gffp:			nv_ptr_new(), $	; GFF pointer
-
-;	segment:		{nv_seg_struct}, $
-
-	compress:		'', $		; Data compression function suffix
-	compress_data_p:	nv_ptr_new(), $
-
-	maintain:		0b, $		; Data maintenance mode:
-						;  0: load initially
-						;  1: load when needed; retain
-						;     only ndd data descriptor
-						;     arrays in memory.
-						;  2: Load when needed, but
-						;     do not retain.
-
-	update:			0, $		; Data update mode:
-						; -1: Locked; applies to data, header,
-						;     and udata.
-						;  0: Normal
-						;  1: Clone a new descriptor 
-						;     and leave original dd
-						;     unchanged.
 
 	sibling_dd_h:		0l $		; Handle giving dd spawned as a result
 						;  of writing to this descriptor
 						;  while update = 1.
 						;  Handle is used to protect that dd
 						;  from nv_free.
-
     }
 
 

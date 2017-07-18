@@ -35,9 +35,11 @@
 ;		 as the observer from which limb is computed.  If no observer
 ;		 descriptor is given, the camera descriptor is used.
 ;
-;	gd:	 Generic descriptor.  If given, the cd and gbx inputs 
-;		 are taken from the cd and gbx fields of this structure
-;		 instead of from those keywords.
+;	gd:	Generic descriptor.  If given, the descriptor inputs 
+;		are taken from this structure if not explicitly given.
+;
+;	dd:	Data descriptor containing a generic descriptor to use
+;		if gd not given.
 ;
 ;	npoints: Number of points to compute.  Default is 1000.
 ;
@@ -46,10 +48,10 @@
 ;	reveal:	 Normally, points computed for objects whose opaque flag
 ;		 is set are made invisible.  /reveal suppresses this behavior.
 ;
-;	fov:	 If set points are computed only within this many camera
+;	clip:	 If set points are computed only within this many camera
 ;		 fields of view.
 ;
-;	cull:	 If set, POINT objects excluded by the fov keyword
+;	cull:	 If set, POINT objects excluded by the clip keyword
 ;		 are not returned.  Normally, empty POINT objects
 ;		 are returned as placeholders.
 ;
@@ -88,19 +90,20 @@
 ;	
 ;-
 ;=============================================================================
-function pg_limb, cd=cd, od=od, gbx=gbx, gd=gd, fov=fov, cull=cull, $
+function pg_limb, cd=cd, od=od, gbx=gbx, dd=dd, gd=gd, clip=clip, cull=cull, $
                         npoints=npoints, epsilon=epsilon, reveal=reveal
 @pnt_include.pro
 
  ;-----------------------------------------------
  ; dereference the generic descriptor if given
  ;-----------------------------------------------
- pgs_gd, gd, cd=cd, gbx=gbx, od=od
- if(NOT keyword_set(cd)) then cd = 0 
+ if(NOT keyword_set(cd)) then cd = dat_gd(gd, dd=dd, /cd)
+ if(NOT keyword_set(gbx)) then gbx = dat_gd(gd, dd=dd, /gbx)
+ if(NOT keyword_set(od)) then od = dat_gd(gd, dd=dd, /od)
 
  if(NOT keyword_set(gbx)) then return, obj_new()
 
- if(keyword_set(fov)) then slop = (image_size(cd[0]))[0]*(fov-1) > 1
+ if(keyword_set(clip)) then slop = (image_size(cd[0]))[0]*(clip-1) > 1
 
  ;-----------------------------
  ; default observer is camera
@@ -119,9 +122,8 @@ function pg_limb, cd=cd, od=od, gbx=gbx, gd=gd, fov=fov, cull=cull, $
  ;-----------------------------------
  nt = n_elements(cd)
  nt1 = n_elements(od)
- pgs_count_descriptors, gbx, nd=n_objects, nt=nt2
- if(nt NE nt1 OR nt1 NE nt2) then nv_message, name='pg_limb', $
-                                                      'Inconsistent timesteps.'
+ cor_count_descriptors, gbx, nd=n_objects, nt=nt2
+ if(nt NE nt1 OR nt1 NE nt2) then nv_message, 'Inconsistent timesteps.'
 
 
  ;-----------------------------------------------
@@ -147,11 +149,11 @@ function pg_limb, cd=cd, od=od, gbx=gbx, gd=gd, fov=fov, cull=cull, $
 							; in object i's body
 							; frame for all t.
    ;- - - - - - - - - - - - - - - - -
-   ; fov 
+   ; clip 
    ;- - - - - - - - - - - - - - - - -
    alpha = 0
    continue = 1
-   if(keyword_set(fov)) then $
+   if(keyword_set(clip)) then $
     begin
      test_pts_body = glb_get_limb_points(xd, Rs, npoints, epsilon, 1, alpha=alpha)
      test_pts_image = body_to_image_pos(cd, xd, test_pts_body)
@@ -179,7 +181,7 @@ function pg_limb, cd=cd, od=od, gbx=gbx, gd=gd, fov=fov, cull=cull, $
 
      limb_ptd[i] = pnt_create_descriptors(name = cor_name(xd), $
                           desc=desc, $
-                          input=pgs_desc_suffix(gbx=gbx[i,0], od=od[0], cd[0]), $
+                          gd={gbx:gbx[i,0], od:od[0], cd:cd[0]}, $
                           assoc_xd = xd, $
                           points = points, $
                           flags = flags, $
@@ -193,7 +195,7 @@ function pg_limb, cd=cd, od=od, gbx=gbx, gd=gd, fov=fov, cull=cull, $
  ; crop to fov, if desired
  ;  Note, that one image size is applied to all points
  ;------------------------------------------------------
- if(keyword_set(fov)) then $
+ if(keyword_set(clip)) then $
   begin
    pg_crop_points, limb_ptd, cd=cd[0], slop=slop
    if(keyword_set(cull)) then limb_ptd = pnt_cull(limb_ptd)

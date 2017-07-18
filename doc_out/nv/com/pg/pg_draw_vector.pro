@@ -116,7 +116,7 @@
 ;
 ;-
 ;=============================================================================
-pro pg_draw_vector, source, target, cd=cd, gd=gd, literal=literal, $
+pro pg_draw_vector, source, target, cd=cd, dd=dd, gd=gd, literal=literal, $
     lengths=_lengths, plabels=_plabels, colors=_colors, thick=_thick, $
     csizes=_csizes, wnum=wnum, noshorten=noshorten, solid=solid, $
     fixedheads=fixedheads, winglength=winglength, draw_wnum=draw_wnum, $
@@ -134,9 +134,9 @@ compile_opt IDL2
  ;-----------------------------------------------
  ; dereference the generic descriptor if given
  ;-----------------------------------------------
- pgs_gd, gd, cd=cd
+ if(NOT keyword_set(cd)) then cd = dat_gd(gd, dd=dd, /cd)
 
- if(not keyword__set(cd)) then nv_message, name="pg_draw_vector", $
+ if(not keyword__set(cd)) then nv_message, $
    "A camera descriptor (or a generic descriptor containing a camera descriptor) is required for this routine."
 
 
@@ -220,7 +220,7 @@ compile_opt IDL2
     endif else if(ntargets eq 1) then begin 
         target_v = target_v##make_array(nsources, val=1d)
     endif else begin 
-        nv_message, name='pg_draw_vector', 'Source and Target arrays have incompatible sizes.'
+        nv_message, 'Source and Target arrays have incompatible sizes.'
     endelse
  endif
  nv = n_elements(source_v)/3

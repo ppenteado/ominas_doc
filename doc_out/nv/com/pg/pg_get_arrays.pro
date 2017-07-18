@@ -74,32 +74,34 @@
 ;	
 ;-
 ;=============================================================================
-function pg_get_arrays, dd, trs, od=od, bx=bx, ard=_ard, gd=gd, $
+function pg_get_arrays, dd, trs, od=od, bx=bx, ard=_ard, _extra=select, $
                           override=override, verbatim=verbatim, $
 @arr__keywords.include
 @nv_trs_keywords_include.pro
 		end_keywords
 
  ;-----------------------------------------------
+ ; add selection keywords to translator keywords
+ ;-----------------------------------------------
+ if(keyword_set(select)) then pg_add_selections, trs, select
+
+ ;-----------------------------------------------
  ; dereference the generic descriptor if given
  ;-----------------------------------------------
- pgs_gd, gd, dd=dd, bx=bx
+ if(NOT keyword_set(bx)) then bx = dat_gd(gd, dd=dd, /bx)
 
 
- ;- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
- ; if names requested, the force tr_first
- ;- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
- if(keyword_set(name)) then tr_first = 1
-;tr_first = 1
-
- ards = dat_get_value(dd, 'ARR_DESCRIPTORS', key1=od, key2=bx, key4=_ard, key6=primary, $$
+ ;-----------------------------------------------
+ ; call translators
+ ;-----------------------------------------------
+ ard = dat_get_value(dd, 'ARR_DESCRIPTORS', key1=od, key2=bx, key4=_ard, key6=primary, $$
                              key8=name, trs=trs, $
 @nv_trs_keywords_include.pro
 	end_keywords)
 
- if(NOT keyword_set(ards)) then return, obj_new()
+ if(NOT keyword_set(ard)) then return, obj_new()
 
- n = n_elements(ards)
+ n = n_elements(ard)
 
  ;---------------------------------------------------
  ; If name given, determine subscripts such that
@@ -113,7 +115,7 @@ function pg_get_arrays, dd, trs, od=od, bx=bx, ard=_ard, gd=gd, $
  ;---------------------------------------------------
  if(keyword__set(name)) then $
   begin
-   tr_names = cor_name(ards)
+   tr_names = cor_name(ard)
    sub = nwhere(strupcase(tr_names), strupcase(name))
    if(sub[0] EQ -1) then return, obj_new()
    if(NOT keyword__set(verbatim)) then sub = sub[sort(sub)]
@@ -121,10 +123,16 @@ function pg_get_arrays, dd, trs, od=od, bx=bx, ard=_ard, gd=gd, $
  else sub=lindgen(n)
 
  n = n_elements(sub)
- ards = ards[sub]
+ ard = ard[sub]
 
 
- return, ards
+ ;--------------------------------------------------------
+ ; update generic descriptors
+ ;--------------------------------------------------------
+ if(keyword_set(dd)) then dat_set_gd, dd, gd, bx=bx
+ dat_set_gd, ard, gd, bx=bx
+
+ return, ard
 end
 ;===========================================================================
 

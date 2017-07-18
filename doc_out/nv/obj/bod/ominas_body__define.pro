@@ -13,6 +13,7 @@ end_keywords)
  if(keyword_set(bd0)) then struct_assign, bd0, self
 
  self.abbrev = 'BOD'
+ self.tag = 'BD'
 
  self.opaque = 1
  if(defined(opaque)) then self.opaque = decrapify(opaque[ii])
@@ -27,15 +28,13 @@ end_keywords)
  if(NOT keyword_set(orient)) then self.orient = idgen(3) $
  else self.orient = orient[*,*,ii]
 
- self.orientT = transpose(self.orient) 
-
  if(keyword_set(fn_body_to_inertial)) then $
                         self.fn_body_to_inertial=decrapify(fn_body_to_inertial[ii]) $
  else self.fn_body_to_inertial = decrapify('bod_body_to_inertial_default')
  if(keyword_set(fn_inertial_to_body)) then $
                           self.fn_inertial_to_body=decrapify(fn_inertial_to_body[ii]) $
  else self.fn_inertial_to_body = decrapify('bod_inertial_to_body_default')
-;;; if(keyword_set(ib_data)) then bod_set_ib_data, bd0, ib_data
+;;; if(keyword_set(ib_data)) then bod_set_ib_data, bd0, ib_data, /noevent
 
  return, 1
 end
@@ -70,17 +69,6 @@ end
 ;	opaque:	Flag describing whether a body is "easily visible".  
 ;
 ;		Methods: bod_opaque, bod_set_opaque
-;
-;
-;	arrays_tlp: Pointer to a arrays of body-frame points, maintained in the 
-;		   file given by array_fname. 
-;
-;			Methods: bod_array, bod_set_array
-;
-;
-;	array_fnames: String giving the names for the each points file. 
-;
-;			Methods: bod_array_fname, bod_set_array_fname
 ;
 ;
 ;	time:	Time, at body position, at which this descriptor is valid.
@@ -126,6 +114,9 @@ end
 ;
 ;		Methods: bod_dlibdt, bod_set_dlibdt
 ;
+;	aberration:
+;		Aberration flag mask: 1=correction performed.
+;
 ;
 ; STATUS:
 ;	Complete
@@ -145,17 +136,16 @@ pro ominas_body__define
     { ominas_body, inherits ominas_core, $
 	opaque:		 0b, $			; If set, then this body is
 						;  "easily visible".
-	arrays_tlp:	 nv_ptr_new(), $	; Pointer to body-frame points 
-						; arrays
 	time:		 double(0), $		; time at which this descriptor
 						; is valid at body position
 	orient:		 dblarr(3,3), $		; transforms body->inertial
-	orientT:	 dblarr(3,3), $		; transpose of orient matrix
 
 	avel:		 dblarr(ndv,3), $	; angular velocites -- each
 						;  higher-order avel is the
 						;  ang. vel. for the avel of
 						;  the preceding order.
+	aberration:	0l, $			; Aberration flag mask: 1=
+						;  correction performed
 
 	fn_body_to_inertial:   '', $		; user procedures to tranform
 	fn_inertial_to_body:   '', $		;  between body and inertial

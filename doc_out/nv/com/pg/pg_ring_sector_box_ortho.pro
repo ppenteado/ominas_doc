@@ -39,7 +39,7 @@
 ; xor_graphics:     If set, the sector outline is drawn and erased using xor
 ;                   graphics instead of a pixmap.
 ;
-;    noverbose:     If set, messages are suppressed.
+;       silent:     If set, messages are suppressed.
 ;
 ;       sample:     Grid sampling, default is 1.
 ;
@@ -51,6 +51,10 @@
 ; RETURN: 
 ;      POINT containing points on the sector outline.  The point
 ;      spacing is determined by the sample keyword.
+;
+; KNOWN BUGS:
+;	The sector flips when it hits zero azimuth rather than retaining a 
+;	consistent sense.
 ;
 ;
 ; ORIGINAL AUTHOR : J. Spitale ; 6/2005
@@ -69,7 +73,7 @@ function pg_ring_sector_box_ortho, p, $
                          win_num=win_num, $
                          restore=restore, $
                          p0=p0, xor_graphics=xor_graphics, $
-                         color=color, noverbose=noverbose
+                         color=color, silent=silent
 
  if(NOT keyword__set(win_num)) then win_num=!window
  if(NOT keyword__set(color)) then color=!p.color
@@ -82,7 +86,7 @@ function pg_ring_sector_box_ortho, p, $
  ;-----------------------------------------
  if(NOT keyword_set(p)) then $
   begin
-   if(NOT keyword__set(noverbose)) then $
+   if(NOT keyword__set(silent)) then $
     begin
      nv_message, 'Drag and release to define box', $
                                      name='pg_ring_sector_box_ortho', /continue

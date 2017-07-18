@@ -43,6 +43,23 @@
 ;=============================================================================
 function nv_init_state
 
+ ;-------------------------------------------------------------------
+ ; check for proper startup environment
+ ;-------------------------------------------------------------------
+ if(NOT keyword_set(getenv('OMINAS_DIR'))) then $
+;   stop, 'OMINAS not configured; did you start IDL using the "ominas" command?'
+  begin
+   print, 'OMINAS not configured; did you start IDL using the "ominas" command?'
+   ;This point is only reached if one tried to use OMINAS routines while the
+   ;environment does not have a OMINAS_DIR variable set, which would prevent
+   ;proper execution of most OMINAS code. So, we must exit
+   if (fstat(-1)).isagui then stop else exit,status=1
+  end
+
+
+ ;-------------------------------------------------------------------
+ ; initialize state structure
+ ;-------------------------------------------------------------------
  nv_state = {nv_state_struct}
  
 

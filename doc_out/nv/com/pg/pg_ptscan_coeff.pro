@@ -19,7 +19,7 @@
 ;
 ; ARGUMENTS:
 ;  INPUT:
-;       pts_ptd:         Array (n_pts) of POINT output from
+;       pts_ptd:        Array (n_pts) of POINT output from
 ;                       pg_ptscan containing image points as well as
 ;                       other necessary data.;
 ;
@@ -91,7 +91,7 @@ function pg_ptscan_coeff, pts_ptd, axis_ptd=_axis_ptd, fix=fix, model_ptd=model_
    ;----------------------------------------
    ; compute the least-squares coefficients
    ;----------------------------------------
-   pnt_get, pts_ptd[i], data=pts_data, points=pts_pts, /visible
+   pnt_query, pts_ptd[i], data=pts_data, points=pts_pts, /visible
 
    if(keyword__set(pts_data)) then $
     begin
@@ -111,7 +111,7 @@ scan_sigma = 1d
     begin
      n_points = n_points + 1
 
-     axis=dblarr(2)
+     axis = dblarr(2)
      if(keyword__set(axis_ptd)) then axis = pnt_points(axis_ptd)
      ipt_coeff, pts_x, pts_y, pts_pts, axis, sigma=scan_sigma, M=M, b=b
 
@@ -120,16 +120,16 @@ scan_sigma = 1d
      ;--------------------------------------
      if(keyword__set(fix)) then $
       begin
-       nfix=n_elements(fix)
+       nfix = n_elements(fix)
 
        for j=0, nfix-1 do $
         begin
          w = where([0,1,2] NE fix[j])
-         M[fix[j],w]=0. & M[w,fix[j]]=0.
-         M[fix[j],fix[j]]=1.
+         M[fix[j],w] = 0. & M[w,fix[j]] = 0.
+         M[fix[j],fix[j]] = 1.
         end
 
-       b[fix]=0.
+       b[fix] = 0.
       end
 
     end $
@@ -139,23 +139,22 @@ scan_sigma = 1d
    ;---------------------------------------------------------------
    else $
     begin
-     M=dblarr(3,3)
-     b=dblarr(1,3)
+     M = dblarr(3,3)
+     b = dblarr(1,3)
     end
 
    ;--------------------
    ; save the scan data
    ;--------------------
-   pts_cf[i].M=M
-   pts_cf[i].b=b
+   pts_cf[i].M = M
+   pts_cf[i].b = b
   end
 
  ;---------------------------
  ; error if no points exist
  ;---------------------------
  if(n_points EQ 0) then return, 0
-; if(n_points EQ 0) then nv_message, name='pg_ptscan_coeff', $
-;                                      'No point data available - use pg_ptscan.'
+; if(n_points EQ 0) then nv_message, 'No point data available - use pg_ptscan.'
 
  return, pts_cf
 end

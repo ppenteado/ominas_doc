@@ -29,10 +29,13 @@
 ;	bx:	Array (n_objects, n_timesteps) of descriptors of objects 
 ;		which must be a subclass of BODY.
 ;
-;	gd:	Generic descriptor.  If given, the cd, od, and bx inputs 
-;		are taken from this structure instead of from those keywords.
+;	gd:	Generic descriptor.  If given, the descriptor inputs 
+;		are taken from this structure if not explicitly given.
 ;
-;	fov:	 If set, points are computed only within this many camera
+;	dd:	Data descriptor containing a generic descriptor to use
+;		if gd not given.
+;
+;	clip:	 If set, points are computed only within this many camera
 ;		 fields of view.
 ;
 ;	sample:	 Sampling rate; default is 1 pixel.
@@ -54,15 +57,16 @@
 ;	
 ;-
 ;=============================================================================
-function pg_footprint, cd=cd, bx=bx, gd=gd, fov=fov, $
+function pg_footprint, cd=cd, bx=bx, dd=dd, gd=gd, clip=clip, $
     sample=sample
 @pnt_include.pro
 
  ;-----------------------------------------------
  ; dereference the generic descriptor if given
  ;-----------------------------------------------
- pgs_gd, gd, cd=cd, bx=bx, od=od
- if(NOT keyword_set(cd)) then cd = 0 
+ if(NOT keyword_set(cd)) then cd = dat_gd(gd, dd=dd, /cd)
+ if(NOT keyword_set(bx)) then bx = dat_gd(gd, dd=dd, /bx)
+ if(NOT keyword_set(od)) then od = dat_gd(gd, dd=dd, /od)
 
  if(NOT keyword_set(bx)) then return, obj_new()
 
@@ -76,9 +80,8 @@ function pg_footprint, cd=cd, bx=bx, gd=gd, fov=fov, $
  ;-----------------------------------
  nt = n_elements(cd)
  nt1 = n_elements(od)
- pgs_count_descriptors, bx, nd=n_objects, nt=nt2
- if(nt NE nt1 OR nt1 NE nt2) then nv_message, $
-                          name='pg_footprint', 'Inconsistent timesteps.'
+ cor_count_descriptors, bx, nd=n_objects, nt=nt2
+ if(nt NE nt1 OR nt1 NE nt2) then nv_message, 'Inconsistent timesteps.'
 
  ;-----------------------------------------------
  ; determine points description
@@ -107,7 +110,7 @@ function pg_footprint, cd=cd, bx=bx, gd=gd, fov=fov, $
      footprint_ptd[i] = $
         pnt_create_descriptors(name = cor_name(bx0), $
               desc = cor_class(bx0) + '_footprint', $
-              input = pgs_desc_suffix(bx=bx0, cd[0]), $
+              gd = {bx:bx0, cd:cd[0]}, $
               assoc_xd = bx0, $
               vectors = inertial_pts, $
               points = points)
@@ -121,7 +124,7 @@ function pg_footprint, cd=cd, bx=bx, gd=gd, fov=fov, $
  ; crop to fov, if desired
  ;  Note, that one image size is applied to all points
  ;------------------------------------------------------
- if(keyword_set(fov)) then $
+ if(keyword_set(clip)) then $
   begin
    pg_crop_points, footprint_ptd, cd=cd[0], slop=slop
    if(keyword_set(cull)) then footprint_ptd = pnt_cull(footprint_ptd)

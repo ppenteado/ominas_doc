@@ -114,22 +114,24 @@ function pg_profile_ring, dd, cd=cd, dkx=dkx, gd=gd, outline_ptd, $
  ;-----------------------------------------------
  ; dereference the generic descriptor if given
  ;-----------------------------------------------
- pgs_gd, gd, dd=dd, cd=cd, dkx=dkx
+ if(NOT keyword_set(dd)) then dd = dat_gd(gd, /dd)
+ if(NOT keyword_set(cd)) then cd = dat_gd(gd, dd=dd, /cd)
+ if(NOT keyword_set(dkx)) then dkx = dat_gd(gd, dd=dd, /dkx)
 
 
  ;-----------------------------------
  ; validate descriptors
  ;-----------------------------------
- if(n_elements(dkx) GT 1) then nv_message, /continue, name='pg_profile_ring', $
-                          'Using first disk descriptor.'
- if(n_elements(cd) GT 1) then nv_message, /continue, name='pg_profile_ring', $
-                        'Using first camera descriptor.'
+ if(n_elements(dkx) GT 1) then $
+                   nv_message, /continue, 'Using first disk descriptor.'
+ if(n_elements(cd) GT 1) then $
+                   nv_message, /continue, 'Using first camera descriptor.'
  dkd = dkx[0]
 
  ;-----------------------------------
  ; get the points and data
  ;-----------------------------------
- pnt_get, outline_ptd, $
+ pnt_query, outline_ptd, $
 	points=outline_pts, $
 	data=dsk_outline_pts
  if(keyword_set(dsk_outline_pts)) then dsk_outline_pts = transpose(dsk_outline_pts)
