@@ -345,12 +345,12 @@ pro docparprofileparser_o::_parseLines, lines, file, format=format, markup=marku
   currentComments = obj_new('MGcoArrayList', type=7, block_size=20)
   
   ;parse includes (by Paulo Penteado, 06/2016)
-  w=where(stregex(strtrim(lines,2),'^[^;]*@[[:graph:]]+',/bool),wc)
+  w=where(stregex(strtrim(lines,2),'^[^;]@[[:graph:]]+',/bool),wc)
   on_error,0
   while wc gt 0 do begin
     linesl=list(lines,/extract)
     iincs=0
-      incfilen=(stregex(strtrim(lines[w[iincs]],2),'@([[:graph:]]+)',/extract,/subexpr))[-1]
+      incfilen=(stregex(strtrim(lines[w[iincs]],2),'^@([[:graph:]]+)',/extract,/subexpr))[-1]
       incfile=file_which(incfilen)
       if ~incfile then incfile=file_which(incfilen+'.pro')
       if ~incfile then message,incfilen+', from file'+file.fullpath+' not found'
