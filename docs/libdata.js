@@ -8199,23 +8199,11 @@ libdata[libdataItem++] = new Array("config/strcat/defunct/gsc2/gsc2_catalog_inpu
 
 libdata[libdataItem++] = new Array("config/strcat/defunct/gsc2/gsc2_record__define.html", "gsc2_record__define.pro", '.pro file in <a href="config/strcat/defunct/gsc2/dir-overview.html">config/strcat/defunct/gsc2/ directory</a>', "gsc2_record__define.pro", "", "", "", "", "          -1", "");
   
-  
-  libdata[libdataItem++] = new Array("config/strcat/defunct/gsc2/gsc2_record__define.html#gsc2_record__define", "gsc2_record__define", 'routine in <a href="config/strcat/defunct/gsc2/gsc2_record__define.html">gsc2_record__define.pro</a>', "gsc2_record__define.pro", "", "gsc2_record__define", " Format of the standardized star catalog record for gsc2.   ", "", "          -1", "");
-  
-  
 
 libdata[libdataItem++] = new Array("config/strcat/defunct/gsc/gsc_record__define.html", "gsc_record__define.pro", '.pro file in <a href="config/strcat/defunct/gsc/dir-overview.html">config/strcat/defunct/gsc/ directory</a>', "gsc_record__define.pro", "", "", "", "", "          -1", "");
   
-  
-  libdata[libdataItem++] = new Array("config/strcat/defunct/gsc/gsc_record__define.html#gsc_record__define", "gsc_record__define", 'routine in <a href="config/strcat/defunct/gsc/gsc_record__define.html">gsc_record__define.pro</a>', "gsc_record__define.pro", "", "gsc_record__define", " Specifies the format of a standard GSC record   ", "", "          -1", "");
-  
-  
 
 libdata[libdataItem++] = new Array("config/strcat/defunct/gsc/gsc_region__define.html", "gsc_region__define.pro", '.pro file in <a href="config/strcat/defunct/gsc/dir-overview.html">config/strcat/defunct/gsc/ directory</a>', "gsc_region__define.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("config/strcat/defunct/gsc/gsc_region__define.html#gsc_region__define", "gsc_region__define", 'routine in <a href="config/strcat/defunct/gsc/gsc_region__define.html">gsc_region__define.pro</a>', "gsc_region__define.pro", "", "gsc_region__define", " Format of a GSC region file record   ", "", "          -1", "");
-  
   
 
 libdata[libdataItem++] = new Array("util/h.html", "h.pro", '.pro file in <a href="util/dir-overview.html">util/ directory</a>', "h.pro", "", "", "", "", "          -1", "");
@@ -9078,9 +9066,6 @@ libdata[libdataItem++] = new Array("util/make_error_number.html", "make_error_nu
   
   libdata[libdataItem++] = new Array("util/make_error_number.html#make_error_number", "make_error_number", 'routine in <a href="util/make_error_number.html">make_error_number.pro</a>', "make_error_number.pro", "", "make_error_number", "", "x_sig", "          -1", "");
   
-  
-
-libdata[libdataItem++] = new Array("config/strcat/defunct/gsc2/make_star_files_gsc2.html", "make_star_files_gsc2.pro", '.pro file in <a href="config/strcat/defunct/gsc2/dir-overview.html">config/strcat/defunct/gsc2/ directory</a>', "make_star_files_gsc2.pro", "", "", " Used to create the GSC2 records for use by strcat_gsc2_input.   Purpose   The full catalog file for GSC 2.2 is not available for download by  researchers, but the data is accessible through a WWW query engine at  http://www-gsss.stsci.edu/support/data_access.htm .  I was able to  determine the sections of the sky that were needed for the sat search  project (see /raid/matt/pointing.sav and /raid/matt/pointing.pro), and  created 40 data files by cut-and-paste from the WWW query engine.  This  routine compiles those data files into a single structure that can be  accessed by OMINAS.   ", "", "          -1", "");
   
 
 libdata[libdataItem++] = new Array("demo/map-disk_example.html", "map-disk_example.pro", '.pro file in <a href="demo/dir-overview.html">demo/ directory</a>', "map-disk_example.pro", "", "", "", "", "          -1", "");
@@ -13295,10 +13280,6 @@ libdata[libdataItem++] = new Array("util/gen/rowgen.html", "rowgen.pro", '.pro f
 
 libdata[libdataItem++] = new Array("config/strcat/defunct/sao/sao_record__define.html", "sao_record__define.pro", '.pro file in <a href="config/strcat/defunct/sao/dir-overview.html">config/strcat/defunct/sao/ directory</a>', "sao_record__define.pro", "", "", "", "", "          -1", "");
   
-  
-  libdata[libdataItem++] = new Array("config/strcat/defunct/sao/sao_record__define.html#sao_record__define", "sao_record__define", 'routine in <a href="config/strcat/defunct/sao/sao_record__define.html">sao_record__define.pro</a>', "sao_record__define.pro", "", "sao_record__define", " Format of a record in the SAO catalog   ", "", "          -1", "");
-  
-  
 
 libdata[libdataItem++] = new Array("util/sat_convert_longitude.html", "sat_convert_longitude.pro", '.pro file in <a href="util/dir-overview.html">util/ directory</a>', "sat_convert_longitude.pro", "", "", " NAME: 	sat_convert_longitude    PURPOSE: 	Convert among Saturn's I, II, and III longitude systems.    CATEGORY: 	UTIL    CALLING SEQUENCE: 	result = sat_convert_longitude(lon, jd, from=from, to=to)    ARGUMENTS:   INPUT: 	lon:	Longitude to be converted; radians.  	jd:	Julian date.    KEYWORDS:   INPUT: 	from:	String specifying the input longitude system 		-- 'I', 'II', or 'III'.  	to:	String specifying the output longitude system 		-- 'I', 'II', or 'III'.   RETURN: 	Converted longitude; radians.    PROCEDURE: 	Conversions are based on the physical ephemeris parameters 	given in table 7.44.1 of the explanatory supplement to the 	astronomical almanac.    MODIFICATION HISTORY:  	Written by:	Spitale, 9/18/2001   ", "", "          -1", "");
   
@@ -14423,10 +14404,6 @@ libdata[libdataItem++] = new Array("config/strcat/strcat_input.html", "strcat_in
 
 libdata[libdataItem++] = new Array("config/strcat/strcat_nbright.html", "strcat_nbright.pro", '.pro file in <a href="config/strcat/dir-overview.html">config/strcat/ directory</a>', "strcat_nbright.pro", "", "", "", "", "          -1", "");
   
-  
-  libdata[libdataItem++] = new Array("config/strcat/strcat_nbright.html#strcat_nbright", "strcat_nbright", 'routine in <a href="config/strcat/strcat_nbright.html">strcat_nbright.pro</a>', "strcat_nbright.pro", "", "strcat_nbright", " Retrieves n brightest stars from a set of magnitudes   ", "mags       vector of star magnitudes  nbright       number of stars to return   ", "          -1", "     Vector of magnitudes with length nbright   ");
-  
-  
 
 libdata[libdataItem++] = new Array("config/strcat/strcat_radec_regions.html", "strcat_radec_regions.pro", '.pro file in <a href="config/strcat/dir-overview.html">config/strcat/ directory</a>', "strcat_radec_regions.pro", "", "", "", "", "          -1", "");
   
@@ -15238,37 +15215,17 @@ libdata[libdataItem++] = new Array("util/tvim/tvzoom.html", "tvzoom.pro", '.pro 
 
 libdata[libdataItem++] = new Array("config/strcat/tycho2/tycho2_index__define.html", "tycho2_index__define.pro", '.pro file in <a href="config/strcat/tycho2/dir-overview.html">config/strcat/tycho2/ directory</a>', "tycho2_index__define.pro", "", "", "", "", "          -1", "");
   
-  
-  libdata[libdataItem++] = new Array("config/strcat/tycho2/tycho2_index__define.html#tycho2_index__define", "tycho2_index__define", 'routine in <a href="config/strcat/tycho2/tycho2_index__define.html">tycho2_index__define.pro</a>', "tycho2_index__define.pro", "", "tycho2_index__define", " Format of one line in TYCHO-2 index.dat   ", "", "          -1", "");
-  
-  
 
 libdata[libdataItem++] = new Array("config/strcat/tycho2/tycho2_record__define.html", "tycho2_record__define.pro", '.pro file in <a href="config/strcat/tycho2/dir-overview.html">config/strcat/tycho2/ directory</a>', "tycho2_record__define.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("config/strcat/tycho2/tycho2_record__define.html#tycho2_record__define", "tycho2_record__define", 'routine in <a href="config/strcat/tycho2/tycho2_record__define.html">tycho2_record__define.pro</a>', "tycho2_record__define.pro", "", "tycho2_record__define", " Format of one line of the TYCHO-2 tyc2.dat catalog file   ", "", "          -1", "");
-  
   
 
 libdata[libdataItem++] = new Array("config/strcat/tycho2/tycho2_star__define.html", "tycho2_star__define.pro", '.pro file in <a href="config/strcat/tycho2/dir-overview.html">config/strcat/tycho2/ directory</a>', "tycho2_star__define.pro", "", "", "", "", "          -1", "");
   
-  
-  libdata[libdataItem++] = new Array("config/strcat/tycho2/tycho2_star__define.html#tycho2_star__define", "tycho2_star__define", 'routine in <a href="config/strcat/tycho2/tycho2_star__define.html">tycho2_star__define.pro</a>', "tycho2_star__define.pro", "", "tycho2_star__define", " Format of the standardized star structure.   ", "", "          -1", "");
-  
-  
 
 libdata[libdataItem++] = new Array("config/strcat/defunct/tycho/tycho_record__define.html", "tycho_record__define.pro", '.pro file in <a href="config/strcat/defunct/tycho/dir-overview.html">config/strcat/defunct/tycho/ directory</a>', "tycho_record__define.pro", "", "", "", "", "          -1", "");
   
-  
-  libdata[libdataItem++] = new Array("config/strcat/defunct/tycho/tycho_record__define.html#tycho_record__define", "tycho_record__define", 'routine in <a href="config/strcat/defunct/tycho/tycho_record__define.html">tycho_record__define.pro</a>', "tycho_record__define.pro", "", "tycho_record__define", " Format of a Tycho (1) catalog star record.   ", "", "          -1", "");
-  
-  
 
 libdata[libdataItem++] = new Array("config/strcat/defunct/tycho/tycho_region__define.html", "tycho_region__define.pro", '.pro file in <a href="config/strcat/defunct/tycho/dir-overview.html">config/strcat/defunct/tycho/ directory</a>', "tycho_region__define.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("config/strcat/defunct/tycho/tycho_region__define.html#tycho_region__define", "tycho_region__define", 'routine in <a href="config/strcat/defunct/tycho/tycho_region__define.html">tycho_region__define.pro</a>', "tycho_region__define.pro", "", "tycho_region__define", " Format of the Tycho (1) region index.   ", "", "          -1", "");
-  
   
 
 libdata[libdataItem++] = new Array("util/unique.html", "unique.pro", '.pro file in <a href="util/dir-overview.html">util/ directory</a>', "unique.pro", "", "", " NAME: 	unique    PURPOSE: 	Returns unique elements of an array.    CATEGORY: 	UTIL    CALLING SEQUENCE: 	result = unique(array, s)    ARGUMENTS:   INPUT: array: 		Array to process.  	s:	Array of sorted subscripts.  If given, these subscripts 		are used to sort the array instead of peforming a sort 		operation.    OUTPUT: 	s:	Sorted subsctripts.    KEYWORDS:   INPUT: 	nosort:	If set, the input array is not sorted.    OUTPUT: 	reverse_indices: 		Array of subscripts mapping the output elements to their 		original positions in the input array.    RETURN: 	Unique array elements.    STATUS: 	Complete    MODIFICATION HISTORY:  	Written by:	Spitale, 1/1998   ", "", "          -1", "");

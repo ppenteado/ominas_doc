@@ -1,5 +1,5 @@
 <div class="header">
-  <h1>[% title %]</h1>
+  <a href="https://ppenteado.github.io/ominas_doc"><h1>[% title %]</h1></a>
   <h2>[% subtitle %]</h2>
 </div>
 
