@@ -1,2 +1,2 @@
-idldoc,root='../ringsdb/nv/obj/dat',output='./doc_out/css',title='OMINAS API Documentation',$
- embed=0,/statistics,format='ominas',overview='./overview.idldoc'
+idldoc,root=getenv('OMINAS_DIR')+'/nv/obj/dat',output='./docs/css',title='OMINAS Documentation',$
+ /embed,/statistics,format_style='ominas',overview='./overview.idldoc',template_location='./templates/'
