@@ -844,7 +844,6 @@ digraph callgraph {
   _map_lookup_transformations[fontcolor=black,shape=plaintext]
   map_set_scale[fontcolor=black,shape=plaintext]
   sld_refl_fn[fontcolor=black,shape=plaintext]
-  disk_to_corot_lon[fontcolor=black,shape=plaintext]
   image_predict_orbit[fontcolor=black,shape=plaintext]
   disk_to_map[fontcolor=black,shape=plaintext]
   nv_free[fontcolor=black,shape=plaintext]
