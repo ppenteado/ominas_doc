@@ -20,7 +20,7 @@
       <frame src="all-files.html" name="files_frame"/>
     </frameset>
     [% END %]
-    <frameset rows="15%,85%">
+    <frameset rows="140,*">
     <frame src="headerbar.html" name="header_frame"/>
     <frame src="overview.html" name="main_frame"/>
     </frameset>
