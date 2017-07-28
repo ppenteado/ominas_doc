@@ -7,4 +7,4 @@ file_copy,outdir+'overview.old',outdir+'user_guide.html',/verbose,/overwrite
 file_copy,outdir+'index.html',outdir+'userguide.html',/verbose,/overwrite
 replaceoverview,outdir+'user_guide.html','./UpdatedOMINASUserGuide.html',outdir+'user_guide.old'
 replaceindex,outdir+'userguide.html','user_guide.html',outdir+'empty.html',outdir+'toc.html'
-if ~file_test('newheader/images',/directory) then file_copy,'./images','./newheader',/verbose,/recursive
+if ~file_test('newheader/guides/images',/directory) then file_copy,'./images','./newheader',/verbose,/recursive
