@@ -1,0 +1,26 @@
+<div class="header">
+  <a href="https://ppenteado.github.io/ominas_doc"><h1>[% title %]</h1></a>
+  <h2>[% subtitle %]</h2>
+</div>
+
+<table class="navbar smaller" summary="Navigation header" cellspacing="0">
+  <tr>
+
+  <td>
+    <a href="../user_guide.html">User Guide</a>
+  </td>
+  <td>
+    <a target="_top" href="../nv/index.html">API</a>
+  </td>
+  <td>
+    <a target="_top" href="../demo/index.html">Demos</a>
+  </td>
+  <td>
+    <a href="../demo/install_guide.html">Installation Guide</a>
+  </td>
+  <td class='flexible'>
+  <a href="search.html">Search</a>
+  </td>
+
+  </tr>
+</table>
