@@ -45,7 +45,7 @@
       [% IF location ne './' %]
       <h2 class="directory">[% location %]</h2>
       [% END %]
-      <h1 class="basename">[% basename %]<span class="file-attributes">[% IF is_abstract %]abstract&nbsp; [% END %][% IF is_obsolete %]obsolete&nbsp; [% END %]</span></h1>
+      <h1 class="basename"><span class="file-attributes">[% IF is_abstract %]abstract&nbsp; [% END %][% IF is_obsolete %]obsolete&nbsp; [% END %]</span></h1>
       [% IF has_categories %]
       <p class="small categories">[% strjoin(categories, ', ') %]</p>
       [% END %]
