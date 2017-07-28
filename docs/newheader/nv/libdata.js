@@ -74,13 +74,6 @@ libdata[libdataItem++] = new Array("obj/map/_map_apply_pole.html", "_map_apply_p
   
   
 
-libdata[libdataItem++] = new Array("obj/map/_map_lookup_transformations.html", "_map_lookup_transformations.pro", '.pro file in <a href="obj/map/dir-overview.html">obj/map/ directory</a>', "_map_lookup_transformations.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("obj/map/_map_lookup_transformations.html#_map_lookup_transformations", "_map_lookup_transformations", 'routine in <a href="obj/map/_map_lookup_transformations.html">_map_lookup_transformations.pro</a>', "_map_lookup_transformations.pro", "", "_map_lookup_transformations", "", "_mdfn_map_to_imagefn_image_to_map", "          -1", "");
-  
-  
-
 libdata[libdataItem++] = new Array("obj/map/_map_valid_points.html", "_map_valid_points.pro", '.pro file in <a href="obj/map/dir-overview.html">obj/map/ directory</a>', "_map_valid_points.pro", "", "", "", "", "          -1", "");
   
   
@@ -1008,7 +1001,7 @@ libdata[libdataItem++] = new Array("obj/cor/cor_class.html", "cor_class.pro", '.
 libdata[libdataItem++] = new Array("obj/cor/cor_class_info.html", "cor_class_info.pro", '.pro file in <a href="obj/cor/dir-overview.html">obj/cor/ directory</a>', "cor_class_info.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/cor/cor_class_info.html#cor_class_info", "cor_class_info", 'routine in <a href="obj/cor/cor_class_info.html">cor_class_info.pro</a>', "cor_class_info.pro", "", "cor_class_info", "	Returns information about OMINAS object classes.    ", "classesabbrevtags", "NV/OBJ/COR", " 	Written by:	Spitale		2/2017   	classes:	String array giving the names of all OMINAS classes.  	abbrev:		String array giving the abbreviations of OMINAS classes.  	tags:		String array giving the tag names of OMINAS classes.     ");
+  libdata[libdataItem++] = new Array("obj/cor/cor_class_info.html#cor_class_info", "cor_class_info", 'routine in <a href="obj/cor/cor_class_info.html">cor_class_info.pro</a>', "cor_class_info.pro", "", "cor_class_info", "	Returns information about OMINAS object classes.    ", "classabbrevtag", "NV/OBJ/COR", " 	Written by:	Spitale		2/2017   	class:		String array giving the names of all OMINAS classes.  	abbrev:		String array giving the abbreviations of OMINAS classes.  	tag:		String array giving the tag names of OMINAS classes.     ");
   
   
 
@@ -1540,10 +1533,12 @@ libdata[libdataItem++] = new Array("obj/dat/dat_parse_keyval.html", "dat_parse_k
   
   
 
-libdata[libdataItem++] = new Array("obj/dat/dat_parse_keyvals.html", "dat_parse_keyvals.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_parse_keyvals.pro", "", "", "", "", "          -1", "");
+libdata[libdataItem++] = new Array("obj/dat/dat_parse_keyvals.html", "dat_parse_keyvals.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_parse_keyvals.pro", "", "", "	Parses an array strings containing keyword=value pairs.    ", "", "          -1", " 	Written by:	Spitale   ");
   
   
-  libdata[libdataItem++] = new Array("obj/dat/dat_parse_keyvals.html#dat_parse_keyvals", "dat_parse_keyvals", 'routine in <a href="obj/dat/dat_parse_keyvals.html">dat_parse_keyvals.pro</a>', "dat_parse_keyvals.pro", "", "dat_parse_keyvals", "	Parses an array strings containing keyword=value pairs.    ", "keywordskeyvalsArray of strings of the form <keyword>=<value>.   ", "NV/SYS", " 	Written by:	Spitale   	Array of type keyval_struct containing the parsed keywords 	and values.  One element per input array element.    STATUS: 	Complete    ");
+  libdata[libdataItem++] = new Array("obj/dat/dat_parse_keyvals.html#dat_parse_keyvals_extra", "dat_parse_keyvals_extra", 'routine in <a href="obj/dat/dat_parse_keyvals.html">dat_parse_keyvals.pro</a>', "dat_parse_keyvals.pro", "", "dat_parse_keyvals_extra", "", "lines", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("obj/dat/dat_parse_keyvals.html#dat_parse_keyvals", "dat_parse_keyvals", 'routine in <a href="obj/dat/dat_parse_keyvals.html">dat_parse_keyvals.pro</a>', "dat_parse_keyvals.pro", "", "dat_parse_keyvals", "", "keywordsextrakeyvals", "          -1", "");
   
   
 
@@ -1571,7 +1566,7 @@ libdata[libdataItem++] = new Array("obj/dat/dat_query.html", "dat_query.pro", '.
 libdata[libdataItem++] = new Array("obj/dat/dat_read.html", "dat_read.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_read.pro", "", "", "	Reads a data file of arbitrary format and produces a data descriptor.    	dat_read expands all file specifications and then attempts to detect 	the filetype for each resulting filename using the filetype detectors 	table.  If a filetype is detected, dat_read looks up the I/O functions 	and calls the input function to read the file.  Finally, it calls 	nv_init_descriptor to obtain a data descriptor.    STATUS: 	Complete    SEE ALSO: 	dat_write    ", "", "          -1", " 	Written by:	Spitale, 2/1998   ");
   
   
-  libdata[libdataItem++] = new Array("obj/dat/dat_read.html#drd_read", "drd_read", 'routine in <a href="obj/dat/dat_read.html">dat_read.pro</a>', "dat_read.pro", "", "drd_read", "", "filetypeinput_fnoutput_fnkeyword_fninstrumentinput_translatorsoutput_translatorsinput_transformsoutput_transformstab_translatorsmaintaincompresssamplenodatanamenhistextensions_filenamedataheader", "          -1", "");
+  libdata[libdataItem++] = new Array("obj/dat/dat_read.html#drd_read", "drd_read", 'routine in <a href="obj/dat/dat_read.html">dat_read.pro</a>', "dat_read.pro", "", "drd_read", "", "filetypeinput_fnoutput_fnkeyword_fninstrumentinput_translatorsoutput_translatorsinput_transformsoutput_transformstab_translatorsmaintaincompresssamplenodatanamenhistextensionsfilenamedataheader", "          -1", "");
   
   libdata[libdataItem++] = new Array("obj/dat/dat_read.html#dat_read", "dat_read", 'routine in <a href="obj/dat/dat_read.html">dat_read.pro</a>', "dat_read.pro", "", "dat_read", "", "filetypeinput_fnoutput_fnkeyword_fninstrumentinput_translatorsoutput_translatorsinput_transformsoutput_transformstab_translatorsmaintaincompresssamplenodatanamenhistextensionsfilespecdataheader", "          -1", "");
   
@@ -1615,7 +1610,9 @@ libdata[libdataItem++] = new Array("obj/dat/dat_sampling_fn.html", "dat_sampling
 libdata[libdataItem++] = new Array("obj/dat/dat_set_compress.html", "dat_set_compress.pro", '.pro file in <a href="obj/dat/dir-overview.html">obj/dat/ directory</a>', "dat_set_compress.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("obj/dat/dat_set_compress.html#dat_set_compress", "dat_set_compress", 'routine in <a href="obj/dat/dat_set_compress.html">dat_set_compress.pro</a>', "dat_set_compress.pro", "", "dat_set_compress", "	Replaces the name of the compression function in a data descriptor.    ", "dd	Data descriptor.   compressString giving the name of a new compression function.   ", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
+  libdata[libdataItem++] = new Array("obj/dat/dat_set_compress.html#dat_set_compress", "dat_set_compress", 'routine in <a href="obj/dat/dat_set_compress.html">dat_set_compress.pro</a>', "dat_set_compress.pro", "", "dat_set_compress", "	Replaces the name of the compression function in a data descriptor.    ", "noeventdd	Data descriptor.   compressString giving the name of a new compression function.   ", "NV/SYS", " 	Written by:	Spitale  	Adapted by:	Spitale, 5/2016   ");
+  
+  libdata[libdataItem++] = new Array("obj/dat/dat_set_compress.html#__dat_set_compress", "__dat_set_compress", 'routine in <a href="obj/dat/dat_set_compress.html">dat_set_compress.pro</a>', "dat_set_compress.pro", "", "__dat_set_compress", "", "ddcompress", "          -1", "");
   
   
 
@@ -3416,6 +3413,35 @@ libdata[libdataItem++] = new Array("obj/tools/composite/globe_to_map.html", "glo
   
   
 
+libdata[libdataItem++] = new Array("grim/tools/gr_colortool.html", "gr_colortool.pro", '.pro file in <a href="grim/tools/dir-overview.html">grim/tools/ directory</a>', "gr_colortool.pro", "", "", "	Tool for adjusting colors in GRIM.    ", "", "          -1", " 	Written by:	Spitale   ");
+  
+  
+  libdata[libdataItem++] = new Array("grim/tools/gr_colortool.html#grct_slider_to_gamma", "grct_slider_to_gamma", 'routine in <a href="grim/tools/gr_colortool.html">gr_colortool.pro</a>', "gr_colortool.pro", "", "grct_slider_to_gamma", "", "value", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("grim/tools/gr_colortool.html#grct_gamma_to_slider", "grct_gamma_to_slider", 'routine in <a href="grim/tools/gr_colortool.html">gr_colortool.pro</a>', "gr_colortool.pro", "", "grct_gamma_to_slider", "", "value", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("grim/tools/gr_colortool.html#grct_print_gamma", "grct_print_gamma", 'routine in <a href="grim/tools/gr_colortool.html">gr_colortool.pro</a>', "gr_colortool.pro", "", "grct_print_gamma", "", "data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("grim/tools/gr_colortool.html#grct_widget_to_descriptor", "grct_widget_to_descriptor", 'routine in <a href="grim/tools/gr_colortool.html">gr_colortool.pro</a>', "gr_colortool.pro", "", "grct_widget_to_descriptor", "", "datacmd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("grim/tools/gr_colortool.html#grct_descriptor_to_widget", "grct_descriptor_to_widget", 'routine in <a href="grim/tools/gr_colortool.html">gr_colortool.pro</a>', "gr_colortool.pro", "", "grct_descriptor_to_widget", "", "noslidedatacmd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("grim/tools/gr_colortool.html#grct_plot", "grct_plot", 'routine in <a href="grim/tools/gr_colortool.html">gr_colortool.pro</a>', "gr_colortool.pro", "", "grct_plot", "", "data", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("grim/tools/gr_colortool.html#grct_cleanup", "grct_cleanup", 'routine in <a href="grim/tools/gr_colortool.html">gr_colortool.pro</a>', "gr_colortool.pro", "", "grct_cleanup", "", "base", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("grim/tools/gr_colortool.html#grct_update", "grct_update", 'routine in <a href="grim/tools/gr_colortool.html">gr_colortool.pro</a>', "gr_colortool.pro", "", "grct_update", "", "allautocmd", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("grim/tools/gr_colortool.html#gr_colortool_event", "gr_colortool_event", 'routine in <a href="grim/tools/gr_colortool.html">gr_colortool.pro</a>', "gr_colortool.pro", "", "gr_colortool_event", "", "event", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("grim/tools/gr_colortool.html#gr_colortool_change", "gr_colortool_change", 'routine in <a href="grim/tools/gr_colortool.html">gr_colortool.pro</a>', "gr_colortool.pro", "", "gr_colortool_change", "", "base", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("grim/tools/gr_colortool.html#grct_primary_notify", "grct_primary_notify", 'routine in <a href="grim/tools/gr_colortool.html">gr_colortool.pro</a>', "gr_colortool.pro", "", "grct_primary_notify", "", "data_p", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("grim/tools/gr_colortool.html#gr_colortool", "gr_colortool", 'routine in <a href="grim/tools/gr_colortool.html">gr_colortool.pro</a>', "gr_colortool.pro", "", "gr_colortool", "", "", "          -1", "");
+  
+  
+
 libdata[libdataItem++] = new Array("grim/tools/gr_lsqtool.html", "gr_lsqtool.pro", '.pro file in <a href="grim/tools/dir-overview.html">grim/tools/ directory</a>', "gr_lsqtool.pro", "", "", "", "", "          -1", " 	Written by:	Spitale 7/2002   ");
   
   
@@ -3636,7 +3662,7 @@ libdata[libdataItem++] = new Array("grim/grim.html", "grim.pro", '.pro file in <
   
   libdata[libdataItem++] = new Array("grim/grim.html#grim_repeat", "grim_repeat", 'routine in <a href="grim/grim.html">grim.pro</a>', "grim.pro", "", "grim_repeat", "", "grim_data", "          -1", "");
   
-  libdata[libdataItem++] = new Array("grim/grim.html#grim_exit", "grim_exit", 'routine in <a href="grim/grim.html">grim.pro</a>', "grim.pro", "", "grim_exit", "", "grim_data", "          -1", "");
+  libdata[libdataItem++] = new Array("grim/grim.html#grim_exit", "grim_exit", 'routine in <a href="grim/grim.html">grim.pro</a>', "grim.pro", "", "grim_exit", "", "grngrim_data", "          -1", "");
   
   libdata[libdataItem++] = new Array("grim/grim.html#grim_undo", "grim_undo", 'routine in <a href="grim/grim.html">grim.pro</a>', "grim.pro", "", "grim_undo", "", "grim_dataplane", "          -1", "");
   
@@ -4080,7 +4106,7 @@ libdata[libdataItem++] = new Array("grim/grim.html", "grim.pro", '.pro file in <
   
   libdata[libdataItem++] = new Array("grim/grim.html#grim_menu_render_event", "grim_menu_render_event", 'routine in <a href="grim/grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_render_event", "", "event", "          -1", "");
   
-  libdata[libdataItem++] = new Array("grim/grim.html#grim_menu_view_colors_help_event", "grim_menu_view_colors_help_event", 'routine in <a href="grim/grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_colors_help_event", "	Opens grim_colortool.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
+  libdata[libdataItem++] = new Array("grim/grim.html#grim_menu_view_colors_help_event", "grim_menu_view_colors_help_event", 'routine in <a href="grim/grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_colors_help_event", "	Opens gr_colortool.    ", "event", "NV/GR", " 	Written by:	Spitale, 7/2002   ");
   
   libdata[libdataItem++] = new Array("grim/grim.html#grim_menu_view_colors_event", "grim_menu_view_colors_event", 'routine in <a href="grim/grim.html">grim.pro</a>', "grim.pro", "", "grim_menu_view_colors_event", "", "event", "          -1", "");
   
@@ -4236,11 +4262,11 @@ libdata[libdataItem++] = new Array("grim/grim.html", "grim.pro", '.pro file in <
   
   libdata[libdataItem++] = new Array("grim/grim.html#grim_get_arg", "grim_get_arg", 'routine in <a href="grim/grim.html">grim.pro</a>', "grim.pro", "", "grim_get_arg", "", "ddgrnextensionsarg", "          -1", "");
   
-  libdata[libdataItem++] = new Array("grim/grim.html#grim_get_args", "grim_get_args", 'routine in <a href="grim/grim.html">grim.pro</a>', "grim.pro", "", "grim_get_args", "", "ddgrntypexzeronhistmaintaincompressextensionsrgbarg1arg2", "          -1", "");
+  libdata[libdataItem++] = new Array("grim/grim.html#grim_get_args", "grim_get_args", 'routine in <a href="grim/grim.html">grim.pro</a>', "grim.pro", "", "grim_get_args", "", "ddgrndisplay_typexzeromaintaincompressnhistoverlaysextensionsrgbarg1arg2", "          -1", "");
   
   libdata[libdataItem++] = new Array("grim/grim.html#grim_create_cursor_mode", "grim_create_cursor_mode", 'routine in <a href="grim/grim.html">grim.pro</a>', "grim.pro", "", "grim_create_cursor_mode", "", "no_prefixnamemode_argscursor_modes", "          -1", "");
   
-  libdata[libdataItem++] = new Array("grim/grim.html#grim", "grim", 'routine in <a href="grim/grim.html">grim.pro</a>', "grim.pro", "", "grim", "", "gd_extracdpdrdsdstdardsundodnewxsizeysizeno_refreshdefaultpreviousrestoreactivatedoffsetno_erasefilterrgbvisibilitychannelexitzoomrotateorderoffsetretainmaintainmode_initmodalxzeroframerefresh_callbacksrefresh_callback_data_psplane_callbacksplane_callback_data_psnhistcompresspathsymsizeuser_psymworkdirmode_argssave_pathload_pathoverlayspnmenu_fnamecursor_swapfovcliphidemenu_extensionsbutton_extensionsarg_extensionsloadctmaxgrnextensionsbetarenderingnpointscam_trsplt_trsrng_trsstr_trssun_trsstn_trsarr_trsassoc_xdplane_syncingtiepoint_syncingcurve_syncingrender_samplerender_pht_minslave_overlayspositiondelay_overlaysauto_stretchcolorxrangeyrangethicknsumnddxtitleytitlepsymtitlearg1arg2", "          -1", "");
+  libdata[libdataItem++] = new Array("grim/grim.html#grim", "grim", 'routine in <a href="grim/grim.html">grim.pro</a>', "grim.pro", "", "grim", "", "_extracdpdrdsdstdardsundodnewxsizeysizeno_refreshdefaultpreviousrestoreactivatedoffsetno_erasefilterrgbvisibilitychannelexitzoomrotateorderoffsetretaingdnhistcompressmaintainmode_initmodalxzeroframerefresh_callbacksrefresh_callback_data_psplane_callbacksplane_callback_data_psmaxpathsymsizeuser_psymworkdirmode_argssave_pathload_pathoverlayspnmenu_fnamecursor_swapfovcliphidemenu_extensionsbutton_extensionsarg_extensionsloadctgrnextensionsbetarenderingnpointscam_trsplt_trsrng_trsstr_trssun_trsstn_trsarr_trsassoc_xdplane_syncingtiepoint_syncingcurve_syncingrender_samplerender_pht_minslave_overlayspositiondelay_overlaysauto_stretchcolorxrangeyrangethicknsumnddxtitleytitlepsymtitlearg1arg2", "          -1", "");
   
   
 
@@ -4325,35 +4351,6 @@ libdata[libdataItem++] = new Array("grim/grim_bitmaps_include.html", "grim_bitma
   
   
 
-libdata[libdataItem++] = new Array("grim/grim_colortool.html", "grim_colortool.pro", '.pro file in <a href="grim/dir-overview.html">grim/ directory</a>', "grim_colortool.pro", "", "", "	Tool for adjusting colors in GRIM.    ", "", "          -1", " 	Written by:	Spitale   ");
-  
-  
-  libdata[libdataItem++] = new Array("grim/grim_colortool.html#grct_slider_to_gamma", "grct_slider_to_gamma", 'routine in <a href="grim/grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grct_slider_to_gamma", "", "value", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("grim/grim_colortool.html#grct_gamma_to_slider", "grct_gamma_to_slider", 'routine in <a href="grim/grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grct_gamma_to_slider", "", "value", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("grim/grim_colortool.html#grct_print_gamma", "grct_print_gamma", 'routine in <a href="grim/grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grct_print_gamma", "", "data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("grim/grim_colortool.html#grct_widget_to_descriptor", "grct_widget_to_descriptor", 'routine in <a href="grim/grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grct_widget_to_descriptor", "", "datacmd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("grim/grim_colortool.html#grct_descriptor_to_widget", "grct_descriptor_to_widget", 'routine in <a href="grim/grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grct_descriptor_to_widget", "", "noslidedatacmd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("grim/grim_colortool.html#grct_plot", "grct_plot", 'routine in <a href="grim/grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grct_plot", "", "data", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("grim/grim_colortool.html#grct_cleanup", "grct_cleanup", 'routine in <a href="grim/grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grct_cleanup", "", "base", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("grim/grim_colortool.html#grct_update", "grct_update", 'routine in <a href="grim/grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grct_update", "", "allautocmd", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("grim/grim_colortool.html#grim_colortool_event", "grim_colortool_event", 'routine in <a href="grim/grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grim_colortool_event", "", "event", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("grim/grim_colortool.html#grim_colortool_change", "grim_colortool_change", 'routine in <a href="grim/grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grim_colortool_change", "", "base", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("grim/grim_colortool.html#grct_primary_notify", "grct_primary_notify", 'routine in <a href="grim/grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grct_primary_notify", "", "data_p", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("grim/grim_colortool.html#grim_colortool", "grim_colortool", 'routine in <a href="grim/grim_colortool.html">grim_colortool.pro</a>', "grim_colortool.pro", "", "grim_colortool", "", "", "          -1", "");
-  
-  
-
 libdata[libdataItem++] = new Array("grim/grim_compute_include.html", "grim_compute_include.pro", '.pro file in <a href="grim/dir-overview.html">grim/ directory</a>', "grim_compute_include.pro", "", "", "", "", "          -1", "");
   
   
@@ -4432,7 +4429,7 @@ libdata[libdataItem++] = new Array("grim/grim_data_include.html", "grim_data_inc
   
   libdata[libdataItem++] = new Array("grim/grim_data_include.html#grim_blank", "grim_blank", 'routine in <a href="grim/grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_blank", "", "xsizeysize", "          -1", "");
   
-  libdata[libdataItem++] = new Array("grim/grim_data_include.html#grim_init", "grim_init", 'routine in <a href="grim/grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_init", "", "dd0zoomwnumgrnfilterretainuser_callbacksuser_psymuser_graphics_fnuser_thickuser_linecursor_swapcmdpathsave_pathload_pathfovclipcam_trsplt_trsrng_trsstr_trsstn_trsarr_trssun_trshidetypecam_selectplt_selectrng_selectsun_selectstr_selectstn_selectarr_selectcolorxrangeyrangepositionnpointsthicknsumxtitleytitlepsymcursor_modessymsizenhistmaintainworkdircompressextensionsmaxbetavisibilitychanneltitleslave_overlaysrender_samplerender_pht_minoverlaysactivatedd", "          -1", "");
+  libdata[libdataItem++] = new Array("grim/grim_data_include.html#grim_init", "grim_init", 'routine in <a href="grim/grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_init", "", "dd0zoomwnumgrnfilterretainuser_callbacksuser_psymuser_graphics_fnuser_thickuser_linecursor_swapcmdpathsave_pathload_pathfovclipcam_trsplt_trsrng_trsstr_trsstn_trsarr_trssun_trshidetypecam_selectplt_selectrng_selectsun_selectstr_selectstn_selectarr_selectcolorxrangeyrangepositionnpointsthicknsumxtitleytitlepsymcursor_modeskeyvalssymsizenhistmaintainworkdircompressextensionsmaxbetavisibilitychanneltitleslave_overlaysrender_samplerender_pht_minoverlaysactivatedd", "          -1", "");
   
   libdata[libdataItem++] = new Array("grim/grim_data_include.html#grim_exists", "grim_exists", 'routine in <a href="grim/grim_data_include.html">grim_data_include.pro</a>', "grim_data_include.pro", "", "grim_exists", "", "grim_data", "          -1", "");
   
@@ -5361,13 +5358,9 @@ libdata[libdataItem++] = new Array("grim/grim_print.html", "grim_print.pro", '.p
 libdata[libdataItem++] = new Array("grim/grim_rc_settings.html", "grim_rc_settings.pro", '.pro file in <a href="grim/dir-overview.html">grim/ directory</a>', "grim_rc_settings.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("grim/grim_rc_settings.html#grim_rc_value", "grim_rc_value", 'routine in <a href="grim/grim_rc_settings.html">grim_rc_settings.pro</a>', "grim_rc_settings.pro", "", "grim_rc_value", "", "keywordsvalue_pskeyword", "          -1", "");
+  libdata[libdataItem++] = new Array("grim/grim_rc_settings.html#grim_rc_select", "grim_rc_select", 'routine in <a href="grim/grim_rc_settings.html">grim_rc_settings.pro</a>', "grim_rc_settings.pro", "", "grim_rc_select", "", "keyvals", "          -1", "");
   
-  libdata[libdataItem++] = new Array("grim/grim_rc_settings.html#grim_rc_add_values", "grim_rc_add_values", 'routine in <a href="grim/grim_rc_settings.html">grim_rc_settings.pro</a>', "grim_rc_settings.pro", "", "grim_rc_add_values", "", "selectkeywordsvalue_psprefix", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("grim/grim_rc_settings.html#grim_rc_selections", "grim_rc_selections", 'routine in <a href="grim/grim_rc_settings.html">grim_rc_settings.pro</a>', "grim_rc_settings.pro", "", "grim_rc_selections", "", "cam_selectplt_selectrng_selectstr_selectstn_selectarr_selectsun_selectkeywordsvalue_pskeyvals", "          -1", "");
-  
-  libdata[libdataItem++] = new Array("grim/grim_rc_settings.html#grim_rc_settings", "grim_rc_settings", 'routine in <a href="grim/grim_rc_settings.html">grim_rc_settings.pro</a>', "grim_rc_settings.pro", "", "grim_rc_settings", "", "rcfilekeyvalscam_selectplt_selectrng_selectstr_selectstn_selectarr_selectsun_selectcmdnewxsizeysizemode_initnpointszoomrotateorderoffsetfilterretainpathsave_pathload_pathsymsizeoverlaysmenu_fnamecursor_swapfovclipmenu_extensionsbutton_extensionscam_trsplt_trsrng_trsstr_trsstn_trsarr_trssun_trsfiletypehidemode_argsxzerorgbpsymnhistmaintainnddworkdiractivateframecompressloadctmaxarg_extensionsextensionsbetarenderingplane_syncingtiepoint_syncingcurve_syncingvisibilitychannelrender_samplerender_pht_minslave_overlaysdelay_overlaysauto_stretch", "          -1", "");
+  libdata[libdataItem++] = new Array("grim/grim_rc_settings.html#grim_rc_settings", "grim_rc_settings", 'routine in <a href="grim/grim_rc_settings.html">grim_rc_settings.pro</a>', "grim_rc_settings.pro", "", "grim_rc_settings", "", "rcfilekeyvalscmdnewxsizeysizemode_initnpointszoomrotateorderoffsetfilterretainpathsave_pathload_pathsymsizeoverlaysmenu_fnamecursor_swapfovclipmenu_extensionsbutton_extensionscam_trsplt_trsrng_trsstr_trsstn_trsarr_trssun_trsfiletypehidemode_argsxzerorgbpsymnhistmaintainnddworkdiractivateframecompressloadctmaxdatarg_extensionsextensionsbetarenderingplane_syncingtiepoint_syncingcurve_syncingvisibilitychannelrender_samplerender_pht_minslave_overlaysdelay_overlaysauto_stretch", "          -1", "");
   
   
 
@@ -6206,20 +6199,6 @@ libdata[libdataItem++] = new Array("obj/map/map_set_fn_data.html", "map_set_fn_d
   
   
   libdata[libdataItem++] = new Array("obj/map/map_set_fn_data.html#map_set_fn_data", "map_set_fn_data", 'routine in <a href="obj/map/map_set_fn_data.html">map_set_fn_data.pro</a>', "map_set_fn_data.pro", "", "map_set_fn_data", "	Replaces the function data for a map descriptor.    ", "noeventmd Map descriptor.   data New function data.   ", "NV/LIB/MAP", " 	Adapted by:	Spitale, 7/2016; adapted from map_set_fn_data_p   ");
-  
-  
-
-libdata[libdataItem++] = new Array("obj/map/map_set_fn_image_to_map.html", "map_set_fn_image_to_map.pro", '.pro file in <a href="obj/map/dir-overview.html">obj/map/ directory</a>', "map_set_fn_image_to_map.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("obj/map/map_set_fn_image_to_map.html#map_set_fn_image_to_map", "map_set_fn_image_to_map", 'routine in <a href="obj/map/map_set_fn_image_to_map.html">map_set_fn_image_to_map.pro</a>', "map_set_fn_image_to_map.pro", "", "map_set_fn_image_to_map", "	Replaces the name of the image->map function for each given map 	descriptor.    ", "noeventmdfn", "NV/LIB/MAP", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
-  
-  
-
-libdata[libdataItem++] = new Array("obj/map/map_set_fn_map_to_image.html", "map_set_fn_map_to_image.pro", '.pro file in <a href="obj/map/dir-overview.html">obj/map/ directory</a>', "map_set_fn_map_to_image.pro", "", "", "", "", "          -1", "");
-  
-  
-  libdata[libdataItem++] = new Array("obj/map/map_set_fn_map_to_image.html#map_set_fn_map_to_image", "map_set_fn_map_to_image", 'routine in <a href="obj/map/map_set_fn_map_to_image.html">map_set_fn_map_to_image.pro</a>', "map_set_fn_map_to_image.pro", "", "map_set_fn_map_to_image", "	Replaces the name of the map->image function for each given map 	descriptor.    ", "noeventmdfn", "NV/LIB/MAP", " 	Written by:	Spitale, 1/1998  	Adapted by:	Spitale, 5/2016   ");
   
   
 
@@ -7261,7 +7240,9 @@ libdata[libdataItem++] = new Array("obj/tools/orb/orb_to_cartesian.html", "orb_t
 libdata[libdataItem++] = new Array("com/pg/pg_add_selections.html", "pg_add_selections.pro", '.pro file in <a href="com/pg/dir-overview.html">com/pg/ directory</a>', "pg_add_selections.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("com/pg/pg_add_selections.html#pg_add_selections", "pg_add_selections", 'routine in <a href="com/pg/pg_add_selections.html">pg_add_selections.pro</a>', "pg_add_selections.pro", "", "pg_add_selections", "", "trsselect", "          -1", "");
+  libdata[libdataItem++] = new Array("com/pg/pg_add_selections.html#pg_filter_selections", "pg_filter_selections", 'routine in <a href="com/pg/pg_add_selections.html">pg_add_selections.pro</a>', "pg_add_selections.pro", "", "pg_filter_selections", "", "selectprefix", "          -1", "");
+  
+  libdata[libdataItem++] = new Array("com/pg/pg_add_selections.html#pg_add_selections", "pg_add_selections", 'routine in <a href="com/pg/pg_add_selections.html">pg_add_selections.pro</a>', "pg_add_selections.pro", "", "pg_add_selections", "", "trsselectprefix", "          -1", "");
   
   
 
@@ -8069,7 +8050,7 @@ libdata[libdataItem++] = new Array("com/pg/pg_select.html", "pg_select.pro", '.p
 libdata[libdataItem++] = new Array("com/pg/pg_select_bodies.html", "pg_select_bodies.pro", '.pro file in <a href="com/pg/dir-overview.html">com/pg/ directory</a>', "pg_select_bodies.pro", "", "", "", "", "          -1", "");
   
   
-  libdata[libdataItem++] = new Array("com/pg/pg_select_bodies.html#pg_select_bodies", "pg_select_bodies", 'routine in <a href="com/pg/pg_select_bodies.html">pg_select_bodies.pro</a>', "pg_select_bodies.pro", "", "pg_select_bodies", "	Selects bodies based on given criteria.    ", "od	Observer descriptor; some selections require a 			CAMERA, others will work with any subclass of BODY.  	Descriptor Select Keywords 	-------------------------- 	Descriptor select keywords are combined with OR logic.  	  fov/cov:	Select all planets that fall within this many fields of 			view (fov) (+/- 10%) from the center of view (cov). 			Default cov is the camera optic axis.   _extrabxArray of descriptors.   ", "NV/PG", " 	Written by:	Spitale, 2017   	Array of subscripts for the descriptors in bx corresponding to the 	specified criteria.  !null if no selection criteria were applied.    SEE ALSO:  	pg_cull_bodies    STATUS: 	Starred keywords are not yet implemented.    ");
+  libdata[libdataItem++] = new Array("com/pg/pg_select_bodies.html#pg_select_bodies", "pg_select_bodies", 'routine in <a href="com/pg/pg_select_bodies.html">pg_select_bodies.pro</a>', "pg_select_bodies.pro", "", "pg_select_bodies", "	Selects bodies based on given criteria.    ", "od	Observer descriptor; some selections require a 			CAMERA, others will work with any subclass of BODY.  	Descriptor Select Keywords 	-------------------------- 	Descriptor select keywords are combined with OR logic.  	  fov/cov:	Select all planets that fall within this many fields of 			view (fov) (+/- 10%) from the center of view (cov). 			Default cov is the camera optic axis.   prefix_extrabx	Array of descriptors.   ", "NV/PG", " 	Written by:	Spitale, 2017   	Array of subscripts for the descriptors in bx corresponding to the 	specified criteria.  !null if no selection criteria were applied.    SEE ALSO:  	pg_cull_bodies    STATUS: 	Starred keywords are not yet implemented.    ");
   
   
 
