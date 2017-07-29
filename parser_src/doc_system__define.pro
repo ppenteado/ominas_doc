@@ -365,7 +365,9 @@ pro doc_system::getProperty, root=root, output=output, classes=classes, $
                              routine_line_cutoffs=routineLineCutoffs, $
                              complexity_cutoffs=complexityCutoffs, $
                              statistics=statistics, $
-                             flat=flat, doc_center=doc_center
+                             flat=flat, doc_center=doc_center, $
+                             ;If set, routines with missing comment headers are treated as private - Added by Paulo Penteado, 07/2017
+                             default_private=default_private
   compile_opt strictarr, hidden
 
   if (arg_present(root)) then root = self.root
@@ -386,6 +388,8 @@ pro doc_system::getProperty, root=root, output=output, classes=classes, $
   if (arg_present(statistics)) then statistics = self.statistics
   if (arg_present(flat)) then flat = self.flat
   if (arg_present(doc_center)) then doc_center = self.doc_center
+  ;If set, routines with missing comment headers are treated as private - Added by Paulo Penteado, 07/2017
+  if (arg_present(default_private)) then default_private=self.default_private
 end
 
 
@@ -1735,7 +1739,9 @@ function doc_system::init, root=root, output=output, $
                            template_prefix=templatePrefix, $
                            template_location=templateLocation, $
                            help=help, version=version, charset=charset, $
-                           color_outputlog=colorOutputlog
+                           color_outputlog=colorOutputlog, $
+                           ;If set, routines with missing comment headers are treated as private - Added by Paulo Penteado, 07/2017
+                           default_private=default_private
   compile_opt strictarr, hidden
 
   self.idldoc_version = idldoc_version()
@@ -1797,10 +1803,10 @@ function doc_system::init, root=root, output=output, $
 
   ; get location of IDLdoc in order to find locations of data files like
   ; images, templates, etc.
-  ; Look for idldoc.pro instead of calling mg_src_root(), because this file is
+  ; Look for idldoc_version.pro instead of calling mg_src_root(), because this file is
   ; replacing the original from IDLdoc (Paulo Penteado,2016/06)
   ;self.sourceLocation = mg_src_root() 
-  self.sourceLocation = file_dirname(file_which('idldoc.pro'))
+  self.sourceLocation = file_dirname(file_which('idldoc_version.pro'))
 
   self.quiet = keyword_set(quiet)
   self.silent = keyword_set(silent)
@@ -1813,6 +1819,8 @@ function doc_system::init, root=root, output=output, $
   self.user = keyword_set(user)
   self.statistics = keyword_set(statistics)
   self.indexLevel = n_elements(indexLevel) eq 0L ? 2L : indexLevel
+  ;If set, routines with missing comment headers are treated as private - Added by Paulo Penteado, 07/2017
+  self.default_private=keyword_set(default_private)
 
   case n_elements(routineLineCutoffs) of
     0: self.routineLineCutoffs = [0, 75, 150]
@@ -2122,6 +2130,8 @@ pro doc_system__define
              visibleRoutines: obj_new(), $
 
              requiresVersion: '', $
-             requiresItems: obj_new() $
+             requiresItems: obj_new(), $
+             ;If set, routines with missing comment headers are treated as private - Added by Paulo Penteado, 07/2017
+             default_private:0B $
            }
 end
