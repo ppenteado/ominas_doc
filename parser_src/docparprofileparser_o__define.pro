@@ -476,8 +476,8 @@ pro docparprofileparser_o::_parseLines, lines, file, format=format, markup=marku
                                        format=format, markup=markup
 
           currentComments->remove, /all
-        endif
-
+        endif else $ ;Treat routines with no header as private - Added by Paulo Penteado, 07/2017
+          if self.system.user then routine.setproperty,is_private=1B
         justFinishedHeader = 1B
       endif
     endif
@@ -510,6 +510,9 @@ pro docparprofileparser_o::_parseLines, lines, file, format=format, markup=marku
 
         currentComments->remove, /all
       endif
+      ;Treat routines with no header as private - Added by Paulo Penteado, 07/2017
+      if (~headerContinued && (currentComments->count() eq 0) && self.system.user) then $
+        routine.setproperty,is_private=1B
     endif
 
     justFinishedComment--
