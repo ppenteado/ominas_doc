@@ -273,6 +273,9 @@ pro docparprofileparser_o::_parseFileComments, file, comments, $
 
   ; call format parser's "parse" method
   formatParser->parseFileComments, comments, file=file, markup_parser=markupParser
+  ;Treat routines with no header as private - Added by Paulo Penteado, 07/2017
+  file.getproperty,is_private=fip
+  if self.system.default_private && (fip eq 3B) then file.setproperty,is_private=0
 end
 
 
@@ -423,6 +426,9 @@ pro docparprofileparser_o::_parseLines, lines, file, format=format, markup=marku
           self->_parseRoutineComments, routine, currentComments->get(/all), $
                                        format=format, markup=markup
           currentComments->remove, /all
+          ;Treat routines with no header as private - Added by Paulo Penteado, 07/2017
+          file.getproperty,is_private=fip
+          if self.system.default_private && (fip eq 3B) then file.setproperty,is_private=0
         endif
       endif
 
@@ -437,6 +443,9 @@ pro docparprofileparser_o::_parseLines, lines, file, format=format, markup=marku
       self->_parseRoutineComments, routine, currentComments->get(/all), $
                                    format=format, markup=markup
       currentComments->remove, /all
+      ;Treat routines with no header as private - Added by Paulo Penteado, 07/2017
+      file.getproperty,is_private=fip
+      if self.system.default_private && (fip eq 3B) then file.setproperty,is_private=0
     endif
 
     firstToken = strlowcase(tokens[0])
@@ -476,6 +485,9 @@ pro docparprofileparser_o::_parseLines, lines, file, format=format, markup=marku
                                        format=format, markup=markup
 
           currentComments->remove, /all
+          ;Treat routines with no header as private - Added by Paulo Penteado, 07/2017
+          file.getproperty,is_private=fip
+          if self.system.default_private && (fip eq 3B) then file.setproperty,is_private=0
         endif else $ ;Treat routines with no header as private - Added by Paulo Penteado, 07/2017
           if self.system.default_private then routine.setproperty,is_private=self.system.user
         justFinishedHeader = 1B
@@ -509,6 +521,9 @@ pro docparprofileparser_o::_parseLines, lines, file, format=format, markup=marku
                                      format=format, markup=markup
 
         currentComments->remove, /all
+        ;Treat routines with no header as private - Added by Paulo Penteado, 07/2017
+        file.getproperty,is_private=fip
+        if self.system.default_private && (fip eq 3B) then file.setproperty,is_private=0
       endif
       ;Treat routines with no header as private - Added by Paulo Penteado, 07/2017
       if (~headerContinued && (currentComments->count() eq 0) && self.system.default_private) then $
@@ -562,6 +577,8 @@ function docparprofileparser_o::parse, filename, found=found, directory=director
                  system=self.system, $
                  fullpath=filename)
 
+  ;Treat routines with no header as private - Added by Paulo Penteado, 07/2017
+  if self.system.default_private then file.setproperty,is_private=3
   ; get the contents of the file
   lines = self->_readFile(filename, empty=empty, n_lines=nLines, $
                           modification_time=mTime)
