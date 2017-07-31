@@ -6,7 +6,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>Search (OMINAS Documentation)</title>
+    <title>OMINAS Documentation</title>
+
+    <script type="text/javascript" src="idldoc-resources/js/jquery.js"></script>
+    <script type="text/javascript" src="idldoc-resources/js/copybutton.js"></script>
 
 
 
@@ -157,87 +160,179 @@
 
     <script type="text/javascript">
       function setTitle() {
-        parent.document.title="Search (OMINAS Documentation)";
+        parent.document.title="OMINAS Documentation";
       }
     </script>
-    <script type="text/javascript" src="libdata.js"></script>
-    <script type="text/javascript" src="idldoc-resources/search.js"></script>
   </head>
 
   <body onload="setTitle();">
 
-
     <div class="content">
 
-    	<h2>Search</h2>
 
- 				<form name="basicForm">
- 					<input class="text" name="basicText" size="50"/>&nbsp;<input name="send" type="submit" value="Search" onClick="basicsearch()"/>
- 				</form>
+      <h2>Overview</h2>
+<h1>OMINAS Overview</h1>
 
-       <p class="smaller description">Enter search terms to find in file and routine comment headers. The search is case insensitive.</p>
+<h2>Introduction</h2>
 
-      <!--
-			<form name="advancedForm">
-				<fieldset>
-					<legend>Advanced search</legend>
-					<table>
-						<tr>
-							<td class="name">
-								<label for="routinename">Routine name</label>
-							</td>
-							<td>
-								<input type="text" name="routinename" id="routinename" size="40">
-							</td>
-						</tr>
+<p>OMINAS is an IDL-based software environment for the reduction and
+analysis of data taken by any space-based or Earth-based system.
+It was written by Joseph Spitale (jnspitale@psi.edu) under the
+direction of Carolyn Porco. Other contributers include Vance
+Haemmerle, Matthew Tiscareno, John Weiss, Daiana DiNino,
+Paulo Penteado, Jackie Ryan and Mark Moretto.
+Funding for its initial development was provided through the
+Cassini mission.
+</p>
 
-						<tr>
-							<td class="name">
-								<label for="comments">Comments</label>
-							</td>
-							<td>
-								<input type="text" name="comments" id="comments" size="40">
-							</td>
-						</tr>
+<h2>Download and installation</h2>
 
-						<tr>
-							<td class="name">
-								<label for="parameters">Parameters</label>
-							</td>
-							<td>
-								<input type="text" name="parameters" id="parameters" size="40">
-							</td>
-						</tr>
+<p>See the <a href="install_guide.html">installation guide</a>.
+</p>
 
-						<tr>
-							<td class="name">
-								<label for="authors">Authors</label>
-							</td>
-							<td>
-								<input type="text" name="authors" id="authors" size="40">
-							</td>
-						</tr>
+<h2>Functional requirements</h2>
+
+<p>OMINAS development is guided by the following functional
+requirements:
+</p>
+
+<h3>Portability</h3>
+
+<p>OMINAS should operate on as many UNIX-based platforms as
+possible. This requirement is easily (though not trivially) met
+using IDL. To date, OMINAS has been tested on Alpha/OSF,
+Sun/Solaris, PC/Linux, and Mac/OS X. However, note that a
+specific OMINAS configuration (see Architecture below) may
+contain platform dependencies.
+Note that it is desirable for OMINAS to remain backward compatible
+to the earliest possible IDL version so that users are not forced
+to upgrade.
+</p>
+
+<h3>Speed</h3>
+
+<p>OMINAS computational routines must be as fast as possible.
+Although this requirement is the most difficult to meet using
+IDL, through the use of massive array operations, every existing
+routine in OMINAS operates at an acceptable speed, usually
+comparable to analogous code written in C.
+</p>
+
+<h3>Modularity</h3>
+
+<p>OMINAS obeys object-oriented software concepts, so that it is
+highly modular and relatively easy to modify. Although IDL
+directly provides for an object-oriented architecture, that
+packaged is not used in OMINAS, or reasons mainly having to do
+with flexibility.
+</p>
+
+<h3>Generality</h3>
+
+<p>OMINAS itself must not contain any code that is dependent upon
+the particular instrument that generated the input data, or upon
+the organization of the file in which the data resides. Because
+IDL compiles code dynamically, this requirement is met in OMINAS
+by allowing for external "user"-written configuration code that
+contains all of the specifics of a particular data source.&lt;/p&gt;
+</p>
+
+<h3>Scripting</h3>
+
+<p>OMINAS must maintain a lowest-level user interface that
+operates from a command line so that analyses may be constructed
+as command scripts. Such a capability is necessary in order for
+jobs to be performed in batch mode with no user intervention.
+Moreover, such a capability must not prevent the addition of a
+more user-friendly graphical interface. OMINAS contains a
+command level user interface known as <a href="./com/pg/index.html">PG</a>,
+which consists of a number of IDL programs. Those programs may be
+combined into IDL batch files and run autonomously. There is also a graphical
+interface called <a href="./gr/index.html">GRIM</a> (GRaphical Interface to oMinas).
+</p>
+
+<h2>Architecture</h2>
+
+<p>The following diagram illustrates the relationships among the
+various components of a OMINAS installation.
+</p>
+
+<p><img src="arch.png"/>
+</p>
+
+<p>The core OMINAS code is completely independent of the source of
+the data and the type of file in which it is stored. Those details
+are configured based on the intended purpose of a particular
+OMINAS installation. For example, the Cassini ISS installation
+contains configuration code that reads and writes VICAR image
+files and SPICE kernels.
+</p>
+
+<p>The separation between the data processing and I/O is maintained
+by a portion of the OMINAS system called NV. NV uses
+application-specific configuration tables to determine how to
+transform ancillary data from external sources into the standard
+data objects recognized in OMINAS. NV is described in detail in
+nv_description.txt.
+</p>
+
+<p>The OMINAS object library defines and manipulates the the basic
+data objects used to describe the various entities -- cameras,
+planets, rings, etc., -- of interest to the user. The object
+library is described in lib_description.txt.
+</p>
+
+<p>The typical OMINAS user will operate at the command level, which
+consists of the image display program <code>TVIM</code>, the NV I/O commands <code>NV_READ</code> and
+<code>NV_WRITE</code>, and a set of programs based on the underlying object library and utility
+routines referred to as <a href="./com/pg/index.html">PG</a>.
+</p>
+
+<p>The graphical interface to OMINAS is called <a href="./gr/index.html">GRIM</a>.
+Although it's designed to be used along with the command line like a
+fancy TVIM, GRIM may be used on its own.
+</p>
+
+<p></p>
 
 
 
-						<tr>
-							<td></td>
-							<td>
-								<input name="send" type="submit" value="Search" onClick="javascript:advancedsearch()"/>
-					  	</td>
-						</tr>
 
-					</table>
 
-					<div>
-						<p class="smaller description">This is an explanation of what the advanced search does. I'm not sure there really should be an advanced search right now. But it might be useful to be able to search on a particular type of information: author name, category, etc.</p>
-					</div>
-			  </fieldset>
 
-			</form>
-      -->
 
-			<br/>
+
+
+      <h2 id="statistics">Project statistics</h2>
+
+      <table class="attribute small" summary="Project statistics">
+        <tr>
+          <td class="name">Directories:</td>
+          <td>1</td>
+        </tr>
+
+        <tr>
+          <td class="name">.pro files:</td>
+          <td>1</td>
+        </tr>
+
+        <tr>
+          <td class="name">.sav files:</td>
+          <td>0</td>
+        </tr>
+
+        <tr>
+          <td class="name">Routines:</td>
+          <td>1</td>
+        </tr>
+
+        <tr>
+          <td class="name">Lines:</td>
+          <td>3</td>
+        </tr>
+
+
+      </table>
 
 
     </div>
