@@ -157,6 +157,9 @@ pro docparominasformatparser::_handleRoutineTag, tag, lines, $
         tag='restrictions'
         lines=['Status: ','',lines]
         self.docparidlformatparser::_handleRoutineTag, tag, lines,routine=routine,markup_parser=markupParser
+      end
+      'common blocks': begin
+        routine->setProperty, comments=markupParser->parse(lines, file=file)
       end     
     else: begin
         self.docparidlformatparser::_handleRoutineTag, tag, lines,routine=routine,markup_parser=markupParser
