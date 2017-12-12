@@ -1,0 +1,49 @@
+[% basename %]
+===================================================================================================
+
+[% IF is_batch %]*batch file*
+[% END %] [% IF has_main_level %]*includes main-level program*
+[% END %] [% IF is_private %]*private*
+[% END %][% IF has_comments %]
+[% comments %]
+[% END %][% IF has_examples %]
+Examples
+___________
+
+[% examples %]
+[% END %]
+[% IF n_visible_routines gt 0 %]
+[% FOREACH r IN visible_routines %][% SCOPE r %]
+________________________________________________________________________________________________________________________
+
+[% name %]
+
+
+[% commheader %]
+
+________________________________________________________________________________________________________________________
+[% END %][% END %]
+
+[% IF statistics %]
+- File attributes
+
+
+- Modification date
+
+[% modification_time %]
+
+-Lines
+
+
+[% n_lines %]
+
+[% IF format ne '' || markup ne '' %]
+- Docformat
+[% format %][% IF format ne '' %] [% END %][% markup %]
+[% END %]
+
+[% END %]
+
+[% END %]
+
+
