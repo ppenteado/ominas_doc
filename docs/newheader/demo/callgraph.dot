@@ -1,5 +1,0 @@
-digraph callgraph {
-  page="8.5,11"
-  node[fontsize=8,color=gray,fontcolor=grey]
-  edge[color=gray]
-}
