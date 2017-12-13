@@ -378,7 +378,7 @@ pro docparprofileparser_o::_parseLines, lines, file, format=format, markup=marku
 ;    if wc then lines[w]=strmid(lines[w],0,sl[w])
   w=where(stregex(strtrim(lines,2),'^[^;]*@[[:graph:]]+',/bool),wc)
   endwhile
-
+;print,lines,/impl
   tokenizer = obj_new('DOCparProFileTokenizer', lines)
 
   endVariants = ['end', 'endif', 'endelse', 'endcase', 'endswitch', 'endfor', $
@@ -413,7 +413,7 @@ pro docparprofileparser_o::_parseLines, lines, file, format=format, markup=marku
     delims = ' ' + string(9B) + ',:'
     cmd = self->_stripComments(command)
     tokens = strsplit(cmd, delims, /extract, count=nTokens)
-
+;print,command
     ; handle blank line (w/ possible comments)
     if (nTokens eq 0) then begin
       if (justFinishedComment eq 2 && currentComments->count() gt 0) then begin
@@ -425,6 +425,7 @@ pro docparprofileparser_o::_parseLines, lines, file, format=format, markup=marku
         if (codeLevel gt 0) then begin
           self->_parseRoutineComments, routine, currentComments->get(/all), $
                                        format=format, markup=markup
+          routine.setproperty,commheader=currentComments.get(/all)
           currentComments->remove, /all
           ;Treat routines with no header as private - Added by Paulo Penteado, 07/2017
           file.getproperty,is_private=fip
@@ -442,6 +443,7 @@ pro docparprofileparser_o::_parseLines, lines, file, format=format, markup=marku
           && currentComments->count() gt 0) then begin
       self->_parseRoutineComments, routine, currentComments->get(/all), $
                                    format=format, markup=markup
+      routine.setproperty,commheader=currentComments.get(/all)
       currentComments->remove, /all
       ;Treat routines with no header as private - Added by Paulo Penteado, 07/2017
       file.getproperty,is_private=fip
@@ -483,7 +485,7 @@ pro docparprofileparser_o::_parseLines, lines, file, format=format, markup=marku
         if (currentComments->count() gt 0) then begin
           self->_parseRoutineComments, routine, currentComments->get(/all), $
                                        format=format, markup=markup
-
+          routine.setproperty,commheader=currentComments.get(/all)
           currentComments->remove, /all
           ;Treat routines with no header as private - Added by Paulo Penteado, 07/2017
           file.getproperty,is_private=fip
@@ -519,7 +521,7 @@ pro docparprofileparser_o::_parseLines, lines, file, format=format, markup=marku
       if (~headerContinued && currentComments->count() gt 0) then begin
         self->_parseRoutineComments, routine, currentComments->get(/all), $
                                      format=format, markup=markup
-
+        routine.setproperty,commheader=currentComments.get(/all)
         currentComments->remove, /all
         ;Treat routines with no header as private - Added by Paulo Penteado, 07/2017
         file.getproperty,is_private=fip
