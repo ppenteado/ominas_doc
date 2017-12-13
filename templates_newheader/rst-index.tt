@@ -1,0 +1,65 @@
+
+
+[% title %]
+================================================================================
+[% subtitle %]
+_______________________________________________________________________________
+[% date %]
+
+
+[% FOREACH d IN visible_dirs %][% SCOPE d %]
+Directory: [% mg_escape_latex(location) %]
+-------------------------------------------------------------------------------
+
+Overview
+--------
+
+[% IF has_overview_comments %]
+[% overview_comments %]
+[% END %]
+
+[% IF has_author_info %]
+[% IF has_author %]
+  - Author
+[% author %]
+[% END %]
+
+[% IF has_copyright %]
+  \- Copyright
+[% copyright %]
+[% END %]
+
+[% IF has_history %]
+  - History
+[% history %]
+[% END %]
+[% END %]
+
+
+[% IF n_idldoc_files gt 0 %]
+[% FOREACH f IN idldoc_files %][% SCOPE f %]
+*[% output_path %]*
+[% END %][% END %]
+[% END %]
+
+[% IF n_visible_pro_files gt 0 %]
+[% FOREACH f IN visible_pro_files %][% SCOPE f %]
+*[% output_path %]*
+[% END %][% END %]
+[% END %]
+
+[% IF n_dlm_files gt 0 %]
+[% FOREACH f IN dlm_files %][% SCOPE f %]
+*[% output_path %]*
+[% END %][% END %]
+[% END %]
+
+[% IF n_sav_files gt 0 %]
+[% FOREACH f IN sav_files %][% SCOPE f %]
+*[% output_path %]*
+[% END %][% END %]
+[% END %]
+
+[% END %][% END %]
+
+

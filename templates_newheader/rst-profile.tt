@@ -1,0 +1,396 @@
+[% mg_escape_latex(basename) %]
+===================================================================================================
+
+[% IF ~user %]
+gg `source <./`[% basename %]>`_
+[% END %]
+
+[% IF is_batch %]*batch file*[% END %] 
+[% IF has_main_level %]*includes main-level program*[% END %] 
+[% IF is_private %]*private*[% END %]
+
+
+[% IF has_comments %]
+[% comments %]
+[% END %]
+
+
+[% IF has_examples %]
+Examples
+___________
+
+[% examples %]
+
+[% END %]
+
+
+[% IF has_class %][% FOREACH class IN classes %][% SCOPE class %]
+Class description for [% mg_escape_latex(classname) %]
+___________________________________________________________________________________________________________
+
+
+[% IF ~user %]
+ff `source <./`[% basename %]>`_
+[% END %]
+
+[% IF n_ancestors gt 0 %]
+Inheritance
+-----------
+
+[% FOREACH p IN parents %]
+- [% mg_escape_latex(p->getClassname()) %]
+[% END %]
+
+
+[% IF n_ancestors gt n_parents %]
+
+All ancestor classes
+--------------------
+
+[% FOREACH a IN ancestors %]
+- [% mg_escape_latex(a->getClassname()) %]
+[% END %]
+
+[% END %]
+
+
+[% END %]
+
+[% IF n_children gt 0 %]
+Subclasses
+-----------
+
+[% FOREACH c IN children %]
+- [% mg_escape_latex(c->getClassname()) %]
+[% END %]
+
+
+
+[% END %]
+
+[% IF n_properties gt 0 %]
+
+Properties
+----------
+
+[% FOREACH p IN properties %][% SCOPE p %]
+- [% mg_escape_latex(name) %] [% IF is_get %]*get* [% END %][% IF is_set %]*set* [% END %][% IF is_init %]*init* [% END %][% IF has_type %]*type=[% type %]* [% ELSE %][% END %] 
+
+[% comments %]
+[% END %][% END %]
+
+
+
+[% END %]
+
+[% IF n_fields gt 0 && ~user %]
+
+Fields
+------
+
+
+[% FOREACH f IN fields %][% SCOPE f %]
+- [% mg_escape_latex(name) %] *[% mg_escape_latex(type) %]* 
+[% comments %]
+[% END %][% END %]
+
+
+[% END %]
+
+[% IF n_ancestors gt 0 && ~user %]
+
+[% FOREACH a IN ancestors %][% SCOPE a %]
+[% IF n_fields gt 0 %]
+
+Fields in [% mg_escape_latex(classname) %]
+----------------------------------------------------------------------------------------------
+[% FOREACH f IN fields %][% SCOPE f %]
+[% mg_escape_latex(name) %] *[% mg_escape_latex(type) %]*
+[% END %][% END %]
+[% END %]
+[% END %][% END %]
+
+[% END %]
+
+[% END %][% END %][% END %]
+
+
+[% IF has_author_info %]
+
+[% IF has_author %]
+Author
+------
+
+[% author %]
+[% END %]
+
+[% IF has_copyright %]
+Copyright
+---------
+
+[% copyright %]
+[% END %]
+
+[% IF has_history %]
+History
+-------
+
+[% history %]
+[% END %]
+
+[% IF has_version %]
+Version
+-------
+
+[% version %]
+[% END %]
+[% END %]
+
+[% IF has_others %]
+
+[% IF has_bugs %]
+Bugs
+----
+
+[% bugs %]
+[% END %]
+
+[% IF has_customer_id %]
+Customer ID
+-----------
+
+[% customer_id %]
+[% END %]
+
+[% IF has_requires %]
+Requires
+--------
+
+[% requires %]
+[% END %]
+
+[% IF has_restrictions %]
+Restrictions
+------------
+
+[% restrictions %]
+[% END %]
+
+[% IF has_todo %]
+Todo
+----
+
+[% todo %]
+[% END %]
+
+[% IF has_uses %]
+Uses
+----
+
+[% uses %]
+[% END %]
+
+[% END %]
+
+
+
+[% IF n_visible_routines gt 0 %]
+
+[% FOREACH r IN visible_routines %][% SCOPE r %]
+
+[% mg_escape_latex(name) %]
+________________________________________________________________________________________________________________________
+
+[% IF is_private %]*private* [% END %][% IF is_obsolete %]*obsolete* [% END %][% IF is_abstract %]*abstract* [% END %]
+
+[% IF ~user %]
+`source <./`[% basename %]>`_
+[% END %]
+
+.. code:: IDL
+
+ [% IF is_function %]result = [% END %][% name %][% IF is_function %]([% END %][% IF n_visible_parameters gt 0 %][% FOREACH p IN visible_parameters %][% SCOPE p %][% IF is_optional %] [[% END %][% prefix %][% name %][% suffix %][% IF is_optional %]][% END %][% END %][% END %][% END %][% IF n_visible_keywords gt 0 %][% FOREACH k IN visible_keywords %][% SCOPE k %][% IF is_optional %] [[% END %][% prefix %][% IF is_boolean %]/[% END %][% name %][% IF ~is_boolean %]=[% IF type ne '' %][% type %][% ELSE %][% name %][% END %][% END %][% suffix %][% IF is_optional %]][% END %][% END %][% END %][% END %][% IF is_function %])[% END %]
+
+
+[% IF has_comments %]
+Description
+-----------
+[% comments %]
+
+[% END %]
+
+
+[% IF is_function and has_returns %]
+
+Returns
+-------
+
+[% returns %]
+
+[% END %]
+
+[% IF n_parameters gt 0 %]
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Parameters
+----------
+
+
+[% FOREACH p IN parameters %][% SCOPE p %]
+
+[% mg_escape_latex(name) %]
+-----------------------------------------------------------------------------
+
+[% IF is_input %]*in* [% END %][% IF is_output %]*out* [% END %][% IF is_optional %]*optional* [% END %][% IF is_required %]*required* [% END %][% IF is_private %]*private* [% END %][% IF is_hidden %]*hidden* [% END %][% IF is_obsolete %]*obsolete* [% END %][% IF type ne '' %]*type=[% mg_escape_latex(type) %]* [% END %][% IF default_value ne '' %]*default=[% mg_escape_latex(default_value) %]*[% END %]
+
+[% comments %]
+[% END %][% END %]
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+[% END %]
+
+[% IF n_keywords gt 0 %]
+Keywords
+--------
+
+[% FOREACH k IN keywords %][% SCOPE k %]
+.. _[% mg_escape_latex(name) %]
+- [% mg_escape_latex(name) %] [% IF is_input %]*in* [% END %][% IF is_output %]*out* [% END %][% IF is_optional %]*optional* [% END %][% IF is_required %]*required* [% END %][% IF is_private %]*private* [% END %][% IF is_hidden %]*hidden* [% END %][% IF is_obsolete %]*obsolete* [% END %][% IF type ne '' %]*type=[% mg_escape_latex(type) %]* [% END %][% IF default_value ne '' %][% mg_escape_latex(default_value) %][% END %]
+
+[% comments %]
+[% END %][% END %]
+[% END %]
+
+[% IF has_examples %]
+
+Examples
+--------
+
+[% examples %]
+[% END %]
+
+[% IF has_author_info %]
+[% IF has_author %]
+Author
+------
+
+[% author %]
+[% END %]
+
+[% IF has_copyright %]
+Copyright
+---------
+
+[% copyright %]
+[% END %]
+
+[% IF has_history %]
+History
+-------
+
+[% history %]
+[% END %]
+
+[% IF has_version %]
+Version
+-------
+
+[% version %]
+[% END %]
+[% END %]
+
+[% IF has_others %]
+[% IF has_todo %]
+Todo
+----
+
+[% todo %]
+[% END %]
+
+[% IF has_restrictions %]
+Restrictions
+------------
+
+[% restrictions %]
+[% END %]
+
+[% IF has_requires %]
+Requires
+--------
+
+[% requires %]
+[% END %]
+
+[% IF has_uses %]
+Uses
+----
+
+[% uses %]
+[% END %]
+
+[% IF has_bugs %]
+Bugs
+----
+
+[% bugs %]
+[% END %]
+
+[% IF has_pre %]
+Pre-condition
+-------------
+
+[% pre %]
+[% END %]
+
+[% IF has_post %]
+Post-condition
+--------------
+
+[% post %]
+[% END %]
+
+[% IF has_customer_id %]
+Customer ID
+-----------
+
+[% customer_id %]
+[% END %]
+[% END %]
+
+[% IF statistics %]
+- Lines [% n_lines %]
+- McCabe complexity
+[% END %]
+
+
+
+[% END %][% END %]
+
+[% IF statistics %]
+- File attributes
+
+
+- Modification date
+
+[% modification_time %]
+
+-Lines
+
+
+[% n_lines %]
+
+[% IF format ne '' || markup ne '' %]
+- Docformat
+[% format %][% IF format ne '' %] [% END %][% markup %]
+[% END %]
+
+[% END %]
+
+[% END %]
+
+
+
